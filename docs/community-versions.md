@@ -344,3 +344,8 @@ ControlNet 内存：PAI 卡页写明 Transformer(~62 GB)+TE(~62 GB) 难以整装
 | 仅要更快的 T2VA 学生模型 | FastH3 Preview（接受质量上限） |
 | Blackwell 再压 DiT | coolthor / lilcheaty / rockerBOO |
 
+## 附：Hugging Face 近 3 个月全量索引
+
+主手册只精写代表性发行。若需要 **Hub 上近 3 个月出现的全部相关仓**（量化镜像、Turbo、FastH3、LoRA、ControlNet、MLX、实验合并等），见：
+
+**[docs/hf-last-3-months.md](hf-last-3-months.md)**

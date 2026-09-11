@@ -40,3 +40,4 @@
 | FastH3 Preview | https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree |
 | Fun-Controlnet-Union | https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union |
 | awesome-minimax-H3 | https://github.com/wildminder/awesome-minimax-H3 |
+- [HF 近 3 个月全量索引](hf-last-3-months.md)

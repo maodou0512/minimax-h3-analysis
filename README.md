@@ -94,6 +94,7 @@ sglang serve \
 | [部署指南](docs/deployment.md) | 本地 768p 与 Full 2K 工作流 |
 | [对比与定位](docs/comparison.md) | 与同代视频模型的对比框架（无编造榜单） |
 | [社区版本手册](docs/community-versions.md) | 开源/量化/Turbo/ControlNet 等发行对照、下载与硬件 |
+| [HF近3个月全量索引](docs/hf-last-3-months.md) | Hugging Face 上近 3 个月全部相关仓分类清单 |
 | [资料索引](docs/sources.md) | 一手链接与二次资料 |
 
 ## 许可证提示
