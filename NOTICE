@@ -1,0 +1,17 @@
+NOTICE
+======
+
+This repository contains third-party analysis and documentation about MiniMax H3.
+It does not redistribute MiniMax model weights.
+
+MiniMax H3 model weights and related official materials are subject to the
+MiniMax H3 Community License Agreement published by MiniMax.
+
+Primary announcement:
+https://www.minimax.io/news/minimax-h3-open-source
+
+Model hub:
+https://huggingface.co/MiniMaxAI/MiniMax-H3
+
+Before downloading, deploying, fine-tuning, or redistributing any MiniMax H3
+artifacts, review the official license text and Q&A on MiniMax's site.

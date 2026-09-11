@@ -1,0 +1,10 @@
+.DS_Store
+*.mp4
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+.env
+.venv/
+__pycache__/
+MiniMax-H3/
