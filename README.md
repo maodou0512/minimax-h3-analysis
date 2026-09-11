@@ -93,6 +93,7 @@ sglang serve \
 | [能力与提示](docs/capabilities.md) | I/O、Context-IR、语言与安全护栏 |
 | [部署指南](docs/deployment.md) | 本地 768p 与 Full 2K 工作流 |
 | [对比与定位](docs/comparison.md) | 与同代视频模型的对比框架（无编造榜单） |
+| [社区版本手册](docs/community-versions.md) | 开源/量化/Turbo/ControlNet 等发行对照、下载与硬件 |
 | [资料索引](docs/sources.md) | 一手链接与二次资料 |
 
 ## 许可证提示
