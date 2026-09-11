@@ -1,7 +1,7 @@
 # MiniMax H3 开源社区版本手册
 
 > 目标：用一份文档快速看清「有哪些开源/社区发行版、谁发的、怎么下、适合什么硬件、各自优缺点」。  
-> 整理日期：2026-09-11。社区量化与 VRAM 数字变化很快，**以各仓库 model card 为准**；本页未写死的字段标为「未公开/社区报告」。  
+> 整理日期：2026-09-11（同日二次扩写）。社区量化与 VRAM 数字变化很快，**以各仓库 model card 为准**；本页未写死的字段标为「未公开/社区报告」。  
 > **不会编造榜单分数**。许可统一注意：上游多为 [MiniMax H3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE)（含地域与商业门槛）；部分 Turbo/LoRA 标注 Apache-2.0，使用前请逐仓核对。
 
 ## 0. 先分清三层
@@ -47,6 +47,14 @@
 | MATLOWAI fused-turbo-int8 | 合并包 | MATLOWAI | 2026-08-29 | [HF](https://huggingface.co/MATLOWAI/minimax-h3-fused-turbo-int8-convrot) | Comfy 单文件 | INT8+Turbo 融合 | 少文件、开箱加速 | 看卡页 VRAM |
 | fal Realism-People-LoRA 等 | 风格/题材 LoRA | fal 等 | 2026-08 起 | [例](https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA) | 风格化 | LoRA | 人像写实等；生态大量 adapters | 额外显存通常不大 |
 | WarmBloodAban Singularity 等 | 微调/风格 | 社区 | 2026-09 起 | [例](https://huggingface.co/WarmBloodAban/Minimax-h3_Singularity) | 微调 | 各异 | HDR/风格向微调，非「基座替代」 | 依赖所选 Base 量化 |
+| multimodalart MiniMax-H3-Pruned | AdaLN 剪枝（diffusers） | multimodalart | 2026-08-09 | [HF](https://huggingface.co/multimodalart/MiniMax-H3-Pruned) | FL2VA/Ref2VA | pruned BF16 + 截断 TE | DiT 约 66→40 GB/分区；兼容 Comfy 剪枝 LoRA 坐标 | 示例峰值约 52 GB（其 H100 offload 测） |
+| DiffSynth-Studio MiniMax-H3-NF4 | NF4 量化 | DiffSynth-Studio | 2026-08-04 | [HF](https://huggingface.co/DiffSynth-Studio/MiniMax-H3-NF4) | FL2VA/Ref2VA | bitsandbytes NF4（含 pruned） | Python/DiffSynth 低显存；可训 LoRA | 作者称磁盘 offload 可至约 **8 GB** VRAM |
+| unsloth MiniMax-H3-FP8 | torchao INT8/FP8 | Unsloth | 2026-08-07 | [HF](https://huggingface.co/unsloth/MiniMax-H3-FP8) | FL2VA/Ref2VA | INT8 / INT8-ConvRot / FP8 `.pt` | 基于 Comfy pruned_bf16；非 sd.cpp | 端到端峰值有作者自测下降 |
+| coolthor MiniMax-H3-pruned-NVFP4 | NVFP4 | coolthor | 2026-08-04 | [HF](https://huggingface.co/coolthor/MiniMax-H3-pruned-NVFP4)（可能 gated） | FL2VA+Ref2VA | pruned NVFP4 ~11.7 GiB | 双任务 NVFP4 | 5090 峰值约 26.9 GiB（作者） |
+| ModelsLab ref2va-NVFP4 | NVFP4 未剪枝 | ModelsLab | 2026-08-03 | [HF](https://huggingface.co/ModelsLab/MiniMax-H3-ref2va-NVFP4) | Ref2VA | NVFP4 ~38.6 GB | 未剪枝体积更大 | 需大显存/Blackwell |
+| Ar4ikov transformer-W4A16-RTN | W4A16 | Ar4ikov | 2026-08-03 | [HF](https://huggingface.co/Ar4ikov/MiniMax-H3-transformer-W4A16-RTN) | transformer only | AutoRound W4A16 | AdaLN 保持 BF16；66→38 GB 级 | 未做完整画质对比 |
+| FastVideo FastH3 4-step Preview | 蒸馏学生 | FastVideo | 2026-08-27 | [HF](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree) | **仅 T2VA** | 4-step DMD2 + VSA | 少步独立学生模型；preview | 多为多卡示例，非消费级主路径 |
+| WanGP / DiffSynth / SGLang 运行时 | 启动器/框架 | 各团队 | — | [Wan2GP](https://github.com/deepbeepmeep/Wan2GP) 等 | 加载官方或社区权重 | — | 低 VRAM 启动与服务配方 | 视所选权重 |
 
 > HF `createdAt` 来自 Hub API（仓库创建时间），**不等于**官方新闻稿发布日。官方开源公告为 **2026-08-03**。
 
@@ -250,3 +258,89 @@ ControlNet 内存：PAI 卡页写明 Transformer(~62 GB)+TE(~62 GB) 难以整装
 ---
 
 *本手册服务 [minimax-h3-analysis](https://github.com/maodou0512/minimax-h3-analysis) 分析项目，不替代各作者 model card。*
+
+
+## 11. 二次扩写：补充发行详表
+
+以下条目在首版总表之外补全，便于「按名字搜到就能读懂」。
+
+### multimodalart/MiniMax-H3-Pruned
+
+| 字段 | 内容 |
+| --- | --- |
+| 下载 | https://huggingface.co/multimodalart/MiniMax-H3-Pruned |
+| 发布 | multimodalart · 约 2026-08-09 |
+| 特点 | AdaLN 剪枝的 **diffusers** 形态；DiT 分区约 66.28→40.24 GB（参数约 33.14B→20.11B）；TE 截断层 51–63；VAE 仍指向官方 |
+| 优势 | 与 Comfy 剪枝 LoRA 坐标系兼容；适合 ModularPipeline |
+| 硬件 | 作者 H100 offload 示例峰值约 52.7 GB（pruned）vs 65.2 GB（released）——仅该配置 |
+| 注意 | 数值近似重构，非 bit-identical；常需 `trust_remote_code=True` |
+
+### DiffSynth-Studio/MiniMax-H3-NF4
+
+| 字段 | 内容 |
+| --- | --- |
+| 下载 | https://huggingface.co/DiffSynth-Studio/MiniMax-H3-NF4 |
+| 发布 | DiffSynth-Studio · 约 2026-08-04 |
+| 特点 | `bitsandbytes` **NF4**；含 fl2va/ref2va 与 pruned-nf4；TE/VAE 亦有 NF4；支持 LoRA 训练 |
+| 优势 | 面向 DiffSynth/Python 的极低显存路径 |
+| 硬件 | 作者宣称磁盘 offload 可至约 **8 GB** VRAM；训练示例涉及 H20≈48GB / 4090≈24GB |
+| 注意 | processor 等仍可能取自官方仓 |
+
+### unsloth/MiniMax-H3-FP8 与 GGUF 补充
+
+| 发行 | 链接 | 要点 |
+| --- | --- | --- |
+| unsloth GGUF | https://huggingface.co/unsloth/MiniMax-H3-GGUF | pruned Q2–Q8；建议 TE 放 CPU；VAE 取 Comfy-Org |
+| unsloth FP8/INT8 | https://huggingface.co/unsloth/MiniMax-H3-FP8 | `.pt` INT8 / INT8-ConvRot / FP8；源为 Comfy pruned_bf16；**不适用于** sd.cpp |
+| molbal GGUF | https://huggingface.co/molbal/MiniMax-H3-GGUF | Q8_CR/U16G 等需作者指定 ComfyUI-GGUF 节点；U16G 面向约 16GB |
+
+### coolthor / ModelsLab / rockerBOO NVFP4 族
+
+| 发行 | 链接 | 要点 |
+| --- | --- | --- |
+| coolthor pruned-NVFP4 | https://huggingface.co/coolthor/MiniMax-H3-pruned-NVFP4 | FL2VA+Ref2VA；可能 gated；5090 峰值约 26.9 GiB（作者） |
+| ModelsLab ref2va-NVFP4 | https://huggingface.co/ModelsLab/MiniMax-H3-ref2va-NVFP4 | **未剪枝** Ref2VA NVFP4 ~38.6 GB |
+| rockerBOO nvfp4-convrot | https://huggingface.co/rockerBOO/minimax-h3-nvfp4-convrot | 文档较全；推荐 pruned_nvfp4_convrot_int8 等组合 |
+| lilcheaty NVFP4 | https://huggingface.co/lilcheaty/MiniMax-H3-NVFP4 | **仅 Ref2VA**；双重量化有误差累积自述 |
+
+**Blackwell 提示**：NVFP4 在 50 系上原生；Ada/Hopper 上多为仿真，优先 INT8 ConvRot。
+
+### Ar4ikov W4A16-RTN
+
+| 字段 | 内容 |
+| --- | --- |
+| 下载 | https://huggingface.co/Ar4ikov/MiniMax-H3-transformer-W4A16-RTN |
+| 特点 | 仅量化 transformer（AutoRound W4A16 RTN）；AdaLN 保持 BF16；约 66→38 GB |
+| 注意 | 作者未提供完整与 BF16 的视频质量对比 |
+
+### FastVideo FastH3（4-step Preview）
+
+| 字段 | 内容 |
+| --- | --- |
+| 下载 | https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree |
+| 发布 | FastVideo · 约 2026-08-27 |
+| 特点 | 4-step DMD2 + VSA 稀疏；**仅 T2VA** 的蒸馏学生；preview |
+| 硬件 | 公开示例偏多卡服务；不要默认当成 单卡消费级替换 Base |
+| 许可 | 继承 H3 Community License（以卡页为准） |
+
+### 运行时与门户（再次强调）
+
+| 名称 | 链接 | 角色 |
+| --- | --- | --- |
+| SGLang cookbook | https://docs.sglang.io/cookbook/diffusion/MiniMax/MiniMax-H3 | 官方服务配方（含 ModelScope、量化、Turbo、FastH3 等） |
+| vLLM recipes | https://recipes.vllm.ai/MiniMaxAI/MiniMax-H3 | 视频 API / 双 DiT 等 |
+| Wan2GP | https://github.com/deepbeepmeep/Wan2GP | 低 VRAM 启动器与剪枝脚本 |
+| design.minimax.io/h3 | https://design.minimax.io/h3 | 官方开放生态与 FAQ |
+| cybermotaz Qwen3-VL NVFP4 | https://huggingface.co/cybermotaz/Qwen3-VL-32B-Instruct-NVFP4 | Comfy `nvfp4_awq` TE 上游之一 |
+| Sol Engine | https://nvlabs.github.io/Sana/Sol-Engine/H3-OnDevice/ | 不改权重的推理加速 |
+
+### 选用补丁（更新）
+
+| 目标 | 优先 |
+| --- | --- |
+| Diffusers 剪枝 | multimodalart Pruned |
+| 极低显存 Python | DiffSynth NF4 / WanGP |
+| sd.cpp / Unsloth GGUF | unsloth MiniMax-H3-GGUF |
+| 仅要更快的 T2VA 学生模型 | FastH3 Preview（接受质量上限） |
+| Blackwell 再压 DiT | coolthor / lilcheaty / rockerBOO |
+

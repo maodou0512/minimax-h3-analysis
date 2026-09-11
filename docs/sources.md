@@ -28,3 +28,15 @@
 ## 本仓库延伸
 
 - [社区版本手册](community-versions.md) — 开源社区发行版总表
+
+## 社区发行（抽样，完整见 community-versions）
+
+| 资源 | URL |
+| --- | --- |
+| Comfy-Org 重打包 | https://huggingface.co/Comfy-Org/MiniMax-H3 |
+| DiffSynth NF4 | https://huggingface.co/DiffSynth-Studio/MiniMax-H3-NF4 |
+| LightX2V Turbo | https://huggingface.co/lightx2v/Minimax-h3-Turbo |
+| Unsloth GGUF | https://huggingface.co/unsloth/MiniMax-H3-GGUF |
+| FastH3 Preview | https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree |
+| Fun-Controlnet-Union | https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union |
+| awesome-minimax-H3 | https://github.com/wildminder/awesome-minimax-H3 |
