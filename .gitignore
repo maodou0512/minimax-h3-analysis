@@ -8,3 +8,4 @@
 .venv/
 __pycache__/
 MiniMax-H3/
+hf_last3m_categorized.json
