@@ -1,7 +1,7 @@
 # MiniMax H3 原理知识
 
 <p align="center">
-  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.2-2563eb?style=for-the-badge">
+  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.3-2563eb?style=for-the-badge">
   <img alt="知识语言" src="https://img.shields.io/badge/正文-中文-16a34a?style=for-the-badge">
   <img alt="更新频率" src="https://img.shields.io/badge/更新-每小时-f59e0b?style=for-the-badge">
   <img alt="最后修订" src="https://img.shields.io/badge/修订-2026--09--23-64748b?style=for-the-badge">
@@ -349,13 +349,18 @@ flowchart TB
 | 对照项 | MiniMax-H3（本页主线） | MiniMax-H3-Max | 依据 |
 | :---: | --- | --- | :---: |
 | **定位** | 开源通用多模态视频模型；完整 2K 路径依赖托管 IR / Regenerate-2K | fal 后训练的高速变体；平台称生成更快 | [GUIDE][API-GEN] |
+| **生成模式（平台 API）** | 文生 / 首末帧图生 / **参考生**（图·视·音） | **同样**支持文生 / 首末帧图生 / **参考生**（图·视·音）——「能参考」≠ 同一条官方原理栈 | [API-GEN][GUIDE] |
+| **Context-IR 端点** | `/v2/h3_context_ir` 的 `model` **仅** `MiniMax-H3` | **不在**该端点可选模型枚举中；不能把 H3-Max 当成「带官方 IR 的 H3 加速版」 | [API-IR] |
 | **分辨率** | `768P` / `2K` | `480P` / `768P`（**不支持 2K**） | [API-GEN][GUIDE] |
 | **时长** | 4–15 秒 | 5–15 秒（**不支持 4 秒**） | [API-GEN][GUIDE] |
 | **与本页原理关系** | Contextual Omni / VAE / Omni-Transformer / In-Context 2K 的主叙事对象 | 后训练 + 推理优化产物；**不应**把速度收益写成 H3 Tech Report 级架构结论 | [GUIDE][API-GEN] |
 | **额外字段** | — | 可有 `extra.prompt_expansion_mode`（`disabled` / `balanced` 默认 / `quality`） | [API-GEN] |
 
-**依据**：[GUIDE] · [API-GEN]  
-**原地址**：[视频生成指南](https://platform.minimax.io/docs/guides/video-generation) · [创建视频生成任务](https://platform.minimax.io/docs/api-reference/video-generation-v2-create)
+> [!NOTE]
+> **边界再钉一句**：Open Platform 已写明 H3-Max **支持** reference-to-video；但 **2K In-Context Regeneration**、**Context-IR 托管流水线**仍锚定在 `MiniMax-H3` 主线。读二手对比文时，勿把「某聚合路由不支持参考」误当成 MiniMax 一手 API 结论。
+
+**依据**：[GUIDE] · [API-GEN] · [API-IR]  
+**原地址**：[视频生成指南](https://platform.minimax.io/docs/guides/video-generation) · [创建视频生成任务](https://platform.minimax.io/docs/api-reference/video-generation-v2-create) · [Context-IR](https://platform.minimax.io/docs/api-reference/video-generation-v2-h3-context-ir)
 
 <details>
 <summary><b>原文摘录（英文 → 对照）</b></summary>
@@ -365,10 +370,15 @@ flowchart TB
 
 **中文对照**：MiniMax H3 Max 由 MiniMax 与 fal.ai 联合发布；是 fal.ai 在 MiniMax H3 上后训练、面向高速生成优化的视频模型。主流输出为 480P 与 768P，生成速度快于 MiniMax H3。
 
-> `MiniMax-H3-Max`: the fast generation variant… `480P` / `768P` resolution, `2K` is not supported; 5–15s duration.  
+> `MiniMax-H3-Max`: the fast generation variant. Supports text-to-video, image-to-video (first / last frame), and reference-to-video (reference image / video / audio); `480P` / `768P` resolution, `2K` is not supported; 5–15s duration.  
 > —— [API-GEN](https://platform.minimax.io/docs/api-reference/video-generation-v2-create)
 
-**中文对照**：`MiniMax-H3-Max` 为快速生成变体……分辨率 `480P` / `768P`，**不支持 2K**；时长 5–15 秒。
+**中文对照**：`MiniMax-H3-Max` 为快速生成变体。支持文生视频、图生视频（首/末帧）以及**参考生视频**（参考图 / 视 / 音）；分辨率 `480P` / `768P`，**不支持 2K**；时长 5–15 秒。
+
+> Model name. Currently available: `MiniMax-H3`.  
+> —— [API-IR](https://platform.minimax.io/docs/api-reference/video-generation-v2-h3-context-ir)（`model` 枚举）
+
+**中文对照**：Context-IR 创建任务当前可选模型**仅** `MiniMax-H3`。
 
 </details>
 
@@ -402,7 +412,7 @@ flowchart TB
 | 1 | 把 H3 当成「只有一个扩散 UNet」 | 实际是 Encoder + 双 VAE + Omni-Transformer 联合系统，音视频同前向 | [OSS] |
 | 2 | 以为开源 = 完整官方 2K 体验 | IR 与 2K 再生成仍托管 | [OSS] |
 | 3 | 用传统超分替代 Regenerate-2K 并声称等价 | 官方路径强调上下文再利用；API 亦非通用超分 | [BLOG][API-R2K] |
-| 4 | 把 Turbo / FastH3 / **H3-Max** 当成「同一原理的无损加速」或完整 2K 官方路径 | H3-Max 是 fal 后训练高速变体（平台并列模型）；**无 2K**、时长与分辨率约束也不同；社区 Turbo 更勿与一手原理混谈 | [GUIDE][API-GEN][BLOG][OSS] |
+| 4 | 把 Turbo / FastH3 / **H3-Max** 当成「同一原理的无损加速」或完整 2K / Context-IR 官方路径 | H3-Max 是 fal 后训练高速变体（平台并列模型）；API 虽也支持参考生，但**无 2K**、**不进** Context-IR 端点，时长/分辨率亦不同；社区 Turbo 更勿与一手原理混谈 | [GUIDE][API-GEN][API-IR][BLOG][OSS] |
 | 5 | 把社区量化剪枝当成架构论文结论 | 多为部署优化；AdaLN 可缓存见开源公告 | [OSS] |
 | 6 | 以为首末帧与多参考可在一次请求里混用 | API 明确两套角色互斥，不能混装 | [API-IR][API-GEN] |
 
@@ -441,6 +451,7 @@ flowchart TB
 | AdaLN 缓存与社区剪枝的形式化等价条件 | 社区经验为主 | 对照 [OSS] |
 | In-context 2K 与传统超分的系统消融 | 官方定性；缺公开定量表 | [BLOG][OSS] |
 | H3-Max 后训练配方 / 与 Base bit 级差异 | 平台仅定性「fal 后训练 + 高速」；细节未作为 MiniMax Tech Report 发布 | [GUIDE][API-GEN] |
+| H3-Max 参考生与 H3 Ref2VA / Context-IR 质量差 | API 已确认 Max 支持 reference-to-video，但缺公开消融；勿外推为「同 IR 质量」 | [API-GEN][API-IR][GUIDE] |
 
 ---
 
@@ -453,6 +464,7 @@ flowchart TB
 | **v1.1.0** | 2026-09-23 | **阅读版式升级**：徽章区分版本/语言/频率；GitHub 彩色提示块区分重点；目录与折叠「原文摘录」；外文一律中文陈述并附原地址 | 排版规范（内容仍锚定一手 URL） |
 | **v1.1.1** | 2026-09-23 | 澄清 H3-Encoder 使用 Qwen3-VL-32B **第 50 层** hidden；补 Regenerate-2K **双输入路径**与 768P 源视频规格摘要；I/O 补 11 种稳定对话语言；开放问题表记录博客「下一步」与 Tech Report 仍未发布 | [OSS][HF][API-R2K][BLOG] |
 | **v1.1.2** | 2026-09-23 | 补 **MiniMax-H3-Max** 与本页原理栈边界（联合 fal 后训练、无 2K、时长/分辨率差异、`prompt_expansion_mode`）；澄清首末帧与参考模式互斥、提示长度上限、Ref2VA 混合文件 ≤12；来源表增 [API-GEN]；Tech Report 仍未发布 | [GUIDE][API-GEN][API-IR][API-R2K] |
+| **v1.1.3** | 2026-09-23 | 澄清 **H3-Max 在平台 API 亦支持参考生**（图/视/音），但 **Context-IR 端点仍仅 H3**、仍无 2K；补原文摘录与误区/开放问题，避免被二手「Max 无参考」叙述误导；Tech Report 仍未发布 | [API-GEN][GUIDE][API-IR] |
 
 <!--
 每小时例行维护格式（必须遵守）：
