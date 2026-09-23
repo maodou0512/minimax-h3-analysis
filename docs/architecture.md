@@ -1,3 +1,5 @@
+> 设计动机与原理地图见 [`principles.md`](principles.md)。
+
 # MiniMax H3 架构分析
 
 依据：[Open General Intelligence: MiniMax H3 Is Now Open Source](https://www.minimax.io/news/minimax-h3-open-source)。

@@ -4,16 +4,18 @@
 
 本仓库**不是**官方推理/训练代码，也**不托管**模型权重。你可以用它快速搞清：
 
-1. H3 系统怎么拆（开源 Base vs 托管 IR / 2K）  
-2. 本地怎么部署、硬件大概怎么选  
-3. Hugging Face / 社区上有哪些量化、Turbo、ControlNet、FastH3 等发行，各自适合谁  
+1. H3 **原理**与设计动机（任务泛化、VAE、Omni-Transformer、In-Context 2K）  
+2. H3 系统怎么拆（开源 Base vs 托管 IR / 2K）  
+3. 本地怎么部署、硬件大概怎么选  
+4. Hugging Face / 社区有哪些量化、Turbo、ControlNet、FastH3 等发行  
 
 > 主要依据：[官方开源公告](https://www.minimax.io/news/minimax-h3-open-source)（2026-08-03）、[`MiniMaxAI/MiniMax-H3`](https://huggingface.co/MiniMaxAI/MiniMax-H3)、[H3 Open 资源页](https://design.minimax.io/h3)、Hugging Face Hub API 快照。未核实的数字会标明，**不编造榜单分数**。
 
-## 先看这两份（社区版本）
+## 先看这几份
 
 | 文档 | 适合谁 | 内容 |
 | --- | --- | --- |
+| **[H3 原理知识](docs/principles.md)** | 想搞懂为什么这样设计 | 任务泛化、Contextual Omni Representation、VAE、Omni-Transformer、In-Context 2K；定期完善 |
 | **[社区版本手册](docs/community-versions.md)** | 要选型、要硬件建议 | 官方 Base、Comfy-Org、GGUF、Turbo、NF4、NVFP4、ControlNet、FastH3 等**代表性发行**详解 + 硬件档位 |
 | **[HF 近 3 个月全量索引](docs/hf-last-3-months.md)** | 要扫全 Hub | **2026-06-11 → 2026-09-11** 共 **315** 个相关仓，按 15 类列出（创建日 / 下载量 / 链接） |
 
@@ -36,6 +38,7 @@ minimax-h3-analysis/
 ├── NOTICE / CONTRIBUTING.md
 ├── hf_last3m.json            # HF 近 3 个月 API 快照（可复现索引）
 └── docs/
+    ├── principles.md         # 原理知识（定期完善）
     ├── community-versions.md # 社区发行精选手册
     ├── hf-last-3-months.md   # Hub 全量分类索引
     ├── architecture.md       # 架构
@@ -115,6 +118,7 @@ sglang serve   --model-path MiniMaxAI/MiniMax-H3   --num-gpus 4   --ulysses-degr
 
 | 文档 | 内容 |
 | --- | --- |
+| [H3 原理知识](docs/principles.md) | 设计动机与关键机制；知识更新日志 |
 | [社区版本手册](docs/community-versions.md) | 精选开源/社区发行：下载、发布方、特点、硬件 |
 | [HF 近 3 个月全量索引](docs/hf-last-3-months.md) | Hub 上 315 仓分类全表 |
 | [架构分析](docs/architecture.md) | Encoder / VAE / Transformer / 2K |
@@ -136,4 +140,4 @@ sglang serve   --model-path MiniMaxAI/MiniMax-H3   --num-gpus 4   --ulysses-degr
 
 **MiniMax H3** (~33B) generates **video + native stereo audio** in one pass (4–15s, 24fps). Open weights cover **H3-Base** (**FL2VA** / **Ref2VA**) at ~768p; **Context-IR** and **Regenerate-2K** stay hosted.
 
-This repo is **docs-only**: architecture notes, deployment pointers, a curated [community release handbook](docs/community-versions.md), and a [full Hugging Face index for the last ~3 months](docs/hf-last-3-months.md) (315 repos). No model weights are hosted here.
+This repo is **docs-only**: [principles](docs/principles.md), architecture notes, deployment pointers, a curated [community release handbook](docs/community-versions.md), and a [full Hugging Face index for the last ~3 months](docs/hf-last-3-months.md) (315 repos). No model weights are hosted here.
