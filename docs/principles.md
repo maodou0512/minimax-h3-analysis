@@ -1,7 +1,7 @@
 # MiniMax H3 原理知识
 
 <p align="center">
-  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.0-2563eb?style=for-the-badge">
+  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.1-2563eb?style=for-the-badge">
   <img alt="知识语言" src="https://img.shields.io/badge/正文-中文-16a34a?style=for-the-badge">
   <img alt="更新频率" src="https://img.shields.io/badge/更新-每小时-f59e0b?style=for-the-badge">
   <img alt="最后修订" src="https://img.shields.io/badge/修订-2026--09--23-64748b?style=for-the-badge">
@@ -241,7 +241,7 @@
 | **规模** | 约 **33B** 稠密单流 Transformer；约 **13B** 在 AdaLN 相关分支；AdaLN 调制可预计算缓存 → 纯推理可不加载对应参数；完整权重仍发布以便微调 | [OSS] |
 | **模态结构** | Attention / FFN **无**按模态拆分；模态专用主要在 I/O 与 AdaLN | [OSS] |
 | **位置编码** | **MM-RoPE**：三维多模态旋转位置编码，覆盖 `(t, h, w)` | [OSS] |
-| **输入编码** | 文本经 H3-Encoder（基于 **Qwen3-VL-32B** 深层 hidden）；视觉 = Encoder + VisualVAE；音频 = AudioVAE；再打包成统一序列 | [OSS] |
+| **输入编码** | 文本经 H3-Encoder（完整加载 **Qwen3-VL-32B** 预训练权重，向 Omni-Transformer 提供其**第 50 层** hidden states）；视觉 = Encoder + VisualVAE；音频 = AudioVAE；再打包成统一序列 | [OSS][HF] |
 | **输出** | 联合预测视频与音频 latent，再分别解码 | [OSS] |
 | **稀疏注意力** | 训练后期引入原生 sparse attention；**首发开源推理为 full attention**，稀疏实现后续单独发布 | [OSS] |
 | **发布权重** | **CFG 蒸馏**后的 Omni Transformer（以卡页 / 公告为准） | [OSS][HF] |
@@ -280,9 +280,10 @@
 | 产品约束 | 中文说明 | 依据 |
 | :---: | --- | :---: |
 | **开源** | **H3-Regenerate-2K** 因系统复杂**尚未开源**，提供 API | [OSS] |
-| **不是通用超分** | 只接受符合 MiniMax-H3 **768P 输出规格**的源视频再生成到 2K | [API-R2K] |
-| **最终提示** | 请求中的文本必须是生成 768P 时**实际送给模型**的最终 prompt，**不是** Context-IR 处理前的原始用户提示；参考图/视/音也须一致 | [API-R2K][GUIDE] |
-| **输入形态** | 内容中恰好一项源视频，且角色为 base / 源视频角色（以 API 文档字段名为准） | [API-R2K] |
+| **不是通用超分** | 只接受符合 MiniMax-H3 **768P 输出规格**的源视频再生成到 2K；对任意视频做通用放大**不在**该接口能力内 | [API-R2K] |
+| **两种合法输入（二选一）** | ① `source_task_id`：复用本账号已成功的 `/v2/video_generation` 任务输出（需白名单，且任务仍在约 7 天可查询窗口内）；② `content` 中恰好一项 `role=base_video` 的源视频，并附上生成该 768P 时**实际**送入模型的文本与参考素材 | [API-R2K] |
+| **最终提示** | `base_video` 模式下，文本必须是生成 768P 时**实际送给模型**的最终 prompt，**不是** Context-IR 处理前的原始用户提示；参考图/视/音也须一致 | [API-R2K][GUIDE] |
+| **768P 源视频规格（摘要）** | 必须有音轨；**24 fps**；宽/高均可被 **32** 整除；面积约在 **768×768～768×1344**；总帧数 **107–362**（步长 17，约 4–15 秒）——这些规格把「什么叫官方 768P 输出」钉死，也解释了为何不能拿任意片源当超分输入 | [API-R2K] |
 
 > [!WARNING]
 > **原理含义**：2K 质量强依赖「低分结果 + 原（最终）上下文」。只放大像素、丢掉上下文，就偏离官方路径。
@@ -350,7 +351,7 @@ flowchart TB
 | **FL2VA** | 文生 / 首末帧：0–2 张图（无图 = 文生视频；单图 = 首或末帧；双图 = 首末帧） | [OSS] |
 | **Ref2VA** | 多参考：图 ≤9；视频 ≤3 段且各约 2–15s、总时长 ≤15s；音频 ≤3 段（须伴随图/视，不能单独作唯一输入）；全类型文件总数有上限（以公告为准） | [OSS] |
 
-**系统级 I/O 摘要（中文）**：输出时长约 **4–15s**；短边默认 **768**；帧率 **24 FPS**；音频约 **32 kHz 立体声**；多种画幅比。[OSS]
+**系统级 I/O 摘要（中文）**：输出时长约 **4–15s**；短边默认 **768**；帧率 **24 FPS**；音频约 **32 kHz 立体声**；多种画幅比；对话语言稳定支持 **11** 种（阿拉伯语、中文、英语、法语、德语、意大利语、日语、韩语、葡萄牙语、俄语、西班牙语；其余语言程度不一）。[OSS][HF]
 
 详见 [`variants.md`](variants.md)。
 
@@ -392,10 +393,11 @@ flowchart TB
 
 | 问题 | 状态 | 跟踪来源 |
 | --- | :---: | :---: |
-| Tech Report 全文与训练配方细节 | 待发布 | [BLOG] |
-| Sparse attention 开源时间表与质量差 | 未公开完整细节 | [OSS] |
+| Tech Report 全文与训练配方细节 | 待发布（博客仍写 *soon*；本轮复查未见独立报告页 / PDF） | [BLOG] |
+| Sparse attention 开源时间表与质量差 | 未公开完整细节；首发开源推理仍为 full attention | [OSS] |
 | Context-IR 内部模型清单与 100K→4K 蒸馏精确流程 | 博客摘要级 | [BLOG] |
 | Mixing ratio、理解/生成分离训练的具体实现 | 待报告 | [BLOG] |
+| 下一代公开方向（非细节）：融合 M 系列理解能力、扩大模型规模、推更高分辨率与视觉保真 | 博客「What's Next」定性；无时间表 | [BLOG] |
 | AdaLN 缓存与社区剪枝的形式化等价条件 | 社区经验为主 | 对照 [OSS] |
 | In-context 2K 与传统超分的系统消融 | 官方定性；缺公开定量表 | [BLOG][OSS] |
 
@@ -408,6 +410,7 @@ flowchart TB
 | **v1.0.0** | 2026-09-23 | 初版：建立原理板块（任务泛化、Omni Representation、VAE、Omni-Transformer、In-Context Regeneration、开源边界与误区） | [BLOG][OSS] |
 | **v1.0.1** | 2026-09-23 | 增加来源总表与正文逐条标注；补 Context-IR / Regeneration API 约束；补 FL2VA/Ref2VA 与 I/O 摘要；维护改为每小时 | [BLOG][OSS][API-IR][API-R2K][GUIDE][HF] |
 | **v1.1.0** | 2026-09-23 | **阅读版式升级**：徽章区分版本/语言/频率；GitHub 彩色提示块区分重点；目录与折叠「原文摘录」；外文一律中文陈述并附原地址 | 排版规范（内容仍锚定一手 URL） |
+| **v1.1.1** | 2026-09-23 | 澄清 H3-Encoder 使用 Qwen3-VL-32B **第 50 层** hidden；补 Regenerate-2K **双输入路径**与 768P 源视频规格摘要；I/O 补 11 种稳定对话语言；开放问题表记录博客「下一步」与 Tech Report 仍未发布 | [OSS][HF][API-R2K][BLOG] |
 
 <!--
 每小时例行维护格式（必须遵守）：
