@@ -1,10 +1,10 @@
 # MiniMax H3 原理知识
 
 <p align="center">
-  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.3-2563eb?style=for-the-badge">
+  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.4-2563eb?style=for-the-badge">
   <img alt="知识语言" src="https://img.shields.io/badge/正文-中文-16a34a?style=for-the-badge">
   <img alt="更新频率" src="https://img.shields.io/badge/更新-每小时-f59e0b?style=for-the-badge">
-  <img alt="最后修订" src="https://img.shields.io/badge/修订-2026--09--23-64748b?style=for-the-badge">
+  <img alt="最后修订" src="https://img.shields.io/badge/修订-2026--09--29-64748b?style=for-the-badge">
 </p>
 
 > [!IMPORTANT]
@@ -51,6 +51,7 @@
 | **[API-GEN]** | Open Platform：创建视频生成任务（含 H3 / H3-Max 模型字段） | *Create Video Generation Task*（英文） | API 参考 | [打开原文](https://platform.minimax.io/docs/api-reference/video-generation-v2-create) |
 | **[GUIDE]** | Open Platform：视频生成指南（H3 与 H3 Max） | *Video Generation guides*（英文） | 产品指南 | [打开原文](https://platform.minimax.io/docs/guides/video-generation) |
 | **[HF]** | Hugging Face：`MiniMaxAI/MiniMax-H3` 模型卡 | Model card / repo docs（英文为主） | Hub | [打开原文](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
+| **[HF-PG]** | Hugging Face：官方 Prompting Guidance（IR 表面格式） | *Video Prompt Writing Guide* / *Full-Reference Mode Rewrite Output Format Guide*（英文） | Hub 文档 | [base 指南](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md) · [ref 指南](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_ref_en.md) · [skills](https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills) |
 | **[TR]** | H3 技术报告 | *H3 Technical Report*（预告） | **待发布** | — |
 
 社区二手材料若引用，会单独写明并降权，不与上表混排。
@@ -165,10 +166,45 @@
 | **角色** | 自由形式多模态输入的预处理与编排：指令解析、跨模态关联、时间理解、复杂逻辑 | [OSS][API-IR] |
 | **输出** | 序列化为 Base 更易消费的 **Context Intermediate Representation（上下文中间表示）**——增强后的结构化提示 | [OSS][API-IR] |
 | **语义补全** | 在不偏离用户意图的前提下，可补充欠定语义 | [OSS][API-IR] |
-| **开源边界** | 多阶段托管流水线 → **未随 Base 开源**；提供 API，并鼓励按 Prompting Guidance 自建预处理 | [OSS] |
+| **开源边界** | 多阶段托管流水线 → **未随 Base 开源**；提供 API，并鼓励按 Prompting Guidance / 官方 skills 自建预处理（对齐公开 IR 表面字段） | [OSS][HF-PG] |
 | **API 用法** | 异步任务；成功后取出增强提示，再交给生成 | [API-IR][GUIDE] |
 | **输入互斥** | 首末帧模式（`first_frame` / `last_frame`）与参考模式（`reference_image` / `reference_video` / `reference_audio`）**不可混用** | [API-IR][API-GEN] |
 | **提示长度** | Context-IR / 生成请求中单条 `text` 最长约 **7000** 字符；再生成（`base_video`）路径的最终 prompt 上限约 **40000** 字符 | [API-IR][API-GEN][API-R2K] |
+
+> [!TIP]
+> **Context Intermediate Representation 的公开表面格式**（不是内部实现清单）  
+> 官方 Prompting Guidance / Hub 示例与 API 返回的增强提示，把 IR 表现为**带固定字段名的结构化英文提示**。这是社区自建预处理应对齐的契约；**不等于**已公开 Context-IR 多阶段托管模型清单（仍待 Tech Report）。
+
+| 模式 | 公开字段顺序（原文标识符） | 中文要点 | 依据 |
+| :---: | --- | --- | :---: |
+| **Base**（T2VA / I2VA / FL2VA / L2VA） | 可选首行关键帧对齐指令 → `integrated_multimodal_description` → `overall_soundscape` → `non_diegetic_music` | 三核心字段：时间线上的视听一体描述；全片环境/动作声；观众可闻、角色不可闻的配乐 | [HF-PG][API-IR][HF] |
+| **Ref2VA**（全能参考） | `subject_definitions` → `summary` → `retention_analysis` → `detailed_description` → `overall_soundscape` → `non_diegetic_music` | 先定义参考标签与保留/迁移关系，再用 `detailed_description` 承担时间线主叙述（对应 Base 的 integrated 字段角色） | [HF-PG][HF] |
+
+| 字段（原文） | 中文说明 |
+| --- | --- |
+| `integrated_multimodal_description` | 沿时间线描述画面、动作、分镜、说话人、对白/演唱与画内同步声 |
+| `overall_soundscape` | 全片环境声、物理动作声、非言语人声等氛围层 |
+| `non_diegetic_music` | 背景配乐（角色听不见、观众可听见）；无配乐时可写 `N/A` |
+| `subject_definitions` / `summary` / `retention_analysis` | 参考模式下：标签定义、任务摘要、各参考素材的保留/迁移/复用关系 |
+| `detailed_description` | 参考模式下的主叙述字段（作用对应 Base 的 `integrated_multimodal_description`） |
+
+**原地址**：[base Prompting Guidance](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md) · [ref Prompting Guidance](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_ref_en.md) · [官方 skills](https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills) · [Context-IR API](https://platform.minimax.io/docs/api-reference/video-generation-v2-h3-context-ir)
+
+<details>
+<summary><b>原文摘录（英文 → 对照）</b></summary>
+
+> Part Two Contains the Three Core Fields: `integrated_multimodal_description` … `overall_soundscape` … `non_diegetic_music`.  
+> —— [HF-PG base](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md)
+
+**中文对照**：第二部分为三核心字段：`integrated_multimodal_description`、`overall_soundscape`、`non_diegetic_music`。
+
+> A complete rewrite output consists of six sections in the following order: `subject_definitions`, `summary`, `retention_analysis`, `detailed_description`, `overall_soundscape`, and `non_diegetic_music`.  
+> —— [HF-PG ref](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_ref_en.md)
+
+**中文对照**：完整参考模式改写输出按以下六节顺序：`subject_definitions`、`summary`、`retention_analysis`、`detailed_description`、`overall_soundscape`、`non_diegetic_music`。
+
+</details>
+
 
 > [!WARNING]
 > **原理含义**：本地只跑 Base，等于在「跳过或自行近似」这一层表示学习——质量差距往往出在这里，而不只是采样步数。  
@@ -445,7 +481,7 @@ flowchart TB
 | --- | :---: | :---: |
 | Tech Report 全文与训练配方细节 | 待发布（博客仍写 *soon*；本轮复查未见独立报告页 / PDF） | [BLOG] |
 | Sparse attention 开源时间表与质量差 | 未公开完整细节；首发开源推理仍为 full attention | [OSS] |
-| Context-IR 内部模型清单与 100K→4K 蒸馏精确流程 | 博客摘要级 | [BLOG] |
+| Context-IR 内部模型清单与 100K→4K 蒸馏精确流程 | 博客摘要级；**表面字段**已由 [HF-PG] 公开，内部多阶段模型仍未公开 | [BLOG][HF-PG] |
 | Mixing ratio、理解/生成分离训练的具体实现 | 待报告 | [BLOG] |
 | 下一代公开方向（非细节）：融合 M 系列理解能力、扩大模型规模、推更高分辨率与视觉保真 | 博客「What's Next」定性；无时间表 | [BLOG] |
 | AdaLN 缓存与社区剪枝的形式化等价条件 | 社区经验为主 | 对照 [OSS] |
@@ -465,6 +501,7 @@ flowchart TB
 | **v1.1.1** | 2026-09-23 | 澄清 H3-Encoder 使用 Qwen3-VL-32B **第 50 层** hidden；补 Regenerate-2K **双输入路径**与 768P 源视频规格摘要；I/O 补 11 种稳定对话语言；开放问题表记录博客「下一步」与 Tech Report 仍未发布 | [OSS][HF][API-R2K][BLOG] |
 | **v1.1.2** | 2026-09-23 | 补 **MiniMax-H3-Max** 与本页原理栈边界（联合 fal 后训练、无 2K、时长/分辨率差异、`prompt_expansion_mode`）；澄清首末帧与参考模式互斥、提示长度上限、Ref2VA 混合文件 ≤12；来源表增 [API-GEN]；Tech Report 仍未发布 | [GUIDE][API-GEN][API-IR][API-R2K] |
 | **v1.1.3** | 2026-09-23 | 澄清 **H3-Max 在平台 API 亦支持参考生**（图/视/音），但 **Context-IR 端点仍仅 H3**、仍无 2K；补原文摘录与误区/开放问题，避免被二手「Max 无参考」叙述误导；Tech Report 仍未发布 | [API-GEN][GUIDE][API-IR] |
+| **v1.1.4** | 2026-09-29 | 补 Context Intermediate Representation **公开表面格式**：Base 三核心字段与 Ref2VA 六节顺序；来源表增 [HF-PG]（Prompting Guidance / skills）；开放问题区分表面契约与内部流水线；Tech Report 仍未发布 | [HF-PG][HF][API-IR][OSS] |
 
 <!--
 每小时例行维护格式（必须遵守）：
