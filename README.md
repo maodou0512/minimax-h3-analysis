@@ -17,7 +17,7 @@
 | --- | --- | --- |
 | **[H3 原理知识](docs/principles.md)** | 想搞懂为什么这样设计 | 任务泛化、Contextual Omni Representation、VAE、Omni-Transformer、In-Context 2K；定期完善 |
 | **[社区版本手册](docs/community-versions.md)** | 要选型、要硬件建议 | 官方 Base、Comfy-Org、GGUF、Turbo、NF4、NVFP4、ControlNet、FastH3 等**代表性发行**详解 + 硬件档位 |
-| **[HF 近 3 个月全量索引](docs/hf-last-3-months.md)** | 要扫全 Hub | **2026-06-11 → 2026-09-11** 共 **315** 个相关仓，按 15 类列出（创建日 / 下载量 / 链接） |
+| **[HF 近 3 个月全量索引](docs/hf-last-3-months.md)** | 要扫全 Hub | **2026-06-29 → 2026-09-29** 共 **1035** 个相关仓，按 15 类列出（创建日 / 下载量 / 链接） |
 
 **一分钟选型（摘要）**
 
@@ -120,7 +120,7 @@ sglang serve   --model-path MiniMaxAI/MiniMax-H3   --num-gpus 4   --ulysses-degr
 | --- | --- |
 | [H3 原理知识](docs/principles.md) | 设计动机与关键机制；知识更新日志 |
 | [社区版本手册](docs/community-versions.md) | 精选开源/社区发行：下载、发布方、特点、硬件 |
-| [HF 近 3 个月全量索引](docs/hf-last-3-months.md) | Hub 上 315 仓分类全表 |
+| [HF 近 3 个月全量索引](docs/hf-last-3-months.md) | Hub 上 1035 仓分类全表 |
 | [架构分析](docs/architecture.md) | Encoder / VAE / Transformer / 2K |
 | [模型变体](docs/variants.md) | FL2VA vs Ref2VA |
 | [能力与提示](docs/capabilities.md) | I/O、Context-IR、护栏 |
@@ -140,4 +140,4 @@ sglang serve   --model-path MiniMaxAI/MiniMax-H3   --num-gpus 4   --ulysses-degr
 
 **MiniMax H3** (~33B) generates **video + native stereo audio** in one pass (4–15s, 24fps). Open weights cover **H3-Base** (**FL2VA** / **Ref2VA**) at ~768p; **Context-IR** and **Regenerate-2K** stay hosted.
 
-This repo is **docs-only**: [principles](docs/principles.md), architecture notes, deployment pointers, a curated [community release handbook](docs/community-versions.md), and a [full Hugging Face index for the last ~3 months](docs/hf-last-3-months.md) (315 repos). No model weights are hosted here.
+This repo is **docs-only**: [principles](docs/principles.md), architecture notes, deployment pointers, a curated [community release handbook](docs/community-versions.md), and a [full Hugging Face index for the last ~3 months](docs/hf-last-3-months.md) (1035 repos, 2026-06-29 → 2026-09-29). No model weights are hosted here.

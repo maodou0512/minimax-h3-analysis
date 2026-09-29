@@ -1,7 +1,7 @@
 # MiniMax H3 开源社区版本手册
 
 > 目标：用一份文档快速看清「有哪些开源/社区发行版、谁发的、怎么下、适合什么硬件、各自优缺点」。  
-> 整理日期：2026-09-11（同日二次扩写）。社区量化与 VRAM 数字变化很快，**以各仓库 model card 为准**；本页未写死的字段标为「未公开/社区报告」。  
+> 整理日期：2026-09-11（同日二次扩写）；**2026-09-29 周更**（新增代表性发行见 [§12](#12-2026-09-29-周更新增代表性发行)）。社区量化与 VRAM 数字变化很快，**以各仓库 model card 为准**；本页未写死的字段标为「未公开/社区报告」。  
 > **不会编造榜单分数**。许可统一注意：上游多为 [MiniMax H3 Community License](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE)（含地域与商业门槛）；部分 Turbo/LoRA 标注 Apache-2.0，使用前请逐仓核对。
 
 ## 0. 先分清三层
@@ -22,7 +22,9 @@
 | ComfyUI 工作站，要质量+速度平衡 | **Comfy-Org/MiniMax-H3** 的 `pruned_int8_convrot` + `nvfp4_awq` 文本编码器 |
 | 显存吃紧（12–16 GB） | GGUF（Abiray / unsloth 等）或 pruned INT8 + Turbo 4/8 step |
 | 只要更快出片（可接受音质损失） | **lightx2v** 或 **larryvrh/drbaph** Turbo LoRA |
-| 需要线稿/深度/姿态控视频、局部重绘 | **alibaba-pai Fun-Controlnet-Union** |
+| 需要线稿/深度/姿态控视频、局部重绘 | **alibaba-pai Fun-Controlnet-Union-2.0**（8 种条件；v1 仍可用，配置不可混用） |
+| 只要更快的 T2VA 学生模型 | **FastVideo FastH3 8-Step V2**（ComfyUI 用 `FastVideo/FastVideo-FastH3-Comfy`） |
+| 少步 LoRA 且要覆盖 t2va/fl2va/ref2va | **Video Rebirth HyperFlow**（8-step）或 **TaoMate-H3**（3-step，目前仅 T2AV） |
 | Blackwell（50 系）想压显存 | 社区 **NVFP4** 扩散包（非 Blackwell 上多为仿真，优先 INT8） |
 
 ## 2. 总览对照表
@@ -54,6 +56,16 @@
 | ModelsLab ref2va-NVFP4 | NVFP4 未剪枝 | ModelsLab | 2026-08-03 | [HF](https://huggingface.co/ModelsLab/MiniMax-H3-ref2va-NVFP4) | Ref2VA | NVFP4 ~38.6 GB | 未剪枝体积更大 | 需大显存/Blackwell |
 | Ar4ikov transformer-W4A16-RTN | W4A16 | Ar4ikov | 2026-08-03 | [HF](https://huggingface.co/Ar4ikov/MiniMax-H3-transformer-W4A16-RTN) | transformer only | AutoRound W4A16 | AdaLN 保持 BF16；66→38 GB 级 | 未做完整画质对比 |
 | FastVideo FastH3 4-step Preview | 蒸馏学生 | FastVideo | 2026-08-27 | [HF](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree) | **仅 T2VA** | 4-step DMD2 + VSA | 少步独立学生模型；preview | 多为多卡示例，非消费级主路径 |
+| FastVideo FastH3 8-Step V2 | 蒸馏学生 | FastVideo | 2026-09-04 | [HF](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2) · [Comfy 重打包](https://huggingface.co/FastVideo/FastVideo-FastH3-Comfy) | **仅 T2VA** | 8-step DMD2（data-free）+ VSA-H3 80% 稀疏 | 取代 4-step Preview 成为 FastH3 主线；需 VSA-H3 后端，scheduler shift=10 | 作者测试默认 **4×B200**；GPU 数需整除 56 个注意力头；消费级 VRAM 未公开 |
+| alibaba-pai Fun-Controlnet-Union-2.0 | ControlNet | 阿里 PAI / VideoX-Fun | 2026-09-22 | [HF](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0) | V2V 控制+重绘 | 控制分支 ~13.5 GB（10 blocks） | 8 种条件（新增 Scribble/Layout/Gray）；`post_norm` 重绘；须用 2.0 专用 yaml | 需再加载完整 Base；VRAM 未公开 |
+| TaoMate-H3 | 3-step LoRA / 流式运行时 | 阿里 TaoLive AIGC | 2026-09-07 | [HF](https://huggingface.co/TaoLiveAIGC/TaoMate-H3) · [GitHub](https://github.com/TaoLiveAIGC/TaoMate-H3) | T2AV（FL2AV 待发布） | LoRA | 低延迟分块流式音视频；480p/768p/1080p；社区有 ComfyUI 转换版 | 官方：单节点 4 或 8 GPU |
+| Video Rebirth HyperFlow | 8-step 加速 LoRA | Video Rebirth | 2026-09-17 | [HF](https://huggingface.co/videorebirth/hyperflow) · [Comfy 节点权重](https://huggingface.co/drbaph/Hyperflow-Comfyui) | t2va / fl2va / ref2va | LoRA | data-free flow 自蒸馏；49→8 次前向；走官方 diffusers Modular Pipeline | 叠在 Base 上；VRAM 未公开 |
+| Veda 稀疏注意力预测器（Preview） | 注意力加速插件 | Veda-Sparse | 2026-09-25 | [HF](https://huggingface.co/Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview) | T2VA 8 NFE | fp8 预测器（275M 参数） | 块稀疏注意力，10% keep；preview 仅在 5.17 s 片段上训练 | 作者文档覆盖 Ada/Hopper/Blackwell；VRAM 未公开 |
+| QuantFunc 4bit | INT4（SVDQuant 系） | QuantFunc | 2026-09-28 | [HF](https://huggingface.co/QuantFunc/Minimax-H3-Quantfunc-4bit) | FL2VA 等 | INT4 | 作者自测 FL2VA 对 BF16 约 23.7 dB PSNR；4090 单步耗时对比见卡页 | VRAM 未公开 |
+| Abiray MiniMax-H3-Singularity-GGUF | 微调的 GGUF | Abiray | 2026-09-18 | [HF](https://huggingface.co/Abiray/MiniMax-H3-Singularity-GGUF) | 同 Singularity 微调 | Q3_K_M–Q8_0（8.9–21.6 GB） | 把 WarmBloodAban Singularity 微调带到 GGUF 线 | 作者建议 Q4_K_M→12 GB、Q5_K_M→16 GB 卡 |
+| Viggle Meridian | 重运镜 / 新视角 LoRA | Viggle AI | 2026-09-14 | [HF](https://huggingface.co/Viggle/Meridian) | V2V 新视角 / 子弹时间 | 2 个 LoRA（各 2.5 GiB） | 几何引导（VGGT-Omega）；推理不加载 TE | 需完整 Base transformer（61.7 GiB）；VRAM 未公开 |
+| XGEN-JING | 第一人称交互世界模型（微调） | XGEN Labs | 2026-09-16 | [HF](https://huggingface.co/XGENlabs/XGEN-JING) | 动作+参考图→第一人称音视频 | 4-step 双向（JING-Flash-v1） | 基于 H3 Ref2VA + FlashGen；因果模型与技术报告待发布 | Demo 验证于 **6×H100** |
+| akatz-ai Character-Swap-LoRA | 功能 LoRA | Akatz Labs | 2026-09-25 | [HF](https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA) | Ref2VA 换角色 | LoRA | 实验性；1,000 updates；建议 strength 1.0 | 训练基于 Comfy pruned INT8 Ref2VA；VRAM 未公开 |
 | WanGP / DiffSynth / SGLang 运行时 | 启动器/框架 | 各团队 | — | [Wan2GP](https://github.com/deepbeepmeep/Wan2GP) 等 | 加载官方或社区权重 | — | 低 VRAM 启动与服务配方 | 视所选权重 |
 
 > HF `createdAt` 来自 Hub API（仓库创建时间），**不等于**官方新闻稿发布日。官方开源公告为 **2026-08-03**。
@@ -182,6 +194,8 @@ hf download MiniMaxAI/MiniMax-H3 --include "model_index.json" "FL2VA/*" "Ref2VA/
 | MiniMax-H3-Turbo-Lora | larryvrh | https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora | 少步 LoRA | Comfy 常用 | 需正确 alpha/strength、节点 |
 | Turbo-Lora-ComfyUI | drbaph | https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI | 多种 pruned/动态秩 | 面向 Comfy 打包 | 版本多，别混用错文件 |
 | Acc-LoRAs | alibaba-pai | https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs | 加速 LoRA | 与 VideoX-Fun / 论文线相关 | 按卡页接入 |
+| TaoMate-H3 | 阿里 TaoLive AIGC | https://huggingface.co/TaoLiveAIGC/TaoMate-H3 | 3-step LoRA（T2AV） | 流式分块、长时连续 | FL2AV/Ref2AV 版尚未发布 |
+| HyperFlow | Video Rebirth | https://huggingface.co/videorebirth/hyperflow | 8-step LoRA | 覆盖 t2va/fl2va/ref2va；官方 Modular Pipeline | 质量对比以作者展示为准，未见第三方评测 |
 | Turbo-GGUF（合并） | molbal 等 | https://huggingface.co/molbal/MiniMax-H3-Turbo-GGUF | 4-step 合并权重 | 免 LoRA 加载 | 仍需 Turbo sampler |
 
 实践建议（社区收敛）：**Turbo 出草稿 → 同种子关 Turbo 出成片**；音频敏感镜头少用 4-step。
@@ -191,6 +205,8 @@ hf download MiniMaxAI/MiniMax-H3 --include "model_index.json" "FL2VA/*" "Ref2VA/
 | 发行 | 发布方 | 链接 | 能做什么 |
 | --- | --- | --- | --- |
 | Fun-Controlnet-Union | alibaba-pai | https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union | 单一权重：Canny/Depth/HED/MLSD/Pose + inpaint；挂 5 个 transformer block；`guidance_scale=1.0` |
+| Fun-Controlnet-Union-2.0 | alibaba-pai | https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0 | 8 种条件（+Scribble/Layout/Gray）；10 个控制 block；`post_norm` 重绘；**v1 yaml 加载 2.0 权重会静默出错** |
+| Meridian | Viggle AI | https://huggingface.co/Viggle/Meridian | 几何引导重运镜/新视角/子弹时间（2 个 LoRA） |
 | Kijai controlnet 再分发 | Kijai | https://huggingface.co/Kijai/MiniMax-H3-experimental | Comfy 友好 pruned bf16/int8 控制文件 |
 | 风格/题材 LoRA | fal、社区等 | 如 Realism-People、spatial-physics… | 在 Base 上叠风格；HF 上 adapters 数量持续增长 |
 | 融合/实验合并 | MATLOWAI、xmarre、joeygambino 等 | 各仓 | Turbo+量化合并、Ref delta fuse、跨模型实验 | 实验性，质量自负 |
@@ -344,8 +360,60 @@ ControlNet 内存：PAI 卡页写明 Transformer(~62 GB)+TE(~62 GB) 难以整装
 | 仅要更快的 T2VA 学生模型 | FastH3 Preview（接受质量上限） |
 | Blackwell 再压 DiT | coolthor / lilcheaty / rockerBOO |
 
+## 12. 2026-09-29 周更：新增代表性发行
+
+> 依据：Hub API 复扫（窗口 2026-06-29 → 2026-09-29，共 1035 仓，见 [hf-last-3-months.md](hf-last-3-months.md)）+ 各仓 model card。以下数字均来自作者卡页；未写明的一律标「未公开」。
+
+### 12.1 FastH3 主线换代：8-Step V2
+
+| 字段 | 内容 |
+| --- | --- |
+| 下载 | https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2 |
+| ComfyUI | https://huggingface.co/FastVideo/FastVideo-FastH3-Comfy（`fastvideo_fasth3_8step_v2_pruned_bf16` / `_pruned_int8_convrot`，TE/VAE 同 Comfy-Org） |
+| 发布 | FastVideo · 约 2026-09-04（Comfy 重打包约 2026-09-08） |
+| 特点 | 8 次 transformer 前向；data-free DMD2 + VSA-H3（80% 稀疏）；step-1300 |
+| 范围 | **仅 T2VA**，FL2VA / Ref2VA 未蒸馏；复杂运动、细节与部分音频可能低于 Base（作者自述） |
+| 硬件 | 作者测试默认 4×B200；其它多卡需 `--vsa-kernel triton` 等参数，GPU 数需整除 56；消费级 VRAM 未公开 |
+| 社区衍生 | realrebelai [FastH3-V2_GGUFs](https://huggingface.co/realrebelai/FastH3-V2_GGUFs)（Q3_K_M/Q4_K_M/Q5_K_M，源自全量 BF16 而非剪枝版；文件体积以卡页为准） |
+
+### 12.2 ControlNet：Fun-Controlnet-Union-2.0
+
+| 字段 | 内容 |
+| --- | --- |
+| 下载 | https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0 |
+| 发布 | 阿里 PAI · 约 2026-09-22 |
+| 相比 v1 | 条件 5→**8**（新增 Scribble、Layout、Gray）；控制 block 5→**10**（每 5 层注入）；重绘改为 `post_norm`；权重 ~6.8 GB→~13.5 GB |
+| 使用 | 必须配 `minimax_h3_control_inpaint_post_norm.yaml`；`guidance_scale=1.0`；`control_context_scale` 调强度 |
+| 硬件 | 仍需加载完整 Base；VRAM 未公开 |
+
+### 12.3 少步加速：TaoMate-H3 与 HyperFlow
+
+| 发行 | 链接 | 要点 | 未知/注意 |
+| --- | --- | --- | --- |
+| TaoMate-H3（阿里 TaoLive AIGC） | https://huggingface.co/TaoLiveAIGC/TaoMate-H3 | 3-step LoRA + 流式运行时；分块低延迟、长时连续；480p/768p/1080p；官方单节点 4/8 GPU | 当前仅 T2AV；FL2AV 卡页写「将于 2026-10-15 前发布」；ComfyUI 转换版如 [Robert1212star](https://huggingface.co/Robert1212star/TaoMate-H3-3Step-ComfyUI)（未重训） |
+| HyperFlow（Video Rebirth） | https://huggingface.co/videorebirth/hyperflow | 8-step LoRA；data-free flow 自蒸馏；t2va/fl2va/ref2va 全覆盖；官方 diffusers Modular Pipeline | ComfyUI 节点权重见 [drbaph/Hyperflow-Comfyui](https://huggingface.co/drbaph/Hyperflow-Comfyui)；VRAM 未公开 |
+| Veda 预测器（Preview） | https://huggingface.co/Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview | 块稀疏注意力（10% keep），配合 8 NFE T2VA | Preview：仅 600 updates、5.17 s 片段训练 |
+| 横评参考 | https://huggingface.co/vladmandic/MiniMax-H3-Turbo-LoRA | SD.Next 下 lightx2v / larryvrh / TaoMate / PAI 等 Turbo LoRA 网格对比图 | 仅为图片网格，非量化指标 |
+
+### 12.4 量化 / GGUF 新线
+
+| 发行 | 链接 | 要点 |
+| --- | --- | --- |
+| QuantFunc 4bit | https://huggingface.co/QuantFunc/Minimax-H3-Quantfunc-4bit | INT4；作者自测 FL2VA 对 BF16 约 23.7 dB PSNR，4090 单步耗时对比见卡页；VRAM 未公开 |
+| Abiray Singularity-GGUF | https://huggingface.co/Abiray/MiniMax-H3-Singularity-GGUF | Singularity 微调的 Q3_K_M–Q8_0（8.9–21.6 GB）；作者建议 Q4_K_M→12 GB、Q5_K_M→16 GB |
+
+### 12.5 新能力方向（基于 H3 的衍生模型）
+
+| 发行 | 链接 | 要点 |
+| --- | --- | --- |
+| Viggle Meridian | https://huggingface.co/Viggle/Meridian | 重运镜 / 新视角 / 子弹时间；VGGT-Omega 估深度与相机，2 个 LoRA（各 2.5 GiB）挂在原版 H3 transformer 上，推理不加载 TE |
+| XGEN-JING | https://huggingface.co/XGENlabs/XGEN-JING | 第一人称交互体验模型；键盘运镜 + 参考图 + 对话；4-step 双向；Demo 验证于 6×H100 |
+| akatz-ai Character-Swap-LoRA | https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA | Ref2VA 角色替换（实验性，配套开源数据集）；作者称 4–5 s 短镜头效果更稳 |
+| Cseti CrossView-Warp / pablodawson 360-Orbit | [Cseti](https://huggingface.co/Cseti/MiniMax-H3_Ref2VA-LoRA-CrossView-Warp_v1) · [pablodawson](https://huggingface.co/pablodawson/MiniMax-H3-360-Orbit-LoRA) | 视角/环绕运镜类 LoRA，社区高 Likes |
+
 ## 附：Hugging Face 近 3 个月全量索引
 
 主手册只精写代表性发行。若需要 **Hub 上近 3 个月出现的全部相关仓**（量化镜像、Turbo、FastH3、LoRA、ControlNet、MLX、实验合并等），见：
 
-**[docs/hf-last-3-months.md](hf-last-3-months.md)**
+**[docs/hf-last-3-months.md](hf-last-3-months.md)**（2026-06-29 → 2026-09-29，共 1035 仓）
+
