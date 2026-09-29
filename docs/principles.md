@@ -1,10 +1,10 @@
 # MiniMax H3 原理知识
 
 <p align="center">
-  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.4-2563eb?style=for-the-badge">
+  <img alt="文档版本" src="https://img.shields.io/badge/文档版本-v1.1.5-2563eb?style=for-the-badge">
   <img alt="知识语言" src="https://img.shields.io/badge/正文-中文-16a34a?style=for-the-badge">
   <img alt="更新频率" src="https://img.shields.io/badge/更新-每小时-f59e0b?style=for-the-badge">
-  <img alt="最后修订" src="https://img.shields.io/badge/修订-2026--09--29-64748b?style=for-the-badge">
+  <img alt="最后修订" src="https://img.shields.io/badge/修订-2026--09--30-64748b?style=for-the-badge">
 </p>
 
 > [!IMPORTANT]
@@ -52,6 +52,8 @@
 | **[GUIDE]** | Open Platform：视频生成指南（H3 与 H3 Max） | *Video Generation guides*（英文） | 产品指南 | [打开原文](https://platform.minimax.io/docs/guides/video-generation) |
 | **[HF]** | Hugging Face：`MiniMaxAI/MiniMax-H3` 模型卡 | Model card / repo docs（英文为主） | Hub | [打开原文](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
 | **[HF-PG]** | Hugging Face：官方 Prompting Guidance（IR 表面格式） | *Video Prompt Writing Guide* / *Full-Reference Mode Rewrite Output Format Guide*（英文） | Hub 文档 | [base 指南](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md) · [ref 指南](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_ref_en.md) · [skills](https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills) |
+| **[TRANS]** | Open Platform：透明度 / EU AI Act 训练内容摘要入口 | *Transparency*（英文） | 合规指南 | [打开原文](https://platform.minimax.io/docs/guides/transparency) |
+| **[EU-TC]** | MiniMax H3 训练内容公开摘要（EU AI Act Art.53(1)(d)） | *Public Summary of Training Content for MiniMax H3*（英文 PDF） | 摘要 v1.0 · 标注更新日期 2026-02-08 | [打开 PDF](https://file.cdn.minimax.io/public/8b640d09-235b-4351-a096-2f7bea762e75.pdf) |
 | **[TR]** | H3 技术报告 | *H3 Technical Report*（预告） | **待发布** | — |
 
 社区二手材料若引用，会单独写明并降权，不与上表混排。
@@ -123,6 +125,39 @@
 > [!NOTE]
 > **应用侧定性（中文）**：创作者越来越用自然语言描述完整创作意图；模型从「生成一个片段」走向更深地参与内容生产流程。  
 > **依据**：[BLOG] · **原地址**：https://www.minimax.io/blog/minimax-h3
+
+### 2.4 训练内容公开摘要（EU AI Act，非 Tech Report）
+
+> [!WARNING]
+> **边界**：下列内容来自 MiniMax 为遵守 **欧盟 AI 法案第 53(1)(d) 条** 而发布的 *Public Summary of Training Content*。它是**合规级训练数据摘要**，**不是**博客预告的完整 **H3 Technical Report**；不得据此补写 mixing ratio、100K→4K 蒸馏实现、稀疏注意力配方或未公开架构训练细节。
+
+| 公开项 | 中文要点（仅摘要已勾选/已写明者） | 依据 |
+| :---: | --- | :---: |
+| **发布入口** | Open Platform「Transparency」并列链到 M3 / **H3** 训练内容公开摘要 PDF | [TRANS][EU-TC] |
+| **摘要元数据** | 摘要版本 **1.0**；文内 *Last update* / 投放欧盟市场日期均标注为 **2026-02-08**；提供方登记为 Nanonoble Pte. Ltd. | [EU-TC] |
+| **模态与量级区间** | 训练数据覆盖 **文本 / 图像 / 音频 / 视频**：文本约 **10 亿–10 万亿 tokens**；图像 **>10 亿**；音频 **>100 万小时**；视频 **>100 万小时**（模板勾选区间，非精确计量） | [EU-TC] |
+| **采集截止** | 训练用数据获取/采集最晚日期：**2026 年 7 月** | [EU-TC] |
+| **来源类别（定性）** | 使用公开数据集（摘要勾选图/视）；与权利人商业许可及第三方私有许可数据（图/视/音）；使用爬虫 **MINIMAX_UA** 采集公开可访问的图/视/音（尊重 robots.txt，不绕过付费墙/验证码/登录墙）；**未**使用用户与模型或其他产品交互数据训练；使用 **合成文本**（含对图/视/音的文本描述，由多模态理解模型与 LLM 等生成） | [EU-TC] |
+| **处理措施（定性）** | 文内勾选：非 GPAI 行为准则（含 TDM 权利保留承诺）签署方；爬虫侧尊重 robots.txt；训练数据经预处理/过滤（含过滤模型）以排除不安全或有害内容 | [EU-TC] |
+
+**依据**：[TRANS] · [EU-TC]  
+**原地址**：[Transparency](https://platform.minimax.io/docs/guides/transparency) · [H3 训练内容公开摘要 PDF](https://file.cdn.minimax.io/public/8b640d09-235b-4351-a096-2f7bea762e75.pdf)
+
+<details>
+<summary><b>原文摘录（英文 → 对照）</b></summary>
+
+> MiniMax publishes, pursuant to Article 53(1)(d) of the EU Artificial Intelligence Act, the summary of training data of our general-purpose AI models… **H3 - the Public Summary of Training Content**  
+> —— [TRANS](https://platform.minimax.io/docs/guides/transparency)
+
+**中文对照**：为遵守欧盟 AI 法案第 53(1)(d) 条，MiniMax 发布通用 AI 模型训练数据摘要……其中包括 **H3 训练内容公开摘要**。
+
+> Latest date of data acquisition/collection for model training: **July 2026**  
+> MINIMAX_UA is used to collect publicly accessible image, video and audio content… respects robots.txt…  
+> —— [EU-TC](https://file.cdn.minimax.io/public/8b640d09-235b-4351-a096-2f7bea762e75.pdf)
+
+**中文对照**：训练数据获取/采集最晚日期为 **2026 年 7 月**；爬虫 **MINIMAX_UA** 用于采集公开可访问的图像、视频与音频，并尊重 robots.txt 等限制。
+
+</details>
 
 ---
 
@@ -471,7 +506,8 @@ flowchart TB
 
 > [!NOTE]
 > 官方称将分享完整 **H3 Technical Report**；发布后应优先吸收进本页并记入日志。  
-> **依据**：[BLOG]
+> 训练数据侧已有合规摘要 [EU-TC]（见 §2.4），**不能**替代 Tech Report。  
+> **依据**：[BLOG][EU-TC]
 
 ---
 
@@ -479,7 +515,8 @@ flowchart TB
 
 | 问题 | 状态 | 跟踪来源 |
 | --- | :---: | :---: |
-| Tech Report 全文与训练配方细节 | 待发布（博客仍写 *soon*；本轮复查未见独立报告页 / PDF） | [BLOG] |
+| Tech Report 全文与训练配方细节 | 待发布（博客仍写 *soon*；`/news/minimax-h3` 404；`/docs/h3-technical-report`、`/research/minimax-h3` 仍回首页；**不等于**已有的 [EU-TC] 合规摘要） | [BLOG][EU-TC] |
+| 训练数据精确组成 / 各数据集占比 / 合成数据比例 | [EU-TC] 仅给模态量级区间与来源类别；无细清单或配比 | [EU-TC] |
 | Sparse attention 开源时间表与质量差 | 未公开完整细节；首发开源推理仍为 full attention | [OSS] |
 | Context-IR 内部模型清单与 100K→4K 蒸馏精确流程 | 博客摘要级；**表面字段**已由 [HF-PG] 公开，内部多阶段模型仍未公开 | [BLOG][HF-PG] |
 | Mixing ratio、理解/生成分离训练的具体实现 | 待报告 | [BLOG] |
@@ -502,6 +539,7 @@ flowchart TB
 | **v1.1.2** | 2026-09-23 | 补 **MiniMax-H3-Max** 与本页原理栈边界（联合 fal 后训练、无 2K、时长/分辨率差异、`prompt_expansion_mode`）；澄清首末帧与参考模式互斥、提示长度上限、Ref2VA 混合文件 ≤12；来源表增 [API-GEN]；Tech Report 仍未发布 | [GUIDE][API-GEN][API-IR][API-R2K] |
 | **v1.1.3** | 2026-09-23 | 澄清 **H3-Max 在平台 API 亦支持参考生**（图/视/音），但 **Context-IR 端点仍仅 H3**、仍无 2K；补原文摘录与误区/开放问题，避免被二手「Max 无参考」叙述误导；Tech Report 仍未发布 | [API-GEN][GUIDE][API-IR] |
 | **v1.1.4** | 2026-09-29 | 补 Context Intermediate Representation **公开表面格式**：Base 三核心字段与 Ref2VA 六节顺序；来源表增 [HF-PG]（Prompting Guidance / skills）；开放问题区分表面契约与内部流水线；Tech Report 仍未发布 | [HF-PG][HF][API-IR][OSS] |
+| **v1.1.5** | 2026-09-30 | 补 **EU AI Act Art.53(1)(d)** H3 训练内容公开摘要（模态量级区间、采集截止 2026-07、MINIMAX_UA、许可/爬取/合成文本边界）；来源表增 [TRANS][EU-TC]；明确该摘要 **≠** Tech Report；Tech Report 仍未发布 | [TRANS][EU-TC][BLOG] |
 
 <!--
 每小时例行维护格式（必须遵守）：
