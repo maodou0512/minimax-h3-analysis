@@ -1,51 +1,51 @@
 # Hugging Face 近 3 个月 MiniMax H3 相关仓完整清单
 
-> 覆盖窗口：**2026-07-05 → 2026-10-05**（滚动 3 个月；官方基座 `createdAt` 为 2026-07-28，窗口前移未剔除任何仓）。
-> 收录：**1112** 个 HF 模型仓（Hub API 检索 + 关键词过滤）。
-> `创建日` = `createdAt`；`下载量/Likes` 为抓取快照（2026-10-05），会随时间变化。
+> 覆盖窗口：**2026-07-12 → 2026-10-12**（滚动 3 个月；官方基座 `createdAt` 为 2026-07-28，窗口前移未剔除任何仓）。
+> 收录：**1211** 个 HF 模型仓（Hub API 检索 + 关键词过滤）。
+> `创建日` = `createdAt`；`下载量/Likes` 为抓取快照（2026-10-12），会随时间变化。
 > 选型与硬件详解见 [community-versions.md](community-versions.md)；本页追求**近 3 个月全量索引**。
 > 官方开源公告日：**2026-08-03**（与部分仓 `createdAt` 早于该日不冲突——预上传常见）。
-> 检索方法沿用 2026-09-29 版：`search=` 关键词（MiniMax-H3 / minimax_h3 / FastH3 / H3-GGUF / H3-NVFP4 / H3-LoRA / H3-Turbo / H3-ControlNet / H3-MLX 等）+ `filter=` 标签（`minimax-h3`、`fasth3`、`base_model:*MiniMax-H3` 各关系）+ 重点作者；本次另加 `H3-int8` / `H3-fp8` / `H3-SVDQuant` / `H3-Fun` / `MiniMax_H3` / `H3 Turbo` 补扫，全部分页到底；排除同名非视频仓（如组蛋白 `H3K*` 基因组模型）。
+> 检索方法沿用 2026-09-29 版：`search=` 关键词（MiniMax-H3 / minimax_h3 / FastH3 / H3-GGUF / H3-NVFP4 / H3-LoRA / H3-Turbo / H3-ControlNet / H3-MLX 等）+ `filter=` 标签（`minimax-h3`、`fasth3`、`base_model:*MiniMax-H3` 各关系）+ 重点作者；另含 `H3-int8` / `H3-fp8` / `H3-SVDQuant` / `H3-Fun` / `MiniMax_H3` / `H3 Turbo` 补扫，全部分页到底；排除同名非视频仓（如组蛋白 `H3K*` 基因组模型）。
 
-## 自 2026-09-29 快照以来的变化
+## 自 2026-10-05 快照以来的变化
 
-- 上一版 **1035** 仓 → 本版 **1112** 仓（净增 **77**）。
-- 新收录 **79** 仓：其中 `createdAt` ≥ 2026-09-29 的新建仓 **68** 个；另 **11** 个为扩充检索词后补录的较早仓（主要是 9 个 `Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot` 文本编码器仓：ethanfel 原仓 + 8 个镜像）。
-- 改名/转移 **4** 仓（按新名收录、沿用原分类）：`skx618/FastVideo-FastH3-*-NVFP4` ×2 → `FastVideo/…`；`SexGod1979/PinkCherry_MiniMax-H3` → `PinkCherry-NSFW_MiniMax-H3`；`LokkenJP/10Eros_Max_optimized_w4a8_exp_learned` → `TenEros_Max_optimized_learned`。
-- 已删除/转私有 **2** 仓（已剔除）：`cokeadrink/minimax-h3-fl2va-bf16-8step`、`FinancialSupport/vr180-poc-clips-3s-lora`。
-- 分类增量（旧→新，括号内为新收/剔除）：03-量化与剪枝权重 128→130（+2）；04-GGUF量化 54→57（+3）；05-Turbo少步加速 122→139（+18/−1）；07-FastH3蒸馏 45→46（+1）；09-风格题材LoRA 169→186（+17）；11-组件-VAE-TE-提示器 57→68（+12/−1）；12-题材角色LoRA含NSFW 117→125（+8）；13-微调合并实验 60→65（+5）；14-工作流工具箱 15→19（+4）；15-镜像转载与其它 218→227（+9）。
+- 上一版 **1112** 仓 → 本版 **1211** 仓（净增 **99**）。
+- 新收录 **102** 仓：其中 `createdAt` ≥ 2026-10-05 的新建仓 **96** 个；另 **6** 个为窗口内较早但上周未命中/本周补录的仓（含 `Wuli-art/MiniMax-H3-Turbo`、`Journey9ni/LatentNVS` 及 FastH3 Trim 源权重等）。
+- 改名/转移：本周无新增改名映射（沿用历史 4 条）。
+- 已删除/转私有 **3** 仓（已剔除）：`Asirus/MiniMax-H3-TaoMate-3Step-Fused-BF16`、`JOYUNGI/pixelart8x-h3-lora`、`JOYUNGI/nwpxstyle-h3-lora`。
+- 分类增量（旧→新，括号内为新收/剔除）：03-量化与剪枝权重 130→139（+9）；04-GGUF量化 57→59（+2）；05-Turbo少步加速 139→151（+13/−1）；06-加速LoRA-Acc 11→12（+1）；07-FastH3蒸馏 46→58（+12）；08-ControlNet控制 6→7（+1）；09-风格题材LoRA 186→202（+18/−2）；10-Apple-MLX 31→37（+6）；11-组件-VAE-TE-提示器 68→71（+3）；12-题材角色LoRA含NSFW 125→135（+10）；13-微调合并实验 65→70（+5）；14-工作流工具箱 19→23（+4）；15-镜像转载与其它 227→245（+18）。
 - 值得关注：
 
-  - [`Comfy-Org/MiniMax-H3`](https://huggingface.co/Comfy-Org/MiniMax-H3)：官方 Comfy 包 2026-09-29 新增 `minimax_h3_{fl2va,ref2va}_pruned_w6a8.safetensors`（各约 14.9 GiB），W6A8 成为 Comfy-Org 正式档位
-  - [`FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4)：FastH3 V2 的 ModelOpt NVFP4（W4A4）UniServe 部署包，由 skx618 转入 FastVideo 官方组织；另有 4-step Preview NVFP4 同步转入
-  - [`ZhengmingYu/DMAD`](https://huggingface.co/ZhengmingYu/DMAD)：DMAD（arXiv 2610.02188，TAMU × 字节）4-step H3 学生 LoRA（rank 128），1344×768 带原生立体声
-  - [`pdmd2026/pdmd_4NFE_lora`](https://huggingface.co/pdmd2026/pdmd_4NFE_lora)：PDMD（arXiv 2609.35768）4-NFE 蒸馏 LoRA；社区 ComfyUI 转换版见 Iwannapose 2/4-NFE
-  - [`Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step`](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step)：NVIDIA Efficient-Large-Model 的少步 LoRA，另有 `-cfg` CFG 蒸馏 LoRA（卡页：暂不建议二者叠用）
-  - [`speach1sdef178/MiniMax-H3-X2-Detail-VAE`](https://huggingface.co/speach1sdef178/MiniMax-H3-X2-Detail-VAE)：社区 2X 细节 VAE（2-in-1：2X 解码 + 参考图细节增强）+ ComfyUI 节点；新仓下载量居首
-  - [`corechan/MiniMax-H3-LightVAE`](https://huggingface.co/corechan/MiniMax-H3-LightVAE)：LynnReal-Omni 轻量视频 VAE 解码器（26 块替 36 块）的 diffusers + ONNX 转换
-  - [`binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w6a8`](https://huggingface.co/binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w6a8)：基于新 W6A8 档的 fl2va×ref2va b25-49 混合单文件（约 14.88 GiB）
-  - [`ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot)：高 Likes 的 Qwen3-VL-32B 去审查 TE（H3 条件编码器 BF16/INT8 ConvRot）；本次扩充检索词后补录，连同其 8 个镜像
+  - [`FastVideo/FastVideo-FastH3-Trim-Comfy`](https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-Comfy)：FastH3 Trim 官方 Comfy 重打包（下载量居新仓之首）：42/50 blocks + rank-16 AdaLN，8-step；含 NVFP4 11.9 GB / FP8 19.7 GB / INT8 ConvRot 18.9 GB / BF16 37.5 GB；配套 Trim-8-Step 源权重与 FP8/NVFP4 变体同周放出
+  - [`FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4-Comfy`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4-Comfy)：FastH3 V2 pruned NVFP4 的 Comfy 单文件（13.6 GB），面向 Blackwell；另有 V2-FP8（非 FP4 卡）与 V2-NVFP4-Consumer（单卡 Blackwell / DGX Spark，含 AdaLN 预计算表）
+  - [`Wuli-art/MiniMax-H3-Turbo`](https://huggingface.co/Wuli-art/MiniMax-H3-Turbo)：阿里 Wuli-Art 固定步数 Turbo：4-step LoRA + 6/8-step 完整 transformer；社区横评 demo 对比 Larry/LightX2V/FlashGen/DMAD/PAI；Comfy 转换见 sandpies/Wuli-MiniMax-H3-Turbo-ComfyUI（需 ComfyUI ≥0.38）
+  - [`Veda-Sparse/Minimax-H3-R2VA-Veda-Preview`](https://huggingface.co/Veda-Sparse/Minimax-H3-R2VA-Veda-Preview)：Veda 稀疏注意力扩展到 R2VA（参考→音视频）：独立 FP8 预测器，32 ref + 32 video tiles；配合 Turbo LoRA 8-step；Preview（600 updates）
+  - [`akatz-ai/MiniMax-H3-Person-Remover-LoRA`](https://huggingface.co/akatz-ai/MiniMax-H3-Person-Remover-LoRA)：Ref2VA 人物移除 LoRA（高 Likes）：SAM 3.1 遮罩 + 绿幕填充 + 重叠窗口重绘；配套数据集与 Comfy 工作流；VRAM 未公开
+  - [`lightx2v/LightVAE`](https://huggingface.co/lightx2v/LightVAE)：LightX2V 官方 LightVAE 仓（Apache-2.0）：含 MiniMax-H3 lite encoder/decoder，保留 latent 接口；另覆盖 Wan2.1/2.2
+  - [`Efficient-Large-Model/StreamRender-H3`](https://huggingface.co/Efficient-Large-Model/StreamRender-H3)：NVIDIA Efficient-Large-Model 交互式流式渲染：基于 H3 Ref2VA 的 2-step 学生 + Fast Causal H3 VAE；完整运行时资产约 206 GB；默认 8×GB200
+  - [`Aazeus/Spark-H3`](https://huggingface.co/Aazeus/Spark-H3)：Spark-Attn 块稀疏注意力后端（仅代码、不托管权重）：作者报告 10% 密度下约 2.33× attention / 1.73× DiT 加速；可与社区 LoRA 叠用
+  - [`berryber09/MiniMax-H3-Fun-Controlnet-Union-2.0-pruned-w4a8`](https://huggingface.co/berryber09/MiniMax-H3-Fun-Controlnet-Union-2.0-pruned-w4a8)：Fun-ControlNet-Union 2.0 的 pruned W4A8（2.85 GB）Comfy 补丁：asym_w4a8_int8 + ConvRot；VRAM 未公开
 
 ## 分类统计
 
-| 类别 | 数量 | 较 09-29 |
+| 类别 | 数量 | 较 10-05 |
 | --- | ---: | ---: |
 | 01-官方基座 | 1 | 0 |
 | 02-Comfy官方生态重打包 | 1 | 0 |
-| 03-量化与剪枝权重 | 130 | +2 |
-| 04-GGUF量化 | 57 | +3 |
-| 05-Turbo少步加速 | 139 | +17 |
-| 06-加速LoRA-Acc | 11 | 0 |
-| 07-FastH3蒸馏 | 46 | +1 |
-| 08-ControlNet控制 | 6 | 0 |
-| 09-风格题材LoRA | 186 | +17 |
-| 10-Apple-MLX | 31 | 0 |
-| 11-组件-VAE-TE-提示器 | 68 | +11 |
-| 12-题材角色LoRA含NSFW | 125 | +8 |
-| 13-微调合并实验 | 65 | +5 |
-| 14-工作流工具箱 | 19 | +4 |
-| 15-镜像转载与其它 | 227 | +9 |
-| **合计** | **1112** | **+77** |
+| 03-量化与剪枝权重 | 139 | +9 |
+| 04-GGUF量化 | 59 | +2 |
+| 05-Turbo少步加速 | 151 | +12 |
+| 06-加速LoRA-Acc | 12 | +1 |
+| 07-FastH3蒸馏 | 58 | +12 |
+| 08-ControlNet控制 | 7 | +1 |
+| 09-风格题材LoRA | 202 | +16 |
+| 10-Apple-MLX | 37 | +6 |
+| 11-组件-VAE-TE-提示器 | 71 | +3 |
+| 12-题材角色LoRA含NSFW | 135 | +10 |
+| 13-微调合并实验 | 70 | +5 |
+| 14-工作流工具箱 | 23 | +4 |
+| 15-镜像转载与其它 | 245 | +18 |
+| **合计** | **1211** | **+99** |
 
 ## 完整分表
 
@@ -53,118 +53,124 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-07-28 | 3562175 | 5889 | [`MiniMaxAI/MiniMax-H3`](https://huggingface.co/MiniMaxAI/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-07-28 | 3607946 | 6043 | [`MiniMaxAI/MiniMax-H3`](https://huggingface.co/MiniMaxAI/MiniMax-H3) | image-text-to-video | license:other |
 
 ### 02-Comfy官方生态重打包
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-07-30 | 23256823 | 2133 | [`Comfy-Org/MiniMax-H3`](https://huggingface.co/Comfy-Org/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-07-30 | 23580892 | 2224 | [`Comfy-Org/MiniMax-H3`](https://huggingface.co/Comfy-Org/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 
 ### 03-量化与剪枝权重
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-03 | 152019 | 242 | [`Abiray/Minimax-H3-nvfp4-INT4-INT8-Convrot`](https://huggingface.co/Abiray/Minimax-H3-nvfp4-INT4-INT8-Convrot) | image-text-to-video | quantized, comfyui, int4, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-21 | 130567 | 36 | [`xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI`](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI) | image-text-to-video | comfyui, int8, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, license:other |
-| 2026-09-05 | 92419 | 65 | [`drbaph/Viggle-Animate-ComfyUI`](https://huggingface.co/drbaph/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
-| 2026-09-22 | 51694 | 29 | [`Winnougan/Cobijada_Minimax-H3_Hybrid_Pruned_ComfyUI`](https://huggingface.co/Winnougan/Cobijada_Minimax-H3_Hybrid_Pruned_ComfyUI) | image-to-video | comfyui, quantization, int8, license:apache-2.0 |
-| 2026-08-04 | 49754 | 29 | [`AX1Y2JP/MiniMax-H3-W4A8-ConvRot`](https://huggingface.co/AX1Y2JP/MiniMax-H3-W4A8-ConvRot) | diffusion-single-file | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:other |
-| 2026-08-04 | 49537 | 30 | [`coolthor/MiniMax-H3-pruned-NVFP4`](https://huggingface.co/coolthor/MiniMax-H3-pruned-NVFP4) | image-text-to-video | nvfp4, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-04 | 43043 | 27 | [`drbaph/vdn-minimax-h3-int8-convrot-comfyui`](https://huggingface.co/drbaph/vdn-minimax-h3-int8-convrot-comfyui) | minimax-h3 | comfyui, int8, quantization, license:other |
-| 2026-09-28 | 27628 | 28 | [`QuantFunc/Minimax-H3-Quantfunc-4bit`](https://huggingface.co/QuantFunc/Minimax-H3-Quantfunc-4bit) | text-to-video | quantized, int4, svdquant, comfyui, license:other |
-| 2026-08-09 | 25613 | 8 | [`koongrizzly/MiniMax_H3_int4_W4A8_ConvRot_Pruned`](https://huggingface.co/koongrizzly/MiniMax_H3_int4_W4A8_ConvRot_Pruned) | minimax-h3 | int4, quantization, license:apache-2.0 |
-| 2026-08-03 | 25307 | 28 | [`rockerBOO/minimax-h3-nvfp4-convrot`](https://huggingface.co/rockerBOO/minimax-h3-nvfp4-convrot) | text-to-video | nvfp4, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-20 | 16717 | 4 | [`MATLOWAI/minimax-h3-nvfp4`](https://huggingface.co/MATLOWAI/minimax-h3-nvfp4) | diffusion-single-file | comfyui, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-22 | 14381 | 101 | [`joeygambino/MiniMax-H3-x-Z-Image-native`](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native) | text-to-video | comfyui, comfy-native, comfy-quant, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-24 | 13936 | 16 | [`hoidhxd/MiniMax-H3-x-Z-Image-hybrid`](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-hybrid) | image-to-video | int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-16 | 13781 | 10 | [`berryber09/MiniMax-H3-ref2va-fl2va-hybrid-w4a8`](https://huggingface.co/berryber09/MiniMax-H3-ref2va-fl2va-hybrid-w4a8) | image-to-video | comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 8577 | 23 | [`rzgar/minimax_h3_fl2va_fp8_e4m3fn`](https://huggingface.co/rzgar/minimax_h3_fl2va_fp8_e4m3fn) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-07 | 7857 | 4 | [`rzgar/minimax_h3_ref2va_fp8_e4m3fn`](https://huggingface.co/rzgar/minimax_h3_ref2va_fp8_e4m3fn) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-09 | 7048 | 8 | [`abakanai/Minimax_h3_hybrid`](https://huggingface.co/abakanai/Minimax_h3_hybrid) | image-to-video | comfyui, nvfp4, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
-| 2026-08-07 | 5341 | 0 | [`abenliao/minimax-h3-transformer-mxfp8`](https://huggingface.co/abenliao/minimax-h3-transformer-mxfp8) | diffusers | fp8, quantized |
-| 2026-09-16 | 4058 | 5 | [`sandpies/Minimax-H3-fl2va-ref2va-hybrid-unpruned-int8`](https://huggingface.co/sandpies/Minimax-H3-fl2va-ref2va-hybrid-unpruned-int8) | minimax-h3 | comfyui, int8, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-07 | 3914 | 7 | [`xtanqn/MiniMax-H3-fl2va-ref2va-b25-49-r1024-r0`](https://huggingface.co/xtanqn/MiniMax-H3-fl2va-ref2va-b25-49-r1024-r0) | minimax-h3 | fp8, license:other |
-| 2026-08-27 | 3880 | 0 | [`fkyyy/MiniMax-H3-fp8`](https://huggingface.co/fkyyy/MiniMax-H3-fp8) | image-text-to-video | license:other |
-| 2026-09-10 | 3609 | 7 | [`jfar-z/MiniMax-H3-FL2VA-Ref2VA-Hybrid-NVFP4`](https://huggingface.co/jfar-z/MiniMax-H3-FL2VA-Ref2VA-Hybrid-NVFP4) | image-to-video | comfyui, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-30 | 3236 | 5 | [`szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot`](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot) | video-to-video | int8, base_model:Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3, base_model:finetune:Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3, license:other |
-| 2026-08-21 | 2169 | 1 | [`rockerBOO/minimax-h3-nvfp4-fp8`](https://huggingface.co/rockerBOO/minimax-h3-nvfp4-fp8) | text-to-video | nvfp4, fp8, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-18 | 2162 | 1 | [`t8star/Meridian-Comfy`](https://huggingface.co/t8star/Meridian-Comfy) | video-to-video | comfyui, int8, base_model:Viggle/Meridian, base_model:finetune:Viggle/Meridian, license:other |
-| 2026-09-07 | 2003 | 10 | [`speach1sdef178/VDN-H3-INT8-ConvRot-ComfyUI`](https://huggingface.co/speach1sdef178/VDN-H3-INT8-ConvRot-ComfyUI) | minimax-h3 | comfyui, int8, license:other |
-| 2026-09-05 | 1768 | 11 | [`Raretutor/vdn-minimax-h3-comfyui-int8-convrot`](https://huggingface.co/Raretutor/vdn-minimax-h3-comfyui-int8-convrot) | text-to-video | comfyui, int8, base_model:OpenVDN/vdn-minimax-h3, base_model:finetune:OpenVDN/vdn-minimax-h3, license:other |
-| 2026-08-09 | 1530 | 1 | [`abenliao/minimax-h3-ref2va-transformer-mxfp8`](https://huggingface.co/abenliao/minimax-h3-ref2va-transformer-mxfp8) | diffusers |  |
-| 2026-09-30 | 1459 | 3 | [`binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w6a8`](https://huggingface.co/binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w6a8) | image-to-video | comfyui, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-20 | 1439 | 0 | [`PulpCut/MiniMax-H3-INT8-ConvRot`](https://huggingface.co/PulpCut/MiniMax-H3-INT8-ConvRot) | minimax-h3 | int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-18 | 1287 | 0 | [`yuivs/Minimax-H3-nvfp4-INT4-INT8-Convrot`](https://huggingface.co/yuivs/Minimax-H3-nvfp4-INT4-INT8-Convrot) | image-text-to-video | quantized, comfyui, int4, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-03 | 1254 | 1 | [`1ronman1993/MiniMax-H3-SVDQuant-fp4-pdd8`](https://huggingface.co/1ronman1993/MiniMax-H3-SVDQuant-fp4-pdd8) | minimax-h3 | svdquant, comfyui, license:apache-2.0 |
-| 2026-08-15 | 1137 | 2 | [`joeygambino/MiniMax-H3-comfy-native-fl2va`](https://huggingface.co/joeygambino/MiniMax-H3-comfy-native-fl2va) | text-to-video | comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-11 | 595 | 1 | [`OzzyGT/MiniMax_H3_sdnq_4bit_pruned`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_4bit_pruned) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-15 | 568 | 1 | [`wukaikevin/MiniMax-H3-Singularity-Ref2VA-NVFP4`](https://huggingface.co/wukaikevin/MiniMax-H3-Singularity-Ref2VA-NVFP4) | minimax-h3 | nvfp4, quantization, license:apache-2.0 |
-| 2026-08-06 | 460 | 0 | [`AcademiaSD/MiniMax-H3-NF4`](https://huggingface.co/AcademiaSD/MiniMax-H3-NF4) | diffusers | nf4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-05 | 455 | 0 | [`1ronman1993/MiniMax-H3-SVDQuant-int4-pdd8`](https://huggingface.co/1ronman1993/MiniMax-H3-SVDQuant-int4-pdd8) | minimax-h3 | svdquant, comfyui, license:apache-2.0 |
-| 2026-08-03 | 361 | 2 | [`Ar4ikov/MiniMax-H3-transformer-W4A16-RTN`](https://huggingface.co/Ar4ikov/MiniMax-H3-transformer-W4A16-RTN) | image-text-to-video | int4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-09 | 347 | 1 | [`abhishekchohan/minimax-h3-int8`](https://huggingface.co/abhishekchohan/minimax-h3-int8) | text-to-video | quantization, quantized, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-13 | 342 | 6 | [`stdstu123/LynnReal-Onmi-flash-beta-0.1`](https://huggingface.co/stdstu123/LynnReal-Onmi-flash-beta-0.1) | diffusers | int8 |
-| 2026-08-20 | 334 | 1 | [`ravibhai1212/MiniMax_H3_int4_W4A8_ConvRot_Pruned`](https://huggingface.co/ravibhai1212/MiniMax_H3_int4_W4A8_ConvRot_Pruned) | minimax-h3 | int4, quantization, license:apache-2.0 |
-| 2026-09-28 | 270 | 0 | [`binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w4a8_mixed`](https://huggingface.co/binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w4a8_mixed) | image-to-video | comfyui, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-03 | 269 | 1 | [`OzzyGT/MiniMax_H3_sdnq_dynamic_4bit`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_dynamic_4bit) | diffusers |  |
-| 2026-08-26 | 257 | 4 | [`taurusduan/MiniMax-H3-x-Z-Image-hybrid`](https://huggingface.co/taurusduan/MiniMax-H3-x-Z-Image-hybrid) | image-to-video | int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-12 | 245 | 0 | [`ibyteohdear/MiniMax-H3-Pruned-LightX8-Fused`](https://huggingface.co/ibyteohdear/MiniMax-H3-Pruned-LightX8-Fused) | image-text-to-video | license:other |
-| 2026-08-10 | 232 | 2 | [`t8star/minimax_h3_ref2va_patchin_hf102`](https://huggingface.co/t8star/minimax_h3_ref2va_patchin_hf102) | image-text-to-video | comfyui, int8-convrot, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-01 | 228 | 1 | [`rootonchair/MiniMax-H3-nunchaku-lite-nvfp4`](https://huggingface.co/rootonchair/MiniMax-H3-nunchaku-lite-nvfp4) | diffusers | svdquant, quantized, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-01 | 202 | 1 | [`rootonchair/MiniMax-H3-nunchaku-lite-int4`](https://huggingface.co/rootonchair/MiniMax-H3-nunchaku-lite-int4) | diffusers | svdquant, quantized, int4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-28 | 193 | 10 | [`isichan-ai/MiniMax-H3-FL2VA-norefiner`](https://huggingface.co/isichan-ai/MiniMax-H3-FL2VA-norefiner) | minimax-h3 | comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-20 | 148 | 7 | [`diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024`](https://huggingface.co/diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024) | image-text-to-video | base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-09 | 144 | 0 | [`abhishekchohan/minimax-h3-fp8`](https://huggingface.co/abhishekchohan/minimax-h3-fp8) | text-to-video | quantization, quantized, fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-17 | 134 | 0 | [`wangpj/MiniMax-H3_fp8`](https://huggingface.co/wangpj/MiniMax-H3_fp8) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-07 | 117 | 0 | [`cccian091/MiniMax-H3-T2V-NVFP4`](https://huggingface.co/cccian091/MiniMax-H3-T2V-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-04 | 113 | 0 | [`aufjsufjaujda3/vdn-minimax-h3-int8-convrot-comfyui`](https://huggingface.co/aufjsufjaujda3/vdn-minimax-h3-int8-convrot-comfyui) | minimax-h3 | comfyui, int8, quantization, license:other |
-| 2026-08-11 | 104 | 0 | [`OzzyGT/MiniMax_H3_sdnq_8bit_pruned`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_8bit_pruned) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 102 | 44 | [`Merserk/MiniMax-H3-INT4-ConvRot`](https://huggingface.co/Merserk/MiniMax-H3-INT4-ConvRot) | image-text-to-video | comfyui, int4, license:other |
-| 2026-09-23 | 72 | 0 | [`kato96/Viggle-Animate-ComfyUI`](https://huggingface.co/kato96/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
-| 2026-08-04 | 63 | 0 | [`OzzyGT/MiniMax_H3_sdnq_dynamic_8bit`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_dynamic_8bit) | diffusers |  |
-| 2026-08-19 | 63 | 0 | [`tsolful/Minimax_H3_W4A8`](https://huggingface.co/tsolful/Minimax_H3_W4A8) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-09 | 53 | 0 | [`CalamitousFelicitousness/MiniMax-H3-SDNQ-cb4-hadamard-dynamic`](https://huggingface.co/CalamitousFelicitousness/MiniMax-H3-SDNQ-cb4-hadamard-dynamic) | image-text-to-video | quantization, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-24 | 40 | 0 | [`aiinfluencer00/Viggle-Animate-ComfyUI`](https://huggingface.co/aiinfluencer00/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
-| 2026-09-25 | 29 | 0 | [`Ziyaad30/minimax-h3-fp8`](https://huggingface.co/Ziyaad30/minimax-h3-fp8) | text-to-video | quantization, quantized, fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-27 | 27 | 0 | [`Wesley1234/minimax_h3_ref2va_patchin_hf102`](https://huggingface.co/Wesley1234/minimax_h3_ref2va_patchin_hf102) | image-text-to-video | comfyui, int8-convrot, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
-| 2026-08-31 | 25 | 0 | [`Papina/MiniMax-H3-ref2va-int8`](https://huggingface.co/Papina/MiniMax-H3-ref2va-int8) | image-text-to-video | quantized, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-12 | 24 | 0 | [`voosq/minimax-h3-nvfp4-fp8`](https://huggingface.co/voosq/minimax-h3-nvfp4-fp8) | text-to-video | nvfp4, fp8, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 21 | 1 | [`noctuashap/MiniMax-H3-pruned-r16`](https://huggingface.co/noctuashap/MiniMax-H3-pruned-r16) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-07 | 11 | 0 | [`abenliao/minimax-h3-conditioner-fp8`](https://huggingface.co/abenliao/minimax-h3-conditioner-fp8) |  | fp8, quantized |
-| 2026-08-09 | 7 | 0 | [`abenliao/minimax-h3-conditioner-fp8-stock`](https://huggingface.co/abenliao/minimax-h3-conditioner-fp8-stock) |  |  |
+| 2026-08-03 | 134201 | 243 | [`Abiray/Minimax-H3-nvfp4-INT4-INT8-Convrot`](https://huggingface.co/Abiray/Minimax-H3-nvfp4-INT4-INT8-Convrot) | image-text-to-video | quantized, comfyui, int4, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 102656 | 69 | [`drbaph/Viggle-Animate-ComfyUI`](https://huggingface.co/drbaph/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
+| 2026-09-22 | 98228 | 49 | [`Winnougan/Cobijada_Minimax-H3_Hybrid_Pruned_ComfyUI`](https://huggingface.co/Winnougan/Cobijada_Minimax-H3_Hybrid_Pruned_ComfyUI) | image-to-video | comfyui, quantization, int8, license:apache-2.0 |
+| 2026-08-21 | 83489 | 40 | [`xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI`](https://huggingface.co/xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI) | image-text-to-video | comfyui, int8, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, license:other |
+| 2026-08-04 | 48886 | 33 | [`coolthor/MiniMax-H3-pruned-NVFP4`](https://huggingface.co/coolthor/MiniMax-H3-pruned-NVFP4) | image-text-to-video | nvfp4, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-04 | 34630 | 30 | [`AX1Y2JP/MiniMax-H3-W4A8-ConvRot`](https://huggingface.co/AX1Y2JP/MiniMax-H3-W4A8-ConvRot) | diffusion-single-file | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:other |
+| 2026-09-28 | 33059 | 32 | [`QuantFunc/Minimax-H3-Quantfunc-4bit`](https://huggingface.co/QuantFunc/Minimax-H3-Quantfunc-4bit) | text-to-video | quantized, int4, svdquant, comfyui, license:other |
+| 2026-08-09 | 32739 | 9 | [`koongrizzly/MiniMax_H3_int4_W4A8_ConvRot_Pruned`](https://huggingface.co/koongrizzly/MiniMax_H3_int4_W4A8_ConvRot_Pruned) | minimax-h3 | int4, quantization, license:apache-2.0 |
+| 2026-08-03 | 32701 | 28 | [`rockerBOO/minimax-h3-nvfp4-convrot`](https://huggingface.co/rockerBOO/minimax-h3-nvfp4-convrot) | text-to-video | nvfp4, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-16 | 20868 | 6 | [`sandpies/Minimax-H3-fl2va-ref2va-hybrid-unpruned-int8`](https://huggingface.co/sandpies/Minimax-H3-fl2va-ref2va-hybrid-unpruned-int8) | minimax-h3 | comfyui, int8, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-03 | 20703 | 23 | [`rzgar/minimax_h3_fl2va_fp8_e4m3fn`](https://huggingface.co/rzgar/minimax_h3_fl2va_fp8_e4m3fn) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-24 | 16813 | 19 | [`hoidhxd/MiniMax-H3-x-Z-Image-hybrid`](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-hybrid) | image-to-video | int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-04 | 16114 | 28 | [`drbaph/vdn-minimax-h3-int8-convrot-comfyui`](https://huggingface.co/drbaph/vdn-minimax-h3-int8-convrot-comfyui) | minimax-h3 | comfyui, int8, quantization, license:other |
+| 2026-08-16 | 13806 | 10 | [`berryber09/MiniMax-H3-ref2va-fl2va-hybrid-w4a8`](https://huggingface.co/berryber09/MiniMax-H3-ref2va-fl2va-hybrid-w4a8) | image-to-video | comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-22 | 13769 | 101 | [`joeygambino/MiniMax-H3-x-Z-Image-native`](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-native) | text-to-video | comfyui, comfy-native, comfy-quant, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-20 | 13668 | 4 | [`MATLOWAI/minimax-h3-nvfp4`](https://huggingface.co/MATLOWAI/minimax-h3-nvfp4) | diffusion-single-file | comfyui, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-30 | 9716 | 5 | [`binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w6a8`](https://huggingface.co/binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w6a8) | image-to-video | comfyui, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-07 | 7770 | 4 | [`rzgar/minimax_h3_ref2va_fp8_e4m3fn`](https://huggingface.co/rzgar/minimax_h3_ref2va_fp8_e4m3fn) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-07 | 5443 | 0 | [`abenliao/minimax-h3-transformer-mxfp8`](https://huggingface.co/abenliao/minimax-h3-transformer-mxfp8) | diffusers | fp8, quantized |
+| 2026-09-30 | 5238 | 6 | [`szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot`](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot) | video-to-video | int8, base_model:Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3, base_model:finetune:Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3, license:other |
+| 2026-09-28 | 5115 | 1 | [`binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w4a8_mixed`](https://huggingface.co/binglingzhimeng/minimax_h3_hybrid_fl2va_ref2va_b25-49_w4a8_mixed) | image-to-video | comfyui, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-07 | 5083 | 7 | [`xtanqn/MiniMax-H3-fl2va-ref2va-b25-49-r1024-r0`](https://huggingface.co/xtanqn/MiniMax-H3-fl2va-ref2va-b25-49-r1024-r0) | minimax-h3 | fp8, license:other |
+| 2026-09-10 | 4662 | 9 | [`jfar-z/MiniMax-H3-FL2VA-Ref2VA-Hybrid-NVFP4`](https://huggingface.co/jfar-z/MiniMax-H3-FL2VA-Ref2VA-Hybrid-NVFP4) | image-to-video | comfyui, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-18 | 4216 | 1 | [`t8star/Meridian-Comfy`](https://huggingface.co/t8star/Meridian-Comfy) | video-to-video | comfyui, int8, base_model:Viggle/Meridian, base_model:finetune:Viggle/Meridian, license:other |
+| 2026-08-27 | 2691 | 0 | [`fkyyy/MiniMax-H3-fp8`](https://huggingface.co/fkyyy/MiniMax-H3-fp8) | image-text-to-video | license:other |
+| 2026-08-09 | 2641 | 8 | [`abakanai/Minimax_h3_hybrid`](https://huggingface.co/abakanai/Minimax_h3_hybrid) | image-to-video | comfyui, nvfp4, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-09-07 | 2636 | 11 | [`speach1sdef178/VDN-H3-INT8-ConvRot-ComfyUI`](https://huggingface.co/speach1sdef178/VDN-H3-INT8-ConvRot-ComfyUI) | minimax-h3 | comfyui, int8, license:other |
+| 2026-08-21 | 2061 | 1 | [`rockerBOO/minimax-h3-nvfp4-fp8`](https://huggingface.co/rockerBOO/minimax-h3-nvfp4-fp8) | text-to-video | nvfp4, fp8, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-09 | 1594 | 1 | [`abenliao/minimax-h3-ref2va-transformer-mxfp8`](https://huggingface.co/abenliao/minimax-h3-ref2va-transformer-mxfp8) | diffusers |  |
+| 2026-08-20 | 1346 | 1 | [`PulpCut/MiniMax-H3-INT8-ConvRot`](https://huggingface.co/PulpCut/MiniMax-H3-INT8-ConvRot) | minimax-h3 | int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-03 | 1185 | 2 | [`1ronman1993/MiniMax-H3-SVDQuant-fp4-pdd8`](https://huggingface.co/1ronman1993/MiniMax-H3-SVDQuant-fp4-pdd8) | minimax-h3 | svdquant, comfyui, license:apache-2.0 |
+| 2026-08-15 | 1181 | 2 | [`joeygambino/MiniMax-H3-comfy-native-fl2va`](https://huggingface.co/joeygambino/MiniMax-H3-comfy-native-fl2va) | text-to-video | comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-15 | 867 | 1 | [`wukaikevin/MiniMax-H3-Singularity-Ref2VA-NVFP4`](https://huggingface.co/wukaikevin/MiniMax-H3-Singularity-Ref2VA-NVFP4) | minimax-h3 | nvfp4, quantization, license:apache-2.0 |
+| 2026-08-06 | 540 | 0 | [`AcademiaSD/MiniMax-H3-NF4`](https://huggingface.co/AcademiaSD/MiniMax-H3-NF4) | diffusers | nf4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-26 | 536 | 4 | [`taurusduan/MiniMax-H3-x-Z-Image-hybrid`](https://huggingface.co/taurusduan/MiniMax-H3-x-Z-Image-hybrid) | image-to-video | int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-05 | 525 | 11 | [`Raretutor/vdn-minimax-h3-comfyui-int8-convrot`](https://huggingface.co/Raretutor/vdn-minimax-h3-comfyui-int8-convrot) | text-to-video | comfyui, int8, base_model:OpenVDN/vdn-minimax-h3, base_model:finetune:OpenVDN/vdn-minimax-h3, license:other |
+| 2026-08-11 | 514 | 1 | [`OzzyGT/MiniMax_H3_sdnq_4bit_pruned`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_4bit_pruned) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 394 | 2 | [`Ar4ikov/MiniMax-H3-transformer-W4A16-RTN`](https://huggingface.co/Ar4ikov/MiniMax-H3-transformer-W4A16-RTN) | image-text-to-video | int4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 388 | 1 | [`1ronman1993/MiniMax-H3-SVDQuant-int4-pdd8`](https://huggingface.co/1ronman1993/MiniMax-H3-SVDQuant-int4-pdd8) | minimax-h3 | svdquant, comfyui, license:apache-2.0 |
+| 2026-08-09 | 373 | 2 | [`abhishekchohan/minimax-h3-int8`](https://huggingface.co/abhishekchohan/minimax-h3-int8) | text-to-video | quantization, quantized, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-13 | 355 | 6 | [`stdstu123/LynnReal-Onmi-flash-beta-0.1`](https://huggingface.co/stdstu123/LynnReal-Onmi-flash-beta-0.1) | diffusers | int8 |
+| 2026-08-20 | 335 | 1 | [`ravibhai1212/MiniMax_H3_int4_W4A8_ConvRot_Pruned`](https://huggingface.co/ravibhai1212/MiniMax_H3_int4_W4A8_ConvRot_Pruned) | minimax-h3 | int4, quantization, license:apache-2.0 |
+| 2026-09-12 | 287 | 0 | [`ibyteohdear/MiniMax-H3-Pruned-LightX8-Fused`](https://huggingface.co/ibyteohdear/MiniMax-H3-Pruned-LightX8-Fused) | image-text-to-video | license:other |
+| 2026-09-01 | 250 | 1 | [`rootonchair/MiniMax-H3-nunchaku-lite-int4`](https://huggingface.co/rootonchair/MiniMax-H3-nunchaku-lite-int4) | diffusers | svdquant, quantized, int4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-10 | 236 | 2 | [`t8star/minimax_h3_ref2va_patchin_hf102`](https://huggingface.co/t8star/minimax_h3_ref2va_patchin_hf102) | image-text-to-video | comfyui, int8-convrot, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-09-28 | 233 | 13 | [`isichan-ai/MiniMax-H3-FL2VA-norefiner`](https://huggingface.co/isichan-ai/MiniMax-H3-FL2VA-norefiner) | minimax-h3 | comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-18 | 203 | 0 | [`yuivs/Minimax-H3-nvfp4-INT4-INT8-Convrot`](https://huggingface.co/yuivs/Minimax-H3-nvfp4-INT4-INT8-Convrot) | image-text-to-video | quantized, comfyui, int4, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 199 | 1 | [`OzzyGT/MiniMax_H3_sdnq_dynamic_4bit`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_dynamic_4bit) | diffusers |  |
+| 2026-09-01 | 164 | 1 | [`rootonchair/MiniMax-H3-nunchaku-lite-nvfp4`](https://huggingface.co/rootonchair/MiniMax-H3-nunchaku-lite-nvfp4) | diffusers | svdquant, quantized, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-09 | 156 | 0 | [`abhishekchohan/minimax-h3-fp8`](https://huggingface.co/abhishekchohan/minimax-h3-fp8) | text-to-video | quantization, quantized, fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-20 | 140 | 7 | [`diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024`](https://huggingface.co/diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024) | image-text-to-video | base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 119 | 47 | [`Merserk/MiniMax-H3-INT4-ConvRot`](https://huggingface.co/Merserk/MiniMax-H3-INT4-ConvRot) | image-text-to-video | comfyui, int4, license:other |
+| 2026-08-11 | 102 | 0 | [`OzzyGT/MiniMax_H3_sdnq_8bit_pruned`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_8bit_pruned) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-23 | 94 | 0 | [`kato96/Viggle-Animate-ComfyUI`](https://huggingface.co/kato96/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
+| 2026-09-07 | 73 | 0 | [`cccian091/MiniMax-H3-T2V-NVFP4`](https://huggingface.co/cccian091/MiniMax-H3-T2V-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-19 | 73 | 0 | [`tsolful/Minimax_H3_W4A8`](https://huggingface.co/tsolful/Minimax_H3_W4A8) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-17 | 70 | 0 | [`wangpj/MiniMax-H3_fp8`](https://huggingface.co/wangpj/MiniMax-H3_fp8) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-04 | 68 | 0 | [`aufjsufjaujda3/vdn-minimax-h3-int8-convrot-comfyui`](https://huggingface.co/aufjsufjaujda3/vdn-minimax-h3-int8-convrot-comfyui) | minimax-h3 | comfyui, int8, quantization, license:other |
+| 2026-08-04 | 65 | 0 | [`OzzyGT/MiniMax_H3_sdnq_dynamic_8bit`](https://huggingface.co/OzzyGT/MiniMax_H3_sdnq_dynamic_8bit) | diffusers |  |
+| 2026-08-09 | 62 | 0 | [`CalamitousFelicitousness/MiniMax-H3-SDNQ-cb4-hadamard-dynamic`](https://huggingface.co/CalamitousFelicitousness/MiniMax-H3-SDNQ-cb4-hadamard-dynamic) | image-text-to-video | quantization, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-25 | 55 | 0 | [`Ziyaad30/minimax-h3-fp8`](https://huggingface.co/Ziyaad30/minimax-h3-fp8) | text-to-video | quantization, quantized, fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-24 | 46 | 0 | [`aiinfluencer00/Viggle-Animate-ComfyUI`](https://huggingface.co/aiinfluencer00/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
+| 2026-10-06 | 44 | 0 | [`zzdfildd/Viggle-Animate-ComfyUI`](https://huggingface.co/zzdfildd/Viggle-Animate-ComfyUI) | video-to-video | comfyui, int8, license:other |
+| 2026-08-31 | 28 | 0 | [`Papina/MiniMax-H3-ref2va-int8`](https://huggingface.co/Papina/MiniMax-H3-ref2va-int8) | image-text-to-video | quantized, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-12 | 26 | 0 | [`voosq/minimax-h3-nvfp4-fp8`](https://huggingface.co/voosq/minimax-h3-nvfp4-fp8) | text-to-video | nvfp4, fp8, quantized, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 24 | 1 | [`noctuashap/MiniMax-H3-pruned-r16`](https://huggingface.co/noctuashap/MiniMax-H3-pruned-r16) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-27 | 20 | 0 | [`Wesley1234/minimax_h3_ref2va_patchin_hf102`](https://huggingface.co/Wesley1234/minimax_h3_ref2va_patchin_hf102) | image-text-to-video | comfyui, int8-convrot, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-10-07 | 17 | 1 | [`ai-server-mgr/MiniMax-H3-SDNQ-uint4`](https://huggingface.co/ai-server-mgr/MiniMax-H3-SDNQ-uint4) | image-text-to-video | quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-09 | 14 | 0 | [`Ziyaad30/MiniMax-H3-Pruned`](https://huggingface.co/Ziyaad30/MiniMax-H3-Pruned) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-07 | 10 | 0 | [`abenliao/minimax-h3-conditioner-fp8`](https://huggingface.co/abenliao/minimax-h3-conditioner-fp8) |  | fp8, quantized |
+| 2026-08-09 | 4 | 0 | [`abenliao/minimax-h3-conditioner-fp8-stock`](https://huggingface.co/abenliao/minimax-h3-conditioner-fp8-stock) |  |  |
 | 2026-08-12 | 2 | 0 | [`Yi30/minimax_h3_mxfp8_packed_pretrained`](https://huggingface.co/Yi30/minimax_h3_mxfp8_packed_pretrained) | diffusers |  |
 | 2026-08-04 | 0 | 14 | [`DiffSynth-Studio/MiniMax-H3-NF4`](https://huggingface.co/DiffSynth-Studio/MiniMax-H3-NF4) |  | license:apache-2.0 |
-| 2026-08-03 | 0 | 37 | [`DmitryDB/MiniMax-H3-ComfyUI-Quants`](https://huggingface.co/DmitryDB/MiniMax-H3-ComfyUI-Quants) | image-text-to-video | comfyui, quantization, int8, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 0 | 38 | [`DmitryDB/MiniMax-H3-ComfyUI-Quants`](https://huggingface.co/DmitryDB/MiniMax-H3-ComfyUI-Quants) | image-text-to-video | comfyui, quantization, int8, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-04 | 0 | 7 | [`DmitryDB/MiniMax-H3-DynTime-sQKV`](https://huggingface.co/DmitryDB/MiniMax-H3-DynTime-sQKV) | image-text-to-video | comfyui, quantization, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-09 | 0 | 0 | [`EliovpAI/MiniMax-H3-W4A8-Paiton-RDNA4`](https://huggingface.co/EliovpAI/MiniMax-H3-W4A8-Paiton-RDNA4) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-22 | 0 | 0 | [`Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32`](https://huggingface.co/Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32) | text-generation | base_model:Qwen/Qwen3-32B, base_model:finetune:Qwen/Qwen3-32B, license:apache-2.0 |
 | 2026-08-03 | 0 | 4 | [`FenomAI/MiniMax-H3`](https://huggingface.co/FenomAI/MiniMax-H3) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-16 | 0 | 0 | [`Frosty40/h3-spark`](https://huggingface.co/Frosty40/h3-spark) | comfyui | comfyui, nvfp4, quantization, license:other |
-| 2026-08-02 | 0 | 20 | [`Gluttony10/MiniMax-H3-INT8-CONVROT`](https://huggingface.co/Gluttony10/MiniMax-H3-INT8-CONVROT) | image-text-to-video | comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-02 | 0 | 21 | [`Gluttony10/MiniMax-H3-INT8-CONVROT`](https://huggingface.co/Gluttony10/MiniMax-H3-INT8-CONVROT) | image-text-to-video | comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-24 | 0 | 0 | [`JeffDing/MiniMax_h3_int8_demo`](https://huggingface.co/JeffDing/MiniMax_h3_int8_demo) |  |  |
 | 2026-09-21 | 0 | 0 | [`JoyFusionAI/dt-minimax-h3`](https://huggingface.co/JoyFusionAI/dt-minimax-h3) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 0 | 0 | [`Labourer/makautini_MINIMAX_H3_merged_int8_v1.safetensors`](https://huggingface.co/Labourer/makautini_MINIMAX_H3_merged_int8_v1.safetensors) |  |  |
 | 2026-08-03 | 0 | 7 | [`ModelsLab/MiniMax-H3-ref2va-NVFP4`](https://huggingface.co/ModelsLab/MiniMax-H3-ref2va-NVFP4) |  | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-19 | 0 | 0 | [`ModelsLab/MiniMax-H3-svdquant-int4_r32`](https://huggingface.co/ModelsLab/MiniMax-H3-svdquant-int4_r32) | text-to-video | svdquant, int4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-19 | 0 | 0 | [`ModelsLab/MiniMax-H3-svdquant-nvfp4_r32`](https://huggingface.co/ModelsLab/MiniMax-H3-svdquant-nvfp4_r32) | text-to-video | svdquant, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-13 | 0 | 1 | [`OpenVDN/vdn-minimax-h3-edge`](https://huggingface.co/OpenVDN/vdn-minimax-h3-edge) | text-to-video | fp8, base_model:OpenVDN/vdn-minimax-h3, base_model:finetune:OpenVDN/vdn-minimax-h3, license:other |
+| 2026-09-13 | 0 | 3 | [`OpenVDN/vdn-minimax-h3-edge`](https://huggingface.co/OpenVDN/vdn-minimax-h3-edge) | text-to-video | fp8, base_model:OpenVDN/vdn-minimax-h3, base_model:finetune:OpenVDN/vdn-minimax-h3, license:other |
 | 2026-08-06 | 0 | 1 | [`Rudra-ai/MiniMax-H3-NF4`](https://huggingface.co/Rudra-ai/MiniMax-H3-NF4) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
 | 2026-08-19 | 0 | 1 | [`RunningHubAI/MiniMax-H3-INT8-CONVROT`](https://huggingface.co/RunningHubAI/MiniMax-H3-INT8-CONVROT) | image-text-to-video | comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 0 | 0 | [`RunningHubAI/rh-camera-motion-h3-lora-v1-3000-pruned-lora`](https://huggingface.co/RunningHubAI/rh-camera-motion-h3-lora-v1-3000-pruned-lora) |  | comfyui, lora |
 | 2026-09-25 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-hybrid-fl2va-ref2va-b25-49-int8-r-unet`](https://huggingface.co/RunningHubAI/rh-minimax-h3-hybrid-fl2va-ref2va-b25-49-int8-r-unet) | text-to-video | comfyui |
 | 2026-08-08 | 0 | 1 | [`SabiQG/minimax-h3-fp8`](https://huggingface.co/SabiQG/minimax-h3-fp8) | image-to-video | fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-09 | 0 | 0 | [`Simplismart/Minimax-H3-FL2V-NVFP4`](https://huggingface.co/Simplismart/Minimax-H3-FL2V-NVFP4) |  |  |
 | 2026-08-16 | 0 | 33 | [`WarmBloodAban/Minimax_h3_ref2va_XUELUO_int8_convrot`](https://huggingface.co/WarmBloodAban/Minimax_h3_ref2va_XUELUO_int8_convrot) |  |  |
-| 2026-08-03 | 0 | 27 | [`Winnougan/MiniMax-H3-INT4_Convrot_ComfyUI`](https://huggingface.co/Winnougan/MiniMax-H3-INT4_Convrot_ComfyUI) | image-to-video | comfyui, quantization, int4, license:apache-2.0 |
+| 2026-08-03 | 0 | 30 | [`Winnougan/MiniMax-H3-INT4_Convrot_ComfyUI`](https://huggingface.co/Winnougan/MiniMax-H3-INT4_Convrot_ComfyUI) | image-to-video | comfyui, quantization, int4, license:apache-2.0 |
 | 2026-08-25 | 0 | 0 | [`aaaaakkkkk/minimaxH3Remix_int8ConvrotV06`](https://huggingface.co/aaaaakkkkk/minimaxH3Remix_int8ConvrotV06) |  |  |
 | 2026-09-28 | 0 | 2 | [`aireet/viggle-animate-workflow`](https://huggingface.co/aireet/viggle-animate-workflow) | image-to-video | comfyui, quantized, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-17 | 0 | 4 | [`cicalooo/MiniMax-H3-hybrid-b45-49-rtx3090-w4a8-int8`](https://huggingface.co/cicalooo/MiniMax-H3-hybrid-b45-49-rtx3090-w4a8-int8) | text-to-video | comfyui, quantization, int8, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diobrando0/MiniMax-H3-fl2va-ref2va-hybrids-bf16, base_model:merge:diobrando0/MiniMax-H3-fl2va-ref2va-hybrids-bf16, license:other |
+| 2026-09-17 | 0 | 6 | [`cicalooo/MiniMax-H3-hybrid-b45-49-rtx3090-w4a8-int8`](https://huggingface.co/cicalooo/MiniMax-H3-hybrid-b45-49-rtx3090-w4a8-int8) | text-to-video | comfyui, quantization, int8, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diobrando0/MiniMax-H3-fl2va-ref2va-hybrids-bf16, base_model:merge:diobrando0/MiniMax-H3-fl2va-ref2va-hybrids-bf16, license:other |
 | 2026-08-06 | 0 | 1 | [`cicalooo/Minimax-H3-INT8-converts`](https://huggingface.co/cicalooo/Minimax-H3-INT8-converts) | image-text-to-video | comfyui, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 0 | 0 | [`cobrasnake141/h3-a100-int8`](https://huggingface.co/cobrasnake141/h3-a100-int8) |  |  |
 | 2026-08-27 | 0 | 0 | [`corechan/MiniMax-H3_NF4`](https://huggingface.co/corechan/MiniMax-H3_NF4) | text-generation | quantized, nf4, license:other |
-| 2026-08-30 | 0 | 0 | [`corechan/MiniMax-H3_nvfp4`](https://huggingface.co/corechan/MiniMax-H3_nvfp4) | text-generation | quantized, nvfp4, license:other |
+| 2026-08-30 | 0 | 1 | [`corechan/MiniMax-H3_nvfp4`](https://huggingface.co/corechan/MiniMax-H3_nvfp4) | text-generation | quantized, nvfp4, license:other |
 | 2026-09-12 | 0 | 3 | [`corechan/MiniMax_H3_Torchao018`](https://huggingface.co/corechan/MiniMax_H3_Torchao018) | text-to-video | quantized, nvfp4, int8, nf4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-10 | 0 | 2 | [`deAPI-ai/minimax-h3-33b-int8`](https://huggingface.co/deAPI-ai/minimax-h3-33b-int8) | text-to-video | int8, license:other |
-| 2026-08-03 | 0 | 0 | [`dimitarx/MiniMax-H3-fp8`](https://huggingface.co/dimitarx/MiniMax-H3-fp8) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
-| 2026-08-03 | 0 | 11 | [`dotexec/MiniMax-H3-T2V-NVFP4`](https://huggingface.co/dotexec/MiniMax-H3-T2V-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-03 | 0 | 1 | [`dimitarx/MiniMax-H3-fp8`](https://huggingface.co/dimitarx/MiniMax-H3-fp8) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
+| 2026-08-03 | 0 | 13 | [`dotexec/MiniMax-H3-T2V-NVFP4`](https://huggingface.co/dotexec/MiniMax-H3-T2V-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:other |
 | 2026-08-21 | 0 | 2 | [`dreamkrate/Minimax-H3-Hybrid-BF16-Pruned`](https://huggingface.co/dreamkrate/Minimax-H3-Hybrid-BF16-Pruned) | text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-03 | 0 | 0 | [`endman100/MiniMax-H3-FL2VA-FP8`](https://huggingface.co/endman100/MiniMax-H3-FL2VA-FP8) |  | comfyui, fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-03 | 0 | 1 | [`endman100/MiniMax-H3-Ref2VA-FP8`](https://huggingface.co/endman100/MiniMax-H3-Ref2VA-FP8) |  | comfyui, fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
@@ -173,13 +179,15 @@
 | 2026-08-03 | 0 | 0 | [`harsh171104/MiniMax-H3-FP8`](https://huggingface.co/harsh171104/MiniMax-H3-FP8) | diffusers |  |
 | 2026-09-02 | 0 | 0 | [`herb786/MiniMaxH3-acheze-int8`](https://huggingface.co/herb786/MiniMaxH3-acheze-int8) | diffusers | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
 | 2026-08-24 | 0 | 0 | [`hoidhxd/MiniMax-H3-x-Z-Image-bf16`](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-bf16) | safetensors | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-03 | 0 | 133 | [`lilcheaty/MiniMax-H3-NVFP4`](https://huggingface.co/lilcheaty/MiniMax-H3-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 0 | 2 | [`jeuzu/Dasiwa_MiniMax_H3_V4_int8`](https://huggingface.co/jeuzu/Dasiwa_MiniMax_H3_V4_int8) |  |  |
+| 2026-08-03 | 0 | 141 | [`lilcheaty/MiniMax-H3-NVFP4`](https://huggingface.co/lilcheaty/MiniMax-H3-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-13 | 0 | 0 | [`naiwen888/MiniMax-H3-NVFP4`](https://huggingface.co/naiwen888/MiniMax-H3-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-03 | 0 | 3 | [`natalie5/MiniMax-H3-INT8-CONVROT`](https://huggingface.co/natalie5/MiniMax-H3-INT8-CONVROT) |  |  |
 | 2026-09-27 | 0 | 0 | [`nrxdkx/minimax_h3_fl2va_pruned_int8_convrot`](https://huggingface.co/nrxdkx/minimax_h3_fl2va_pruned_int8_convrot) |  |  |
 | 2026-09-02 | 0 | 2 | [`pottokao/H3-RotNVFP4-ComfyUI-Loader`](https://huggingface.co/pottokao/H3-RotNVFP4-ComfyUI-Loader) | minimax-h3 | comfyui, nvfp4, license:apache-2.0 |
 | 2026-09-02 | 0 | 1 | [`pottokao/MiniMax-H3-NVFP4-rotated`](https://huggingface.co/pottokao/MiniMax-H3-NVFP4-rotated) | text-to-video | comfyui, nvfp4, quantization, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-08 | 0 | 0 | [`pottokao/minimax-h3-2x16gb`](https://huggingface.co/pottokao/minimax-h3-2x16gb) | text-to-video | nvfp4, quantized, license:other |
+| 2026-10-11 | 0 | 0 | [`rockstarengine/vflash-h3-prepared`](https://huggingface.co/rockstarengine/vflash-h3-prepared) | diffusers | fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-03 | 0 | 0 | [`sekkit/MiniMax-H3-INT8-CONVROT`](https://huggingface.co/sekkit/MiniMax-H3-INT8-CONVROT) |  |  |
 | 2026-08-06 | 0 | 7 | [`starsfriday/MiniMax-H3-w4a8`](https://huggingface.co/starsfriday/MiniMax-H3-w4a8) | image-text-to-video | comfyui, int4, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-31 | 0 | 0 | [`suanyu/MiniMax-H3-Star7-INT8`](https://huggingface.co/suanyu/MiniMax-H3-Star7-INT8) |  |  |
@@ -189,6 +197,7 @@
 | 2026-08-03 | 0 | 39 | [`tsolful/Minimax_H3_INT4MixedConvRot`](https://huggingface.co/tsolful/Minimax_H3_INT4MixedConvRot) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-07 | 0 | 14 | [`unsloth/MiniMax-H3-FP8`](https://huggingface.co/unsloth/MiniMax-H3-FP8) | image-text-to-video | fp8, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-05 | 0 | 2 | [`vonkaiser/MiniMax-H3-NVFP4`](https://huggingface.co/vonkaiser/MiniMax-H3-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 0 | 0 | [`x-atm-x/MiniMax-H3-FP8`](https://huggingface.co/x-atm-x/MiniMax-H3-FP8) | image-text-to-video | fp8, int8, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-16 | 0 | 0 | [`xt111/MiniMax-H3-NVFP4`](https://huggingface.co/xt111/MiniMax-H3-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-20 | 0 | 0 | [`xvmrjxc/MiniMax-H3-NVFP4`](https://huggingface.co/xvmrjxc/MiniMax-H3-NVFP4) | text-to-video | comfyui, nvfp4, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-09 | 0 | 0 | [`yitongl/minimax-h3-deltaquant-nvfp4`](https://huggingface.co/yitongl/minimax-h3-deltaquant-nvfp4) |  | deltaquant, nvfp4, quantization, license:other |
@@ -200,146 +209,158 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-07 | 1456680 | 326 | [`unsloth/MiniMax-H3-GGUF`](https://huggingface.co/unsloth/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 567741 | 144 | [`Abiray/MiniMax-H3-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-02 | 537600 | 66 | [`DeepBeepMeep/MiniMax-H3`](https://huggingface.co/DeepBeepMeep/MiniMax-H3) | diffusion-single-file | gguf |
-| 2026-08-07 | 270363 | 73 | [`Abiray/MiniMax-H3-Pruned-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-Pruned-GGUF) | image-text-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 167341 | 229 | [`realrebelai/MiniMax-H3_GGUFs`](https://huggingface.co/realrebelai/MiniMax-H3_GGUFs) |  | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
-| 2026-08-03 | 161541 | 22 | [`leejet/MiniMax-H3-GGUF`](https://huggingface.co/leejet/MiniMax-H3-GGUF) | image-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3 |
-| 2026-08-04 | 66909 | 14 | [`joeygambino/MiniMax-H3-encoder-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-encoder-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3 |
-| 2026-08-03 | 65335 | 62 | [`molbal/MiniMax-H3-GGUF`](https://huggingface.co/molbal/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-04 | 37416 | 36 | [`nif0/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-H3-GGUF`](https://huggingface.co/nif0/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-H3-GGUF) |  | gguf, base_model:mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-i1-GGUF, base_model:quantized:mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-i1-GGUF, license:apache-2.0 |
-| 2026-09-05 | 36518 | 7 | [`pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-GGUF`](https://huggingface.co/pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-GGUF) | image-text-to-text | gguf, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-08-05 | 31110 | 8 | [`joeygambino/MiniMax-H3-curve-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-curve-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-05 | 25277 | 14 | [`nif0/Qwen3-VL-32B-Instruct-MiniMax-H3-GGUF`](https://huggingface.co/nif0/Qwen3-VL-32B-Instruct-MiniMax-H3-GGUF) |  | gguf, base_model:unsloth/Qwen3-VL-32B-Instruct-GGUF, base_model:quantized:unsloth/Qwen3-VL-32B-Instruct-GGUF, license:apache-2.0 |
-| 2026-09-18 | 15255 | 30 | [`Abiray/MiniMax-H3-Singularity-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-Singularity-GGUF) | image-to-video | gguf, comfyui, quantized, base_model:WarmBloodAban/Minimax-h3_Singularity, base_model:quantized:WarmBloodAban/Minimax-h3_Singularity, license:other |
-| 2026-09-13 | 13191 | 12 | [`Abiray/10Eros-Max-Hybrid-Beta5-GGUF`](https://huggingface.co/Abiray/10Eros-Max-Hybrid-Beta5-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
-| 2026-08-06 | 11700 | 0 | [`convertor/minimax-h3-gguf`](https://huggingface.co/convertor/minimax-h3-gguf) |  | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3 |
-| 2026-08-04 | 10349 | 24 | [`vantagewithai/MiniMax-H3-comfyUI-GGUF`](https://huggingface.co/vantagewithai/MiniMax-H3-comfyUI-GGUF) | image-text-to-video | gguf, license:other |
-| 2026-08-13 | 6658 | 5 | [`hoidhxd/MiniMax-H3-Hybrid-b25-49-GGUF`](https://huggingface.co/hoidhxd/MiniMax-H3-Hybrid-b25-49-GGUF) | image-to-video | gguf, comfyui, quantized, base_model:smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models, base_model:quantized:smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models |
-| 2026-08-20 | 5545 | 3 | [`PurpleBlazey/Minimax-H3-pruned-GGUF`](https://huggingface.co/PurpleBlazey/Minimax-H3-pruned-GGUF) | image-text-to-video | gguf, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-04 | 4761 | 9 | [`joeygambino/MiniMax-H3-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-22 | 3979 | 34 | [`joeygambino/MiniMax-H3-x-Z-Image-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-GGUF) | text-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 2946 | 0 | [`brurpo/MiniMax-H3-NVFP4-GGUF`](https://huggingface.co/brurpo/MiniMax-H3-NVFP4-GGUF) | image-text-to-video | gguf, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-20 | 2614 | 1 | [`eraiko/Qwen3-VL-32B-Ultra-Heretic-Minimax-H3-GGUF`](https://huggingface.co/eraiko/Qwen3-VL-32B-Ultra-Heretic-Minimax-H3-GGUF) |  | gguf |
-| 2026-08-26 | 1890 | 7 | [`pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-Omni-GGUF`](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-Omni-GGUF) | image-text-to-text | gguf, lora, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni, base_model:adapter:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni |
-| 2026-08-06 | 1887 | 3 | [`woodfireind/MiniMax-H3-GGUF-MiniStack`](https://huggingface.co/woodfireind/MiniMax-H3-GGUF-MiniStack) | text-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-16 | 1757 | 6 | [`Abiray/MiniMax-H3-Pruned-Ref-Delta-Fused-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-Pruned-Ref-Delta-Fused-GGUF) | image-to-video | gguf, comfyui, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, base_model:quantized:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, license:other |
-| 2026-08-10 | 1732 | 0 | [`MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF`](https://huggingface.co/MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-06 | 1714 | 0 | [`Raretutor/Qwen3-VL-32B-MiniMax-H3-GGUF`](https://huggingface.co/Raretutor/Qwen3-VL-32B-MiniMax-H3-GGUF) | image-text-to-text | gguf, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-08-03 | 1517 | 5 | [`FenomAI/MiniMax-H3_GGUFs`](https://huggingface.co/FenomAI/MiniMax-H3_GGUFs) | text-to-video | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
-| 2026-08-10 | 1286 | 0 | [`myhuggingbb/MiniMax-H3-GGUF`](https://huggingface.co/myhuggingbb/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-19 | 942 | 3 | [`indhic-ai/MiniMax_H3-Prompt_Rewriter-8B-LORA-Merged-GGUF`](https://huggingface.co/indhic-ai/MiniMax_H3-Prompt_Rewriter-8B-LORA-Merged-GGUF) | image-text-to-text | gguf, lora-merge, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:merge:Qwen/Qwen3-VL-8B-Instruct, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, base_model:merge:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, license:apache-2.0 |
-| 2026-08-07 | 902 | 25 | [`pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-GGUF`](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-GGUF) | gguf | gguf, lora, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA, base_model:adapter:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA |
-| 2026-08-05 | 832 | 0 | [`FenomAI/Minimax-H3-WAN2GP`](https://huggingface.co/FenomAI/Minimax-H3-WAN2GP) | diffusion-single-file | gguf |
-| 2026-09-08 | 804 | 1 | [`alibaybay/MiniMax-H3-Prompt-Rewriter-GGUF`](https://huggingface.co/alibaybay/MiniMax-H3-Prompt-Rewriter-GGUF) | text-generation | gguf, base_model:Qwen/Qwen2.5-Omni-7B, base_model:quantized:Qwen/Qwen2.5-Omni-7B, license:apache-2.0 |
-| 2026-08-18 | 673 | 3 | [`pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF`](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF) | image-text-to-text | gguf, lora, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, base_model:adapter:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B |
-| 2026-08-24 | 593 | 1 | [`chfm/MiniMax-H3_GGUFs`](https://huggingface.co/chfm/MiniMax-H3_GGUFs) | text-to-video | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
-| 2026-08-07 | 437 | 0 | [`on-nurida-mov/My-MiniMax-H3`](https://huggingface.co/on-nurida-mov/My-MiniMax-H3) | diffusion-single-file | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-24 | 411 | 1 | [`hoidhxd/MiniMax-H3-x-Z-Image-hybrid-GGUF`](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-hybrid-GGUF) | image-to-video | gguf, base_model:hoidhxd/MiniMax-H3-x-Z-Image-hybrid, base_model:quantized:hoidhxd/MiniMax-H3-x-Z-Image-hybrid, license:apache-2.0 |
-| 2026-08-06 | 324 | 4 | [`EllaPriest45/MinimaxH3_Checkpoints`](https://huggingface.co/EllaPriest45/MinimaxH3_Checkpoints) |  | gguf |
-| 2026-09-29 | 270 | 0 | [`ldov/MiniMax-H3-GGUF`](https://huggingface.co/ldov/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-10-02 | 240 | 2 | [`Abiray/10Eros-Max-Turbo-Hybrid-Beta5-GGUF`](https://huggingface.co/Abiray/10Eros-Max-Turbo-Hybrid-Beta5-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
-| 2026-08-03 | 209 | 3 | [`EllaPriest45/MinimaxH3_base`](https://huggingface.co/EllaPriest45/MinimaxH3_base) |  | gguf |
-| 2026-08-14 | 184 | 0 | [`Derdisirtlan/MiniMax-H3-GGUF`](https://huggingface.co/Derdisirtlan/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-25 | 132 | 0 | [`chfm/10Eros-Max-Hybrid-Beta5-GGUF`](https://huggingface.co/chfm/10Eros-Max-Hybrid-Beta5-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
-| 2026-08-10 | 130 | 0 | [`MarxistLeninist/MiniMax-H3-LowBit-GGUF`](https://huggingface.co/MarxistLeninist/MiniMax-H3-LowBit-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-25 | 109 | 0 | [`ZawShiShawn/Gestura-MiniMax-H3-VAE-GGUF`](https://huggingface.co/ZawShiShawn/Gestura-MiniMax-H3-VAE-GGUF) | image-to-video | gguf, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-28 | 70 | 0 | [`electroglyph/10Eros_Max_h3_TURBO-hybrid_beta3-GGUF`](https://huggingface.co/electroglyph/10Eros_Max_h3_TURBO-hybrid_beta3-GGUF) |  | gguf |
-| 2026-09-06 | 55 | 0 | [`EllipsesMark/MinimaxH3_Checkpoints`](https://huggingface.co/EllipsesMark/MinimaxH3_Checkpoints) |  | gguf |
-| 2026-08-07 | 43 | 0 | [`sandeshrajx/MiniMax-H3-Prompt-Rewriter-LoRA-gguf`](https://huggingface.co/sandeshrajx/MiniMax-H3-Prompt-Rewriter-LoRA-gguf) | text-generation | gguf, lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B, license:apache-2.0 |
-| 2026-09-27 | 28 | 0 | [`Radha7/MiniMax-H3-Remix-Quantized`](https://huggingface.co/Radha7/MiniMax-H3-Remix-Quantized) |  | gguf |
-| 2026-09-25 | 22 | 0 | [`ZawShiShawn/Gestura-MiniMax-H3-REF2VA-Delta`](https://huggingface.co/ZawShiShawn/Gestura-MiniMax-H3-REF2VA-Delta) | image-to-video | gguf, quantized, base_model:ChrisColeTech/minimax-h3-turbo-GGUF, base_model:quantized:ChrisColeTech/minimax-h3-turbo-GGUF, license:other |
-| 2026-08-09 | 20 | 1 | [`solphor/MiniMax-H3-Prompt-Rewriter-LoRA-Q8-GGUF`](https://huggingface.co/solphor/MiniMax-H3-Prompt-Rewriter-LoRA-Q8-GGUF) | peft | gguf, lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B |
-| 2026-08-06 | 10 | 0 | [`radarer168/MinimaxH3_base`](https://huggingface.co/radarer168/MinimaxH3_base) |  | gguf |
-| 2026-08-06 | 6 | 0 | [`radarer168/MinimaxH3_Checkpoints`](https://huggingface.co/radarer168/MinimaxH3_Checkpoints) |  | gguf |
+| 2026-08-07 | 1773155 | 345 | [`unsloth/MiniMax-H3-GGUF`](https://huggingface.co/unsloth/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-02 | 560990 | 68 | [`DeepBeepMeep/MiniMax-H3`](https://huggingface.co/DeepBeepMeep/MiniMax-H3) | diffusion-single-file | gguf |
+| 2026-08-07 | 369915 | 76 | [`Abiray/MiniMax-H3-Pruned-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-Pruned-GGUF) | image-text-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 267515 | 147 | [`Abiray/MiniMax-H3-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 213711 | 233 | [`realrebelai/MiniMax-H3_GGUFs`](https://huggingface.co/realrebelai/MiniMax-H3_GGUFs) |  | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
+| 2026-08-03 | 192678 | 23 | [`leejet/MiniMax-H3-GGUF`](https://huggingface.co/leejet/MiniMax-H3-GGUF) | image-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3 |
+| 2026-08-04 | 62880 | 14 | [`joeygambino/MiniMax-H3-encoder-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-encoder-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3 |
+| 2026-08-03 | 56019 | 65 | [`molbal/MiniMax-H3-GGUF`](https://huggingface.co/molbal/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 43529 | 8 | [`pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-GGUF`](https://huggingface.co/pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-GGUF) | image-text-to-text | gguf, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-08-05 | 39707 | 16 | [`nif0/Qwen3-VL-32B-Instruct-MiniMax-H3-GGUF`](https://huggingface.co/nif0/Qwen3-VL-32B-Instruct-MiniMax-H3-GGUF) |  | gguf, base_model:unsloth/Qwen3-VL-32B-Instruct-GGUF, base_model:quantized:unsloth/Qwen3-VL-32B-Instruct-GGUF, license:apache-2.0 |
+| 2026-08-04 | 37914 | 38 | [`nif0/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-H3-GGUF`](https://huggingface.co/nif0/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-H3-GGUF) |  | gguf, base_model:mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-i1-GGUF, base_model:quantized:mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-i1-GGUF, license:apache-2.0 |
+| 2026-08-05 | 28509 | 9 | [`joeygambino/MiniMax-H3-curve-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-curve-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-18 | 21366 | 34 | [`Abiray/MiniMax-H3-Singularity-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-Singularity-GGUF) | image-to-video | gguf, comfyui, quantized, base_model:WarmBloodAban/Minimax-h3_Singularity, base_model:quantized:WarmBloodAban/Minimax-h3_Singularity, license:other |
+| 2026-09-13 | 14803 | 15 | [`Abiray/10Eros-Max-Hybrid-Beta5-GGUF`](https://huggingface.co/Abiray/10Eros-Max-Hybrid-Beta5-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
+| 2026-08-04 | 12280 | 25 | [`vantagewithai/MiniMax-H3-comfyUI-GGUF`](https://huggingface.co/vantagewithai/MiniMax-H3-comfyUI-GGUF) | image-text-to-video | gguf, license:other |
+| 2026-08-20 | 5906 | 3 | [`PurpleBlazey/Minimax-H3-pruned-GGUF`](https://huggingface.co/PurpleBlazey/Minimax-H3-pruned-GGUF) | image-text-to-video | gguf, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-08-05 | 4057 | 0 | [`FenomAI/Minimax-H3-WAN2GP`](https://huggingface.co/FenomAI/Minimax-H3-WAN2GP) | diffusion-single-file | gguf |
+| 2026-08-13 | 3856 | 5 | [`hoidhxd/MiniMax-H3-Hybrid-b25-49-GGUF`](https://huggingface.co/hoidhxd/MiniMax-H3-Hybrid-b25-49-GGUF) | image-to-video | gguf, comfyui, quantized, base_model:smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models, base_model:quantized:smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models |
+| 2026-10-02 | 3830 | 6 | [`Abiray/10Eros-Max-Turbo-Hybrid-Beta5-GGUF`](https://huggingface.co/Abiray/10Eros-Max-Turbo-Hybrid-Beta5-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
+| 2026-08-04 | 3675 | 9 | [`joeygambino/MiniMax-H3-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-16 | 3640 | 6 | [`Abiray/MiniMax-H3-Pruned-Ref-Delta-Fused-GGUF`](https://huggingface.co/Abiray/MiniMax-H3-Pruned-Ref-Delta-Fused-GGUF) | image-to-video | gguf, comfyui, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, base_model:quantized:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, license:other |
+| 2026-08-22 | 3056 | 34 | [`joeygambino/MiniMax-H3-x-Z-Image-GGUF`](https://huggingface.co/joeygambino/MiniMax-H3-x-Z-Image-GGUF) | text-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-20 | 2933 | 2 | [`eraiko/Qwen3-VL-32B-Ultra-Heretic-Minimax-H3-GGUF`](https://huggingface.co/eraiko/Qwen3-VL-32B-Ultra-Heretic-Minimax-H3-GGUF) |  | gguf |
+| 2026-08-26 | 2271 | 7 | [`pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-Omni-GGUF`](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-Omni-GGUF) | image-text-to-text | gguf, lora, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni, base_model:adapter:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni |
+| 2026-08-06 | 2196 | 3 | [`woodfireind/MiniMax-H3-GGUF-MiniStack`](https://huggingface.co/woodfireind/MiniMax-H3-GGUF-MiniStack) | text-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-16 | 2154 | 0 | [`brurpo/MiniMax-H3-NVFP4-GGUF`](https://huggingface.co/brurpo/MiniMax-H3-NVFP4-GGUF) | image-text-to-video | gguf, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-07 | 2118 | 26 | [`pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-GGUF`](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-GGUF) | gguf | gguf, lora, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA, base_model:adapter:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA |
+| 2026-08-03 | 1929 | 3 | [`EllaPriest45/MinimaxH3_base`](https://huggingface.co/EllaPriest45/MinimaxH3_base) |  | gguf |
+| 2026-08-06 | 1633 | 0 | [`convertor/minimax-h3-gguf`](https://huggingface.co/convertor/minimax-h3-gguf) |  | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3 |
+| 2026-08-10 | 1596 | 0 | [`MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF`](https://huggingface.co/MarxistLeninist/MiniMax-H3-FL2VA-Pruned-IQ1-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 1566 | 5 | [`FenomAI/MiniMax-H3_GGUFs`](https://huggingface.co/FenomAI/MiniMax-H3_GGUFs) | text-to-video | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
+| 2026-08-18 | 1463 | 3 | [`pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF`](https://huggingface.co/pytraveler/MiniMax-H3-Prompt-Rewriter-LoRA-8B-GGUF) | image-text-to-text | gguf, lora, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, base_model:adapter:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B |
+| 2026-08-10 | 1314 | 0 | [`myhuggingbb/MiniMax-H3-GGUF`](https://huggingface.co/myhuggingbb/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-06 | 1304 | 0 | [`Raretutor/Qwen3-VL-32B-MiniMax-H3-GGUF`](https://huggingface.co/Raretutor/Qwen3-VL-32B-MiniMax-H3-GGUF) | image-text-to-text | gguf, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-09-29 | 945 | 0 | [`ldov/MiniMax-H3-GGUF`](https://huggingface.co/ldov/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-24 | 863 | 1 | [`chfm/MiniMax-H3_GGUFs`](https://huggingface.co/chfm/MiniMax-H3_GGUFs) | text-to-video | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
+| 2026-08-19 | 760 | 3 | [`indhic-ai/MiniMax_H3-Prompt_Rewriter-8B-LORA-Merged-GGUF`](https://huggingface.co/indhic-ai/MiniMax_H3-Prompt_Rewriter-8B-LORA-Merged-GGUF) | image-text-to-text | gguf, lora-merge, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:merge:Qwen/Qwen3-VL-8B-Instruct, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, base_model:merge:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, license:apache-2.0 |
+| 2026-08-07 | 564 | 0 | [`on-nurida-mov/My-MiniMax-H3`](https://huggingface.co/on-nurida-mov/My-MiniMax-H3) | diffusion-single-file | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-08 | 552 | 1 | [`alibaybay/MiniMax-H3-Prompt-Rewriter-GGUF`](https://huggingface.co/alibaybay/MiniMax-H3-Prompt-Rewriter-GGUF) | text-generation | gguf, base_model:Qwen/Qwen2.5-Omni-7B, base_model:quantized:Qwen/Qwen2.5-Omni-7B, license:apache-2.0 |
+| 2026-08-24 | 386 | 1 | [`hoidhxd/MiniMax-H3-x-Z-Image-hybrid-GGUF`](https://huggingface.co/hoidhxd/MiniMax-H3-x-Z-Image-hybrid-GGUF) | image-to-video | gguf, base_model:hoidhxd/MiniMax-H3-x-Z-Image-hybrid, base_model:quantized:hoidhxd/MiniMax-H3-x-Z-Image-hybrid, license:apache-2.0 |
+| 2026-10-04 | 268 | 0 | [`hnao23/MiniMax-H3_GGUFs`](https://huggingface.co/hnao23/MiniMax-H3_GGUFs) |  | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
+| 2026-08-06 | 251 | 4 | [`EllaPriest45/MinimaxH3_Checkpoints`](https://huggingface.co/EllaPriest45/MinimaxH3_Checkpoints) |  | gguf |
+| 2026-09-25 | 211 | 0 | [`ZawShiShawn/Gestura-MiniMax-H3-VAE-GGUF`](https://huggingface.co/ZawShiShawn/Gestura-MiniMax-H3-VAE-GGUF) | image-to-video | gguf, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-14 | 210 | 0 | [`Derdisirtlan/MiniMax-H3-GGUF`](https://huggingface.co/Derdisirtlan/MiniMax-H3-GGUF) | image-to-video | gguf, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-25 | 179 | 0 | [`chfm/10Eros-Max-Hybrid-Beta5-GGUF`](https://huggingface.co/chfm/10Eros-Max-Hybrid-Beta5-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
+| 2026-08-10 | 156 | 0 | [`MarxistLeninist/MiniMax-H3-LowBit-GGUF`](https://huggingface.co/MarxistLeninist/MiniMax-H3-LowBit-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 62 | 0 | [`robertbschuette/MiniMax-H3-GGUF`](https://huggingface.co/robertbschuette/MiniMax-H3-GGUF) | image-text-to-video | gguf, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-28 | 51 | 0 | [`electroglyph/10Eros_Max_h3_TURBO-hybrid_beta3-GGUF`](https://huggingface.co/electroglyph/10Eros_Max_h3_TURBO-hybrid_beta3-GGUF) |  | gguf |
+| 2026-08-07 | 51 | 0 | [`sandeshrajx/MiniMax-H3-Prompt-Rewriter-LoRA-gguf`](https://huggingface.co/sandeshrajx/MiniMax-H3-Prompt-Rewriter-LoRA-gguf) | text-generation | gguf, lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B, license:apache-2.0 |
+| 2026-10-06 | 39 | 0 | [`digitalartdynamics/facadelab-minimax-h3-mirror`](https://huggingface.co/digitalartdynamics/facadelab-minimax-h3-mirror) |  | gguf, license:other |
+| 2026-09-27 | 34 | 0 | [`Radha7/MiniMax-H3-Remix-Quantized`](https://huggingface.co/Radha7/MiniMax-H3-Remix-Quantized) |  | gguf |
+| 2026-09-06 | 33 | 0 | [`EllipsesMark/MinimaxH3_Checkpoints`](https://huggingface.co/EllipsesMark/MinimaxH3_Checkpoints) |  | gguf |
+| 2026-09-25 | 33 | 0 | [`ZawShiShawn/Gestura-MiniMax-H3-REF2VA-Delta`](https://huggingface.co/ZawShiShawn/Gestura-MiniMax-H3-REF2VA-Delta) | image-to-video | gguf, quantized, base_model:ChrisColeTech/minimax-h3-turbo-GGUF, base_model:quantized:ChrisColeTech/minimax-h3-turbo-GGUF, license:other |
+| 2026-08-09 | 25 | 1 | [`solphor/MiniMax-H3-Prompt-Rewriter-LoRA-Q8-GGUF`](https://huggingface.co/solphor/MiniMax-H3-Prompt-Rewriter-LoRA-Q8-GGUF) | peft | gguf, lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B |
+| 2026-08-06 | 14 | 0 | [`radarer168/MinimaxH3_Checkpoints`](https://huggingface.co/radarer168/MinimaxH3_Checkpoints) |  | gguf |
+| 2026-08-06 | 11 | 0 | [`radarer168/MinimaxH3_base`](https://huggingface.co/radarer168/MinimaxH3_base) |  | gguf |
 | 2026-08-10 | 0 | 0 | [`MarxistLeninist/MiniMax-H3-IQ1_M-GGUF`](https://huggingface.co/MarxistLeninist/MiniMax-H3-IQ1_M-GGUF) |  |  |
 | 2026-08-08 | 0 | 0 | [`The-frizzy1/Minimax-h3-gguf-workflow`](https://huggingface.co/The-frizzy1/Minimax-h3-gguf-workflow) |  |  |
-| 2026-10-04 | 0 | 0 | [`hnao23/MiniMax-H3_GGUFs`](https://huggingface.co/hnao23/MiniMax-H3_GGUFs) |  | gguf, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:unknown |
 | 2026-08-03 | 0 | 0 | [`liewge/MinimaxH3-GGUF-Quant`](https://huggingface.co/liewge/MinimaxH3-GGUF-Quant) |  | license:apache-2.0 |
 
 ### 05-Turbo少步加速
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-07 | 1530019 | 1034 | [`lightx2v/Minimax-h3-Turbo`](https://huggingface.co/lightx2v/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-29 | 810823 | 240 | [`MATLOWAI/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/MATLOWAI/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
-| 2026-08-05 | 210272 | 1067 | [`larryvrh/MiniMax-H3-Turbo-Lora`](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-06 | 203522 | 492 | [`drbaph/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-15 | 24978 | 12 | [`PulpCut/MiniMax-H3-Ref2VA-Turbo-INT8-ConvRot`](https://huggingface.co/PulpCut/MiniMax-H3-Ref2VA-Turbo-INT8-ConvRot) | minimax-h3 | int8, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-13 | 23911 | 57 | [`Robert1212star/TaoMate-H3-3Step-ComfyUI`](https://huggingface.co/Robert1212star/TaoMate-H3-3Step-ComfyUI) | minimax-h3 | comfyui, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-31 | 20321 | 279 | [`Viggle/Viggle-Animate`](https://huggingface.co/Viggle/Viggle-Animate) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-19 | 18693 | 35 | [`drbaph/Hyperflow-Comfyui`](https://huggingface.co/drbaph/Hyperflow-Comfyui) | image-text-to-video | lora, comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-13 | 15985 | 36 | [`CZMartin22/TaoMate-H3-3step-ComfyUI`](https://huggingface.co/CZMartin22/TaoMate-H3-3step-ComfyUI) | image-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 12398 | 49 | [`Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI`](https://huggingface.co/Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI) | image-text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-11 | 12252 | 21 | [`ChrisColeTech/minimax-h3-turbo-GGUF`](https://huggingface.co/ChrisColeTech/minimax-h3-turbo-GGUF) | text-to-video | gguf, quantized, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-17 | 7737 | 101 | [`videorebirth/hyperflow`](https://huggingface.co/videorebirth/hyperflow) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-08 | 5729 | 2 | [`Jackxuanxuan/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/Jackxuanxuan/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
-| 2026-09-12 | 5390 | 9 | [`rzgar/minimax-h3_ref2va_8Step_motion_enhancer`](https://huggingface.co/rzgar/minimax-h3_ref2va_8Step_motion_enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-13 | 5351 | 3 | [`molbal/MiniMax-H3-Turbo-GGUF`](https://huggingface.co/molbal/MiniMax-H3-Turbo-GGUF) | image-to-video | gguf, comfyui, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-11 | 3719 | 7 | [`vladmandic/MiniMax-H3-Turbo-LoRA`](https://huggingface.co/vladmandic/MiniMax-H3-Turbo-LoRA) | text-to-video | turbo, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-09-08 | 3647 | 2 | [`chfm/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/chfm/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
-| 2026-08-10 | 3484 | 9 | [`DarkRomeo88/MiniMax-H3-turbo-lora-comfyui`](https://huggingface.co/DarkRomeo88/MiniMax-H3-turbo-lora-comfyui) | image-text-to-video | lora, comfyui, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-13 | 2692 | 39 | [`JOKER141/BUNNY_H3_Conditioning_Bridge`](https://huggingface.co/JOKER141/BUNNY_H3_Conditioning_Bridge) | text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 2637 | 12 | [`infosave/MiniMax-H3-Turbo-cmf`](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf) | text-to-video | base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-13 | 2597 | 5 | [`PulpCut/MiniMax-H3-Turbo-INT8-ConvRot`](https://huggingface.co/PulpCut/MiniMax-H3-Turbo-INT8-ConvRot) | minimax-h3 | int8, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 2561 | 0 | [`ulifisherde/MiniMax-H3-Turbo-Lora-Pruned-Fixed`](https://huggingface.co/ulifisherde/MiniMax-H3-Turbo-Lora-Pruned-Fixed) | text-to-video | turbo, lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 2231 | 9 | [`InstantX/MiniMax-H3-Turbo-Lora-Diffusers`](https://huggingface.co/InstantX/MiniMax-H3-Turbo-Lora-Diffusers) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-18 | 1562 | 0 | [`chfm/TaoMate-H3-3Step-ComfyUI`](https://huggingface.co/chfm/TaoMate-H3-3Step-ComfyUI) | minimax-h3 | comfyui, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-18 | 1517 | 2 | [`cgc-0521/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/cgc-0521/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
-| 2026-08-25 | 1500 | 2 | [`Rkss/Minimax_h3_fl2v_lightx2v_turbo_4to8step_768p_v4_step600_dareties_native`](https://huggingface.co/Rkss/Minimax_h3_fl2v_lightx2v_turbo_4to8step_768p_v4_step600_dareties_native) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-08-18 | 1453 | 0 | [`DARK-MING/MiniMax-H3-Turbo-Lora`](https://huggingface.co/DARK-MING/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-25 | 1192 | 49 | [`Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview`](https://huggingface.co/Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-30 | 1188 | 10 | [`Iwannapose/minimax_h3_pdmd_2nfe_comfyui`](https://huggingface.co/Iwannapose/minimax_h3_pdmd_2nfe_comfyui) | text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-07 | 1129 | 115 | [`TaoLiveAIGC/TaoMate-H3`](https://huggingface.co/TaoLiveAIGC/TaoMate-H3) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 1028 | 2 | [`Halpak/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Halpak/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-30 | 1009 | 11 | [`Iwannapose/minimax_h3_pdmd_4nfe_comfyui`](https://huggingface.co/Iwannapose/minimax_h3_pdmd_4nfe_comfyui) | text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-29 | 796 | 15 | [`pdmd2026/pdmd_4NFE_lora`](https://huggingface.co/pdmd2026/pdmd_4NFE_lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-23 | 591 | 0 | [`chfm/MiniMax-H3-Turbo-Lora`](https://huggingface.co/chfm/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-30 | 498 | 19 | [`moe-kill/H3-Turbo-Neat`](https://huggingface.co/moe-kill/H3-Turbo-Neat) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-23 | 413 | 5 | [`pdmd2026/pdmd_2NFE_lora`](https://huggingface.co/pdmd2026/pdmd_2NFE_lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-10 | 327 | 0 | [`CurioSeaLab/Minimax-h3-Turbo`](https://huggingface.co/CurioSeaLab/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-20 | 313 | 2 | [`taurusduan/Minimax-h3-Turbo`](https://huggingface.co/taurusduan/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-31 | 220 | 0 | [`mu1998/MiniMax-H3-Turbo-Lora`](https://huggingface.co/mu1998/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-20 | 182 | 0 | [`mimimi2811/MiniMax-H3-Turbo-Lora`](https://huggingface.co/mimimi2811/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-29 | 171 | 1 | [`Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step`](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-28 | 154 | 0 | [`fbjr/h3-mutant-distill`](https://huggingface.co/fbjr/h3-mutant-distill) | text-to-video | comfyui, lora, base_model:Beidouqixing/minimax-h3-4step-lora-flashgen, base_model:adapter:Beidouqixing/minimax-h3-4step-lora-flashgen, license:other |
-| 2026-09-23 | 149 | 0 | [`EllipsesMark/Minimax-h3-Turbo`](https://huggingface.co/EllipsesMark/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-14 | 145 | 11 | [`Asirus/TaoMate_H3_3_Step_LoRA`](https://huggingface.co/Asirus/TaoMate_H3_3_Step_LoRA) | text-to-video | comfyui, lora, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-25 | 141 | 0 | [`Exmanq/MiniMax-H3-Turbo-Lora`](https://huggingface.co/Exmanq/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-31 | 140 | 1 | [`treydonovan/Minimax-h3-Turbo`](https://huggingface.co/treydonovan/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-30 | 134 | 0 | [`HAOOOOOOO51/Minimax_h3_fl2v_lightx2v_turbo_4to8step_v0.1-v1.0_768p_v4_step600_dareties_fro095_pruned`](https://huggingface.co/HAOOOOOOO51/Minimax_h3_fl2v_lightx2v_turbo_4to8step_v0.1-v1.0_768p_v4_step600_dareties_fro095_pruned) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-09-05 | 125 | 0 | [`EllipsesMark/larryvrh-Turbo-Lora`](https://huggingface.co/EllipsesMark/larryvrh-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-07 | 66 | 0 | [`Drakonff1/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Drakonff1/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-25 | 65 | 0 | [`Exmanq/Minimax-h3-Turbo`](https://huggingface.co/Exmanq/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-19 | 65 | 0 | [`kai2336/Minimax-h3-Turbo`](https://huggingface.co/kai2336/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-05 | 64 | 0 | [`pottokao/MiniMax-H3-FL2VA-turbo-4step-v1.2-768p-NVFP4-SVDQuant-vLLM-Omni`](https://huggingface.co/pottokao/MiniMax-H3-FL2VA-turbo-4step-v1.2-768p-NVFP4-SVDQuant-vLLM-Omni) | image-to-video | turbo, nvfp4, svdquant, license:apache-2.0 |
-| 2026-10-01 | 56 | 0 | [`Shishir1996/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview`](https://huggingface.co/Shishir1996/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview) | text-to-video | fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-29 | 50 | 0 | [`Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg`](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-18 | 49 | 2 | [`Asirus/minimax_h3_fl2va_pruned_int8_convrot_taomate_8_step`](https://huggingface.co/Asirus/minimax_h3_fl2va_pruned_int8_convrot_taomate_8_step) | custom | int8, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3 |
-| 2026-08-31 | 41 | 0 | [`r3lax/MiniMax-H3-Turbo-cmf`](https://huggingface.co/r3lax/MiniMax-H3-Turbo-cmf) | text-to-video | base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-10-03 | 32 | 0 | [`dipjeb/MiniMax-H3-Turbo-LoRA-Pruned`](https://huggingface.co/dipjeb/MiniMax-H3-Turbo-LoRA-Pruned) | minimax-h3 | lora, comfyui, base_model:larryvrh/MiniMax-H3-Turbo-Lora, base_model:adapter:larryvrh/MiniMax-H3-Turbo-Lora, license:apache-2.0 |
-| 2026-08-08 | 16 | 1 | [`Momoking/Minimax-h3-Turbo`](https://huggingface.co/Momoking/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-07 | 1498257 | 1061 | [`lightx2v/Minimax-h3-Turbo`](https://huggingface.co/lightx2v/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-29 | 573435 | 257 | [`MATLOWAI/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/MATLOWAI/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
+| 2026-08-05 | 208507 | 1095 | [`larryvrh/MiniMax-H3-Turbo-Lora`](https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-08-06 | 199063 | 504 | [`drbaph/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-13 | 48800 | 37 | [`CZMartin22/TaoMate-H3-3step-ComfyUI`](https://huggingface.co/CZMartin22/TaoMate-H3-3step-ComfyUI) | image-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-02 | 40935 | 98 | [`ZhengmingYu/DMAD`](https://huggingface.co/ZhengmingYu/DMAD) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-31 | 31532 | 291 | [`Viggle/Viggle-Animate`](https://huggingface.co/Viggle/Viggle-Animate) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-15 | 29126 | 12 | [`PulpCut/MiniMax-H3-Ref2VA-Turbo-INT8-ConvRot`](https://huggingface.co/PulpCut/MiniMax-H3-Ref2VA-Turbo-INT8-ConvRot) | minimax-h3 | int8, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-13 | 28994 | 58 | [`Robert1212star/TaoMate-H3-3Step-ComfyUI`](https://huggingface.co/Robert1212star/TaoMate-H3-3Step-ComfyUI) | minimax-h3 | comfyui, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-19 | 20571 | 39 | [`drbaph/Hyperflow-Comfyui`](https://huggingface.co/drbaph/Hyperflow-Comfyui) | image-text-to-video | lora, comfyui, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 11918 | 52 | [`Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI`](https://huggingface.co/Abiray/MiniMax-H3-Turbo-Lora-Pruned-ComfyUI) | image-text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-25 | 11044 | 104 | [`Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview`](https://huggingface.co/Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-11 | 9312 | 22 | [`ChrisColeTech/minimax-h3-turbo-GGUF`](https://huggingface.co/ChrisColeTech/minimax-h3-turbo-GGUF) | text-to-video | gguf, quantized, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-17 | 8736 | 109 | [`videorebirth/hyperflow`](https://huggingface.co/videorebirth/hyperflow) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-12 | 6362 | 9 | [`rzgar/minimax-h3_ref2va_8Step_motion_enhancer`](https://huggingface.co/rzgar/minimax-h3_ref2va_8Step_motion_enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-11 | 6077 | 7 | [`vladmandic/MiniMax-H3-Turbo-LoRA`](https://huggingface.co/vladmandic/MiniMax-H3-Turbo-LoRA) | text-to-video | turbo, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-30 | 6038 | 16 | [`Iwannapose/minimax_h3_pdmd_2nfe_comfyui`](https://huggingface.co/Iwannapose/minimax_h3_pdmd_2nfe_comfyui) | text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-29 | 4984 | 21 | [`pdmd2026/pdmd_4NFE_lora`](https://huggingface.co/pdmd2026/pdmd_4NFE_lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-08 | 4945 | 2 | [`Jackxuanxuan/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/Jackxuanxuan/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
+| 2026-09-30 | 4566 | 14 | [`Iwannapose/minimax_h3_pdmd_4nfe_comfyui`](https://huggingface.co/Iwannapose/minimax_h3_pdmd_4nfe_comfyui) | text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-13 | 3776 | 3 | [`molbal/MiniMax-H3-Turbo-GGUF`](https://huggingface.co/molbal/MiniMax-H3-Turbo-GGUF) | image-to-video | gguf, comfyui, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-13 | 3489 | 39 | [`JOKER141/BUNNY_H3_Conditioning_Bridge`](https://huggingface.co/JOKER141/BUNNY_H3_Conditioning_Bridge) | text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-18 | 2878 | 2 | [`cgc-0521/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/cgc-0521/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
+| 2026-09-08 | 2856 | 2 | [`chfm/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/chfm/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
+| 2026-08-06 | 2721 | 9 | [`InstantX/MiniMax-H3-Turbo-Lora-Diffusers`](https://huggingface.co/InstantX/MiniMax-H3-Turbo-Lora-Diffusers) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-25 | 1997 | 2 | [`Rkss/Minimax_h3_fl2v_lightx2v_turbo_4to8step_768p_v4_step600_dareties_native`](https://huggingface.co/Rkss/Minimax_h3_fl2v_lightx2v_turbo_4to8step_768p_v4_step600_dareties_native) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-07 | 1956 | 20 | [`Veda-Sparse/Minimax-H3-R2VA-Veda-Preview`](https://huggingface.co/Veda-Sparse/Minimax-H3-R2VA-Veda-Preview) | text-to-video | fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-13 | 1862 | 5 | [`PulpCut/MiniMax-H3-Turbo-INT8-ConvRot`](https://huggingface.co/PulpCut/MiniMax-H3-Turbo-INT8-ConvRot) | minimax-h3 | int8, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-10 | 1779 | 10 | [`DarkRomeo88/MiniMax-H3-turbo-lora-comfyui`](https://huggingface.co/DarkRomeo88/MiniMax-H3-turbo-lora-comfyui) | image-text-to-video | lora, comfyui, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-18 | 1690 | 0 | [`chfm/TaoMate-H3-3Step-ComfyUI`](https://huggingface.co/chfm/TaoMate-H3-3Step-ComfyUI) | minimax-h3 | comfyui, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-23 | 1681 | 6 | [`pdmd2026/pdmd_2NFE_lora`](https://huggingface.co/pdmd2026/pdmd_2NFE_lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-30 | 1556 | 0 | [`ulifisherde/MiniMax-H3-Turbo-Lora-Pruned-Fixed`](https://huggingface.co/ulifisherde/MiniMax-H3-Turbo-Lora-Pruned-Fixed) | text-to-video | turbo, lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-18 | 1269 | 0 | [`DARK-MING/MiniMax-H3-Turbo-Lora`](https://huggingface.co/DARK-MING/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-07 | 1210 | 123 | [`TaoLiveAIGC/TaoMate-H3`](https://huggingface.co/TaoLiveAIGC/TaoMate-H3) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-30 | 1096 | 2 | [`Halpak/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Halpak/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-30 | 1071 | 21 | [`moe-kill/H3-Turbo-Neat`](https://huggingface.co/moe-kill/H3-Turbo-Neat) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-23 | 595 | 0 | [`chfm/MiniMax-H3-Turbo-Lora`](https://huggingface.co/chfm/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-10-04 | 543 | 0 | [`Kokosowek/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Kokosowek/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-10 | 510 | 0 | [`CurioSeaLab/Minimax-h3-Turbo`](https://huggingface.co/CurioSeaLab/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-06 | 492 | 12 | [`infosave/MiniMax-H3-Turbo-cmf`](https://huggingface.co/infosave/MiniMax-H3-Turbo-cmf) | text-to-video | base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-10-10 | 492 | 2 | [`sandpies/Wuli-MiniMax-H3-Turbo-ComfyUI`](https://huggingface.co/sandpies/Wuli-MiniMax-H3-Turbo-ComfyUI) | minimax-h3 | comfyui, lora, turbo, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-03 | 378 | 0 | [`dipjeb/MiniMax-H3-Turbo-LoRA-Pruned`](https://huggingface.co/dipjeb/MiniMax-H3-Turbo-LoRA-Pruned) | minimax-h3 | lora, comfyui, base_model:larryvrh/MiniMax-H3-Turbo-Lora, base_model:adapter:larryvrh/MiniMax-H3-Turbo-Lora, license:apache-2.0 |
+| 2026-08-20 | 323 | 2 | [`taurusduan/Minimax-h3-Turbo`](https://huggingface.co/taurusduan/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-23 | 258 | 0 | [`EllipsesMark/Minimax-h3-Turbo`](https://huggingface.co/EllipsesMark/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-28 | 237 | 0 | [`fbjr/h3-mutant-distill`](https://huggingface.co/fbjr/h3-mutant-distill) | text-to-video | comfyui, lora, base_model:Beidouqixing/minimax-h3-4step-lora-flashgen, base_model:adapter:Beidouqixing/minimax-h3-4step-lora-flashgen, license:other |
+| 2026-08-31 | 214 | 0 | [`mu1998/MiniMax-H3-Turbo-Lora`](https://huggingface.co/mu1998/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-29 | 210 | 2 | [`Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step`](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-few-step) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-31 | 210 | 1 | [`treydonovan/Minimax-h3-Turbo`](https://huggingface.co/treydonovan/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-20 | 208 | 0 | [`mimimi2811/MiniMax-H3-Turbo-Lora`](https://huggingface.co/mimimi2811/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-08-30 | 179 | 1 | [`HAOOOOOOO51/Minimax_h3_fl2v_lightx2v_turbo_4to8step_v0.1-v1.0_768p_v4_step600_dareties_fro095_pruned`](https://huggingface.co/HAOOOOOOO51/Minimax_h3_fl2v_lightx2v_turbo_4to8step_v0.1-v1.0_768p_v4_step600_dareties_fro095_pruned) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-08-25 | 171 | 0 | [`Exmanq/MiniMax-H3-Turbo-Lora`](https://huggingface.co/Exmanq/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-10-01 | 169 | 2 | [`Shishir1996/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview`](https://huggingface.co/Shishir1996/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview) | text-to-video | fp8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-14 | 164 | 12 | [`Asirus/TaoMate_H3_3_Step_LoRA`](https://huggingface.co/Asirus/TaoMate_H3_3_Step_LoRA) | text-to-video | comfyui, lora, turbo, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-31 | 141 | 0 | [`r3lax/MiniMax-H3-Turbo-cmf`](https://huggingface.co/r3lax/MiniMax-H3-Turbo-cmf) | text-to-video | base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-08-25 | 134 | 0 | [`Exmanq/Minimax-h3-Turbo`](https://huggingface.co/Exmanq/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-19 | 126 | 0 | [`kai2336/Minimax-h3-Turbo`](https://huggingface.co/kai2336/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-10-07 | 123 | 1 | [`shuijiaodawang/Minimax-h3-Turbo`](https://huggingface.co/shuijiaodawang/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-10-04 | 118 | 1 | [`Kokosowek/MiniMax-H3-Turbo-Lora`](https://huggingface.co/Kokosowek/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-05 | 103 | 0 | [`EllipsesMark/larryvrh-Turbo-Lora`](https://huggingface.co/EllipsesMark/larryvrh-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-10-04 | 90 | 0 | [`taurusduan/MiniMax-H3-Turbo-Lora`](https://huggingface.co/taurusduan/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-10-07 | 59 | 0 | [`FenomAI/minimax-h3-fused-turbo-int8-convrot`](https://huggingface.co/FenomAI/minimax-h3-fused-turbo-int8-convrot) | image-text-to-video | comfyui, int8, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, base_model:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:merge:diffusers-modular/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024, base_model:xmarre/MiniMax-H3-Pruned-Ref-Delta-Fused-r1024-ComfyUI, … |
+| 2026-09-29 | 58 | 0 | [`Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg`](https://huggingface.co/Efficient-Large-Model/LongLive-Plug-MiniMax-H3-cfg) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-07 | 57 | 0 | [`Drakonff1/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Drakonff1/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-18 | 53 | 4 | [`Asirus/minimax_h3_fl2va_pruned_int8_convrot_taomate_8_step`](https://huggingface.co/Asirus/minimax_h3_fl2va_pruned_int8_convrot_taomate_8_step) | custom | int8, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3 |
+| 2026-10-05 | 31 | 0 | [`lipengx1/MiniMax-H3-Semantic-Bridge`](https://huggingface.co/lipengx1/MiniMax-H3-Semantic-Bridge) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 31 | 0 | [`pottokao/MiniMax-H3-FL2VA-turbo-4step-v1.2-768p-NVFP4-SVDQuant-vLLM-Omni`](https://huggingface.co/pottokao/MiniMax-H3-FL2VA-turbo-4step-v1.2-768p-NVFP4-SVDQuant-vLLM-Omni) | image-to-video | turbo, nvfp4, svdquant, license:apache-2.0 |
+| 2026-08-08 | 26 | 1 | [`Momoking/Minimax-h3-Turbo`](https://huggingface.co/Momoking/Minimax-h3-Turbo) | image-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-10-06 | 19 | 1 | [`Asirus/minimax_h3_ref2va_pdd_baked_int8_convrot`](https://huggingface.co/Asirus/minimax_h3_ref2va_pdd_baked_int8_convrot) | text-to-video | int8, license:other |
+| 2026-10-05 | 17 | 8 | [`Asirus/minimax_h3_ref2va_pruned_int8_convrot_taomate_8_step`](https://huggingface.co/Asirus/minimax_h3_ref2va_pruned_int8_convrot_taomate_8_step) | custom | int8, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3 |
 | 2026-09-19 | 0 | 2 | [`Akilad/minimax_h3_taomate_3step_clarity_extreme_no_attn`](https://huggingface.co/Akilad/minimax_h3_taomate_3step_clarity_extreme_no_attn) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
 | 2026-08-11 | 0 | 1 | [`Alberto454/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Alberto454/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, pruned-model, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-15 | 0 | 0 | [`Asirus/MiniMax-H3-TaoMate-3Step-Fused-BF16`](https://huggingface.co/Asirus/MiniMax-H3-TaoMate-3Step-Fused-BF16) |  |  |
 | 2026-08-09 | 0 | 1 | [`BennyDaBall/MiniMax-H3-Workflows`](https://huggingface.co/BennyDaBall/MiniMax-H3-Workflows) | text-to-video | comfyui, turbo, lora, license:apache-2.0 |
 | 2026-08-21 | 0 | 0 | [`Codes4Fun/lightx2v_MiniMax-H3-Prompt-Rewriter-8B_ComfyUI`](https://huggingface.co/Codes4Fun/lightx2v_MiniMax-H3-Prompt-Rewriter-8B_ComfyUI) |  | base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:merge:Qwen/Qwen3-VL-8B-Instruct, base_model:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B, base_model:merge:lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B |
-| 2026-09-06 | 0 | 11 | [`HardGravy2/Minimax_H3_FLF_HardGravy_6_Step_Turbo_Merge`](https://huggingface.co/HardGravy2/Minimax_H3_FLF_HardGravy_6_Step_Turbo_Merge) |  | comfyui, license:other |
-| 2026-10-04 | 0 | 0 | [`Kokosowek/MiniMax-H3-Turbo-Lora`](https://huggingface.co/Kokosowek/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-10-04 | 0 | 0 | [`Kokosowek/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Kokosowek/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, turbo, pruned-model, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-10-11 | 0 | 1 | [`Fnaneu77/minimax-h3_fl2v_8Step_motion_enhancer`](https://huggingface.co/Fnaneu77/minimax-h3_fl2v_8Step_motion_enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-06 | 0 | 13 | [`HardGravy2/Minimax_H3_FLF_HardGravy_6_Step_Turbo_Merge`](https://huggingface.co/HardGravy2/Minimax_H3_FLF_HardGravy_6_Step_Turbo_Merge) |  | comfyui, license:other |
 | 2026-08-06 | 0 | 14 | [`Mamad8/MiniMaxH3_R2V-PDD-Turbo-LoRA-Mamad8`](https://huggingface.co/Mamad8/MiniMaxH3_R2V-PDD-Turbo-LoRA-Mamad8) |  |  |
 | 2026-08-08 | 0 | 4 | [`Momoking/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/Momoking/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, pruned-model, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-08-18 | 0 | 0 | [`NaukNauk/minimax-h3-turbo-fl2va-merged`](https://huggingface.co/NaukNauk/minimax-h3-turbo-fl2va-merged) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-17 | 0 | 0 | [`NaukNauk/minimax-h3-turbo-merged`](https://huggingface.co/NaukNauk/minimax-h3-turbo-merged) |  |  |
 | 2026-09-04 | 0 | 0 | [`NaukNauk/minimax-h3-turbo-ref2va-merged`](https://huggingface.co/NaukNauk/minimax-h3-turbo-ref2va-merged) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 0 | 42 | [`QrusherZA/H3_Turbo_ComfyUI`](https://huggingface.co/QrusherZA/H3_Turbo_ComfyUI) |  |  |
+| 2026-08-06 | 0 | 43 | [`QrusherZA/H3_Turbo_ComfyUI`](https://huggingface.co/QrusherZA/H3_Turbo_ComfyUI) |  |  |
 | 2026-09-30 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-4step-turbo-v4-pass2-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-4step-turbo-v4-pass2-lora) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-dmd-fl2va-8step-turbo-pruned.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-dmd-fl2va-8step-turbo-pruned.safetensors-lora) |  | comfyui, lora |
 | 2026-09-28 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-dmd-ref2va-8step-turbo-pruned.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-dmd-ref2va-8step-turbo-pruned.safetensors-lora) |  | comfyui, lora |
 | 2026-09-26 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-8step-motion-enhancer-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-8step-motion-enhancer-lora) |  | comfyui, lora |
 | 2026-09-21 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-fl2v-lightx2v-turbo-4step-v0.1-comfy-resized-avg-rank-21-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-lightx2v-turbo-4step-v0.1-comfy-resized-avg-rank-21-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-20 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-lightx2v-turbo-4step-v0.1-comfy.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-lightx2v-turbo-4step-v0.1-comfy.safetensors-lora) |  | comfyui, lora |
+| 2026-10-08 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-768p-sla-comfyui-bf16-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-768p-sla-comfyui-bf16-lora) |  | comfyui, lora |
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-768p-sla-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-768p-sla-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-30 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-comfyui-alpha8-t8-convert-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-comfyui-alpha8-t8-convert-lora) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-comfyui-t8-convert-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v0.1-comfyui-t8-convert-lora) |  | comfyui, lora |
@@ -348,12 +369,12 @@
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v1.2-768p-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v1.2-768p-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v1.2-768p-comfyui-resized-avg-rank-64-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-4step-v1.2-768p-comfyui-resized-avg-rank-64-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-20 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
-| 2026-10-02 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-comfyui-resized-avg-rank-64-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-comfyui-resized-avg-rank-64-bf16.safetensors-lora) |  | comfyui, lora |
+| 2026-10-02 | 0 | 1 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-comfyui-resized-avg-rank-64-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-comfyui-resized-avg-rank-64-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-29 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-feihouremix-v0.6-compat-v001-t8-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-768p-feihouremix-v0.6-compat-v001-t8-lora) |  | comfyui, lora |
 | 2026-09-20 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-29 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2va-bf16-turbo-multistep-fro099-r144-pruned.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2va-bf16-turbo-multistep-fro099-r144-pruned.safetensors-lora) |  | comfyui, lora |
-| 2026-09-25 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-hyperflow-8step-v1.0-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-hyperflow-8step-v1.0-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
-| 2026-09-20 | 0 | 3 | [`RunningHubAI/rh-minimax-h3-ref2v-turbo-4step-v0.1-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-ref2v-turbo-4step-v0.1-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
+| 2026-09-25 | 0 | 3 | [`RunningHubAI/rh-minimax-h3-hyperflow-8step-v1.0-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-hyperflow-8step-v1.0-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
+| 2026-09-20 | 0 | 4 | [`RunningHubAI/rh-minimax-h3-ref2v-turbo-4step-v0.1-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-ref2v-turbo-4step-v0.1-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-ref2v-turbo-8step-v1.0-768p-comfyui-bf16-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-ref2v-turbo-8step-v1.0-768p-comfyui-bf16-lora) |  | comfyui, lora |
 | 2026-09-20 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-ref2v-turbo-8step-v1.0-768p-comfyui-bf16.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-ref2v-turbo-8step-v1.0-768p-comfyui-bf16.safetensors-lora) |  | comfyui, lora |
 | 2026-09-25 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-ref2v-turbo-8step-v1.0-768p-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-ref2v-turbo-8step-v1.0-768p-lora) |  | comfyui, lora |
@@ -373,24 +394,27 @@
 | 2026-09-07 | 0 | 0 | [`Scorpio1111/MiniMax-H3-Turbo-Lora`](https://huggingface.co/Scorpio1111/MiniMax-H3-Turbo-Lora) |  |  |
 | 2026-08-16 | 0 | 7 | [`SpXMerlin1D/MiniMaxH3-CondBridge-Qwen3.5-4B`](https://huggingface.co/SpXMerlin1D/MiniMaxH3-CondBridge-Qwen3.5-4B) | text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
 | 2026-09-04 | 0 | 2 | [`TechnoBaptist/Viggle-Animate`](https://huggingface.co/TechnoBaptist/Viggle-Animate) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-03 | 0 | 18 | [`TenStrip/MinimaxH3-Turbo_Shenanigans`](https://huggingface.co/TenStrip/MinimaxH3-Turbo_Shenanigans) |  |  |
+| 2026-09-03 | 0 | 19 | [`TenStrip/MinimaxH3-Turbo_Shenanigans`](https://huggingface.co/TenStrip/MinimaxH3-Turbo_Shenanigans) |  |  |
 | 2026-08-27 | 0 | 0 | [`Wesley1234/Minimax-H3-Dasiwa-V1-Hybird-4steps`](https://huggingface.co/Wesley1234/Minimax-H3-Dasiwa-V1-Hybird-4steps) |  |  |
 | 2026-08-27 | 0 | 0 | [`Wesley1234/minimax-h3-4step-turbo-loras-comfyui-exp`](https://huggingface.co/Wesley1234/minimax-h3-4step-turbo-loras-comfyui-exp) |  |  |
 | 2026-08-27 | 0 | 0 | [`Wesley1234/minimax_h3_fl2v_turbo_4step_v0.1_comfyui_alpha8-T8-convert`](https://huggingface.co/Wesley1234/minimax_h3_fl2v_turbo_4step_v0.1_comfyui_alpha8-T8-convert) |  |  |
-| 2026-10-02 | 0 | 59 | [`ZhengmingYu/DMAD`](https://huggingface.co/ZhengmingYu/DMAD) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-23 | 0 | 34 | [`Wuli-art/MiniMax-H3-Turbo`](https://huggingface.co/Wuli-art/MiniMax-H3-Turbo) | text-to-video | turbo, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-07 | 0 | 0 | [`amirjan122222/MiniMax-H3-Turbo-Lora`](https://huggingface.co/amirjan122222/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-07 | 0 | 0 | [`asadkhan89/Minimax-h3-Turbo-SLA`](https://huggingface.co/asadkhan89/Minimax-h3-Turbo-SLA) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-07 | 0 | 1 | [`asadkhan89/Minimax-h3-Turbo-SLA`](https://huggingface.co/asadkhan89/Minimax-h3-Turbo-SLA) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
 | 2026-10-03 | 0 | 0 | [`cokeadrink/minimax-h3-fl2va-fp8-8step`](https://huggingface.co/cokeadrink/minimax-h3-fl2va-fp8-8step) |  |  |
 | 2026-09-01 | 0 | 0 | [`cokeadrink/minimax-h3-fl2va-lightning-4step`](https://huggingface.co/cokeadrink/minimax-h3-fl2va-lightning-4step) |  |  |
 | 2026-08-10 | 0 | 0 | [`dadix4e/minimax_h3_turbo_lora_rank256_needs_training`](https://huggingface.co/dadix4e/minimax_h3_turbo_lora_rank256_needs_training) |  | lora, turbo, license:gpl-2.0 |
-| 2026-09-10 | 0 | 0 | [`developerjeremylive/Viggle-Animate-etheroi`](https://huggingface.co/developerjeremylive/Viggle-Animate-etheroi) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-10 | 0 | 1 | [`developerjeremylive/Viggle-Animate-etheroi`](https://huggingface.co/developerjeremylive/Viggle-Animate-etheroi) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-06 | 0 | 0 | [`greenslime/MiniMax-H3-Turbo-Lora-ComfyUI`](https://huggingface.co/greenslime/MiniMax-H3-Turbo-Lora-ComfyUI) | text-to-video | lora, comfyui, pruned-model, turbo, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-08-08 | 0 | 0 | [`inflected111/MiniMax-H3-Turbo-Lora`](https://huggingface.co/inflected111/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-10 | 0 | 66 | [`joyfox/MiniMax-H3-Turbo`](https://huggingface.co/joyfox/MiniMax-H3-Turbo) | image-to-video | comfyui, lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3 |
+| 2026-08-10 | 0 | 67 | [`joyfox/MiniMax-H3-Turbo`](https://huggingface.co/joyfox/MiniMax-H3-Turbo) | image-to-video | comfyui, lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3 |
 | 2026-08-11 | 0 | 0 | [`lasdkjf/MiniMax-H3-Turbo-Lora`](https://huggingface.co/lasdkjf/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-08-20 | 0 | 108 | [`lightx2v/Minimax-h3-Turbo-SLA`](https://huggingface.co/lightx2v/Minimax-h3-Turbo-SLA) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-10-09 | 0 | 0 | [`mediaizy/MinimaxH3-Turbo_4to8steps_Hybrid_pruned`](https://huggingface.co/mediaizy/MinimaxH3-Turbo_4to8steps_Hybrid_pruned) |  |  |
+| 2026-10-05 | 0 | 0 | [`nixsn/DMAD`](https://huggingface.co/nixsn/DMAD) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-05 | 0 | 1 | [`pottokao/MiniMax-H3-FL2VA-turbo-4step-v1.2-768p-NVFP4-rotated-T1`](https://huggingface.co/pottokao/MiniMax-H3-FL2VA-turbo-4step-v1.2-768p-NVFP4-rotated-T1) | image-to-video | comfyui, turbo, nvfp4, license:apache-2.0 |
 | 2026-08-15 | 0 | 0 | [`rb93452/MiniMaxAI.MiniMax-H3-Turbo-Lora`](https://huggingface.co/rb93452/MiniMaxAI.MiniMax-H3-Turbo-Lora) |  | license:apache-2.0 |
+| 2026-10-11 | 0 | 0 | [`robertbschuette/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview`](https://huggingface.co/robertbschuette/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-12 | 0 | 0 | [`seahorse12/MiniMax-H3-Turbo-Lora`](https://huggingface.co/seahorse12/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-09-10 | 0 | 0 | [`slmonker/minimax-h3-fl2v-turbo-comfyui-fp8`](https://huggingface.co/slmonker/minimax-h3-fl2v-turbo-comfyui-fp8) |  |  |
 | 2026-08-10 | 0 | 0 | [`suryatmodulus/MiniMax-H3-Turbo`](https://huggingface.co/suryatmodulus/MiniMax-H3-Turbo) | image-to-video | comfyui, lora |
@@ -399,17 +423,17 @@
 | 2026-08-07 | 0 | 10 | [`t8star/minimax_h3_fl2v_turbo_4step_v0.1_comfyui_alpha8-T8-convert`](https://huggingface.co/t8star/minimax_h3_fl2v_turbo_4step_v0.1_comfyui_alpha8-T8-convert) |  |  |
 | 2026-09-04 | 0 | 1 | [`t8star/minimax_h3_fl2v_turbo_8step_v1.0_768p_FeiHouRemix_v0.6_compat_v001_T8`](https://huggingface.co/t8star/minimax_h3_fl2v_turbo_8step_v1.0_768p_FeiHouRemix_v0.6_compat_v001_T8) |  |  |
 | 2026-09-04 | 0 | 4 | [`t8star/minimax_h3_turbo_v4_step600_ema_DasiwaREF2VAHybridV1_0_curveproj1025_compat_v001`](https://huggingface.co/t8star/minimax_h3_turbo_v4_step600_ema_DasiwaREF2VAHybridV1_0_curveproj1025_compat_v001) |  |  |
-| 2026-10-04 | 0 | 0 | [`taurusduan/MiniMax-H3-Turbo-Lora`](https://huggingface.co/taurusduan/MiniMax-H3-Turbo-Lora) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-08-27 | 0 | 0 | [`wt5719001/Minimax-H3-Dasiwa-V1-Hybird-4steps`](https://huggingface.co/wt5719001/Minimax-H3-Dasiwa-V1-Hybird-4steps) |  |  |
 
 ### 06-加速LoRA-Acc
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-26 | 60538 | 262 | [`alibaba-pai/MiniMax-H3-Acc-LoRAs`](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-26 | 34721 | 79 | [`aptech0081/MiniMax-H3-Acc-LoRAs-ComfyUI`](https://huggingface.co/aptech0081/MiniMax-H3-Acc-LoRAs-ComfyUI) | text-to-video | comfyui, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-29 | 24851 | 9 | [`t8star/Minimax-H3-Super-Acceleration-Comfy`](https://huggingface.co/t8star/Minimax-H3-Super-Acceleration-Comfy) | minimax-h3 | comfyui |
-| 2026-08-29 | 7191 | 6 | [`fbjr/MiniMax-H3-Acc-LoRAs-sidecar`](https://huggingface.co/fbjr/MiniMax-H3-Acc-LoRAs-sidecar) | text-to-video | comfyui, lora, base_model:alibaba-pai/MiniMax-H3-Acc-LoRAs, base_model:adapter:alibaba-pai/MiniMax-H3-Acc-LoRAs, license:other |
+| 2026-08-26 | 51412 | 265 | [`alibaba-pai/MiniMax-H3-Acc-LoRAs`](https://huggingface.co/alibaba-pai/MiniMax-H3-Acc-LoRAs) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-26 | 30036 | 81 | [`aptech0081/MiniMax-H3-Acc-LoRAs-ComfyUI`](https://huggingface.co/aptech0081/MiniMax-H3-Acc-LoRAs-ComfyUI) | text-to-video | comfyui, lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-29 | 7479 | 10 | [`t8star/Minimax-H3-Super-Acceleration-Comfy`](https://huggingface.co/t8star/Minimax-H3-Super-Acceleration-Comfy) | minimax-h3 | comfyui |
+| 2026-08-29 | 2018 | 6 | [`fbjr/MiniMax-H3-Acc-LoRAs-sidecar`](https://huggingface.co/fbjr/MiniMax-H3-Acc-LoRAs-sidecar) | text-to-video | comfyui, lora, base_model:alibaba-pai/MiniMax-H3-Acc-LoRAs, base_model:adapter:alibaba-pai/MiniMax-H3-Acc-LoRAs, license:other |
+| 2026-10-05 | 186 | 2 | [`A20labs/MiniMax-H3-Acc-LoRAs`](https://huggingface.co/A20labs/MiniMax-H3-Acc-LoRAs) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2va-acc-8step-comfy.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2va-acc-8step-comfy.safetensors-lora) |  | comfyui, lora |
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2va-acc-8step-pruned-comfy.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2va-acc-8step-pruned-comfy.safetensors-lora) |  | comfyui, lora |
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-ref2va-acc-8step-comfy.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-ref2va-acc-8step-comfy.safetensors-lora) |  | comfyui, lora |
@@ -422,31 +446,41 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-27 | 1108668 | 318 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-08 | 325757 | 130 | [`FastVideo/FastVideo-FastH3-Comfy`](https://huggingface.co/FastVideo/FastVideo-FastH3-Comfy) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 22534 | 18 | [`barelymining/ComfyUI-MiniMax-H3-FastVideo`](https://huggingface.co/barelymining/ComfyUI-MiniMax-H3-FastVideo) | diffusers | comfyui, lora, fasth3, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:adapter:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
-| 2026-08-27 | 19411 | 23 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-LoRA`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-LoRA) | minimax-h3 | lora, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-16 | 12598 | 25 | [`realrebelai/FastH3-V2_GGUFs`](https://huggingface.co/realrebelai/FastH3-V2_GGUFs) | text-to-video | comfyui, gguf, fasth3, quantization, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:quantized:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
-| 2026-08-23 | 7107 | 7 | [`drozbay/MiniMax-H3-FastH3-Preview-LoRA`](https://huggingface.co/drozbay/MiniMax-H3-FastH3-Preview-LoRA) | minimax-h3 | lora, comfyui, base_model:FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2, base_model:adapter:FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2, license:other |
-| 2026-09-05 | 5084 | 0 | [`zhurrka/FastVideo-FastH3-4-step-Preview-v1-LoRA`](https://huggingface.co/zhurrka/FastVideo-FastH3-4-step-Preview-v1-LoRA) | minimax-h3 | lora, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-02 | 4083 | 4 | [`vantagewithai/FastVideo-FastH3-8-Step-V2-ComfyUI-GGUF`](https://huggingface.co/vantagewithai/FastVideo-FastH3-8-Step-V2-ComfyUI-GGUF) | text-to-video | gguf, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 3994 | 19 | [`realrebelai/FastH3_GGUFs`](https://huggingface.co/realrebelai/FastH3_GGUFs) | image-to-video | gguf, quantized, comfyui, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:quantized:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
-| 2026-09-04 | 3181 | 119 | [`FastVideo/FastVideo-FastH3-8-Step-V2`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-25 | 1377 | 0 | [`ZawShiShawn/Gestura-FastH3-GGUF`](https://huggingface.co/ZawShiShawn/Gestura-FastH3-GGUF) | text-to-video | gguf, quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, base_model:quantized:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, license:other |
-| 2026-09-15 | 1337 | 8 | [`rzgar/FastVideo-FastH3-Motion-Enhanced-Comfy`](https://huggingface.co/rzgar/FastVideo-FastH3-Motion-Enhanced-Comfy) | image-to-video | base_model:FastVideo/FastVideo-FastH3-Comfy, base_model:finetune:FastVideo/FastVideo-FastH3-Comfy, license:other |
-| 2026-08-27 | 1251 | 1 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1900`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1900) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-07 | 1021 | 2 | [`zerubroberts/MiniMax-H3-FastH3-v1-dense-datafree-ComfyUI`](https://huggingface.co/zerubroberts/MiniMax-H3-FastH3-v1-dense-datafree-ComfyUI) | minimax-h3 | lora, comfyui, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-27 | 874 | 2 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-23 | 534 | 33 | [`FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2`](https://huggingface.co/FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-14 | 464 | 0 | [`yniw/MiniMax-H3-mmh3`](https://huggingface.co/yniw/MiniMax-H3-mmh3) | text-to-video | fasth3, lora, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:adapter:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
-| 2026-08-29 | 301 | 0 | [`Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-Q8`](https://huggingface.co/Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-Q8) | text-to-video | mlx, license:other |
-| 2026-08-29 | 195 | 1 | [`Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-BF16`](https://huggingface.co/Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-BF16) | text-to-video | mlx, fasth3, license:other |
-| 2026-09-11 | 74 | 0 | [`KyleNeverGivesUp/FastH3-text-encoder-nvfp4`](https://huggingface.co/KyleNeverGivesUp/FastH3-text-encoder-nvfp4) | fastvideo | fasth3, nvfp4, quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:quantized:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
-| 2026-09-25 | 23 | 0 | [`ZawShiShawn/Gestura-FastH3-LiteRT`](https://huggingface.co/ZawShiShawn/Gestura-FastH3-LiteRT) | text-to-video | quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, base_model:finetune:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, license:other |
-| 2026-09-23 | 15 | 0 | [`gurujack/splashspeed-FastH3-8-Step-V2`](https://huggingface.co/gurujack/splashspeed-FastH3-8-Step-V2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-27 | 853210 | 327 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-08 | 423251 | 146 | [`FastVideo/FastVideo-FastH3-Comfy`](https://huggingface.co/FastVideo/FastVideo-FastH3-Comfy) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-06 | 25290 | 24 | [`FastVideo/FastVideo-FastH3-Trim-Comfy`](https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-Comfy) | diffusion-single-file | comfyui, base_model:FastVideo/FastVideo-FastH3-Trim-8-Step, base_model:finetune:FastVideo/FastVideo-FastH3-Trim-8-Step, license:other |
+| 2026-09-16 | 14205 | 26 | [`realrebelai/FastH3-V2_GGUFs`](https://huggingface.co/realrebelai/FastH3-V2_GGUFs) | text-to-video | comfyui, gguf, fasth3, quantization, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:quantized:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-08-30 | 13715 | 18 | [`barelymining/ComfyUI-MiniMax-H3-FastVideo`](https://huggingface.co/barelymining/ComfyUI-MiniMax-H3-FastVideo) | diffusers | comfyui, lora, fasth3, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:adapter:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
+| 2026-08-27 | 7385 | 23 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-LoRA`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-LoRA) | minimax-h3 | lora, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-02 | 5054 | 5 | [`vantagewithai/FastVideo-FastH3-8-Step-V2-ComfyUI-GGUF`](https://huggingface.co/vantagewithai/FastVideo-FastH3-8-Step-V2-ComfyUI-GGUF) | text-to-video | gguf, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-06 | 4282 | 4 | [`FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4-Comfy`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4-Comfy) | diffusion-single-file | comfyui, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-08-30 | 3586 | 19 | [`realrebelai/FastH3_GGUFs`](https://huggingface.co/realrebelai/FastH3_GGUFs) | image-to-video | gguf, quantized, comfyui, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:quantized:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
+| 2026-09-04 | 3483 | 124 | [`FastVideo/FastVideo-FastH3-8-Step-V2`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-25 | 2846 | 0 | [`ZawShiShawn/Gestura-FastH3-GGUF`](https://huggingface.co/ZawShiShawn/Gestura-FastH3-GGUF) | text-to-video | gguf, quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, base_model:quantized:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, license:other |
+| 2026-08-23 | 2208 | 7 | [`drozbay/MiniMax-H3-FastH3-Preview-LoRA`](https://huggingface.co/drozbay/MiniMax-H3-FastH3-Preview-LoRA) | minimax-h3 | lora, comfyui, base_model:FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2, base_model:adapter:FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2, license:other |
+| 2026-09-14 | 2050 | 0 | [`yniw/MiniMax-H3-mmh3`](https://huggingface.co/yniw/MiniMax-H3-mmh3) | text-to-video | fasth3, lora, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:adapter:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
+| 2026-09-15 | 1568 | 9 | [`rzgar/FastVideo-FastH3-Motion-Enhanced-Comfy`](https://huggingface.co/rzgar/FastVideo-FastH3-Motion-Enhanced-Comfy) | image-to-video | base_model:FastVideo/FastVideo-FastH3-Comfy, base_model:finetune:FastVideo/FastVideo-FastH3-Comfy, license:other |
+| 2026-08-27 | 1230 | 2 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1900`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1900) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-27 | 805 | 2 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-07 | 702 | 2 | [`zerubroberts/MiniMax-H3-FastH3-v1-dense-datafree-ComfyUI`](https://huggingface.co/zerubroberts/MiniMax-H3-FastH3-v1-dense-datafree-ComfyUI) | minimax-h3 | lora, comfyui, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 411 | 0 | [`FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4-Consumer`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2-NVFP4-Consumer) | text-to-video | nvfp4, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-08-23 | 279 | 34 | [`FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2`](https://huggingface.co/FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-29 | 231 | 0 | [`Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-Q8`](https://huggingface.co/Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-Q8) | text-to-video | mlx, license:other |
+| 2026-08-29 | 170 | 1 | [`Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-BF16`](https://huggingface.co/Sawfwair/MiniMax-H3-FastH3-VSA-DataFree-MLX-BF16) | text-to-video | mlx, fasth3, license:other |
+| 2026-10-03 | 111 | 0 | [`FastVideo/FastVideo-FastH3-Trim-8-Step-NVFP4`](https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-8-Step-NVFP4) | text-to-video | nvfp4, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-10-03 | 99 | 0 | [`FastVideo/FastVideo-FastH3-Trim-8-Step-FP8`](https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-8-Step-FP8) | text-to-video | fp8, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-10-07 | 98 | 0 | [`TechnoBaptist/FastVideo-FastH3-Trim-Comfy`](https://huggingface.co/TechnoBaptist/FastVideo-FastH3-Trim-Comfy) | diffusion-single-file | comfyui, base_model:FastVideo/FastVideo-FastH3-Trim-8-Step, base_model:finetune:FastVideo/FastVideo-FastH3-Trim-8-Step, license:other |
+| 2026-10-07 | 93 | 3 | [`rzgar/FastVideo-FastH3-Trim-Motion-Enhanced-Comfy`](https://huggingface.co/rzgar/FastVideo-FastH3-Trim-Motion-Enhanced-Comfy) | image-to-video | comfyui, base_model:FastVideo/FastVideo-FastH3-Trim-8-Step, base_model:finetune:FastVideo/FastVideo-FastH3-Trim-8-Step, license:other |
+| 2026-10-05 | 89 | 0 | [`FastVideo/FastVideo-FastH3-8-Step-V2-FP8`](https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2-FP8) | text-to-video | fp8, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-09-05 | 82 | 0 | [`zhurrka/FastVideo-FastH3-4-step-Preview-v1-LoRA`](https://huggingface.co/zhurrka/FastVideo-FastH3-4-step-Preview-v1-LoRA) | minimax-h3 | lora, fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-03 | 60 | 4 | [`FastVideo/FastVideo-FastH3-Trim-8-Step`](https://huggingface.co/FastVideo/FastVideo-FastH3-Trim-8-Step) | text-to-video | base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
+| 2026-09-11 | 54 | 0 | [`KyleNeverGivesUp/FastH3-text-encoder-nvfp4`](https://huggingface.co/KyleNeverGivesUp/FastH3-text-encoder-nvfp4) | fastvideo | fasth3, nvfp4, quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:quantized:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
+| 2026-09-25 | 35 | 0 | [`ZawShiShawn/Gestura-FastH3-LiteRT`](https://huggingface.co/ZawShiShawn/Gestura-FastH3-LiteRT) | text-to-video | quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, base_model:finetune:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, license:other |
+| 2026-10-07 | 23 | 0 | [`Goghor/FastVideo-FastH3-Trim-Comfy`](https://huggingface.co/Goghor/FastVideo-FastH3-Trim-Comfy) | diffusion-single-file | comfyui, base_model:FastVideo/FastVideo-FastH3-Trim-8-Step, base_model:finetune:FastVideo/FastVideo-FastH3-Trim-8-Step, license:other |
+| 2026-09-23 | 16 | 0 | [`gurujack/splashspeed-FastH3-8-Step-V2`](https://huggingface.co/gurujack/splashspeed-FastH3-8-Step-V2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-22 | 12 | 0 | [`FanzCEO/FastVideo-FastH3-8-Step-V2`](https://huggingface.co/FanzCEO/FastVideo-FastH3-8-Step-V2) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-27 | 11 | 3 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1300`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1300) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-21 | 4 | 3 | [`FastVideo/FastVideo-Minimax-FastH3-Preview-v0.1`](https://huggingface.co/FastVideo/FastVideo-Minimax-FastH3-Preview-v0.1) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-27 | 7 | 4 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1300`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-Synthetic-Step1300) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-21 | 2 | 4 | [`FastVideo/FastVideo-Minimax-FastH3-Preview-v0.1`](https://huggingface.co/FastVideo/FastVideo-Minimax-FastH3-Preview-v0.1) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-28 | 2 | 0 | [`KyleNeverGivesUp/FastH3-Preview-v0.2-r16`](https://huggingface.co/KyleNeverGivesUp/FastH3-Preview-v0.2-r16) | text-to-video | fasth3, base_model:FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2, base_model:finetune:FastVideo/FastVideo-Minimax-FastH3-Preview-v0.2, license:other |
 | 2026-09-01 | 0 | 4 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree-MLX-INT4`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree-MLX-INT4) | text-to-video | mlx, fasth3, quantized, int4, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, base_model:finetune:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, license:other |
 | 2026-09-01 | 0 | 0 | [`FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree-MLX-INT6`](https://huggingface.co/FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree-MLX-INT6) | text-to-video | mlx, fasth3, quantized, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, base_model:finetune:FastVideo/FastVideo-FastH3-4-step-Preview-v1-Dense-DataFree, license:other |
@@ -461,6 +495,8 @@
 | 2026-08-30 | 0 | 5 | [`PulpCut/FastH3-VSA-INT8-ConvRot`](https://huggingface.co/PulpCut/FastH3-VSA-INT8-ConvRot) | text-to-video | int8, fasth3, base_model:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, base_model:finetune:FastVideo/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree, license:other |
 | 2026-09-16 | 0 | 1 | [`QrusherZA/FastH3_V2-LoRA-Experimental`](https://huggingface.co/QrusherZA/FastH3_V2-LoRA-Experimental) |  |  |
 | 2026-08-28 | 0 | 0 | [`TechnoBaptist/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree`](https://huggingface.co/TechnoBaptist/FastVideo-FastH3-4-step-Preview-v1-VSA-DataFree) | text-to-video | fasth3, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-11 | 0 | 0 | [`cokeadrink/fasth3-int8`](https://huggingface.co/cokeadrink/fasth3-int8) |  |  |
+| 2026-10-11 | 0 | 0 | [`cokeadrink/fasth3-v2-nvfp4-blackwell`](https://huggingface.co/cokeadrink/fasth3-v2-nvfp4-blackwell) | text-to-video | comfyui, nvfp4, base_model:FastVideo/FastVideo-FastH3-8-Step-V2, base_model:finetune:FastVideo/FastVideo-FastH3-8-Step-V2, license:other |
 | 2026-09-01 | 0 | 1 | [`kevin-mi/FastH3-4step-Preview-overlay`](https://huggingface.co/kevin-mi/FastH3-4step-Preview-overlay) | sglang-diffusion | fasth3 |
 | 2026-09-30 | 0 | 0 | [`kevin-mi/FastH3-8step-V2-overlay`](https://huggingface.co/kevin-mi/FastH3-8step-V2-overlay) | sglang-diffusion | fasth3 |
 | 2026-09-04 | 0 | 1 | [`lpiao3825/FastH3-ComfyUI-Community-Workflow`](https://huggingface.co/lpiao3825/FastH3-ComfyUI-Community-Workflow) |  |  |
@@ -473,126 +509,138 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-09-22 | 15444 | 65 | [`alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0`](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0) | text-to-video | controlnet, controlnet-union, license:other |
-| 2026-08-24 | 11798 | 199 | [`alibaba-pai/MiniMax-H3-Fun-Controlnet-Union`](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union) | text-to-video | controlnet, license:other |
-| 2026-09-10 | 1531 | 2 | [`berryber09/MiniMax-H3-Fun-Controlnet-Union-w4a8`](https://huggingface.co/berryber09/MiniMax-H3-Fun-Controlnet-Union-w4a8) | minimax-h3 | controlnet, comfyui, quantized, base_model:alibaba-pai/MiniMax-H3-Fun-Controlnet-Union, base_model:adapter:alibaba-pai/MiniMax-H3-Fun-Controlnet-Union, license:other |
-| 2026-08-24 | 31 | 0 | [`TechnoBaptist/MiniMax-H3-Fun-Controlnet-Union`](https://huggingface.co/TechnoBaptist/MiniMax-H3-Fun-Controlnet-Union) | text-to-video | controlnet, license:other |
+| 2026-09-22 | 20388 | 67 | [`alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0`](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0) | text-to-video | controlnet, controlnet-union, license:other |
+| 2026-08-24 | 10468 | 200 | [`alibaba-pai/MiniMax-H3-Fun-Controlnet-Union`](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union) | text-to-video | controlnet, license:other |
+| 2026-09-10 | 2400 | 3 | [`berryber09/MiniMax-H3-Fun-Controlnet-Union-w4a8`](https://huggingface.co/berryber09/MiniMax-H3-Fun-Controlnet-Union-w4a8) | minimax-h3 | controlnet, comfyui, quantized, base_model:alibaba-pai/MiniMax-H3-Fun-Controlnet-Union, base_model:adapter:alibaba-pai/MiniMax-H3-Fun-Controlnet-Union, license:other |
+| 2026-08-24 | 28 | 0 | [`TechnoBaptist/MiniMax-H3-Fun-Controlnet-Union`](https://huggingface.co/TechnoBaptist/MiniMax-H3-Fun-Controlnet-Union) | text-to-video | controlnet, license:other |
+| 2026-10-10 | 25 | 1 | [`berryber09/MiniMax-H3-Fun-Controlnet-Union-2.0-pruned-w4a8`](https://huggingface.co/berryber09/MiniMax-H3-Fun-Controlnet-Union-2.0-pruned-w4a8) | minimax-h3 | controlnet, comfyui, quantized, base_model:alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0, base_model:adapter:alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0, license:other |
 | 2026-08-24 | 0 | 0 | [`GJuarez67/MiniMax-H3-Fun-Controlnet-Union-Demo`](https://huggingface.co/GJuarez67/MiniMax-H3-Fun-Controlnet-Union-Demo) | video-to-video | controlnet |
-| 2026-08-06 | 0 | 134 | [`javawock7618/comfy-MiniMax-H3-workflows`](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) | image-to-video | comfyui, controlnet, controlnet-union, int8, turbo-lora, quantization |
+| 2026-08-06 | 0 | 141 | [`javawock7618/comfy-MiniMax-H3-workflows`](https://huggingface.co/javawock7618/comfy-MiniMax-H3-workflows) | image-to-video | comfyui, controlnet, controlnet-union, int8, turbo-lora, quantization |
 
 ### 09-风格题材LoRA
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-09-06 | 99068 | 342 | [`Alissonerdx/Minimax-H3-ComfyUI`](https://huggingface.co/Alissonerdx/Minimax-H3-ComfyUI) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-10 | 76475 | 452 | [`fal/MiniMax-H3-Realism-People-LoRA`](https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA) | image-text-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 28271 | 126 | [`Jojocodex/minimax-h3-spatial-physics-lora`](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-16 | 23001 | 76 | [`Jojocodex/minimax-h3-Camera-Motion-lora`](https://huggingface.co/Jojocodex/minimax-h3-Camera-Motion-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-08-30 | 17305 | 55 | [`Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora`](https://huggingface.co/Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-04 | 15992 | 48 | [`rzgar/minimax-h3_fl2v_8Step_motion_enhancer`](https://huggingface.co/rzgar/minimax-h3_fl2v_8Step_motion_enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-25 | 15800 | 291 | [`akatz-ai/MiniMax-H3-Character-Swap-LoRA`](https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-08-21 | 13631 | 0 | [`NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints`](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints) | minimax-h3 | lora |
-| 2026-09-01 | 9686 | 36 | [`JOKER141/MiniMax-H3-Combat-Base-V2`](https://huggingface.co/JOKER141/MiniMax-H3-Combat-Base-V2) | minimax-h3 | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3 |
-| 2026-08-31 | 8588 | 63 | [`prithivMLmods/MiniMax-H3-Facial-Realism-CloseUp`](https://huggingface.co/prithivMLmods/MiniMax-H3-Facial-Realism-CloseUp) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-10 | 8195 | 3 | [`Efficient-Large-Model/H3-to-LTX-Latent-Adapter`](https://huggingface.co/Efficient-Large-Model/H3-to-LTX-Latent-Adapter) | minimax-h3 |  |
-| 2026-09-27 | 5742 | 185 | [`pablodawson/MiniMax-H3-360-Orbit-LoRA`](https://huggingface.co/pablodawson/MiniMax-H3-360-Orbit-LoRA) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 5548 | 0 | [`KENIC-1/Comfy-Org-MiniMax-H3-loras`](https://huggingface.co/KENIC-1/Comfy-Org-MiniMax-H3-loras) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 5298 | 65 | [`Jojocodex/minimax-h3-wushu-action-lora`](https://huggingface.co/Jojocodex/minimax-h3-wushu-action-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
-| 2026-09-05 | 4970 | 92 | [`speach1sdef178/MiniMax-H3-Semantic-Bridge`](https://huggingface.co/speach1sdef178/MiniMax-H3-Semantic-Bridge) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-15 | 4821 | 33 | [`MATLOWAI/MiniMax-H3-Motion-Adapter`](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) | image-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:mit |
-| 2026-08-27 | 4821 | 33 | [`siraxe/H3_slider_experiments`](https://huggingface.co/siraxe/H3_slider_experiments) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-09-16 | 4398 | 4 | [`poopooness/H3-Loras`](https://huggingface.co/poopooness/H3-Loras) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-08 | 4024 | 5 | [`rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy`](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-04 | 3639 | 39 | [`JOKER141/MiniMax-H3-Weapon-Combat-LoRA`](https://huggingface.co/JOKER141/MiniMax-H3-Weapon-Combat-LoRA) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-08-31 | 3458 | 58 | [`KennethFal/vh5tape-vhs-lora-minimax-h3`](https://huggingface.co/KennethFal/vh5tape-vhs-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-17 | 3284 | 5 | [`t8star/Semantic-Bridge-Comfy`](https://huggingface.co/t8star/Semantic-Bridge-Comfy) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-20 | 2951 | 71 | [`Cseti/MiniMax-H3_Ref2VA-LoRA-CrossView-Warp_v1`](https://huggingface.co/Cseti/MiniMax-H3_Ref2VA-LoRA-CrossView-Warp_v1) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-24 | 2850 | 26 | [`Beidouqixing/minimax-h3-4step-lora-flashgen`](https://huggingface.co/Beidouqixing/minimax-h3-4step-lora-flashgen) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-17 | 2490 | 21 | [`WarmBloodAban/Minimax_H3_LoRAs`](https://huggingface.co/WarmBloodAban/Minimax_H3_LoRAs) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-25 | 2479 | 77 | [`lovis93/studio-1939-old-animation-lora-minimax-h3`](https://huggingface.co/lovis93/studio-1939-old-animation-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-09 | 1969 | 3 | [`multimodalart/MiniMax-H3-Pruned`](https://huggingface.co/multimodalart/MiniMax-H3-Pruned) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-05 | 1925 | 28 | [`prithivMLmods/MiniMax-H3-I2V-Anime-Motion-LoRA`](https://huggingface.co/prithivMLmods/MiniMax-H3-I2V-Anime-Motion-LoRA) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-16 | 1729 | 20 | [`JOKER141/MiniMaxH3-GunFu-Gunfight-LORA`](https://huggingface.co/JOKER141/MiniMaxH3-GunFu-Gunfight-LORA) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-08-16 | 1371 | 1 | [`masafy/minimax-h3-masafy-lora`](https://huggingface.co/masafy/minimax-h3-masafy-lora) | image-to-video | lora, character-lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-17 | 1203 | 20 | [`KennethFal/16bit-pixel-lora-minimax-h3`](https://huggingface.co/KennethFal/16bit-pixel-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-20 | 1073 | 15 | [`neph1/1980s_horror_movies_minimax_h3`](https://huggingface.co/neph1/1980s_horror_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-28 | 955 | 21 | [`MATLOWAI/MiniMax-H3-ORB360-CardSpin`](https://huggingface.co/MATLOWAI/MiniMax-H3-ORB360-CardSpin) | image-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-15 | 923 | 0 | [`xalexmoon/hmpussy_v6_epoch30.safetensors`](https://huggingface.co/xalexmoon/hmpussy_v6_epoch30.safetensors) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:unknown |
-| 2026-09-16 | 917 | 11 | [`KennethFal/retro-toon-70s-lora-minimax-h3`](https://huggingface.co/KennethFal/retro-toon-70s-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-07 | 703 | 36 | [`vpakarinen/natural-face-speech-h3-lora`](https://huggingface.co/vpakarinen/natural-face-speech-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-05 | 645 | 1 | [`B4100/vh5tape-vhs-lora-minimax-h3`](https://huggingface.co/B4100/vh5tape-vhs-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-20 | 641 | 10 | [`ostris/minimax_h3_ref2va_jacked_lora`](https://huggingface.co/ostris/minimax_h3_ref2va_jacked_lora) | video-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-26 | 637 | 17 | [`neph1/minimax_h3_handheld_shaky_camera`](https://huggingface.co/neph1/minimax_h3_handheld_shaky_camera) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-25 | 544 | 37 | [`Ashmotv/transformation_lora`](https://huggingface.co/Ashmotv/transformation_lora) | image-to-video | lora, license:other |
-| 2026-09-27 | 510 | 14 | [`SOLRICKS/3D-Animation-Style-MiniMax-H3`](https://huggingface.co/SOLRICKS/3D-Animation-Style-MiniMax-H3) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-16 | 497 | 1 | [`KennethFal/low-poly-lora-minimax-h3`](https://huggingface.co/KennethFal/low-poly-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 456 | 2 | [`taurusduan/MiniMax-H3-Realism-People-LoRA`](https://huggingface.co/taurusduan/MiniMax-H3-Realism-People-LoRA) | image-text-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-17 | 441 | 27 | [`vpakarinen/asmr-trigger-audio-h3-lora`](https://huggingface.co/vpakarinen/asmr-trigger-audio-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-02 | 436 | 72 | [`vpakarinen/better-human-motion-h3-lora`](https://huggingface.co/vpakarinen/better-human-motion-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-25 | 435 | 2 | [`suryatmodulus/studio-1939-old-animation-lora-minimax-h3`](https://huggingface.co/suryatmodulus/studio-1939-old-animation-lora-minimax-h3) | text-to-video | lora |
-| 2026-09-04 | 400 | 2 | [`t8star/Minimax-H3-World-Comfy`](https://huggingface.co/t8star/Minimax-H3-World-Comfy) | image-to-video | comfyui, lora, license:apache-2.0 |
-| 2026-09-19 | 387 | 5 | [`neph1/1950sScifiMinimaxH3`](https://huggingface.co/neph1/1950sScifiMinimaxH3) | text-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-09-19 | 386 | 6 | [`prithivMLmods/MiniMax-H3-Rough-2D-Cartoon-Illustration`](https://huggingface.co/prithivMLmods/MiniMax-H3-Rough-2D-Cartoon-Illustration) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 338 | 18 | [`siraxe/3d_to_real_detail_slider_H3`](https://huggingface.co/siraxe/3d_to_real_detail_slider_H3) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-09-02 | 316 | 42 | [`vpakarinen/insta-tiktok-aesthetics-h3-lora`](https://huggingface.co/vpakarinen/insta-tiktok-aesthetics-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-28 | 301 | 7 | [`neph1/1980s_scifi_movies_minimax_h3`](https://huggingface.co/neph1/1980s_scifi_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-21 | 220 | 0 | [`pmczip/MiniMaxH3_LoRAs`](https://huggingface.co/pmczip/MiniMaxH3_LoRAs) | text-to-image | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-05 | 200 | 0 | [`TheMindExpansionNetwork/swingusinnerz_t2v_minimax_h3_v1`](https://huggingface.co/TheMindExpansionNetwork/swingusinnerz_t2v_minimax_h3_v1) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3 |
+| 2026-09-06 | 112240 | 365 | [`Alissonerdx/Minimax-H3-ComfyUI`](https://huggingface.co/Alissonerdx/Minimax-H3-ComfyUI) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-10 | 83195 | 470 | [`fal/MiniMax-H3-Realism-People-LoRA`](https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA) | image-text-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-10 | 48279 | 3 | [`Efficient-Large-Model/H3-to-LTX-Latent-Adapter`](https://huggingface.co/Efficient-Large-Model/H3-to-LTX-Latent-Adapter) | minimax-h3 |  |
+| 2026-09-25 | 40640 | 418 | [`akatz-ai/MiniMax-H3-Character-Swap-LoRA`](https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-16 | 25523 | 129 | [`Jojocodex/minimax-h3-spatial-physics-lora`](https://huggingface.co/Jojocodex/minimax-h3-spatial-physics-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-08-16 | 20896 | 77 | [`Jojocodex/minimax-h3-Camera-Motion-lora`](https://huggingface.co/Jojocodex/minimax-h3-Camera-Motion-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-08-30 | 14142 | 58 | [`Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora`](https://huggingface.co/Jojocodex/wushu-action-v7-minimax-h3-fl2va-ref2va-lora) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-27 | 13805 | 282 | [`pablodawson/MiniMax-H3-360-Orbit-LoRA`](https://huggingface.co/pablodawson/MiniMax-H3-360-Orbit-LoRA) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-04 | 13731 | 52 | [`rzgar/minimax-h3_fl2v_8Step_motion_enhancer`](https://huggingface.co/rzgar/minimax-h3_fl2v_8Step_motion_enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-01 | 10342 | 37 | [`JOKER141/MiniMax-H3-Combat-Base-V2`](https://huggingface.co/JOKER141/MiniMax-H3-Combat-Base-V2) | minimax-h3 | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3 |
+| 2026-08-31 | 7455 | 68 | [`prithivMLmods/MiniMax-H3-Facial-Realism-CloseUp`](https://huggingface.co/prithivMLmods/MiniMax-H3-Facial-Realism-CloseUp) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-16 | 5762 | 5 | [`poopooness/H3-Loras`](https://huggingface.co/poopooness/H3-Loras) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-15 | 5464 | 37 | [`MATLOWAI/MiniMax-H3-Motion-Adapter`](https://huggingface.co/MATLOWAI/MiniMax-H3-Motion-Adapter) | image-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:mit |
+| 2026-08-27 | 4952 | 33 | [`siraxe/H3_slider_experiments`](https://huggingface.co/siraxe/H3_slider_experiments) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-17 | 4270 | 5 | [`t8star/Semantic-Bridge-Comfy`](https://huggingface.co/t8star/Semantic-Bridge-Comfy) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 4235 | 93 | [`speach1sdef178/MiniMax-H3-Semantic-Bridge`](https://huggingface.co/speach1sdef178/MiniMax-H3-Semantic-Bridge) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-08 | 3968 | 5 | [`rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy`](https://huggingface.co/rzgar/minimax_h3_fl2v_lightx2v_4step_int8-convrot_comfy) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-16 | 3833 | 65 | [`Jojocodex/minimax-h3-wushu-action-lora`](https://huggingface.co/Jojocodex/minimax-h3-wushu-action-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:apache-2.0 |
+| 2026-09-20 | 3512 | 71 | [`Cseti/MiniMax-H3_Ref2VA-LoRA-CrossView-Warp_v1`](https://huggingface.co/Cseti/MiniMax-H3_Ref2VA-LoRA-CrossView-Warp_v1) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-04 | 3486 | 39 | [`JOKER141/MiniMax-H3-Weapon-Combat-LoRA`](https://huggingface.co/JOKER141/MiniMax-H3-Weapon-Combat-LoRA) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-08-31 | 2869 | 59 | [`KennethFal/vh5tape-vhs-lora-minimax-h3`](https://huggingface.co/KennethFal/vh5tape-vhs-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-17 | 2753 | 21 | [`WarmBloodAban/Minimax_H3_LoRAs`](https://huggingface.co/WarmBloodAban/Minimax_H3_LoRAs) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-16 | 2318 | 20 | [`JOKER141/MiniMaxH3-GunFu-Gunfight-LORA`](https://huggingface.co/JOKER141/MiniMaxH3-GunFu-Gunfight-LORA) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-28 | 2092 | 23 | [`MATLOWAI/MiniMax-H3-ORB360-CardSpin`](https://huggingface.co/MATLOWAI/MiniMax-H3-ORB360-CardSpin) | image-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 2070 | 28 | [`prithivMLmods/MiniMax-H3-I2V-Anime-Motion-LoRA`](https://huggingface.co/prithivMLmods/MiniMax-H3-I2V-Anime-Motion-LoRA) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-09 | 2044 | 3 | [`multimodalart/MiniMax-H3-Pruned`](https://huggingface.co/multimodalart/MiniMax-H3-Pruned) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-24 | 1972 | 26 | [`Beidouqixing/minimax-h3-4step-lora-flashgen`](https://huggingface.co/Beidouqixing/minimax-h3-4step-lora-flashgen) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-25 | 1824 | 80 | [`lovis93/studio-1939-old-animation-lora-minimax-h3`](https://huggingface.co/lovis93/studio-1939-old-animation-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-21 | 1588 | 0 | [`NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints`](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints) | minimax-h3 | lora |
+| 2026-09-17 | 1526 | 23 | [`KennethFal/16bit-pixel-lora-minimax-h3`](https://huggingface.co/KennethFal/16bit-pixel-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-20 | 1170 | 15 | [`neph1/1980s_horror_movies_minimax_h3`](https://huggingface.co/neph1/1980s_horror_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-16 | 1083 | 12 | [`KennethFal/retro-toon-70s-lora-minimax-h3`](https://huggingface.co/KennethFal/retro-toon-70s-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-26 | 910 | 18 | [`neph1/minimax_h3_handheld_shaky_camera`](https://huggingface.co/neph1/minimax_h3_handheld_shaky_camera) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-25 | 767 | 41 | [`Ashmotv/transformation_lora`](https://huggingface.co/Ashmotv/transformation_lora) | image-to-video | lora, license:other |
+| 2026-10-08 | 749 | 50 | [`akatz-ai/MiniMax-H3-Person-Remover-LoRA`](https://huggingface.co/akatz-ai/MiniMax-H3-Person-Remover-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-16 | 683 | 1 | [`masafy/minimax-h3-masafy-lora`](https://huggingface.co/masafy/minimax-h3-masafy-lora) | image-to-video | lora, character-lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-15 | 678 | 0 | [`xalexmoon/hmpussy_v6_epoch30.safetensors`](https://huggingface.co/xalexmoon/hmpussy_v6_epoch30.safetensors) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:unknown |
+| 2026-09-27 | 607 | 30 | [`SOLRICKS/3D-Animation-Style-MiniMax-H3`](https://huggingface.co/SOLRICKS/3D-Animation-Style-MiniMax-H3) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-07 | 596 | 37 | [`vpakarinen/natural-face-speech-h3-lora`](https://huggingface.co/vpakarinen/natural-face-speech-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-16 | 575 | 1 | [`KennethFal/low-poly-lora-minimax-h3`](https://huggingface.co/KennethFal/low-poly-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-19 | 552 | 6 | [`prithivMLmods/MiniMax-H3-Rough-2D-Cartoon-Illustration`](https://huggingface.co/prithivMLmods/MiniMax-H3-Rough-2D-Cartoon-Illustration) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-20 | 527 | 11 | [`ostris/minimax_h3_ref2va_jacked_lora`](https://huggingface.co/ostris/minimax_h3_ref2va_jacked_lora) | video-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-17 | 515 | 29 | [`vpakarinen/asmr-trigger-audio-h3-lora`](https://huggingface.co/vpakarinen/asmr-trigger-audio-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-19 | 489 | 5 | [`neph1/1950sScifiMinimaxH3`](https://huggingface.co/neph1/1950sScifiMinimaxH3) | text-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-28 | 462 | 7 | [`neph1/1980s_scifi_movies_minimax_h3`](https://huggingface.co/neph1/1980s_scifi_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-07 | 368 | 15 | [`JOKER141/H3-Fight-Flow-Fight-Interaction-LoRA`](https://huggingface.co/JOKER141/H3-Fight-Flow-Fight-Interaction-LoRA) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-04 | 362 | 6 | [`neph1/1980s_fantasy_movies_minimax_h3`](https://huggingface.co/neph1/1980s_fantasy_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-03 | 355 | 0 | [`ij/PixelTune-MiniMax-H3-LoRA`](https://huggingface.co/ij/PixelTune-MiniMax-H3-LoRA) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-09-02 | 326 | 73 | [`vpakarinen/better-human-motion-h3-lora`](https://huggingface.co/vpakarinen/better-human-motion-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-16 | 321 | 18 | [`siraxe/3d_to_real_detail_slider_H3`](https://huggingface.co/siraxe/3d_to_real_detail_slider_H3) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-04 | 306 | 2 | [`t8star/Minimax-H3-World-Comfy`](https://huggingface.co/t8star/Minimax-H3-World-Comfy) | image-to-video | comfyui, lora, license:apache-2.0 |
+| 2026-09-05 | 248 | 0 | [`TheMindExpansionNetwork/swingusinnerz_t2v_minimax_h3_v1`](https://huggingface.co/TheMindExpansionNetwork/swingusinnerz_t2v_minimax_h3_v1) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3 |
+| 2026-08-25 | 247 | 2 | [`suryatmodulus/studio-1939-old-animation-lora-minimax-h3`](https://huggingface.co/suryatmodulus/studio-1939-old-animation-lora-minimax-h3) | text-to-video | lora |
+| 2026-09-02 | 222 | 42 | [`vpakarinen/insta-tiktok-aesthetics-h3-lora`](https://huggingface.co/vpakarinen/insta-tiktok-aesthetics-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-16 | 216 | 2 | [`taurusduan/MiniMax-H3-Realism-People-LoRA`](https://huggingface.co/taurusduan/MiniMax-H3-Realism-People-LoRA) | image-text-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-26 | 205 | 4 | [`neph1/minimax_h3_headmounted_fpv_cam`](https://huggingface.co/neph1/minimax_h3_headmounted_fpv_cam) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-02 | 202 | 6 | [`neph1/1950s_western_movies_h3`](https://huggingface.co/neph1/1950s_western_movies_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-06 | 185 | 2 | [`kabachuha/mh3-morphing-helper`](https://huggingface.co/kabachuha/mh3-morphing-helper) | image-text-to-video | lora, template:diffusion-lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-02 | 166 | 1 | [`B4100/MiniMax-H3-Facial-Realism-CloseUp`](https://huggingface.co/B4100/MiniMax-H3-Facial-Realism-CloseUp) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-21 | 156 | 0 | [`sonnybox/MiniMax-H3_experimental`](https://huggingface.co/sonnybox/MiniMax-H3_experimental) | image-text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-26 | 131 | 3 | [`neph1/minimax_h3_headmounted_fpv_cam`](https://huggingface.co/neph1/minimax_h3_headmounted_fpv_cam) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-13 | 117 | 0 | [`MelloModels/mellos_definitive_zootopia_lora_minimax`](https://huggingface.co/MelloModels/mellos_definitive_zootopia_lora_minimax) | text-to-video | lora, license:other |
-| 2026-08-12 | 109 | 3 | [`kabachuha/mh3-r2va-claymation-transformation`](https://huggingface.co/kabachuha/mh3-r2va-claymation-transformation) | image-text-to-video | lora, template:diffusion-lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-28 | 85 | 0 | [`Kobe202455/MiniMax-H3-Character-Swap-LoRA`](https://huggingface.co/Kobe202455/MiniMax-H3-Character-Swap-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-10-03 | 82 | 1 | [`JOYUNGI/pixelart8x-h3-lora`](https://huggingface.co/JOYUNGI/pixelart8x-h3-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-29 | 76 | 1 | [`JOYUNGI/nwpxstyle-h3-lora`](https://huggingface.co/JOYUNGI/nwpxstyle-h3-lora) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-16 | 166 | 0 | [`KENIC-1/Comfy-Org-MiniMax-H3-loras`](https://huggingface.co/KENIC-1/Comfy-Org-MiniMax-H3-loras) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-13 | 151 | 0 | [`MelloModels/mellos_definitive_zootopia_lora_minimax`](https://huggingface.co/MelloModels/mellos_definitive_zootopia_lora_minimax) | text-to-video | lora, license:other |
+| 2026-09-28 | 150 | 0 | [`Kobe202455/MiniMax-H3-Character-Swap-LoRA`](https://huggingface.co/Kobe202455/MiniMax-H3-Character-Swap-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-21 | 141 | 0 | [`sonnybox/MiniMax-H3_experimental`](https://huggingface.co/sonnybox/MiniMax-H3_experimental) | image-text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-02 | 139 | 1 | [`B4100/MiniMax-H3-Facial-Realism-CloseUp`](https://huggingface.co/B4100/MiniMax-H3-Facial-Realism-CloseUp) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-02 | 133 | 2 | [`neph1/1970s_blaxploitation_movies_minimax_h3`](https://huggingface.co/neph1/1970s_blaxploitation_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-04 | 116 | 0 | [`xaxaxaxaxxaxaxa/MiniMax-H3-Character-Swap-LoRA`](https://huggingface.co/xaxaxaxaxxaxaxa/MiniMax-H3-Character-Swap-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-30 | 114 | 0 | [`pharaouk/awm-minimax-h3-new1344-lora-checkpoints`](https://huggingface.co/pharaouk/awm-minimax-h3-new1344-lora-checkpoints) | minimax-h3 | lora |
+| 2026-09-05 | 111 | 1 | [`B4100/vh5tape-vhs-lora-minimax-h3`](https://huggingface.co/B4100/vh5tape-vhs-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-21 | 109 | 0 | [`pmczip/MiniMaxH3_LoRAs`](https://huggingface.co/pmczip/MiniMaxH3_LoRAs) | text-to-image | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-26 | 100 | 4 | [`neph1/1920s_horror_movies_minimax_h3`](https://huggingface.co/neph1/1920s_horror_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-23 | 92 | 1 | [`Leon1000/16bit-pixel-lora-minimax-h3`](https://huggingface.co/Leon1000/16bit-pixel-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-12 | 83 | 4 | [`kabachuha/mh3-r2va-claymation-transformation`](https://huggingface.co/kabachuha/mh3-r2va-claymation-transformation) | image-text-to-video | lora, template:diffusion-lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-09-10 | 76 | 0 | [`Journey9ni/LatentNVS`](https://huggingface.co/Journey9ni/LatentNVS) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-04 | 75 | 3 | [`Leon1000/MiniMax-H3-360-Orbit-LoRA`](https://huggingface.co/Leon1000/MiniMax-H3-360-Orbit-LoRA) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-09 | 74 | 5 | [`siraxe/Venom_transformation_H3`](https://huggingface.co/siraxe/Venom_transformation_H3) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-09-26 | 64 | 3 | [`neph1/1920s_horror_movies_minimax_h3`](https://huggingface.co/neph1/1920s_horror_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-12 | 54 | 0 | [`Shriramnag/Shiv-AI-Motion-Enhancer`](https://huggingface.co/Shriramnag/Shiv-AI-Motion-Enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-31 | 54 | 0 | [`lokitsar/RHC-H3V2`](https://huggingface.co/lokitsar/RHC-H3V2) | minimax-h3 | lora, comfyui |
-| 2026-09-23 | 52 | 1 | [`Leon1000/16bit-pixel-lora-minimax-h3`](https://huggingface.co/Leon1000/16bit-pixel-lora-minimax-h3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-10-02 | 46 | 6 | [`neph1/1950s_western_movies_h3`](https://huggingface.co/neph1/1950s_western_movies_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 42 | 0 | [`pharaouk/awm-minimax-h3-new1344-lora-checkpoints`](https://huggingface.co/pharaouk/awm-minimax-h3-new1344-lora-checkpoints) | minimax-h3 | lora |
-| 2026-09-08 | 39 | 0 | [`concil859856/natural-face-speech-h3-lora`](https://huggingface.co/concil859856/natural-face-speech-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-08-11 | 32 | 2 | [`siraxe/vault_dweller_H3_slider`](https://huggingface.co/siraxe/vault_dweller_H3_slider) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
-| 2026-08-26 | 32 | 0 | [`zzzDDs/MiniMax-H3_experimental`](https://huggingface.co/zzzDDs/MiniMax-H3_experimental) | image-text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-19 | 31 | 1 | [`TechnoBaptist/asmr-trigger-audio-h3-lora`](https://huggingface.co/TechnoBaptist/asmr-trigger-audio-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-13 | 27 | 3 | [`talos414/Paint-on-glass-LoRA`](https://huggingface.co/talos414/Paint-on-glass-LoRA) | minimax-h3 | lora |
-| 2026-09-28 | 26 | 0 | [`muhammad-taqi512/SLORA-MAX`](https://huggingface.co/muhammad-taqi512/SLORA-MAX) | text-to-video | license:mit |
-| 2026-08-07 | 26 | 0 | [`woodfireind/H3-ScriptGen`](https://huggingface.co/woodfireind/H3-ScriptGen) | text-generation | lora, base_model:Qwen/Qwen3.5-0.8B, base_model:adapter:Qwen/Qwen3.5-0.8B, license:apache-2.0 |
-| 2026-10-03 | 24 | 0 | [`ij/PixelTune-MiniMax-H3-LoRA`](https://huggingface.co/ij/PixelTune-MiniMax-H3-LoRA) | text-to-video | lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-10-02 | 16 | 2 | [`neph1/1970s_blaxploitation_movies_minimax_h3`](https://huggingface.co/neph1/1970s_blaxploitation_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-04 | 70 | 1 | [`moe-kill/H3_Larry_Battle_JOKER`](https://huggingface.co/moe-kill/H3_Larry_Battle_JOKER) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-12 | 63 | 0 | [`Shriramnag/Shiv-AI-Motion-Enhancer`](https://huggingface.co/Shriramnag/Shiv-AI-Motion-Enhancer) | image-to-video | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-31 | 60 | 0 | [`lokitsar/RHC-H3V2`](https://huggingface.co/lokitsar/RHC-H3V2) | minimax-h3 | lora, comfyui |
+| 2026-09-19 | 48 | 1 | [`TechnoBaptist/asmr-trigger-audio-h3-lora`](https://huggingface.co/TechnoBaptist/asmr-trigger-audio-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-13 | 45 | 3 | [`talos414/Paint-on-glass-LoRA`](https://huggingface.co/talos414/Paint-on-glass-LoRA) | minimax-h3 | lora |
+| 2026-08-26 | 41 | 0 | [`zzzDDs/MiniMax-H3_experimental`](https://huggingface.co/zzzDDs/MiniMax-H3_experimental) | image-text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-11 | 40 | 2 | [`siraxe/vault_dweller_H3_slider`](https://huggingface.co/siraxe/vault_dweller_H3_slider) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-28 | 39 | 0 | [`muhammad-taqi512/SLORA-MAX`](https://huggingface.co/muhammad-taqi512/SLORA-MAX) | text-to-video | license:mit |
+| 2026-09-08 | 38 | 0 | [`concil859856/natural-face-speech-h3-lora`](https://huggingface.co/concil859856/natural-face-speech-h3-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-10-09 | 29 | 0 | [`Amador1989/MysticMinimaxH3`](https://huggingface.co/Amador1989/MysticMinimaxH3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-03 | 26 | 0 | [`gnicartweet/Caridad`](https://huggingface.co/gnicartweet/Caridad) | minimax-h3 | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-07 | 20 | 0 | [`woodfireind/H3-ScriptGen`](https://huggingface.co/woodfireind/H3-ScriptGen) | text-generation | lora, base_model:Qwen/Qwen3.5-0.8B, base_model:adapter:Qwen/Qwen3.5-0.8B, license:apache-2.0 |
+| 2026-10-09 | 19 | 0 | [`no3us/minimax-h3-refmod-pilot`](https://huggingface.co/no3us/minimax-h3-refmod-pilot) | image-to-video | comfyui |
+| 2026-10-09 | 16 | 0 | [`Amador1989/Cumshots`](https://huggingface.co/Amador1989/Cumshots) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-09 | 15 | 0 | [`Amador1989/AIOSexMinimax`](https://huggingface.co/Amador1989/AIOSexMinimax) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-11 | 12 | 0 | [`gnicartweet/J-Rogue-H3-ref2va`](https://huggingface.co/gnicartweet/J-Rogue-H3-ref2va) | minimax-h3 | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, license:other |
 | 2026-08-15 | 0 | 2 | [`0xJuicybear/H3LoRA`](https://huggingface.co/0xJuicybear/H3LoRA) |  | license:mit |
 | 2026-08-07 | 0 | 0 | [`AdwolfCzar/h3_test_lora1`](https://huggingface.co/AdwolfCzar/h3_test_lora1) |  |  |
-| 2026-09-04 | 0 | 3 | [`Alex995647/loras-minimax-h3`](https://huggingface.co/Alex995647/loras-minimax-h3) | diffusers | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-04 | 0 | 4 | [`Alex995647/loras-minimax-h3`](https://huggingface.co/Alex995647/loras-minimax-h3) | diffusers | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
 | 2026-08-15 | 0 | 6 | [`ApacheOne/H3_loras`](https://huggingface.co/ApacheOne/H3_loras) |  |  |
-| 2026-10-04 | 0 | 2 | [`Aquinlabs/h3-avatar-aq`](https://huggingface.co/Aquinlabs/h3-avatar-aq) | image-to-video | lora, license:apache-2.0 |
+| 2026-10-04 | 0 | 3 | [`Aquinlabs/h3-avatar-aq`](https://huggingface.co/Aquinlabs/h3-avatar-aq) | image-to-video | lora, license:apache-2.0 |
 | 2026-09-18 | 0 | 0 | [`Boerboer/H3_LoRAs`](https://huggingface.co/Boerboer/H3_LoRAs) |  | license:apache-2.0 |
 | 2026-09-19 | 0 | 0 | [`Buattensorart2/ostris_minimaxh3_loras_yy`](https://huggingface.co/Buattensorart2/ostris_minimaxh3_loras_yy) |  |  |
 | 2026-08-06 | 0 | 4 | [`ComfyCloudModel/MinimaxH3-Loras`](https://huggingface.co/ComfyCloudModel/MinimaxH3-Loras) |  | license:apache-2.0 |
 | 2026-09-28 | 0 | 0 | [`Cufuudsa/h3-loras`](https://huggingface.co/Cufuudsa/h3-loras) |  |  |
 | 2026-08-31 | 0 | 93 | [`DANNY621/H3-World`](https://huggingface.co/DANNY621/H3-World) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-11 | 0 | 1 | [`DIE2025/MiniMaxH3Loras`](https://huggingface.co/DIE2025/MiniMaxH3Loras) |  |  |
-| 2026-08-14 | 0 | 16 | [`DiffSynth-Studio/MiniMax-H3-LoRA-LineartAnime`](https://huggingface.co/DiffSynth-Studio/MiniMax-H3-LoRA-LineartAnime) |  | license:apache-2.0 |
+| 2026-08-14 | 0 | 17 | [`DiffSynth-Studio/MiniMax-H3-LoRA-LineartAnime`](https://huggingface.co/DiffSynth-Studio/MiniMax-H3-LoRA-LineartAnime) |  | license:apache-2.0 |
 | 2026-09-08 | 0 | 1 | [`EllipsesMark/Minimax-h3_Singularity-Lora`](https://huggingface.co/EllipsesMark/Minimax-h3_Singularity-Lora) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-05 | 0 | 10 | [`EllipsesMark/minimax-h3-vr180-sbs-lora`](https://huggingface.co/EllipsesMark/minimax-h3-vr180-sbs-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 0 | 11 | [`EllipsesMark/minimax-h3-vr180-sbs-lora`](https://huggingface.co/EllipsesMark/minimax-h3-vr180-sbs-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-27 | 0 | 0 | [`Fasces/H3-LoraVault`](https://huggingface.co/Fasces/H3-LoraVault) |  |  |
-| 2026-09-01 | 0 | 87 | [`JOKER141/MiniMax-H3-General-Motion-Continuity-Repair`](https://huggingface.co/JOKER141/MiniMax-H3-General-Motion-Continuity-Repair) |  | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-09-01 | 0 | 99 | [`JOKER141/MiniMax-H3-General-Motion-Continuity-Repair`](https://huggingface.co/JOKER141/MiniMax-H3-General-Motion-Continuity-Repair) |  | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-07 | 0 | 1 | [`Jacob121294/h3-restore-enhance-improve-lora`](https://huggingface.co/Jacob121294/h3-restore-enhance-improve-lora) |  |  |
 | 2026-08-22 | 0 | 5 | [`Jojocodex/mslc-h3-lora`](https://huggingface.co/Jojocodex/mslc-h3-lora) |  |  |
 | 2026-09-16 | 0 | 5 | [`KennethFal/hand-drawn-lora-minimax-h3`](https://huggingface.co/KennethFal/hand-drawn-lora-minimax-h3) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-19 | 0 | 16 | [`LeechTM/SMACK`](https://huggingface.co/LeechTM/SMACK) |  | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-10-04 | 0 | 0 | [`Leon1000/MiniMax-H3-360-Orbit-LoRA`](https://huggingface.co/Leon1000/MiniMax-H3-360-Orbit-LoRA) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-17 | 0 | 1 | [`MachineDelusions/Minimax-H3-LoRas`](https://huggingface.co/MachineDelusions/Minimax-H3-LoRas) |  |  |
 | 2026-09-14 | 0 | 0 | [`NaukNauk/minimax-h3-ref2va-larry-v4-strength-0.7`](https://huggingface.co/NaukNauk/minimax-h3-ref2va-larry-v4-strength-0.7) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-15 | 0 | 0 | [`NaukNauk/minimax-h3-ref2va-larry-v4-strength-1.3`](https://huggingface.co/NaukNauk/minimax-h3-ref2va-larry-v4-strength-1.3) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-15 | 0 | 0 | [`NaukNauk/minimax-h3-ref2va-larry-v4-strength-1.7`](https://huggingface.co/NaukNauk/minimax-h3-ref2va-larry-v4-strength-1.7) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-15 | 0 | 2 | [`NaukNauk/minimax-h3-ref2va-larry-v4-strength-2.0`](https://huggingface.co/NaukNauk/minimax-h3-ref2va-larry-v4-strength-2.0) | image-text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-06 | 0 | 7 | [`Nebsh/Snorricam_H3_LORA`](https://huggingface.co/Nebsh/Snorricam_H3_LORA) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-06 | 0 | 8 | [`Nebsh/Snorricam_H3_LORA`](https://huggingface.co/Nebsh/Snorricam_H3_LORA) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
 | 2026-08-16 | 0 | 0 | [`Patarapoom/H3_lora`](https://huggingface.co/Patarapoom/H3_lora) |  |  |
 | 2026-08-30 | 0 | 28 | [`Plaguekind/H3-Lora`](https://huggingface.co/Plaguekind/H3-Lora) |  | base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
 | 2026-08-14 | 0 | 0 | [`Plaguekind/H3-Loras`](https://huggingface.co/Plaguekind/H3-Loras) |  | license:mit |
-| 2026-10-01 | 0 | 1 | [`RunningHubAI/rh-h3-character-swap-pro4500-lora`](https://huggingface.co/RunningHubAI/rh-h3-character-swap-pro4500-lora) |  | comfyui, lora |
+| 2026-10-01 | 0 | 3 | [`RunningHubAI/rh-h3-character-swap-pro4500-lora`](https://huggingface.co/RunningHubAI/rh-h3-character-swap-pro4500-lora) |  | comfyui, lora |
 | 2026-09-27 | 0 | 0 | [`RunningHubAI/rh-h3-faster-anime-edition-lora`](https://huggingface.co/RunningHubAI/rh-h3-faster-anime-edition-lora) |  | comfyui, lora |
 | 2026-09-23 | 0 | 0 | [`RunningHubAI/rh-h3-faster-harder-shake-harder-lora`](https://huggingface.co/RunningHubAI/rh-h3-faster-harder-shake-harder-lora) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-h3-lora`](https://huggingface.co/RunningHubAI/rh-h3-lora) |  | comfyui, lora |
@@ -602,53 +650,58 @@
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-h3-lora-2097123433183518722`](https://huggingface.co/RunningHubAI/rh-h3-lora-2097123433183518722) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-h3-lora-2097509723998736385`](https://huggingface.co/RunningHubAI/rh-h3-lora-2097509723998736385) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-h3-lora-h3-ending-reaction-booster-lora`](https://huggingface.co/RunningHubAI/rh-h3-lora-h3-ending-reaction-booster-lora) |  | comfyui, lora |
-| 2026-09-25 | 0 | 5 | [`RunningHubAI/rh-h3-speed-slider-1.1-lora`](https://huggingface.co/RunningHubAI/rh-h3-speed-slider-1.1-lora) |  | comfyui, lora |
+| 2026-09-25 | 0 | 6 | [`RunningHubAI/rh-h3-speed-slider-1.1-lora`](https://huggingface.co/RunningHubAI/rh-h3-speed-slider-1.1-lora) |  | comfyui, lora |
 | 2026-09-28 | 0 | 0 | [`RunningHubAI/rh-h3realismolora-lora`](https://huggingface.co/RunningHubAI/rh-h3realismolora-lora) |  | comfyui, lora |
 | 2026-09-26 | 0 | 0 | [`RunningHubAI/rh-lora-h3-lora`](https://huggingface.co/RunningHubAI/rh-lora-h3-lora) |  | comfyui, lora |
-| 2026-10-02 | 0 | 1 | [`RunningHubAI/rh-minimax-h3-digicam-realism-improve-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-digicam-realism-improve-lora) |  | comfyui, lora |
-| 2026-09-21 | 0 | 1 | [`RunningHubAI/rh-minimax-h3-five-view-512-s1500.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-five-view-512-s1500.safetensors-lora) |  | comfyui, lora |
+| 2026-10-02 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-digicam-realism-improve-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-digicam-realism-improve-lora) |  | comfyui, lora |
+| 2026-09-21 | 0 | 2 | [`RunningHubAI/rh-minimax-h3-five-view-512-s1500.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-five-view-512-s1500.safetensors-lora) |  | comfyui, lora |
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-five-view-512-s400-instruct.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-five-view-512-s400-instruct.safetensors-lora) |  | comfyui, lora |
-| 2026-09-27 | 0 | 1 | [`RunningHubAI/rh-minimax-h3-lms-v1.0-r64-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-lms-v1.0-r64-lora) |  | comfyui, lora |
+| 2026-09-27 | 0 | 3 | [`RunningHubAI/rh-minimax-h3-lms-v1.0-r64-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-lms-v1.0-r64-lora) |  | comfyui, lora |
 | 2026-09-21 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-lms-v1.0-r64.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-lms-v1.0-r64.safetensors-lora) |  | comfyui, lora |
 | 2026-09-30 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-lora) |  | comfyui, lora |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-third-person-view.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-third-person-view.safetensors-lora) |  | comfyui, lora |
 | 2026-09-25 | 0 | 0 | [`RunningHubAI/rh-minimax-h3v0.1-feihouremix-v0.6-compat-v001.safetensors-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3v0.1-feihouremix-v0.6-compat-v001.safetensors-lora) |  | comfyui, lora |
+| 2026-10-10 | 0 | 0 | [`RunningHubAI/rh-minmax-h3-2d-lora`](https://huggingface.co/RunningHubAI/rh-minmax-h3-2d-lora) |  | comfyui, lora |
+| 2026-10-08 | 0 | 0 | [`RunningHubAI/rh-ss-faceswap-minimax-h3-ref2va-lora`](https://huggingface.co/RunningHubAI/rh-ss-faceswap-minimax-h3-ref2va-lora) |  | comfyui, lora |
 | 2026-09-26 | 0 | 2 | [`SicariusSicariiStuff/Minimax_H3_LoRAs`](https://huggingface.co/SicariusSicariiStuff/Minimax_H3_LoRAs) | text-to-video | license:other |
 | 2026-09-22 | 0 | 0 | [`Teddooo/Minimaxh3loras`](https://huggingface.co/Teddooo/Minimaxh3loras) |  |  |
 | 2026-08-14 | 0 | 5 | [`TenStrip/Anima-H3-Booster-Lora`](https://huggingface.co/TenStrip/Anima-H3-Booster-Lora) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-08 | 0 | 19 | [`TenStrip/Krea2-H3-Style-Lora`](https://huggingface.co/TenStrip/Krea2-H3-Style-Lora) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-08 | 0 | 29 | [`TenStrip/Minimax-h3_Singularity-Lora`](https://huggingface.co/TenStrip/Minimax-h3_Singularity-Lora) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-08 | 0 | 28 | [`TenStrip/Minimax-h3_Singularity-Lora`](https://huggingface.co/TenStrip/Minimax-h3_Singularity-Lora) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-09 | 0 | 26 | [`TenStrip/Wan2.2_H3_Motion_Lora`](https://huggingface.co/TenStrip/Wan2.2_H3_Motion_Lora) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-14 | 0 | 100 | [`Viggle/Meridian`](https://huggingface.co/Viggle/Meridian) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-14 | 0 | 102 | [`Viggle/Meridian`](https://huggingface.co/Viggle/Meridian) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-11 | 0 | 2 | [`Wanamingo/MiniMax-H3-LoRAs`](https://huggingface.co/Wanamingo/MiniMax-H3-LoRAs) |  |  |
 | 2026-08-25 | 0 | 0 | [`adehong/minimax-h3-ntt-lora`](https://huggingface.co/adehong/minimax-h3-ntt-lora) |  |  |
-| 2026-10-02 | 0 | 11 | [`adf99/H3_Ref2V_Anime_Slider_v1`](https://huggingface.co/adf99/H3_Ref2V_Anime_Slider_v1) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
+| 2026-10-02 | 0 | 14 | [`adf99/H3_Ref2V_Anime_Slider_v1`](https://huggingface.co/adf99/H3_Ref2V_Anime_Slider_v1) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
 | 2026-08-03 | 0 | 5 | [`aimalias/h3-loras`](https://huggingface.co/aimalias/h3-loras) |  |  |
-| 2026-08-14 | 0 | 75 | [`alvdansen/h3-keyframe-animation`](https://huggingface.co/alvdansen/h3-keyframe-animation) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 0 | 3 | [`akhaliq/MiniMax-H3-Anime-2D-Style-LoRA`](https://huggingface.co/akhaliq/MiniMax-H3-Anime-2D-Style-LoRA) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-10-05 | 0 | 0 | [`akhaliq/MiniMax-H3-Claymation-Style-LoRA`](https://huggingface.co/akhaliq/MiniMax-H3-Claymation-Style-LoRA) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-14 | 0 | 93 | [`alvdansen/h3-keyframe-animation`](https://huggingface.co/alvdansen/h3-keyframe-animation) | image-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-26 | 0 | 0 | [`azjkjkkjdkjsd/h3zero-loras`](https://huggingface.co/azjkjkkjdkjsd/h3zero-loras) |  |  |
-| 2026-09-10 | 0 | 23 | [`circlestone-labs/MiniMax-H3-Image-Training-Adapter`](https://huggingface.co/circlestone-labs/MiniMax-H3-Image-Training-Adapter) |  | license:other |
+| 2026-09-10 | 0 | 24 | [`circlestone-labs/MiniMax-H3-Image-Training-Adapter`](https://huggingface.co/circlestone-labs/MiniMax-H3-Image-Training-Adapter) |  | license:other |
 | 2026-08-17 | 0 | 0 | [`cjab05/MiniMaxH3Lora`](https://huggingface.co/cjab05/MiniMaxH3Lora) |  |  |
-| 2026-08-19 | 0 | 12 | [`diffusers-modular/minimax-h3-inpainting`](https://huggingface.co/diffusers-modular/minimax-h3-inpainting) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-19 | 0 | 14 | [`diffusers-modular/minimax-h3-inpainting`](https://huggingface.co/diffusers-modular/minimax-h3-inpainting) | video-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
 | 2026-09-25 | 0 | 0 | [`elliotcareydev/minimax-h3-loras`](https://huggingface.co/elliotcareydev/minimax-h3-loras) |  |  |
 | 2026-08-09 | 0 | 15 | [`ethanfel/MiniMax-H3-Pruned-Ref2VA-Delta-LoRAs-Experimental`](https://huggingface.co/ethanfel/MiniMax-H3-Pruned-Ref2VA-Delta-LoRAs-Experimental) |  | comfyui, lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-11 | 0 | 0 | [`gg64537334/MiniMax-H3-Whip-LoRA`](https://huggingface.co/gg64537334/MiniMax-H3-Whip-LoRA) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-11 | 0 | 1 | [`gg64537334/MiniMax-H3-Whip-LoRA`](https://huggingface.co/gg64537334/MiniMax-H3-Whip-LoRA) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-26 | 0 | 0 | [`gregt/fincher35look-h3-lora`](https://huggingface.co/gregt/fincher35look-h3-lora) |  |  |
 | 2026-09-30 | 0 | 0 | [`hyouzansuke/H3-Loras`](https://huggingface.co/hyouzansuke/H3-Loras) |  |  |
 | 2026-08-07 | 0 | 5 | [`iamgroot1212/minimax-h3-loras`](https://huggingface.co/iamgroot1212/minimax-h3-loras) |  | license:apache-2.0 |
+| 2026-10-10 | 0 | 1 | [`johndpope/MiniMax-H3-LoT`](https://huggingface.co/johndpope/MiniMax-H3-LoT) |  | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-29 | 0 | 0 | [`kaibara/MiniMax_H3_lora`](https://huggingface.co/kaibara/MiniMax_H3_lora) |  |  |
 | 2026-09-03 | 0 | 0 | [`kakkkarotto/H3_loras`](https://huggingface.co/kakkkarotto/H3_loras) |  |  |
 | 2026-08-28 | 0 | 2 | [`matheus58457/minimax-h3-loras`](https://huggingface.co/matheus58457/minimax-h3-loras) |  |  |
 | 2026-08-08 | 0 | 36 | [`matlod/minimax-h3-turnaround`](https://huggingface.co/matlod/minimax-h3-turnaround) |  | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-10-04 | 0 | 0 | [`moe-kill/H3_Larry_Battle_JOKER`](https://huggingface.co/moe-kill/H3_Larry_Battle_JOKER) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-16 | 0 | 1 | [`musafa901/Minimax_H3-Age_Slider`](https://huggingface.co/musafa901/Minimax_H3-Age_Slider) |  | license:apache-2.0 |
 | 2026-08-18 | 0 | 89 | [`mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA`](https://huggingface.co/mvp-lab/MiniMax-H3-RAVEN-Streaming-LoRA) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-10-04 | 0 | 0 | [`neph1/1980s_fantasy_movies_minimax_h3`](https://huggingface.co/neph1/1980s_fantasy_movies_minimax_h3) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-12 | 0 | 6 | [`nikdevs/minimax-h3-loras`](https://huggingface.co/nikdevs/minimax-h3-loras) |  |  |
 | 2026-08-29 | 0 | 0 | [`nikomateos/minimax-h3-project-lora`](https://huggingface.co/nikomateos/minimax-h3-project-lora) | minimax-h3 | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-11 | 0 | 6 | [`nynxz/H3_Loras`](https://huggingface.co/nynxz/H3_Loras) |  |  |
-| 2026-08-06 | 0 | 25 | [`ostris/minimax_h3_training_adapter`](https://huggingface.co/ostris/minimax_h3_training_adapter) |  |  |
+| 2026-08-06 | 0 | 27 | [`ostris/minimax_h3_training_adapter`](https://huggingface.co/ostris/minimax_h3_training_adapter) |  |  |
 | 2026-09-25 | 0 | 0 | [`piefke123/h3loras`](https://huggingface.co/piefke123/h3loras) |  |  |
-| 2026-09-29 | 0 | 17 | [`rehan-fal/minimax-h3-360-equirect-lora`](https://huggingface.co/rehan-fal/minimax-h3-360-equirect-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-11 | 0 | 0 | [`rahodan/kikatrin_H3_lora`](https://huggingface.co/rahodan/kikatrin_H3_lora) |  | license:other |
+| 2026-10-12 | 0 | 0 | [`rahodan/kikatrin_h3_lora_REF2V`](https://huggingface.co/rahodan/kikatrin_h3_lora_REF2V) |  | license:other |
+| 2026-09-29 | 0 | 19 | [`rehan-fal/minimax-h3-360-equirect-lora`](https://huggingface.co/rehan-fal/minimax-h3-360-equirect-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-03 | 0 | 39 | [`rehan-fal/minimax-h3-vr180-sbs-lora`](https://huggingface.co/rehan-fal/minimax-h3-vr180-sbs-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-28 | 0 | 0 | [`russgilbert/providence-bassey-h3-lora`](https://huggingface.co/russgilbert/providence-bassey-h3-lora) |  |  |
 | 2026-08-30 | 0 | 0 | [`russgilbert/providence-bose-h3-lora`](https://huggingface.co/russgilbert/providence-bose-h3-lora) |  |  |
@@ -660,11 +713,11 @@
 | 2026-08-30 | 0 | 0 | [`russgilbert/providence-taddeo-h3-lora`](https://huggingface.co/russgilbert/providence-taddeo-h3-lora) |  |  |
 | 2026-08-30 | 0 | 0 | [`russgilbert/providence-torin-h3-lora`](https://huggingface.co/russgilbert/providence-torin-h3-lora) |  |  |
 | 2026-09-23 | 0 | 0 | [`rvhfxb/minimax-h3-vnloras`](https://huggingface.co/rvhfxb/minimax-h3-vnloras) |  |  |
-| 2026-09-04 | 0 | 25 | [`shamanic/minimax-h3-equi360-lora`](https://huggingface.co/shamanic/minimax-h3-equi360-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-04 | 0 | 26 | [`shamanic/minimax-h3-equi360-lora`](https://huggingface.co/shamanic/minimax-h3-equi360-lora) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-31 | 0 | 0 | [`sintecs/minimax_h3_loras`](https://huggingface.co/sintecs/minimax_h3_loras) |  |  |
+| 2026-10-10 | 0 | 1 | [`stale2000/LevelOfToken`](https://huggingface.co/stale2000/LevelOfToken) |  | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-29 | 0 | 0 | [`techbot911/H3_Loras`](https://huggingface.co/techbot911/H3_Loras) |  |  |
 | 2026-08-09 | 0 | 19 | [`tutututututu/Tutu-MiniMax-H3-AudioVideo-20to8-NFE-LoRA`](https://huggingface.co/tutututututu/Tutu-MiniMax-H3-AudioVideo-20to8-NFE-LoRA) | image-text-to-video | lora, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-10-04 | 0 | 0 | [`xaxaxaxaxxaxaxa/MiniMax-H3-Character-Swap-LoRA`](https://huggingface.co/xaxaxaxaxxaxaxa/MiniMax-H3-Character-Swap-LoRA) | video-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
 | 2026-09-16 | 0 | 0 | [`xcmsubs/arnld-h3-lora`](https://huggingface.co/xcmsubs/arnld-h3-lora) |  |  |
 | 2026-10-01 | 0 | 0 | [`xcmsubs/arnschwa_h3_lora2`](https://huggingface.co/xcmsubs/arnschwa_h3_lora2) |  |  |
 | 2026-09-11 | 0 | 0 | [`yichengup/MiniMax-H3-LoRAs`](https://huggingface.co/yichengup/MiniMax-H3-LoRAs) |  | license:mit |
@@ -675,31 +728,37 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-03 | 2860 | 16 | [`ddalcu/MiniMax-H3-FL2VA-MLX-Serve-8bit`](https://huggingface.co/ddalcu/MiniMax-H3-FL2VA-MLX-Serve-8bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 2127 | 9 | [`ddalcu/MiniMax-H3-FL2VA-MLX-Serve-4bit`](https://huggingface.co/ddalcu/MiniMax-H3-FL2VA-MLX-Serve-4bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 1765 | 10 | [`pipenetwork/MiniMax-H3-MLX-8bit`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-8bit) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 1225 | 6 | [`pipenetwork/MiniMax-H3-MLX-4bit`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-4bit) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 845 | 10 | [`pipenetwork/MiniMax-H3-MLX-bf16`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-bf16) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-11 | 737 | 3 | [`water1234/MiniMax-H3-MLX-Argus-Calibrated-INT8`](https://huggingface.co/water1234/MiniMax-H3-MLX-Argus-Calibrated-INT8) | text-to-video | mlx, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 455 | 0 | [`ddalcu/MiniMax-H3-REF2VA-MLX-Serve-8bit`](https://huggingface.co/ddalcu/MiniMax-H3-REF2VA-MLX-Serve-8bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-07 | 454 | 4 | [`antocorr/MiniMax-H3-FL2VA-MLX-Serve-2bit-text-encoder`](https://huggingface.co/antocorr/MiniMax-H3-FL2VA-MLX-Serve-2bit-text-encoder) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 348 | 2 | [`pipenetwork/MiniMax-H3-MLX-6bit`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-6bit) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-04 | 327 | 3 | [`Sawfwair/MiniMax-H3-FL2VA-MLX-4bit`](https://huggingface.co/Sawfwair/MiniMax-H3-FL2VA-MLX-4bit) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-04 | 283 | 1 | [`gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-4bit`](https://huggingface.co/gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-4bit) | image-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-18 | 224 | 0 | [`Sawfwair/MiniMax-H3-FL2VA-MLX-8bit`](https://huggingface.co/Sawfwair/MiniMax-H3-FL2VA-MLX-8bit) | text-to-video | mlx, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-18 | 198 | 0 | [`Sawfwair/MiniMax-H3-FL2VA-MLX-BF16`](https://huggingface.co/Sawfwair/MiniMax-H3-FL2VA-MLX-BF16) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 152 | 0 | [`pipenetwork/MiniMax-H3-MLX-f32`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-f32) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-10 | 139 | 0 | [`Sawfwair/MiniMax-H3-Ref2VA-MLX-8bit`](https://huggingface.co/Sawfwair/MiniMax-H3-Ref2VA-MLX-8bit) | image-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-04 | 139 | 0 | [`gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-8bit`](https://huggingface.co/gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-8bit) | image-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 86 | 0 | [`finbase0530/MiniMax-H3-FL2VA-MLX-Serve-8bit`](https://huggingface.co/finbase0530/MiniMax-H3-FL2VA-MLX-Serve-8bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-08 | 34 | 0 | [`Vayden/MiniMax-H3-MLX-q8-extended-paged`](https://huggingface.co/Vayden/MiniMax-H3-MLX-q8-extended-paged) | text-to-video | mlx, comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-09 | 22 | 0 | [`Vayden/Qwen3-VL-32B-H3-MLX-q8-vision-paged`](https://huggingface.co/Vayden/Qwen3-VL-32B-H3-MLX-q8-vision-paged) | mlx | mlx, comfyui, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:other |
-| 2026-08-08 | 18 | 0 | [`Vayden/Qwen3-VL-32B-H3-MLX-q8-paged`](https://huggingface.co/Vayden/Qwen3-VL-32B-H3-MLX-q8-paged) | mlx | mlx, comfyui, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:other |
-| 2026-09-09 | 8 | 0 | [`Vayden/MiniMax-H3-Ref2VA-MLX-q8-extended-paged`](https://huggingface.co/Vayden/MiniMax-H3-Ref2VA-MLX-q8-extended-paged) | mlx | mlx, comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 2594 | 16 | [`ddalcu/MiniMax-H3-FL2VA-MLX-Serve-8bit`](https://huggingface.co/ddalcu/MiniMax-H3-FL2VA-MLX-Serve-8bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 2082 | 11 | [`ddalcu/MiniMax-H3-FL2VA-MLX-Serve-4bit`](https://huggingface.co/ddalcu/MiniMax-H3-FL2VA-MLX-Serve-4bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 1588 | 10 | [`pipenetwork/MiniMax-H3-MLX-8bit`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-8bit) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-11 | 1220 | 3 | [`water1234/MiniMax-H3-MLX-Argus-Calibrated-INT8`](https://huggingface.co/water1234/MiniMax-H3-MLX-Argus-Calibrated-INT8) | text-to-video | mlx, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 1014 | 6 | [`pipenetwork/MiniMax-H3-MLX-4bit`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-4bit) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 847 | 10 | [`pipenetwork/MiniMax-H3-MLX-bf16`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-bf16) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 441 | 0 | [`ddalcu/MiniMax-H3-REF2VA-MLX-Serve-8bit`](https://huggingface.co/ddalcu/MiniMax-H3-REF2VA-MLX-Serve-8bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-07 | 352 | 4 | [`antocorr/MiniMax-H3-FL2VA-MLX-Serve-2bit-text-encoder`](https://huggingface.co/antocorr/MiniMax-H3-FL2VA-MLX-Serve-2bit-text-encoder) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-04 | 316 | 3 | [`Sawfwair/MiniMax-H3-FL2VA-MLX-4bit`](https://huggingface.co/Sawfwair/MiniMax-H3-FL2VA-MLX-4bit) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-04 | 308 | 1 | [`gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-4bit`](https://huggingface.co/gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-4bit) | image-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 286 | 2 | [`pipenetwork/MiniMax-H3-MLX-6bit`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-6bit) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-18 | 193 | 0 | [`Sawfwair/MiniMax-H3-FL2VA-MLX-8bit`](https://huggingface.co/Sawfwair/MiniMax-H3-FL2VA-MLX-8bit) | text-to-video | mlx, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-18 | 157 | 0 | [`Sawfwair/MiniMax-H3-FL2VA-MLX-BF16`](https://huggingface.co/Sawfwair/MiniMax-H3-FL2VA-MLX-BF16) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-04 | 149 | 0 | [`gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-8bit`](https://huggingface.co/gabrielrocco/MiniMax-H3-Ref2VA-MLX-Serve-8bit) | image-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 148 | 0 | [`pipenetwork/MiniMax-H3-MLX-f32`](https://huggingface.co/pipenetwork/MiniMax-H3-MLX-f32) | image-text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-10 | 138 | 0 | [`Sawfwair/MiniMax-H3-Ref2VA-MLX-8bit`](https://huggingface.co/Sawfwair/MiniMax-H3-Ref2VA-MLX-8bit) | image-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 91 | 0 | [`finbase0530/MiniMax-H3-FL2VA-MLX-Serve-8bit`](https://huggingface.co/finbase0530/MiniMax-H3-FL2VA-MLX-Serve-8bit) | text-to-video | mlx, mlx-serve, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 66 | 1 | [`Avdpro/H3-Portrait-Refiner-MLX`](https://huggingface.co/Avdpro/H3-Portrait-Refiner-MLX) | video-to-video | mlx, license:other |
+| 2026-08-08 | 21 | 0 | [`Vayden/MiniMax-H3-MLX-q8-extended-paged`](https://huggingface.co/Vayden/MiniMax-H3-MLX-q8-extended-paged) | text-to-video | mlx, comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-09 | 19 | 0 | [`Avdpro/Meridian-H3-8bit-MLX`](https://huggingface.co/Avdpro/Meridian-H3-8bit-MLX) |  |  |
+| 2026-09-09 | 19 | 1 | [`Vayden/Qwen3-VL-32B-H3-MLX-q8-vision-paged`](https://huggingface.co/Vayden/Qwen3-VL-32B-H3-MLX-q8-vision-paged) | mlx | mlx, comfyui, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:other |
+| 2026-08-08 | 9 | 0 | [`Vayden/Qwen3-VL-32B-H3-MLX-q8-paged`](https://huggingface.co/Vayden/Qwen3-VL-32B-H3-MLX-q8-paged) | mlx | mlx, comfyui, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:other |
+| 2026-09-09 | 7 | 0 | [`Vayden/MiniMax-H3-Ref2VA-MLX-q8-extended-paged`](https://huggingface.co/Vayden/MiniMax-H3-Ref2VA-MLX-q8-extended-paged) | mlx | mlx, comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-12 | 1 | 0 | [`SceneWorks/minimax-h3-mlx`](https://huggingface.co/SceneWorks/minimax-h3-mlx) | diffusers |  |
 | 2026-08-17 | 0 | 2 | [`MrMofer/MiniMax-H3-MLX-8bit`](https://huggingface.co/MrMofer/MiniMax-H3-MLX-8bit) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-12 | 0 | 0 | [`SceneWorks/minimax-h3-mlx`](https://huggingface.co/SceneWorks/minimax-h3-mlx) | diffusers |  |
-| 2026-08-08 | 0 | 1 | [`Vayden/MiniMax-H3-Video-VAE-MLX-Q8`](https://huggingface.co/Vayden/MiniMax-H3-Video-VAE-MLX-Q8) | mlx | mlx, comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 0 | 0 | [`Shiftedx/minimax-h3-mlx-attention16-mlp8-stream2`](https://huggingface.co/Shiftedx/minimax-h3-mlx-attention16-mlp8-stream2) | text-to-video | mlx, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 0 | 0 | [`Shiftedx/minimax-h3-mlx-bf16-stream2`](https://huggingface.co/Shiftedx/minimax-h3-mlx-bf16-stream2) | text-to-video | mlx, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 0 | 0 | [`Shiftedx/minimax-h3-mlx-core4-stream2`](https://huggingface.co/Shiftedx/minimax-h3-mlx-core4-stream2) | text-to-video | mlx, comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-08 | 0 | 2 | [`Vayden/MiniMax-H3-Video-VAE-MLX-Q8`](https://huggingface.co/Vayden/MiniMax-H3-Video-VAE-MLX-Q8) | mlx | mlx, comfyui, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-06 | 0 | 4 | [`appautomaton/minimax-h3-base-8bit-mlx`](https://huggingface.co/appautomaton/minimax-h3-base-8bit-mlx) | text-to-video | mlx, quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-09 | 0 | 0 | [`joshuaswarren/MiniMax-H3-int8-omarchy`](https://huggingface.co/joshuaswarren/MiniMax-H3-int8-omarchy) | mlx | mlx, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-10 | 0 | 0 | [`nanguoyu/MiniMax-H3-minirun`](https://huggingface.co/nanguoyu/MiniMax-H3-minirun) | diffusers | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:quantized:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-31 | 0 | 0 | [`shadow/mmh3turbo-bundles`](https://huggingface.co/shadow/mmh3turbo-bundles) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:mit |
 | 2026-08-10 | 0 | 1 | [`uetuluk2/minimax-h3-mlx-rebuild`](https://huggingface.co/uetuluk2/minimax-h3-mlx-rebuild) | text-to-video | mlx, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:mit |
@@ -711,48 +770,50 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-17 | 242221 | 381 | [`LBH-123-AI/Minimax_h3_latent_Upscaler`](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
-| 2026-08-20 | 16749 | 55 | [`iamkaikai/MiniMax-H3-Single-Frame-VAE-500K`](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K) | diffusers | base_model:Mamad8/MiniMax-H3-Image-VAE, base_model:finetune:Mamad8/MiniMax-H3-Image-VAE |
-| 2026-09-25 | 8513 | 0 | [`ZawShiShawn/Gestura-MiniMax-H3-VAE-LiteRT`](https://huggingface.co/ZawShiShawn/Gestura-MiniMax-H3-VAE-LiteRT) | image-to-video | quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-30 | 6420 | 73 | [`speach1sdef178/MiniMax-H3-X2-Detail-VAE`](https://huggingface.co/speach1sdef178/MiniMax-H3-X2-Detail-VAE) | image-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-23 | 4461 | 3 | [`fbjr/qwen3-vl-32b-W4A16-AWQ-H3`](https://huggingface.co/fbjr/qwen3-vl-32b-W4A16-AWQ-H3) | minimax-h3 | comfyui, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-09-18 | 3967 | 1 | [`t8star/Taeh3-Comfy`](https://huggingface.co/t8star/Taeh3-Comfy) | minimax-h3 | comfyui, license:other |
-| 2026-10-01 | 824 | 3 | [`corechan/MiniMax-H3-LightVAE`](https://huggingface.co/corechan/MiniMax-H3-LightVAE) | text-to-video | base_model:stdstu123/LynnReal-Onmi-beta-0.1, base_model:quantized:stdstu123/LynnReal-Onmi-beta-0.1, license:other |
-| 2026-08-18 | 750 | 0 | [`6block/MiniMax-H3-Qwen3-VL-NVFP4`](https://huggingface.co/6block/MiniMax-H3-Qwen3-VL-NVFP4) | text-to-video | nvfp4, comfyui, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
-| 2026-08-26 | 426 | 50 | [`lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni`](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni) | text-generation | lora, base_model:Qwen/Qwen2.5-Omni-7B, base_model:adapter:Qwen/Qwen2.5-Omni-7B, license:other |
-| 2026-08-18 | 402 | 45 | [`lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B`](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B) | image-text-to-text | lora, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:adapter:Qwen/Qwen3-VL-8B-Instruct |
-| 2026-08-20 | 367 | 2 | [`nynxz/Qwen3-VL-8B-ComfyUI`](https://huggingface.co/nynxz/Qwen3-VL-8B-ComfyUI) | image-text-to-text | comfyui, lora, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:adapter:Qwen/Qwen3-VL-8B-Instruct, license:apache-2.0 |
-| 2026-09-05 | 352 | 2 | [`pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-NVFP4-AWQ`](https://huggingface.co/pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-NVFP4-AWQ) | image-text-to-text | nvfp4, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-09-02 | 323 | 32 | [`Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY`](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) |  | comfyui, requantization, base_model:LBH-123-AI/Minimax_h3_latent_Upscaler, base_model:finetune:LBH-123-AI/Minimax_h3_latent_Upscaler, license:apache-2.0 |
-| 2026-08-07 | 270 | 187 | [`lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA`](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA) | peft | lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B |
-| 2026-09-23 | 262 | 0 | [`b-rosel/Minimax_h3_latent_Upscaler`](https://huggingface.co/b-rosel/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
-| 2026-09-07 | 244 | 2 | [`PuppetVision/qwen3vl-32b-minimax-h3-amd-rocm-optimized-comfy-triton`](https://huggingface.co/PuppetVision/qwen3vl-32b-minimax-h3-amd-rocm-optimized-comfy-triton) | minimax-h3 | comfyui, int8, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-08-06 | 111 | 2 | [`rockerBOO/qwen3-vl-32b-h3-tail-nvfp4`](https://huggingface.co/rockerBOO/qwen3-vl-32b-h3-tail-nvfp4) | image-text-to-text | comfyui, nvfp4, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-08-17 | 255824 | 401 | [`LBH-123-AI/Minimax_h3_latent_Upscaler`](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
+| 2026-09-25 | 20220 | 1 | [`ZawShiShawn/Gestura-MiniMax-H3-VAE-LiteRT`](https://huggingface.co/ZawShiShawn/Gestura-MiniMax-H3-VAE-LiteRT) | image-to-video | quantized, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-30 | 17343 | 94 | [`speach1sdef178/MiniMax-H3-X2-Detail-VAE`](https://huggingface.co/speach1sdef178/MiniMax-H3-X2-Detail-VAE) | image-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-18 | 5315 | 1 | [`t8star/Taeh3-Comfy`](https://huggingface.co/t8star/Taeh3-Comfy) | minimax-h3 | comfyui, license:other |
+| 2026-08-23 | 4487 | 3 | [`fbjr/qwen3-vl-32b-W4A16-AWQ-H3`](https://huggingface.co/fbjr/qwen3-vl-32b-W4A16-AWQ-H3) | minimax-h3 | comfyui, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-08-20 | 1379 | 55 | [`iamkaikai/MiniMax-H3-Single-Frame-VAE-500K`](https://huggingface.co/iamkaikai/MiniMax-H3-Single-Frame-VAE-500K) | diffusers | base_model:Mamad8/MiniMax-H3-Image-VAE, base_model:finetune:Mamad8/MiniMax-H3-Image-VAE |
+| 2026-10-05 | 1372 | 0 | [`KENIC-1/MiniMax-H3-bucket-embeddings-pruned`](https://huggingface.co/KENIC-1/MiniMax-H3-bucket-embeddings-pruned) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-01 | 1039 | 3 | [`corechan/MiniMax-H3-LightVAE`](https://huggingface.co/corechan/MiniMax-H3-LightVAE) | text-to-video | base_model:stdstu123/LynnReal-Onmi-beta-0.1, base_model:quantized:stdstu123/LynnReal-Onmi-beta-0.1, license:other |
+| 2026-08-18 | 720 | 0 | [`6block/MiniMax-H3-Qwen3-VL-NVFP4`](https://huggingface.co/6block/MiniMax-H3-Qwen3-VL-NVFP4) | text-to-video | nvfp4, comfyui, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-20 | 423 | 2 | [`nynxz/Qwen3-VL-8B-ComfyUI`](https://huggingface.co/nynxz/Qwen3-VL-8B-ComfyUI) | image-text-to-text | comfyui, lora, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:adapter:Qwen/Qwen3-VL-8B-Instruct, license:apache-2.0 |
+| 2026-08-26 | 396 | 54 | [`lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni`](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-Omni) | text-generation | lora, base_model:Qwen/Qwen2.5-Omni-7B, base_model:adapter:Qwen/Qwen2.5-Omni-7B, license:other |
+| 2026-08-18 | 390 | 46 | [`lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B`](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA-8B) | image-text-to-text | lora, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:adapter:Qwen/Qwen3-VL-8B-Instruct |
+| 2026-09-23 | 364 | 0 | [`b-rosel/Minimax_h3_latent_Upscaler`](https://huggingface.co/b-rosel/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
+| 2026-09-02 | 335 | 35 | [`Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY`](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) |  | comfyui, requantization, base_model:LBH-123-AI/Minimax_h3_latent_Upscaler, base_model:finetune:LBH-123-AI/Minimax_h3_latent_Upscaler, license:apache-2.0 |
+| 2026-09-05 | 297 | 3 | [`pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-NVFP4-AWQ`](https://huggingface.co/pottokao/MiniMax-H3-TextEncoder-Qwen3VL-32B-abliterated-NVFP4-AWQ) | image-text-to-text | nvfp4, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-08-07 | 262 | 186 | [`lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA`](https://huggingface.co/lightx2v/MiniMax-H3-Prompt-Rewriter-LoRA) | peft | lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B |
+| 2026-09-07 | 196 | 2 | [`PuppetVision/qwen3vl-32b-minimax-h3-amd-rocm-optimized-comfy-triton`](https://huggingface.co/PuppetVision/qwen3vl-32b-minimax-h3-amd-rocm-optimized-comfy-triton) | minimax-h3 | comfyui, int8, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:finetune:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-09-29 | 123 | 0 | [`zhangccccc/Minimax_h3_latent_Upscaler`](https://huggingface.co/zhangccccc/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
+| 2026-08-06 | 116 | 2 | [`rockerBOO/qwen3-vl-32b-h3-tail-nvfp4`](https://huggingface.co/rockerBOO/qwen3-vl-32b-h3-tail-nvfp4) | image-text-to-text | comfyui, nvfp4, quantized, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-09-28 | 96 | 0 | [`mcbibi/Minimax_h3_latent_Upscaler`](https://huggingface.co/mcbibi/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
 | 2026-08-16 | 89 | 1 | [`valarauca1/qwen3-vl-25m-stitched-8bL16-to-32bL29`](https://huggingface.co/valarauca1/qwen3-vl-25m-stitched-8bL16-to-32bL29) | feature-extraction | base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:merge:Qwen/Qwen3-VL-32B-Instruct, base_model:Qwen/Qwen3-VL-8B-Instruct, base_model:merge:Qwen/Qwen3-VL-8B-Instruct, license:apache-2.0 |
-| 2026-08-19 | 78 | 1 | [`qtum/MiniMax-H3-Qwen3-VL-NVFP4`](https://huggingface.co/qtum/MiniMax-H3-Qwen3-VL-NVFP4) | text-to-video | nvfp4, comfyui, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
-| 2026-09-28 | 66 | 0 | [`mcbibi/Minimax_h3_latent_Upscaler`](https://huggingface.co/mcbibi/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
-| 2026-08-11 | 64 | 5 | [`rzgar/qwen3-vl-32b-minimax-h3-fp8-comfyui`](https://huggingface.co/rzgar/qwen3-vl-32b-minimax-h3-fp8-comfyui) | image-text-to-text | base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-09-29 | 52 | 0 | [`zhangccccc/Minimax_h3_latent_Upscaler`](https://huggingface.co/zhangccccc/Minimax_h3_latent_Upscaler) | minimax-h3 | comfyui, license:apache-2.0 |
-| 2026-08-19 | 38 | 1 | [`moonzerokevin/qwen3vl-32b-minimax-h3-nf4`](https://huggingface.co/moonzerokevin/qwen3vl-32b-minimax-h3-nf4) | image-text-to-text | nf4, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
-| 2026-09-19 | 22 | 2 | [`ygugyg/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY`](https://huggingface.co/ygugyg/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) |  | comfyui, requantization, base_model:LBH-123-AI/Minimax_h3_latent_Upscaler, base_model:finetune:LBH-123-AI/Minimax_h3_latent_Upscaler, license:apache-2.0 |
-| 2026-08-10 | 14 | 2 | [`StellarVoyager/H3-IR-Qwen3.6-27B-LoRA`](https://huggingface.co/StellarVoyager/H3-IR-Qwen3.6-27B-LoRA) | image-text-to-text | lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B, license:apache-2.0 |
+| 2026-08-19 | 85 | 1 | [`qtum/MiniMax-H3-Qwen3-VL-NVFP4`](https://huggingface.co/qtum/MiniMax-H3-Qwen3-VL-NVFP4) | text-to-video | nvfp4, comfyui, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-11 | 67 | 5 | [`rzgar/qwen3-vl-32b-minimax-h3-fp8-comfyui`](https://huggingface.co/rzgar/qwen3-vl-32b-minimax-h3-fp8-comfyui) | image-text-to-text | base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-08-19 | 35 | 1 | [`moonzerokevin/qwen3vl-32b-minimax-h3-nf4`](https://huggingface.co/moonzerokevin/qwen3vl-32b-minimax-h3-nf4) | image-text-to-text | nf4, base_model:Qwen/Qwen3-VL-32B-Instruct, base_model:quantized:Qwen/Qwen3-VL-32B-Instruct, license:apache-2.0 |
+| 2026-09-19 | 23 | 2 | [`ygugyg/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY`](https://huggingface.co/ygugyg/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY) |  | comfyui, requantization, base_model:LBH-123-AI/Minimax_h3_latent_Upscaler, base_model:finetune:LBH-123-AI/Minimax_h3_latent_Upscaler, license:apache-2.0 |
+| 2026-08-10 | 10 | 2 | [`StellarVoyager/H3-IR-Qwen3.6-27B-LoRA`](https://huggingface.co/StellarVoyager/H3-IR-Qwen3.6-27B-LoRA) | image-text-to-text | lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B, license:apache-2.0 |
 | 2026-08-08 | 5 | 0 | [`Momoking/MiniMax-H3-Prompt-Rewriter-LoRA`](https://huggingface.co/Momoking/MiniMax-H3-Prompt-Rewriter-LoRA) | peft | lora, base_model:Qwen/Qwen3.6-27B, base_model:adapter:Qwen/Qwen3.6-27B |
 | 2026-08-20 | 0 | 14 | [`Alissonerdx/MiniMax-H3-Single-Frame-VAE-500K-Comfy`](https://huggingface.co/Alissonerdx/MiniMax-H3-Single-Frame-VAE-500K-Comfy) |  |  |
 | 2026-09-07 | 0 | 0 | [`Allen987/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/Allen987/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-05 | 0 | 1 | [`Avbadi/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/Avbadi/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-08-14 | 0 | 6 | [`DiffSynth-Studio/MiniMax-H3-Text-Embeddings`](https://huggingface.co/DiffSynth-Studio/MiniMax-H3-Text-Embeddings) |  | license:apache-2.0 |
 | 2026-08-29 | 0 | 0 | [`Fab1670/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/Fab1670/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
-| 2026-09-03 | 0 | 1 | [`GuangyuanSD/minimax_h3_video_vae_int8_convrot`](https://huggingface.co/GuangyuanSD/minimax_h3_video_vae_int8_convrot) |  | license:apache-2.0 |
+| 2026-09-03 | 0 | 2 | [`GuangyuanSD/minimax_h3_video_vae_int8_convrot`](https://huggingface.co/GuangyuanSD/minimax_h3_video_vae_int8_convrot) |  | license:apache-2.0 |
+| 2026-10-11 | 0 | 0 | [`Gurningllama/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/Gurningllama/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-09-08 | 0 | 0 | [`Jackxuanxuan/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/Jackxuanxuan/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-27 | 0 | 0 | [`Jamphus/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/Jamphus/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-29 | 0 | 3 | [`Konteni2/Minimax_h3_latent_Upscaler`](https://huggingface.co/Konteni2/Minimax_h3_latent_Upscaler) |  |  |
 | 2026-08-08 | 0 | 12 | [`Mamad8/H3-Latent-Upscaler-2x`](https://huggingface.co/Mamad8/H3-Latent-Upscaler-2x) |  | comfyui |
 | 2026-08-08 | 0 | 91 | [`Mamad8/MiniMax-H3-Image-VAE`](https://huggingface.co/Mamad8/MiniMax-H3-Image-VAE) |  | comfyui |
 | 2026-08-08 | 0 | 0 | [`Momoking/MiniMax-H3-TAE`](https://huggingface.co/Momoking/MiniMax-H3-TAE) |  | license:apache-2.0 |
-| 2026-08-07 | 0 | 283 | [`Momoking/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/Momoking/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
+| 2026-08-07 | 0 | 318 | [`Momoking/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/Momoking/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-06 | 0 | 1 | [`Momoking/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/Momoking/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
-| 2026-08-09 | 0 | 165 | [`NicoLab28/ClipProj-MiniMax-H3`](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
-| 2026-08-04 | 0 | 17 | [`OTMFLY/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/OTMFLY/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
+| 2026-08-09 | 0 | 166 | [`NicoLab28/ClipProj-MiniMax-H3`](https://huggingface.co/NicoLab28/ClipProj-MiniMax-H3) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
+| 2026-08-04 | 0 | 19 | [`OTMFLY/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/OTMFLY/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-08-05 | 0 | 0 | [`PiNetwork/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/PiNetwork/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-08-31 | 0 | 0 | [`PixelAlchemist123/Minimax_h3_latent_Upscaler`](https://huggingface.co/PixelAlchemist123/Minimax_h3_latent_Upscaler) |  |  |
 | 2026-09-28 | 0 | 0 | [`RunningHubAI/rh-lsfqwen3vl-32b-minimax-h3-ultra-uncensored-heretic-int8-convrot.safetensors-checkpoint`](https://huggingface.co/RunningHubAI/rh-lsfqwen3vl-32b-minimax-h3-ultra-uncensored-heretic-int8-convrot.safetensors-checkpoint) | text-to-image | comfyui |
@@ -761,21 +822,22 @@
 | 2026-08-30 | 0 | 0 | [`cjpgxm/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/cjpgxm/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-09-09 | 0 | 0 | [`cuifurong/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/cuifurong/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-09 | 0 | 0 | [`disguisequence/ClipProj-MiniMax-H3`](https://huggingface.co/disguisequence/ClipProj-MiniMax-H3) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
-| 2026-08-03 | 0 | 676 | [`ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
+| 2026-08-03 | 0 | 706 | [`ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-09-14 | 0 | 3 | [`fretdr/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/fretdr/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-05 | 0 | 0 | [`greenslime/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/greenslime/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-08-29 | 0 | 1 | [`jackieccwu/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/jackieccwu/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-09-16 | 0 | 2 | [`jhong520/ClipProj-MiniMax-H3`](https://huggingface.co/jhong520/ClipProj-MiniMax-H3) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
 | 2026-09-12 | 0 | 0 | [`lansen97/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/lansen97/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
+| 2026-10-10 | 0 | 8 | [`lightx2v/LightVAE`](https://huggingface.co/lightx2v/LightVAE) | diffusion-single-file | license:apache-2.0 |
 | 2026-09-01 | 0 | 26 | [`lihaoyun6/MiniMax-H3-VAE-ONNX`](https://huggingface.co/lihaoyun6/MiniMax-H3-VAE-ONNX) |  | base_model:Comfy-Org/MiniMax-H3, base_model:quantized:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-09-29 | 0 | 2 | [`linjian257/minimax-h3-t1-image-vae-int8-convrot`](https://huggingface.co/linjian257/minimax-h3-t1-image-vae-int8-convrot) |  | comfyui, int8 |
-| 2026-08-05 | 0 | 51 | [`linjian257/qwen3vl_32b_minimax_h3_int8_convrot_uncensored-by-linjian257`](https://huggingface.co/linjian257/qwen3vl_32b_minimax_h3_int8_convrot_uncensored-by-linjian257) |  | comfyui, int8, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-05 | 0 | 50 | [`linjian257/qwen3vl_32b_minimax_h3_int8_convrot_uncensored-by-linjian257`](https://huggingface.co/linjian257/qwen3vl_32b_minimax_h3_int8_convrot_uncensored-by-linjian257) |  | comfyui, int8, quantized, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
 | 2026-08-13 | 0 | 0 | [`lwyyds/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/lwyyds/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-08-22 | 0 | 11 | [`misstoyou/ClipProj-MiniMax-H3`](https://huggingface.co/misstoyou/ClipProj-MiniMax-H3) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
 | 2026-08-18 | 0 | 0 | [`nurdich/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/nurdich/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
-| 2026-08-04 | 0 | 228 | [`sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
+| 2026-08-04 | 0 | 230 | [`sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-10 | 0 | 1 | [`suryatmodulus/ClipProj-MiniMax-H3`](https://huggingface.co/suryatmodulus/ClipProj-MiniMax-H3) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
-| 2026-09-27 | 0 | 3 | [`t8star/MinimaxH3-HyperVae-V2`](https://huggingface.co/t8star/MinimaxH3-HyperVae-V2) |  |  |
+| 2026-09-27 | 0 | 4 | [`t8star/MinimaxH3-HyperVae-V2`](https://huggingface.co/t8star/MinimaxH3-HyperVae-V2) |  |  |
 | 2026-08-31 | 0 | 0 | [`taurusduan/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/taurusduan/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
 | 2026-08-10 | 0 | 1 | [`taurusduan/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot`](https://huggingface.co/taurusduan/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot) | image-text-to-text | comfyui, int8, nvfp4, quantized, base_model:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, base_model:finetune:llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic, license:apache-2.0 |
 | 2026-08-17 | 0 | 0 | [`xdkings/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4`](https://huggingface.co/xdkings/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4) | comfyui | comfyui, nvfp4, base_model:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, base_model:quantized:ethanfel/Qwen3-VL-32B-Ultra-Heretic-H3-ComfyUI-INT8-ConvRot, license:apache-2.0 |
@@ -784,49 +846,56 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-09-04 | 58160 | 13 | [`brurpo/DaSiWa-MiniMax-H3-Hybrid`](https://huggingface.co/brurpo/DaSiWa-MiniMax-H3-Hybrid) | image-text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-18 | 37630 | 48 | [`Hearmeman/minimax-h3-loras`](https://huggingface.co/Hearmeman/minimax-h3-loras) | text-to-video | lora, comfyui, nsfw, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-31 | 8419 | 2 | [`lynaNSFW/DaSiWa_MiniMax_H3`](https://huggingface.co/lynaNSFW/DaSiWa_MiniMax_H3) | text-to-image | lora, template:diffusion-lora, base_model:lynaNSFW/minimaxH3_Collection, base_model:adapter:lynaNSFW/minimaxH3_Collection |
-| 2026-08-30 | 7174 | 9 | [`berryber09/10Eros-Max-h3-turbo-hybrid-beta4-w4a8`](https://huggingface.co/berryber09/10Eros-Max-h3-turbo-hybrid-beta4-w4a8) | text-to-video | comfyui, quantized, turbo, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
-| 2026-08-26 | 4914 | 5 | [`lynaNSFW/minimaxH3_Collection`](https://huggingface.co/lynaNSFW/minimaxH3_Collection) | text-to-image | lora, template:diffusion-lora, base_model:pmczip/MiniMaxH3_LoRAs, base_model:adapter:pmczip/MiniMaxH3_LoRAs |
-| 2026-08-29 | 1894 | 9 | [`LokkenJP/TenEros_Max_optimized_learned`](https://huggingface.co/LokkenJP/TenEros_Max_optimized_learned) | image-text-to-video | comfyui, int8, quantization, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
-| 2026-08-27 | 1520 | 1 | [`Wesley1234/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8`](https://huggingface.co/Wesley1234/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
-| 2026-08-20 | 1382 | 0 | [`vasilerosca891/MiniMax-H3`](https://huggingface.co/vasilerosca891/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-21 | 1267 | 12 | [`Abiray/10Eros-Max-fl2va-Beta2-GGUF`](https://huggingface.co/Abiray/10Eros-Max-fl2va-Beta2-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
-| 2026-08-23 | 1243 | 7 | [`Abiray/10Eros-Max-ref2va-Beta2-GGUF`](https://huggingface.co/Abiray/10Eros-Max-ref2va-Beta2-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
-| 2026-08-16 | 1019 | 23 | [`sakamakismile/10Eros-Max-beta2-NVFP4`](https://huggingface.co/sakamakismile/10Eros-Max-beta2-NVFP4) | image-to-video | nvfp4, comfyui, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
-| 2026-08-14 | 1018 | 135 | [`Smite79/MiniMax-H3-Longvideos`](https://huggingface.co/Smite79/MiniMax-H3-Longvideos) | text-to-video | comfyui, comfyui-nodes, license:other |
-| 2026-08-18 | 808 | 192 | [`SexGod1979/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
-| 2026-08-05 | 779 | 425 | [`SexGod1979/PinkCherry-NSFW_MiniMax-H3`](https://huggingface.co/SexGod1979/PinkCherry-NSFW_MiniMax-H3) | text-to-video | nsfw, license:apache-2.0 |
-| 2026-09-25 | 615 | 0 | [`kalyaskye/h3-loras`](https://huggingface.co/kalyaskye/h3-loras) | minimax-h3 | lora |
-| 2026-08-25 | 451 | 3 | [`berryber09/10Eros-Max-h3-turbo-hybrid-beta3-w4a8`](https://huggingface.co/berryber09/10Eros-Max-h3-turbo-hybrid-beta3-w4a8) | text-to-video | comfyui, quantized, turbo, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
-| 2026-09-07 | 227 | 68 | [`SexGod1979/NaughtyTimes-MiniMax-H3`](https://huggingface.co/SexGod1979/NaughtyTimes-MiniMax-H3) |  | license:apache-2.0 |
-| 2026-09-11 | 220 | 1 | [`ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5-pruned`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5-pruned) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-05 | 146 | 100 | [`SexGod1979/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/SexGod1979/PinkFluffyBunny-MiniMax-H3) |  | license:apache-2.0 |
-| 2026-10-03 | 118 | 0 | [`BluePrintSky/MinimaxH3Assets`](https://huggingface.co/BluePrintSky/MinimaxH3Assets) | text-to-image | lora, template:diffusion-lora, base_model:lynaNSFW/minimaxH3_Collection, base_model:adapter:lynaNSFW/minimaxH3_Collection, license:other |
-| 2026-08-22 | 97 | 0 | [`RareConcepts/soad-h3-xm-20260822`](https://huggingface.co/RareConcepts/soad-h3-xm-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 78 | 0 | [`SimpleTuner/minimaxh3-suno-reggae-rank128`](https://huggingface.co/SimpleTuner/minimaxh3-suno-reggae-rank128) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-21 | 71 | 2 | [`chfm/10Eros-Max-beta2-NVFP4`](https://huggingface.co/chfm/10Eros-Max-beta2-NVFP4) | image-to-video | nvfp4, comfyui, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
-| 2026-09-12 | 64 | 1 | [`ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-22 | 54 | 0 | [`RareConcepts/soad-h3-nextlat-20260822`](https://huggingface.co/RareConcepts/soad-h3-nextlat-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-22 | 52 | 0 | [`RareConcepts/soad-h3-nextlat-xm-20260822`](https://huggingface.co/RareConcepts/soad-h3-nextlat-xm-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-22 | 28 | 0 | [`RareConcepts/soad-h3-vanilla-20260822`](https://huggingface.co/RareConcepts/soad-h3-vanilla-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-13 | 28 | 1 | [`dubUhoo/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/dubUhoo/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
-| 2026-10-02 | 25 | 0 | [`nobodyatalliguess/fingering-h3-lora`](https://huggingface.co/nobodyatalliguess/fingering-h3-lora) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-04 | 56111 | 14 | [`brurpo/DaSiWa-MiniMax-H3-Hybrid`](https://huggingface.co/brurpo/DaSiWa-MiniMax-H3-Hybrid) | image-text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-18 | 28406 | 53 | [`Hearmeman/minimax-h3-loras`](https://huggingface.co/Hearmeman/minimax-h3-loras) | text-to-video | lora, comfyui, nsfw, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-26 | 6077 | 6 | [`lynaNSFW/minimaxH3_Collection`](https://huggingface.co/lynaNSFW/minimaxH3_Collection) | text-to-image | lora, template:diffusion-lora, base_model:pmczip/MiniMaxH3_LoRAs, base_model:adapter:pmczip/MiniMaxH3_LoRAs |
+| 2026-08-30 | 2554 | 10 | [`berryber09/10Eros-Max-h3-turbo-hybrid-beta4-w4a8`](https://huggingface.co/berryber09/10Eros-Max-h3-turbo-hybrid-beta4-w4a8) | text-to-video | comfyui, quantized, turbo, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
+| 2026-08-29 | 2176 | 11 | [`LokkenJP/TenEros_Max_optimized_learned`](https://huggingface.co/LokkenJP/TenEros_Max_optimized_learned) | image-text-to-video | comfyui, int8, quantization, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
+| 2026-08-20 | 1843 | 0 | [`vasilerosca891/MiniMax-H3`](https://huggingface.co/vasilerosca891/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-27 | 1369 | 1 | [`Wesley1234/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8`](https://huggingface.co/Wesley1234/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
+| 2026-08-21 | 1184 | 12 | [`Abiray/10Eros-Max-fl2va-Beta2-GGUF`](https://huggingface.co/Abiray/10Eros-Max-fl2va-Beta2-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
+| 2026-09-25 | 1082 | 0 | [`kalyaskye/h3-loras`](https://huggingface.co/kalyaskye/h3-loras) | minimax-h3 | lora |
+| 2026-08-23 | 1073 | 7 | [`Abiray/10Eros-Max-ref2va-Beta2-GGUF`](https://huggingface.co/Abiray/10Eros-Max-ref2va-Beta2-GGUF) | image-text-to-video | gguf, comfyui, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
+| 2026-08-14 | 967 | 136 | [`Smite79/MiniMax-H3-Longvideos`](https://huggingface.co/Smite79/MiniMax-H3-Longvideos) | text-to-video | comfyui, comfyui-nodes, license:other |
+| 2026-08-16 | 783 | 23 | [`sakamakismile/10Eros-Max-beta2-NVFP4`](https://huggingface.co/sakamakismile/10Eros-Max-beta2-NVFP4) | image-to-video | nvfp4, comfyui, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
+| 2026-08-18 | 744 | 199 | [`SexGod1979/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/SexGod1979/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
+| 2026-08-05 | 744 | 455 | [`SexGod1979/PinkCherry-NSFW_MiniMax-H3`](https://huggingface.co/SexGod1979/PinkCherry-NSFW_MiniMax-H3) | text-to-video | nsfw, license:apache-2.0 |
+| 2026-08-31 | 536 | 2 | [`lynaNSFW/DaSiWa_MiniMax_H3`](https://huggingface.co/lynaNSFW/DaSiWa_MiniMax_H3) | text-to-image | lora, template:diffusion-lora, base_model:lynaNSFW/minimaxH3_Collection, base_model:adapter:lynaNSFW/minimaxH3_Collection |
+| 2026-08-25 | 367 | 3 | [`berryber09/10Eros-Max-h3-turbo-hybrid-beta3-w4a8`](https://huggingface.co/berryber09/10Eros-Max-h3-turbo-hybrid-beta3-w4a8) | text-to-video | comfyui, quantized, turbo, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
+| 2026-10-08 | 214 | 0 | [`nobodyatalliguess/minimax-h3-loras`](https://huggingface.co/nobodyatalliguess/minimax-h3-loras) | minimax-h3 | lora, license:other |
+| 2026-09-07 | 206 | 70 | [`SexGod1979/NaughtyTimes-MiniMax-H3`](https://huggingface.co/SexGod1979/NaughtyTimes-MiniMax-H3) |  | license:apache-2.0 |
+| 2026-10-02 | 162 | 0 | [`nobodyatalliguess/epic-cumshots-h3-lora`](https://huggingface.co/nobodyatalliguess/epic-cumshots-h3-lora) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-03 | 155 | 0 | [`BluePrintSky/MinimaxH3Assets`](https://huggingface.co/BluePrintSky/MinimaxH3Assets) | text-to-image | lora, template:diffusion-lora, base_model:lynaNSFW/minimaxH3_Collection, base_model:adapter:lynaNSFW/minimaxH3_Collection, license:other |
+| 2026-09-11 | 152 | 2 | [`ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5-pruned`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5-pruned) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-04 | 129 | 0 | [`f23gg/Deepthroat-Face-Fuck-Minimax-H3-I2V`](https://huggingface.co/f23gg/Deepthroat-Face-Fuck-Minimax-H3-I2V) | image-to-video | lora, template:diffusion-lora, base_model:lynaNSFW/minimaxH3_Collection, base_model:adapter:lynaNSFW/minimaxH3_Collection |
+| 2026-08-05 | 113 | 100 | [`SexGod1979/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/SexGod1979/PinkFluffyBunny-MiniMax-H3) |  | license:apache-2.0 |
+| 2026-08-16 | 77 | 0 | [`SimpleTuner/minimaxh3-suno-reggae-rank128`](https://huggingface.co/SimpleTuner/minimaxh3-suno-reggae-rank128) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-02 | 76 | 0 | [`nobodyatalliguess/fingering-h3-lora`](https://huggingface.co/nobodyatalliguess/fingering-h3-lora) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-12 | 71 | 2 | [`ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_TURBO-hybrid_beta5) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-21 | 68 | 2 | [`chfm/10Eros-Max-beta2-NVFP4`](https://huggingface.co/chfm/10Eros-Max-beta2-NVFP4) | image-to-video | nvfp4, comfyui, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
+| 2026-10-10 | 67 | 1 | [`berryber09/10Eros-Max-h3-turbo-beta6-pruned-w4a8`](https://huggingface.co/berryber09/10Eros-Max-h3-turbo-beta6-pruned-w4a8) | text-to-video | comfyui, quantized, turbo, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
+| 2026-08-22 | 65 | 0 | [`RareConcepts/soad-h3-xm-20260822`](https://huggingface.co/RareConcepts/soad-h3-xm-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-22 | 45 | 0 | [`RareConcepts/soad-h3-nextlat-xm-20260822`](https://huggingface.co/RareConcepts/soad-h3-nextlat-xm-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-22 | 36 | 0 | [`RareConcepts/soad-h3-nextlat-20260822`](https://huggingface.co/RareConcepts/soad-h3-nextlat-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 35 | 0 | [`ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6_pruned`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6_pruned) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-13 | 29 | 1 | [`dubUhoo/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/dubUhoo/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
 | 2026-09-19 | 24 | 0 | [`Scorpio1111/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/Scorpio1111/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
-| 2026-10-02 | 23 | 0 | [`nobodyatalliguess/epic-cumshots-h3-lora`](https://huggingface.co/nobodyatalliguess/epic-cumshots-h3-lora) | minimax-h3 | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-24 | 21 | 1 | [`Imfiilthyfrankdead/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/Imfiilthyfrankdead/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
-| 2026-09-16 | 20 | 0 | [`coeboy/PinkCherry_MiniMax-H3`](https://huggingface.co/coeboy/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
-| 2026-09-16 | 19 | 0 | [`concil859856/MiniMax-H3-Longvideos`](https://huggingface.co/concil859856/MiniMax-H3-Longvideos) | text-to-video | comfyui, comfyui-nodes, license:other |
-| 2026-08-25 | 18 | 0 | [`sisniha/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/sisniha/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
-| 2026-08-21 | 15 | 1 | [`sasimi/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
-| 2026-08-08 | 8 | 0 | [`disguisequence/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/disguisequence/PinkFluffyBunny-MiniMax-H3) |  | license:apache-2.0 |
-| 2026-08-11 | 7 | 0 | [`ghjk654/PinkCherry_MiniMax-H3`](https://huggingface.co/ghjk654/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
-| 2026-08-26 | 6 | 0 | [`tonorth1/PinkCherry_MiniMax-H3`](https://huggingface.co/tonorth1/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
-| 2026-08-06 | 5 | 0 | [`TopgunM/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/TopgunM/PinkFluffyBunny-MiniMax-H3) |  | lora, license:apache-2.0 |
-| 2026-08-10 | 5 | 1 | [`erueye/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/erueye/PinkFluffyBunny-MiniMax-H3) |  | license:apache-2.0 |
-| 2026-08-19 | 4 | 0 | [`Jeet070/PinkCherry_MiniMax-H3`](https://huggingface.co/Jeet070/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-09-24 | 23 | 1 | [`Imfiilthyfrankdead/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/Imfiilthyfrankdead/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
+| 2026-09-16 | 23 | 0 | [`coeboy/PinkCherry_MiniMax-H3`](https://huggingface.co/coeboy/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-09-16 | 21 | 0 | [`concil859856/MiniMax-H3-Longvideos`](https://huggingface.co/concil859856/MiniMax-H3-Longvideos) | text-to-video | comfyui, comfyui-nodes, license:other |
+| 2026-08-22 | 19 | 0 | [`RareConcepts/soad-h3-vanilla-20260822`](https://huggingface.co/RareConcepts/soad-h3-vanilla-20260822) | text-to-video | lora, template:sd-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 18 | 1 | [`neggy555/h3andgoo`](https://huggingface.co/neggy555/h3andgoo) | text-to-image | lora, template:diffusion-lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3 |
+| 2026-10-10 | 14 | 0 | [`ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-25 | 12 | 0 | [`sisniha/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/sisniha/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
+| 2026-08-21 | 8 | 1 | [`sasimi/AfterMidnight-MiniMax-H3-NSFW`](https://huggingface.co/sasimi/AfterMidnight-MiniMax-H3-NSFW) |  | license:apache-2.0 |
+| 2026-08-06 | 6 | 0 | [`TopgunM/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/TopgunM/PinkFluffyBunny-MiniMax-H3) |  | lora, license:apache-2.0 |
+| 2026-08-11 | 6 | 0 | [`ghjk654/PinkCherry_MiniMax-H3`](https://huggingface.co/ghjk654/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-08-19 | 5 | 0 | [`Jeet070/PinkCherry_MiniMax-H3`](https://huggingface.co/Jeet070/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-08-08 | 4 | 0 | [`disguisequence/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/disguisequence/PinkFluffyBunny-MiniMax-H3) |  | license:apache-2.0 |
+| 2026-08-26 | 4 | 0 | [`tonorth1/PinkCherry_MiniMax-H3`](https://huggingface.co/tonorth1/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-08-10 | 3 | 1 | [`erueye/PinkFluffyBunny-MiniMax-H3`](https://huggingface.co/erueye/PinkFluffyBunny-MiniMax-H3) |  | license:apache-2.0 |
 | 2026-08-13 | 3 | 0 | [`romonlyme/PinkCherry_MiniMax-H3`](https://huggingface.co/romonlyme/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-10-07 | 0 | 0 | [`0xSojalSec/Minimax_H3-was-Zendaya`](https://huggingface.co/0xSojalSec/Minimax_H3-was-Zendaya) |  | license:apache-2.0 |
 | 2026-08-08 | 0 | 0 | [`1dk123456/PinkCherry_MiniMax-H3`](https://huggingface.co/1dk123456/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
 | 2026-09-15 | 0 | 3 | [`AiAngelGallery/AiAngelH3`](https://huggingface.co/AiAngelGallery/AiAngelH3) | image-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-23 | 0 | 0 | [`AliceThirty/PinkCherry_MiniMax-H3_pruned_int8_convrot`](https://huggingface.co/AliceThirty/PinkCherry_MiniMax-H3_pruned_int8_convrot) |  | base_model:SexGod1979/PinkCherry_MiniMax-H3, base_model:finetune:SexGod1979/PinkCherry_MiniMax-H3 |
@@ -834,26 +903,26 @@
 | 2026-08-08 | 0 | 0 | [`DBPEnAhTR8r/PinkCherry_MiniMax-H3`](https://huggingface.co/DBPEnAhTR8r/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
 | 2026-08-06 | 0 | 0 | [`DearAzrael/PinkCherry_MiniMax-H3`](https://huggingface.co/DearAzrael/PinkCherry_MiniMax-H3) |  | license:apache-2.0 |
 | 2026-09-26 | 0 | 0 | [`DevXCoder2025/10Eros-Max`](https://huggingface.co/DevXCoder2025/10Eros-Max) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-05 | 0 | 4 | [`DmitryDB/MiniMax-H3-10Eros-Max-DT-sQKV`](https://huggingface.co/DmitryDB/MiniMax-H3-10Eros-Max-DT-sQKV) | image-text-to-video | comfyui, quantization, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-05 | 0 | 22 | [`DmitryDB/MiniMax-H3-10Eros-Max-Quants`](https://huggingface.co/DmitryDB/MiniMax-H3-10Eros-Max-Quants) | image-text-to-video | comfyui, quantization, int8, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-05 | 0 | 5 | [`DmitryDB/MiniMax-H3-10Eros-Max-DT-sQKV`](https://huggingface.co/DmitryDB/MiniMax-H3-10Eros-Max-DT-sQKV) | image-text-to-video | comfyui, quantization, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-05 | 0 | 24 | [`DmitryDB/MiniMax-H3-10Eros-Max-Quants`](https://huggingface.co/DmitryDB/MiniMax-H3-10Eros-Max-Quants) | image-text-to-video | comfyui, quantization, int8, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-08 | 0 | 0 | [`EllipsesMark/eromacks`](https://huggingface.co/EllipsesMark/eromacks) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-25 | 0 | 2 | [`JCorcho/10Eros-Max-TURBO-hybrid-beta3-ComfyUI-Quants`](https://huggingface.co/JCorcho/10Eros-Max-TURBO-hybrid-beta3-ComfyUI-Quants) | image-to-video | comfyui, nvfp4, fp8, quantization, nsfw, base_model:TenStrip/10Eros-Max, base_model:quantized:TenStrip/10Eros-Max, license:other |
 | 2026-09-09 | 0 | 0 | [`Jhjhhkj65/Minimax_H3-Sydney_Sweeney`](https://huggingface.co/Jhjhhkj65/Minimax_H3-Sydney_Sweeney) |  |  |
 | 2026-08-06 | 0 | 0 | [`Kerochake/MiniMax-H3-10Eros-Max-DT-sQKV`](https://huggingface.co/Kerochake/MiniMax-H3-10Eros-Max-DT-sQKV) | image-text-to-video | comfyui, quantization, int8, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-08 | 0 | 1 | [`Momoking/PinkCherry_MiniMax-H3`](https://huggingface.co/Momoking/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-08-08 | 0 | 2 | [`Momoking/PinkCherry_MiniMax-H3`](https://huggingface.co/Momoking/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
 | 2026-09-14 | 0 | 14 | [`NeuralDreamer/h3ErosMax_beta5_turbo_lora`](https://huggingface.co/NeuralDreamer/h3ErosMax_beta5_turbo_lora) |  |  |
 | 2026-08-07 | 0 | 7 | [`Playtime-AI/Minimax-H3_Showcase`](https://huggingface.co/Playtime-AI/Minimax-H3_Showcase) |  | license:apache-2.0 |
-| 2026-09-07 | 0 | 3 | [`Playtime-AI/Minimax_H3-Ace_Ventura`](https://huggingface.co/Playtime-AI/Minimax_H3-Ace_Ventura) |  | license:apache-2.0 |
-| 2026-09-10 | 0 | 41 | [`Playtime-AI/Minimax_H3-Age_Slider`](https://huggingface.co/Playtime-AI/Minimax_H3-Age_Slider) |  | license:apache-2.0 |
+| 2026-09-07 | 0 | 5 | [`Playtime-AI/Minimax_H3-Ace_Ventura`](https://huggingface.co/Playtime-AI/Minimax_H3-Ace_Ventura) |  | license:apache-2.0 |
+| 2026-09-10 | 0 | 51 | [`Playtime-AI/Minimax_H3-Age_Slider`](https://huggingface.co/Playtime-AI/Minimax_H3-Age_Slider) |  | license:apache-2.0 |
 | 2026-09-05 | 0 | 5 | [`Playtime-AI/Minimax_H3-Alan_Rickman`](https://huggingface.co/Playtime-AI/Minimax_H3-Alan_Rickman) |  | license:apache-2.0 |
 | 2026-08-31 | 0 | 23 | [`Playtime-AI/Minimax_H3-Anya_Taylor_Joy`](https://huggingface.co/Playtime-AI/Minimax_H3-Anya_Taylor_Joy) |  | license:apache-2.0 |
 | 2026-08-29 | 0 | 9 | [`Playtime-AI/Minimax_H3-Ariana_Grande`](https://huggingface.co/Playtime-AI/Minimax_H3-Ariana_Grande) |  | license:apache-2.0 |
 | 2026-09-05 | 0 | 2 | [`Playtime-AI/Minimax_H3-Betty_Gilpin`](https://huggingface.co/Playtime-AI/Minimax_H3-Betty_Gilpin) |  | license:apache-2.0 |
 | 2026-08-27 | 0 | 4 | [`Playtime-AI/Minimax_H3-Dolly_Parton`](https://huggingface.co/Playtime-AI/Minimax_H3-Dolly_Parton) |  | license:apache-2.0 |
-| 2026-08-25 | 0 | 10 | [`Playtime-AI/Minimax_H3-Jennifer_Connelly`](https://huggingface.co/Playtime-AI/Minimax_H3-Jennifer_Connelly) |  | license:apache-2.0 |
+| 2026-08-25 | 0 | 13 | [`Playtime-AI/Minimax_H3-Jennifer_Connelly`](https://huggingface.co/Playtime-AI/Minimax_H3-Jennifer_Connelly) |  | license:apache-2.0 |
 | 2026-08-31 | 0 | 3 | [`Playtime-AI/Minimax_H3-Kiernan_Shipka`](https://huggingface.co/Playtime-AI/Minimax_H3-Kiernan_Shipka) |  | license:apache-2.0 |
 | 2026-08-26 | 0 | 24 | [`Playtime-AI/Minimax_H3-Margot_Robbie`](https://huggingface.co/Playtime-AI/Minimax_H3-Margot_Robbie) |  | license:apache-2.0 |
-| 2026-08-29 | 0 | 60 | [`Playtime-AI/Minimax_H3-Megan_Fox`](https://huggingface.co/Playtime-AI/Minimax_H3-Megan_Fox) |  | license:apache-2.0 |
+| 2026-08-29 | 0 | 61 | [`Playtime-AI/Minimax_H3-Megan_Fox`](https://huggingface.co/Playtime-AI/Minimax_H3-Megan_Fox) |  | license:apache-2.0 |
 | 2026-09-07 | 0 | 9 | [`Playtime-AI/Minimax_H3-Mia_Goth`](https://huggingface.co/Playtime-AI/Minimax_H3-Mia_Goth) |  | license:apache-2.0 |
 | 2026-08-22 | 0 | 8 | [`Playtime-AI/Minimax_H3-Mila_Kunis`](https://huggingface.co/Playtime-AI/Minimax_H3-Mila_Kunis) |  | license:apache-2.0 |
 | 2026-08-31 | 0 | 10 | [`Playtime-AI/Minimax_H3-Millie_Bobby_Brown`](https://huggingface.co/Playtime-AI/Minimax_H3-Millie_Bobby_Brown) |  | license:apache-2.0 |
@@ -862,11 +931,11 @@
 | 2026-08-28 | 0 | 10 | [`Playtime-AI/Minimax_H3-Sadie_S`](https://huggingface.co/Playtime-AI/Minimax_H3-Sadie_S) |  | license:apache-2.0 |
 | 2026-08-24 | 0 | 11 | [`Playtime-AI/Minimax_H3-Salma_Hayek`](https://huggingface.co/Playtime-AI/Minimax_H3-Salma_Hayek) |  | license:apache-2.0 |
 | 2026-09-04 | 0 | 15 | [`Playtime-AI/Minimax_H3-Sasha_Grey`](https://huggingface.co/Playtime-AI/Minimax_H3-Sasha_Grey) |  | license:apache-2.0 |
-| 2026-08-24 | 0 | 112 | [`Playtime-AI/Minimax_H3-Sydney_Sweeney`](https://huggingface.co/Playtime-AI/Minimax_H3-Sydney_Sweeney) |  | license:apache-2.0 |
+| 2026-08-24 | 0 | 125 | [`Playtime-AI/Minimax_H3-Sydney_Sweeney`](https://huggingface.co/Playtime-AI/Minimax_H3-Sydney_Sweeney) |  | license:apache-2.0 |
 | 2026-09-03 | 0 | 4 | [`Playtime-AI/Minimax_H3-The_Dude-Jeff_Bridges`](https://huggingface.co/Playtime-AI/Minimax_H3-The_Dude-Jeff_Bridges) |  | license:apache-2.0 |
-| 2026-09-01 | 0 | 15 | [`Playtime-AI/Minimax_H3-Titty_Drop`](https://huggingface.co/Playtime-AI/Minimax_H3-Titty_Drop) |  | license:apache-2.0 |
+| 2026-09-01 | 0 | 16 | [`Playtime-AI/Minimax_H3-Titty_Drop`](https://huggingface.co/Playtime-AI/Minimax_H3-Titty_Drop) |  | license:apache-2.0 |
 | 2026-08-28 | 0 | 8 | [`Playtime-AI/Minimax_H3-Titty_Drop_I2V`](https://huggingface.co/Playtime-AI/Minimax_H3-Titty_Drop_I2V) |  | license:apache-2.0 |
-| 2026-08-27 | 0 | 13 | [`Playtime-AI/Minimax_H3-Zendaya`](https://huggingface.co/Playtime-AI/Minimax_H3-Zendaya) |  | license:apache-2.0 |
+| 2026-08-27 | 0 | 18 | [`Playtime-AI/Minimax_H3-Zendaya`](https://huggingface.co/Playtime-AI/Minimax_H3-Zendaya) |  | license:apache-2.0 |
 | 2026-08-09 | 0 | 0 | [`Rb227715/PinkCherry_MiniMax-H3`](https://huggingface.co/Rb227715/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
 | 2026-09-23 | 0 | 0 | [`RunningHubAI/rh-10eros-max-h3-fl2va-beta1-pruned-unet`](https://huggingface.co/RunningHubAI/rh-10eros-max-h3-fl2va-beta1-pruned-unet) |  |  |
 | 2026-09-24 | 0 | 0 | [`RunningHubAI/rh-10eros-max-h3-fl2va-pruned-int8-convrot-unet`](https://huggingface.co/RunningHubAI/rh-10eros-max-h3-fl2va-pruned-int8-convrot-unet) | text-to-video | comfyui |
@@ -878,24 +947,26 @@
 | 2026-09-23 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-10erosmax-beta1-pruned-compat-v001-t8-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-fl2v-turbo-8step-v1.0-10erosmax-beta1-pruned-compat-v001-t8-lora) |  | comfyui, lora |
 | 2026-10-02 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-mans-p-uncut-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-mans-p-uncut-lora) |  |  |
 | 2026-09-23 | 0 | 0 | [`RunningHubAI/rh-minimax-h3-turbo-4step-10erosmax-test4-pruned-curveproj1025-exp-v001-t8-lora`](https://huggingface.co/RunningHubAI/rh-minimax-h3-turbo-4step-10erosmax-test4-pruned-curveproj1025-exp-v001-t8-lora) |  | comfyui, lora |
-| 2026-09-28 | 0 | 0 | [`RunningHubAI/rh-minimaxh3-dasiwa-10eros-hybird-8steps-turbo-lora`](https://huggingface.co/RunningHubAI/rh-minimaxh3-dasiwa-10eros-hybird-8steps-turbo-lora) |  | comfyui, lora |
+| 2026-09-28 | 0 | 1 | [`RunningHubAI/rh-minimaxh3-dasiwa-10eros-hybird-8steps-turbo-lora`](https://huggingface.co/RunningHubAI/rh-minimaxh3-dasiwa-10eros-hybird-8steps-turbo-lora) |  | comfyui, lora |
 | 2026-10-02 | 0 | 0 | [`RunningHubAI/rh-moawxx-female-pleasure-moans-body-writhing-minimax-h3-lora`](https://huggingface.co/RunningHubAI/rh-moawxx-female-pleasure-moans-body-writhing-minimax-h3-lora) |  | comfyui, lora |
-| 2026-08-18 | 0 | 4 | [`Stuubs/10eros_Max_Ref2va`](https://huggingface.co/Stuubs/10eros_Max_Ref2va) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-04 | 0 | 732 | [`TenStrip/10Eros-Max`](https://huggingface.co/TenStrip/10Eros-Max) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-18 | 0 | 5 | [`Stuubs/10eros_Max_Ref2va`](https://huggingface.co/Stuubs/10eros_Max_Ref2va) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-04 | 0 | 793 | [`TenStrip/10Eros-Max`](https://huggingface.co/TenStrip/10Eros-Max) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-09 | 0 | 0 | [`Zxsry/PinkCherry_MiniMax-H3`](https://huggingface.co/Zxsry/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
 | 2026-08-23 | 0 | 1 | [`chfm/10Eros-Max-h3-int8-convrot`](https://huggingface.co/chfm/10Eros-Max-h3-int8-convrot) | comfyui | comfyui, int8, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
-| 2026-08-14 | 0 | 133 | [`cicalooo/10Eros-Max-h3-int8-convrot`](https://huggingface.co/cicalooo/10Eros-Max-h3-int8-convrot) | comfyui | comfyui, int8, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
+| 2026-08-14 | 0 | 135 | [`cicalooo/10Eros-Max-h3-int8-convrot`](https://huggingface.co/cicalooo/10Eros-Max-h3-int8-convrot) | comfyui | comfyui, int8, base_model:TenStrip/10Eros-Max, base_model:finetune:TenStrip/10Eros-Max, license:other |
 | 2026-08-05 | 0 | 3 | [`disguisequence/MiniMax-H3-10Eros-Max-Quants`](https://huggingface.co/disguisequence/MiniMax-H3-10Eros-Max-Quants) | image-text-to-video | comfyui, quantization, int8, nvfp4, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-08 | 0 | 1 | [`disguisequence/PinkCherry_MiniMax-H3`](https://huggingface.co/disguisequence/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
-| 2026-10-04 | 0 | 0 | [`f23gg/Deepthroat-Face-Fuck-Minimax-H3-I2V`](https://huggingface.co/f23gg/Deepthroat-Face-Fuck-Minimax-H3-I2V) | image-to-video | lora, template:diffusion-lora, base_model:lynaNSFW/minimaxH3_Collection, base_model:adapter:lynaNSFW/minimaxH3_Collection |
 | 2026-09-08 | 0 | 0 | [`h35656566/10Eros-Max`](https://huggingface.co/h35656566/10Eros-Max) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-25 | 0 | 2 | [`h35656566/10Eros-Max-old1`](https://huggingface.co/h35656566/10Eros-Max-old1) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-08 | 0 | 0 | [`hollyw12xw3f/PinkCherry_MiniMax-H3`](https://huggingface.co/hollyw12xw3f/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-10-11 | 0 | 0 | [`ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6_VBVR_FUSED`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6_VBVR_FUSED) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-11 | 0 | 0 | [`ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6_pruned_VBVR_FUSED`](https://huggingface.co/ibyteohdear/10Eros-Max-Transformer_8stepTURBO_beta6_pruned_VBVR_FUSED) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-04 | 0 | 0 | [`kunalmiind/10Eros-Max`](https://huggingface.co/kunalmiind/10Eros-Max) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-09 | 0 | 1 | [`laoda/DasiwaMinimaxH3_dasiwaHybrid8turboV1`](https://huggingface.co/laoda/DasiwaMinimaxH3_dasiwaHybrid8turboV1) | text-to-video | comfyui |
 | 2026-08-08 | 0 | 0 | [`lessxc/PinkCherry_MiniMax-H3-backup`](https://huggingface.co/lessxc/PinkCherry_MiniMax-H3-backup) | text-to-video | license:apache-2.0 |
 | 2026-09-16 | 0 | 0 | [`marin73tomas/minimax-h3-teneros-faststart-20260916`](https://huggingface.co/marin73tomas/minimax-h3-teneros-faststart-20260916) |  |  |
 | 2026-09-30 | 0 | 0 | [`masra2/MiniMax-H3-Megan-Fox-LoRA`](https://huggingface.co/masra2/MiniMax-H3-Megan-Fox-LoRA) | text-to-video | lora, base_model:MiniMaxAI/MiniMax-H3, base_model:adapter:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-10-09 | 0 | 0 | [`matheus58457/10Eros-Max`](https://huggingface.co/matheus58457/10Eros-Max) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-10-01 | 0 | 0 | [`maximsobolev275/PinkCherry-H3-V1-final-LoRA`](https://huggingface.co/maximsobolev275/PinkCherry-H3-V1-final-LoRA) |  |  |
 | 2026-08-06 | 0 | 1 | [`maximsobolev275/PinkCherry-H3-lora-r768-convrot`](https://huggingface.co/maximsobolev275/PinkCherry-H3-lora-r768-convrot) |  |  |
 | 2026-08-07 | 0 | 1 | [`maximsobolev275/PinkCherry-a3-H3-lora-r256-convrot`](https://huggingface.co/maximsobolev275/PinkCherry-a3-H3-lora-r256-convrot) |  |  |
@@ -907,6 +978,7 @@
 | 2026-09-23 | 0 | 0 | [`rdvl89/blowjob-minimaxh3`](https://huggingface.co/rdvl89/blowjob-minimaxh3) |  | license:apache-2.0 |
 | 2026-08-09 | 0 | 0 | [`sSANCHESs/PinkCherry_MiniMax-H3`](https://huggingface.co/sSANCHESs/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
 | 2026-08-08 | 0 | 1 | [`sandaisnot/PinkCherry_MiniMax-H3`](https://huggingface.co/sandaisnot/PinkCherry_MiniMax-H3) | text-to-video | license:apache-2.0 |
+| 2026-10-08 | 0 | 0 | [`suryatmodulus/Minimax_H3-Zendaya`](https://huggingface.co/suryatmodulus/Minimax_H3-Zendaya) |  | license:apache-2.0 |
 | 2026-09-04 | 0 | 6 | [`t8star/MinimaxH3-Dasiwa-10eros-hybird-8steps-turbo`](https://huggingface.co/t8star/MinimaxH3-Dasiwa-10eros-hybird-8steps-turbo) |  |  |
 | 2026-08-10 | 0 | 18 | [`t8star/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8`](https://huggingface.co/t8star/minimax_h3_turbo_4step_10ErosMax_test4_pruned_curveproj1025_T8) | text-to-video | lora, comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
 
@@ -914,212 +986,227 @@
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-09-05 | 571267 | 724 | [`WarmBloodAban/Minimax-h3_Singularity`](https://huggingface.co/WarmBloodAban/Minimax-h3_Singularity) | image-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
-| 2026-09-03 | 36365 | 21 | [`t8star/Vdn-Minimax-H3-Comfy`](https://huggingface.co/t8star/Vdn-Minimax-H3-Comfy) | text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-31 | 3839 | 3 | [`taurusduan/MiniMax-H3`](https://huggingface.co/taurusduan/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-02 | 2087 | 327 | [`OpenVDN/vdn-minimax-h3`](https://huggingface.co/OpenVDN/vdn-minimax-h3) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-11 | 1298 | 0 | [`EllipsesMark/Minimax-h3_Singularity`](https://huggingface.co/EllipsesMark/Minimax-h3_Singularity) | image-to-video | comfyui, license:apache-2.0 |
-| 2026-08-28 | 822 | 13 | [`Hippotes/MiniMax-H3-Experiments`](https://huggingface.co/Hippotes/MiniMax-H3-Experiments) | diffusers | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-03 | 725 | 0 | [`kevin-mi/VDN-H3-overlay`](https://huggingface.co/kevin-mi/VDN-H3-overlay) | minimax-h3 | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-02 | 650 | 0 | [`wsxxxx/MiniMax-H3`](https://huggingface.co/wsxxxx/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 599 | 0 | [`Zidane29/MiniMax-H3`](https://huggingface.co/Zidane29/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 501 | 1 | [`comfy-playflock/MiniMax-H3`](https://huggingface.co/comfy-playflock/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-18 | 487 | 0 | [`wangpj/MiniMax-H3_dit_bf16`](https://huggingface.co/wangpj/MiniMax-H3_dit_bf16) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-05 | 458 | 0 | [`EllipsesMark/MiniMax-H3-ComfyUI`](https://huggingface.co/EllipsesMark/MiniMax-H3-ComfyUI) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 434 | 0 | [`KENIC-1/Comfy-Org-MiniMax-H3`](https://huggingface.co/KENIC-1/Comfy-Org-MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-24 | 292 | 0 | [`TechnoBaptist/MiniMax-H3-x-Z-Image-native`](https://huggingface.co/TechnoBaptist/MiniMax-H3-x-Z-Image-native) | text-to-video | comfyui, comfy-native, comfy-quant, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-23 | 244 | 0 | [`Gyvin/MiniMax-H3`](https://huggingface.co/Gyvin/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-29 | 234 | 0 | [`exefg/hypium-h3-ref2va-prod-v1`](https://huggingface.co/exefg/hypium-h3-ref2va-prod-v1) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-18 | 221 | 0 | [`fkyyy/MiniMax-H3-comfy-slim`](https://huggingface.co/fkyyy/MiniMax-H3-comfy-slim) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-30 | 179 | 0 | [`serieuxalphonse/MiniMax-H3`](https://huggingface.co/serieuxalphonse/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-16 | 166 | 1 | [`musafa901/MiniMax-H3-Comfy_20260816`](https://huggingface.co/musafa901/MiniMax-H3-Comfy_20260816) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-06 | 158 | 0 | [`sunnyyy/MiniMax-H3`](https://huggingface.co/sunnyyy/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-10 | 138 | 1 | [`ibyteohdear/MiniMax-H3-LightX8-Fused-fl2v`](https://huggingface.co/ibyteohdear/MiniMax-H3-LightX8-Fused-fl2v) | image-text-to-video | license:other |
-| 2026-08-10 | 127 | 0 | [`terryway246/MiniMax-H3`](https://huggingface.co/terryway246/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-26 | 123 | 0 | [`Lei0513abc/MiniMax-H3`](https://huggingface.co/Lei0513abc/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-13 | 108 | 0 | [`Fanw/MiniMax-H3`](https://huggingface.co/Fanw/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-18 | 100 | 0 | [`keyyj/MiniMax-H3`](https://huggingface.co/keyyj/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-08 | 89 | 0 | [`gigafreeze/MiniMax-H3`](https://huggingface.co/gigafreeze/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-19 | 88 | 0 | [`musafa901/MiniMax-H3-Comfy_20260820`](https://huggingface.co/musafa901/MiniMax-H3-Comfy_20260820) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-09 | 82 | 0 | [`qb1222090/MiniMax-H3`](https://huggingface.co/qb1222090/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-12 | 71 | 0 | [`kotoriri/MiniMax-H3`](https://huggingface.co/kotoriri/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-09 | 65 | 2 | [`tiny-random/minimax-h3`](https://huggingface.co/tiny-random/minimax-h3) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
-| 2026-08-09 | 47 | 1 | [`yujiepan/minimax-h3-tiny-random`](https://huggingface.co/yujiepan/minimax-h3-tiny-random) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
-| 2026-10-02 | 28 | 0 | [`wxx2785/MiniMax-H3`](https://huggingface.co/wxx2785/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-04 | 24 | 3 | [`WaveCut/MiniMax-H3-OrbitQuant-W4A4`](https://huggingface.co/WaveCut/MiniMax-H3-OrbitQuant-W4A4) | image-text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 613477 | 757 | [`WarmBloodAban/Minimax-h3_Singularity`](https://huggingface.co/WarmBloodAban/Minimax-h3_Singularity) | image-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-09-03 | 107291 | 22 | [`t8star/Vdn-Minimax-H3-Comfy`](https://huggingface.co/t8star/Vdn-Minimax-H3-Comfy) | text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-31 | 3684 | 3 | [`taurusduan/MiniMax-H3`](https://huggingface.co/taurusduan/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-02 | 2754 | 332 | [`OpenVDN/vdn-minimax-h3`](https://huggingface.co/OpenVDN/vdn-minimax-h3) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 1977 | 0 | [`KENIC-1/MiniMax-H3-BF16`](https://huggingface.co/KENIC-1/MiniMax-H3-BF16) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-11 | 1733 | 0 | [`EllipsesMark/Minimax-h3_Singularity`](https://huggingface.co/EllipsesMark/Minimax-h3_Singularity) | image-to-video | comfyui, license:apache-2.0 |
+| 2026-09-02 | 888 | 0 | [`wsxxxx/MiniMax-H3`](https://huggingface.co/wsxxxx/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-03 | 863 | 1 | [`kevin-mi/VDN-H3-overlay`](https://huggingface.co/kevin-mi/VDN-H3-overlay) | minimax-h3 | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-28 | 666 | 13 | [`Hippotes/MiniMax-H3-Experiments`](https://huggingface.co/Hippotes/MiniMax-H3-Experiments) | diffusers | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-30 | 534 | 0 | [`Zidane29/MiniMax-H3`](https://huggingface.co/Zidane29/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 462 | 0 | [`KENIC-1/Comfy-Org-MiniMax-H3`](https://huggingface.co/KENIC-1/Comfy-Org-MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-05 | 427 | 0 | [`EllipsesMark/MiniMax-H3-ComfyUI`](https://huggingface.co/EllipsesMark/MiniMax-H3-ComfyUI) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-23 | 318 | 0 | [`Gyvin/MiniMax-H3`](https://huggingface.co/Gyvin/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-24 | 269 | 0 | [`TechnoBaptist/MiniMax-H3-x-Z-Image-native`](https://huggingface.co/TechnoBaptist/MiniMax-H3-x-Z-Image-native) | text-to-video | comfyui, comfy-native, comfy-quant, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-18 | 247 | 0 | [`fkyyy/MiniMax-H3-comfy-slim`](https://huggingface.co/fkyyy/MiniMax-H3-comfy-slim) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-30 | 246 | 0 | [`serieuxalphonse/MiniMax-H3`](https://huggingface.co/serieuxalphonse/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-02 | 187 | 0 | [`wxx2785/MiniMax-H3`](https://huggingface.co/wxx2785/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-26 | 185 | 0 | [`Lei0513abc/MiniMax-H3`](https://huggingface.co/Lei0513abc/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-16 | 181 | 1 | [`musafa901/MiniMax-H3-Comfy_20260816`](https://huggingface.co/musafa901/MiniMax-H3-Comfy_20260816) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 179 | 0 | [`sunnyyy/MiniMax-H3`](https://huggingface.co/sunnyyy/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-18 | 177 | 0 | [`keyyj/MiniMax-H3`](https://huggingface.co/keyyj/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-06 | 164 | 1 | [`comfy-playflock/MiniMax-H3`](https://huggingface.co/comfy-playflock/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-29 | 157 | 0 | [`exefg/hypium-h3-ref2va-prod-v1`](https://huggingface.co/exefg/hypium-h3-ref2va-prod-v1) | minimax-h3 | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-10 | 145 | 0 | [`terryway246/MiniMax-H3`](https://huggingface.co/terryway246/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-10 | 132 | 1 | [`ibyteohdear/MiniMax-H3-LightX8-Fused-fl2v`](https://huggingface.co/ibyteohdear/MiniMax-H3-LightX8-Fused-fl2v) | image-text-to-video | license:other |
+| 2026-08-19 | 126 | 0 | [`musafa901/MiniMax-H3-Comfy_20260820`](https://huggingface.co/musafa901/MiniMax-H3-Comfy_20260820) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-08 | 107 | 0 | [`gigafreeze/MiniMax-H3`](https://huggingface.co/gigafreeze/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-13 | 106 | 0 | [`Fanw/MiniMax-H3`](https://huggingface.co/Fanw/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-09 | 104 | 0 | [`qb1222090/MiniMax-H3`](https://huggingface.co/qb1222090/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-12 | 89 | 0 | [`kotoriri/MiniMax-H3`](https://huggingface.co/kotoriri/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-09 | 79 | 2 | [`tiny-random/minimax-h3`](https://huggingface.co/tiny-random/minimax-h3) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
+| 2026-08-09 | 68 | 1 | [`yujiepan/minimax-h3-tiny-random`](https://huggingface.co/yujiepan/minimax-h3-tiny-random) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
+| 2026-08-18 | 58 | 0 | [`wangpj/MiniMax-H3_dit_bf16`](https://huggingface.co/wangpj/MiniMax-H3_dit_bf16) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-04 | 28 | 3 | [`WaveCut/MiniMax-H3-OrbitQuant-W4A4`](https://huggingface.co/WaveCut/MiniMax-H3-OrbitQuant-W4A4) | image-text-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-09-14 | 23 | 0 | [`Stonerao/MiniMax-H3`](https://huggingface.co/Stonerao/MiniMax-H3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-03 | 5 | 0 | [`ovedrive/MiniMax-H3-generator-bf16`](https://huggingface.co/ovedrive/MiniMax-H3-generator-bf16) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-09-16 | 2 | 181 | [`XGENlabs/XGEN-JING`](https://huggingface.co/XGENlabs/XGEN-JING) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-05 | 0 | 1 | [`7FSxDjZMUR/gogo-meme-minimax-h3-comfy-bundle`](https://huggingface.co/7FSxDjZMUR/gogo-meme-minimax-h3-comfy-bundle) |  | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-05 | 7 | 0 | [`KENIC-1/MiniMax-H3-BF16-ggsh`](https://huggingface.co/KENIC-1/MiniMax-H3-BF16-ggsh) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-03 | 4 | 0 | [`ovedrive/MiniMax-H3-generator-bf16`](https://huggingface.co/ovedrive/MiniMax-H3-generator-bf16) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-09-16 | 2 | 183 | [`XGENlabs/XGEN-JING`](https://huggingface.co/XGENlabs/XGEN-JING) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-08-05 | 0 | 2 | [`7FSxDjZMUR/gogo-meme-minimax-h3-comfy-bundle`](https://huggingface.co/7FSxDjZMUR/gogo-meme-minimax-h3-comfy-bundle) |  | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-11 | 0 | 1 | [`Efficient-Large-Model/StreamRender-H3`](https://huggingface.co/Efficient-Large-Model/StreamRender-H3) | minimax-h3 | license:other |
 | 2026-08-28 | 0 | 0 | [`EllipsesMark/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/EllipsesMark/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
-| 2026-08-25 | 0 | 29 | [`FX-FeiHou/MiniMax-H3-Remix`](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix) | image-to-video | comfyui, license:other |
+| 2026-08-25 | 0 | 30 | [`FX-FeiHou/MiniMax-H3-Remix`](https://huggingface.co/FX-FeiHou/MiniMax-H3-Remix) | image-to-video | comfyui, license:other |
 | 2026-10-04 | 0 | 0 | [`GSsmart/XGEN-GSsmart-JING`](https://huggingface.co/GSsmart/XGEN-GSsmart-JING) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-08-11 | 0 | 78 | [`Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime`](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) |  | base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3 |
+| 2026-08-11 | 0 | 80 | [`Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime`](https://huggingface.co/Inner-Reflections/MiniMax-H3-Looping-Sketch-Anime) |  | base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3 |
 | 2026-09-08 | 0 | 0 | [`Jackxuanxuan/MiniMax-H3-experimental`](https://huggingface.co/Jackxuanxuan/MiniMax-H3-experimental) |  |  |
 | 2026-08-08 | 0 | 0 | [`Momoking/MiniMax-H3-experimental`](https://huggingface.co/Momoking/MiniMax-H3-experimental) |  |  |
 | 2026-08-19 | 0 | 2 | [`OREDDoug18792/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/OREDDoug18792/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
-| 2026-08-03 | 0 | 85 | [`Plaguekind/Minimax-H3`](https://huggingface.co/Plaguekind/Minimax-H3) |  | base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
+| 2026-08-03 | 0 | 87 | [`Plaguekind/Minimax-H3`](https://huggingface.co/Plaguekind/Minimax-H3) |  | base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:mit |
 | 2026-08-29 | 0 | 0 | [`PlatypusDevice/minimax-h3-ref2va-runtime`](https://huggingface.co/PlatypusDevice/minimax-h3-ref2va-runtime) | image-to-video | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-10 | 0 | 1 | [`QrusherZA/MiniMaxH3_Experimental`](https://huggingface.co/QrusherZA/MiniMaxH3_Experimental) |  |  |
 | 2026-09-28 | 0 | 0 | [`SEVUNX/minimax_H3_merged`](https://huggingface.co/SEVUNX/minimax_H3_merged) |  |  |
 | 2026-08-23 | 0 | 5 | [`Smite79/MiniMax-H3-Tape-FX`](https://huggingface.co/Smite79/MiniMax-H3-Tape-FX) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:mit |
 | 2026-08-08 | 0 | 0 | [`aria220/MiniMax-H3-experimental`](https://huggingface.co/aria220/MiniMax-H3-experimental) |  |  |
 | 2026-09-01 | 0 | 5 | [`diobrando0/MiniMax-H3-fl2va-ref2va-hybrids-bf16`](https://huggingface.co/diobrando0/MiniMax-H3-fl2va-ref2va-hybrids-bf16) | text-to-video | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:merge:Comfy-Org/MiniMax-H3, base_model:MiniMaxAI/MiniMax-H3, base_model:merge:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-05 | 0 | 0 | [`drowzeys/keys-heretic-MiniMax-H3-sol-engine-more-DGX-Spark-weights`](https://huggingface.co/drowzeys/keys-heretic-MiniMax-H3-sol-engine-more-DGX-Spark-weights) |  | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-08-07 | 0 | 0 | [`gmpNora/MMH3`](https://huggingface.co/gmpNora/MMH3) | diffusion-single-file | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-06 | 0 | 0 | [`jashansinghTT/minimax-h3-blackhole`](https://huggingface.co/jashansinghTT/minimax-h3-blackhole) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-12 | 0 | 6 | [`lihaoyun6/MiniMax-H3-Ref-Patch`](https://huggingface.co/lihaoyun6/MiniMax-H3-Ref-Patch) |  | base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:apache-2.0 |
 | 2026-09-20 | 0 | 0 | [`liskasYR/XGEN-JING`](https://huggingface.co/liskasYR/XGEN-JING) | image-text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-08-11 | 0 | 4 | [`model-hub-nd/h3-merged`](https://huggingface.co/model-hub-nd/h3-merged) |  | comfyui, base_model:Comfy-Org/MiniMax-H3, base_model:finetune:Comfy-Org/MiniMax-H3, license:other |
 | 2026-09-12 | 0 | 1 | [`qq2845547190/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/qq2845547190/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
-| 2026-08-11 | 0 | 332 | [`smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
+| 2026-08-11 | 0 | 346 | [`smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
 | 2026-08-04 | 0 | 1 | [`ssjenforcer191/Homelander_Minimax_H3_experimental`](https://huggingface.co/ssjenforcer191/Homelander_Minimax_H3_experimental) |  |  |
 | 2026-09-29 | 0 | 0 | [`steveo23/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/steveo23/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
 | 2026-10-04 | 0 | 0 | [`taurusduan/MiniMax-H3-experimental`](https://huggingface.co/taurusduan/MiniMax-H3-experimental) |  |  |
-| 2026-08-15 | 0 | 3 | [`taxexempt/Custom-MiniMaX-H3-mixed-quants`](https://huggingface.co/taxexempt/Custom-MiniMaX-H3-mixed-quants) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
+| 2026-08-15 | 0 | 4 | [`taxexempt/Custom-MiniMaX-H3-mixed-quants`](https://huggingface.co/taxexempt/Custom-MiniMaX-H3-mixed-quants) |  | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3 |
 | 2026-09-10 | 0 | 0 | [`tttaini/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/tttaini/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
 | 2026-09-03 | 0 | 1 | [`yantongrui/Minimax-H3-fl2va-ref2va-hybrid-models`](https://huggingface.co/yantongrui/Minimax-H3-fl2va-ref2va-hybrid-models) | text-to-video | license:other |
 | 2026-08-05 | 0 | 0 | [`yemsrach3723/MiniMax-H3`](https://huggingface.co/yemsrach3723/MiniMax-H3) |  | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
-| 2026-10-03 | 0 | 0 | [`z1771485039/minimax-h3-selflift-bundle`](https://huggingface.co/z1771485039/minimax-h3-selflift-bundle) |  | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
+| 2026-10-03 | 0 | 1 | [`z1771485039/minimax-h3-selflift-bundle`](https://huggingface.co/z1771485039/minimax-h3-selflift-bundle) |  | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 
 ### 14-工作流工具箱
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-08-04 | 247 | 78 | [`joeygambino/MiniMax-H3-Multishot-Workflow`](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow) | text-to-video | comfyui, license:apache-2.0 |
-| 2026-09-19 | 58 | 12 | [`LaDruid/MiniMax-H3-Multishot-Workflow`](https://huggingface.co/LaDruid/MiniMax-H3-Multishot-Workflow) | text-to-video | comfyui, license:apache-2.0 |
-| 2026-09-30 | 13 | 1 | [`OzzyGT/minimax_h3_preview_blocks`](https://huggingface.co/OzzyGT/minimax_h3_preview_blocks) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
+| 2026-08-04 | 247 | 82 | [`joeygambino/MiniMax-H3-Multishot-Workflow`](https://huggingface.co/joeygambino/MiniMax-H3-Multishot-Workflow) | text-to-video | comfyui, license:apache-2.0 |
+| 2026-10-08 | 70 | 6 | [`Aazeus/Spark-H3`](https://huggingface.co/Aazeus/Spark-H3) | text-to-video | comfyui, license:apache-2.0 |
+| 2026-09-19 | 61 | 12 | [`LaDruid/MiniMax-H3-Multishot-Workflow`](https://huggingface.co/LaDruid/MiniMax-H3-Multishot-Workflow) | text-to-video | comfyui, license:apache-2.0 |
+| 2026-09-30 | 16 | 2 | [`OzzyGT/minimax_h3_preview_blocks`](https://huggingface.co/OzzyGT/minimax_h3_preview_blocks) | text-to-video | base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:apache-2.0 |
 | 2026-08-05 | 0 | 1 | [`Cybronya/minimax-h3-toolkit`](https://huggingface.co/Cybronya/minimax-h3-toolkit) |  | license:apache-2.0 |
 | 2026-09-12 | 0 | 0 | [`Jackxuanxuan/minimax-h3-toolkit`](https://huggingface.co/Jackxuanxuan/minimax-h3-toolkit) |  | license:apache-2.0 |
 | 2026-08-07 | 0 | 1 | [`JahJedi/MiniMax-H3-QJ-Riverfield-Workflow`](https://huggingface.co/JahJedi/MiniMax-H3-QJ-Riverfield-Workflow) |  |  |
-| 2026-08-09 | 0 | 197 | [`PoopMan333/H3_Character_Sheet_Generator`](https://huggingface.co/PoopMan333/H3_Character_Sheet_Generator) | image-to-image | comfyui, license:other |
-| 2026-09-02 | 0 | 22 | [`PoopMan333/H3_Easy_Ref2V_Workflow`](https://huggingface.co/PoopMan333/H3_Easy_Ref2V_Workflow) | video-to-video | comfyui, license:other |
+| 2026-08-09 | 0 | 204 | [`PoopMan333/H3_Character_Sheet_Generator`](https://huggingface.co/PoopMan333/H3_Character_Sheet_Generator) | image-to-image | comfyui, license:other |
+| 2026-09-02 | 0 | 23 | [`PoopMan333/H3_Easy_Ref2V_Workflow`](https://huggingface.co/PoopMan333/H3_Easy_Ref2V_Workflow) | video-to-video | comfyui, license:other |
 | 2026-08-13 | 0 | 2 | [`QrusherZA/MiniMax-H3-Workflow`](https://huggingface.co/QrusherZA/MiniMax-H3-Workflow) |  |  |
 | 2026-08-28 | 0 | 35 | [`RuneXX/Minimax-H3-Workflows`](https://huggingface.co/RuneXX/Minimax-H3-Workflows) | image-to-video | comfy, comfyui |
 | 2026-08-27 | 0 | 3 | [`StefanFalkok/Minimax_H3_Workflows`](https://huggingface.co/StefanFalkok/Minimax_H3_Workflows) |  | license:apache-2.0 |
 | 2026-09-30 | 0 | 0 | [`StellarVoyager/MiniMax-H3-SpeedKit-RTX5090Dv2`](https://huggingface.co/StellarVoyager/MiniMax-H3-SpeedKit-RTX5090Dv2) | minimax-h3 | comfyui, int8, license:gpl-3.0 |
-| 2026-08-25 | 0 | 2 | [`SwagMessiah100/H3_Character_Sheet_Generator`](https://huggingface.co/SwagMessiah100/H3_Character_Sheet_Generator) | image-to-image | comfyui, license:other |
+| 2026-08-25 | 0 | 3 | [`SwagMessiah100/H3_Character_Sheet_Generator`](https://huggingface.co/SwagMessiah100/H3_Character_Sheet_Generator) | image-to-image | comfyui, license:other |
 | 2026-09-30 | 0 | 0 | [`Work-Fisher/MiniMax-H3-Wuxia-Fight-Workflow`](https://huggingface.co/Work-Fisher/MiniMax-H3-Wuxia-Fight-Workflow) | image-to-video | comfyui |
+| 2026-10-07 | 0 | 7 | [`comfyanonymous/minimax_h3_experiments`](https://huggingface.co/comfyanonymous/minimax_h3_experiments) |  |  |
 | 2026-09-07 | 0 | 2 | [`jayseanbrambila/minimax-h3-prompt-workflow-toolkit`](https://huggingface.co/jayseanbrambila/minimax-h3-prompt-workflow-toolkit) | image-to-video | license:apache-2.0 |
+| 2026-10-07 | 0 | 8 | [`jinwyp/MinimaxH3_4K_ComfyUI`](https://huggingface.co/jinwyp/MinimaxH3_4K_ComfyUI) |  | license:mit |
 | 2026-08-05 | 0 | 4 | [`joeygambino/MiniMax-H3-HardMode-Workflow`](https://huggingface.co/joeygambino/MiniMax-H3-HardMode-Workflow) |  | comfyui, base_model:MiniMaxAI/MiniMax-H3, base_model:finetune:MiniMaxAI/MiniMax-H3, license:other |
 | 2026-10-04 | 0 | 0 | [`manateelazycat/MiniMax-H3-Runtime`](https://huggingface.co/manateelazycat/MiniMax-H3-Runtime) | minimax-h3 | license:other |
 | 2026-08-04 | 0 | 3 | [`reverentelusarca/minimax-h3-comfyui-workflows`](https://huggingface.co/reverentelusarca/minimax-h3-comfyui-workflows) |  | license:other |
+| 2026-10-06 | 0 | 8 | [`sandpies/ComfyUI-H3-Video-Upsampler`](https://huggingface.co/sandpies/ComfyUI-H3-Video-Upsampler) | comfyui | comfyui, lora, base_model:Comfy-Org/MiniMax-H3, base_model:adapter:Comfy-Org/MiniMax-H3, license:other |
 | 2026-08-15 | 0 | 0 | [`zuanfilm/H3_Minimax_res2s_rkmk2e_Workflow`](https://huggingface.co/zuanfilm/H3_Minimax_res2s_rkmk2e_Workflow) | image-to-video | comfyui, license:mit |
 
 ### 15-镜像转载与其它
 
 | 创建日 | 下载量 | Likes | 仓库 | 管线/库 | 标签摘要 |
 | --- | ---: | ---: | --- | --- | --- |
-| 2026-09-17 | 352699 | 1 | [`AiAngelGallery/ComfyPod-Models`](https://huggingface.co/AiAngelGallery/ComfyPod-Models) | minimax-h3 | comfyui, license:other |
-| 2026-08-21 | 6347 | 8 | [`jasperz111/redcraft-minimax-h3-a2a-redmix`](https://huggingface.co/jasperz111/redcraft-minimax-h3-a2a-redmix) | minimax-h3 | comfyui |
-| 2026-08-21 | 2865 | 0 | [`Aun1236/MiniMax-H3`](https://huggingface.co/Aun1236/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-30 | 2579 | 1 | [`beike97/MiniMax-H3`](https://huggingface.co/beike97/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-27 | 2170 | 0 | [`ljt520lxy/MiniMax-H3`](https://huggingface.co/ljt520lxy/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-02 | 1841 | 0 | [`star08/MiniMax-H3`](https://huggingface.co/star08/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-10-01 | 1532 | 0 | [`addlabsviral/minimax-h3-combined`](https://huggingface.co/addlabsviral/minimax-h3-combined) | image-text-to-video | license:other |
-| 2026-08-23 | 1373 | 0 | [`shablyx666/MiniMax-H3`](https://huggingface.co/shablyx666/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-24 | 1233 | 0 | [`hjshus/MiniMax-H3`](https://huggingface.co/hjshus/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-09 | 1190 | 1 | [`Rurbino/MiniMax-H3`](https://huggingface.co/Rurbino/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-11 | 1190 | 0 | [`jon52638973/MiniMax-H3`](https://huggingface.co/jon52638973/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-23 | 1158 | 0 | [`Royalrajat1230/MiniMax-H3`](https://huggingface.co/Royalrajat1230/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-27 | 920 | 0 | [`Deepdive404-3/MiniMax-H3`](https://huggingface.co/Deepdive404-3/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-05 | 909 | 0 | [`xiaogongshou/MiniMax-H3`](https://huggingface.co/xiaogongshou/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-24 | 679 | 0 | [`fkyyy/MiniMax-H3-slim`](https://huggingface.co/fkyyy/MiniMax-H3-slim) | image-text-to-video | license:other |
-| 2026-08-15 | 599 | 0 | [`MHWJJ/MiniMax-H3`](https://huggingface.co/MHWJJ/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-26 | 566 | 0 | [`Zane91/MiniMax-H3`](https://huggingface.co/Zane91/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-01 | 538 | 0 | [`saluca-labs/MiniMax-H3`](https://huggingface.co/saluca-labs/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-27 | 535 | 0 | [`mrlol123/MiniMax-H3`](https://huggingface.co/mrlol123/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-14 | 521 | 0 | [`A1Azmi/MiniMax-H3`](https://huggingface.co/A1Azmi/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-13 | 505 | 0 | [`burningfeet/MiniMax-H3`](https://huggingface.co/burningfeet/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-30 | 458 | 0 | [`CosminDM/MiniMax-H3`](https://huggingface.co/CosminDM/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-01 | 445 | 0 | [`skySakir/MiniMax-H3`](https://huggingface.co/skySakir/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-03 | 394 | 1 | [`wudingdeet/MiniMax-H3`](https://huggingface.co/wudingdeet/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-16 | 385 | 1 | [`musafa901/MiniMax-H3_20260816`](https://huggingface.co/musafa901/MiniMax-H3_20260816) | image-text-to-video | license:other |
-| 2026-09-28 | 324 | 13 | [`Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3`](https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3) | diffusers |  |
-| 2026-08-31 | 265 | 0 | [`nyxtesla/MiniMax-H3`](https://huggingface.co/nyxtesla/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-22 | 264 | 0 | [`FrankensteinSim/MiniMax-H3`](https://huggingface.co/FrankensteinSim/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-27 | 263 | 1 | [`BIGJUTT/MiniMax-H3`](https://huggingface.co/BIGJUTT/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-27 | 256 | 0 | [`aleksyuk/h3-comfy-video`](https://huggingface.co/aleksyuk/h3-comfy-video) | minimax-h3 | comfyui, license:other |
-| 2026-08-14 | 252 | 0 | [`Stim748/MiniMax-H3`](https://huggingface.co/Stim748/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-15 | 246 | 0 | [`JNcharkey1/MiniMax-H3`](https://huggingface.co/JNcharkey1/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-18 | 220 | 0 | [`baselquants/MiniMax-H3`](https://huggingface.co/baselquants/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-18 | 209 | 0 | [`LILUMY/MiniMax-H3`](https://huggingface.co/LILUMY/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-22 | 207 | 0 | [`misstoyou/MiniMax-H3`](https://huggingface.co/misstoyou/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-29 | 203 | 2 | [`t8star/semantic_bridge_T8-comic-combat`](https://huggingface.co/t8star/semantic_bridge_T8-comic-combat) | minimax-h3 | comfyui, license:apache-2.0 |
-| 2026-09-22 | 196 | 0 | [`zhanglangdawang/MiniMax-H3`](https://huggingface.co/zhanglangdawang/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-18 | 193 | 0 | [`lin929/MiniMax-H3`](https://huggingface.co/lin929/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-01 | 176 | 0 | [`diffusers-internal-dev/tiny-minimax-h3-modular-pipe`](https://huggingface.co/diffusers-internal-dev/tiny-minimax-h3-modular-pipe) | diffusers |  |
-| 2026-08-26 | 175 | 0 | [`puterijessica/MiniMax-H3`](https://huggingface.co/puterijessica/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-19 | 171 | 0 | [`Nadun29/MiniMax-H3`](https://huggingface.co/Nadun29/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-14 | 157 | 0 | [`Lite01385/MiniMax-H3`](https://huggingface.co/Lite01385/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-16 | 143 | 0 | [`Wvkmsv/MiniMax-H3`](https://huggingface.co/Wvkmsv/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-21 | 134 | 0 | [`CRullo/MiniMax-H3`](https://huggingface.co/CRullo/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-09 | 134 | 0 | [`abenliao/minimax-h3-ref2va-transformer-bf16`](https://huggingface.co/abenliao/minimax-h3-ref2va-transformer-bf16) | diffusers |  |
-| 2026-08-28 | 131 | 0 | [`Archfiendgaming/MiniMax-H3`](https://huggingface.co/Archfiendgaming/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-26 | 129 | 0 | [`jinjiyoshi/MiniMax-H3`](https://huggingface.co/jinjiyoshi/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-25 | 118 | 0 | [`Exmanq/MiniMax-H3`](https://huggingface.co/Exmanq/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-07 | 115 | 23 | [`unsloth/MiniMax-H3`](https://huggingface.co/unsloth/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-21 | 106 | 0 | [`saramara/MiniMax-H3`](https://huggingface.co/saramara/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-24 | 93 | 0 | [`1ST-PLACE-WINNER/MiniMax-H3`](https://huggingface.co/1ST-PLACE-WINNER/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-28 | 88 | 0 | [`alexterieur2026/MiniMax-H3`](https://huggingface.co/alexterieur2026/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-30 | 82 | 0 | [`Ismailsalman444/MiniMax-H3`](https://huggingface.co/Ismailsalman444/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-25 | 58 | 0 | [`baharedorsa/MiniMax-H3`](https://huggingface.co/baharedorsa/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-17 | 725559 | 1 | [`AiAngelGallery/ComfyPod-Models`](https://huggingface.co/AiAngelGallery/ComfyPod-Models) | minimax-h3 | comfyui, license:other |
+| 2026-08-21 | 6006 | 8 | [`jasperz111/redcraft-minimax-h3-a2a-redmix`](https://huggingface.co/jasperz111/redcraft-minimax-h3-a2a-redmix) | minimax-h3 | comfyui |
+| 2026-08-21 | 3506 | 0 | [`Aun1236/MiniMax-H3`](https://huggingface.co/Aun1236/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-30 | 2597 | 1 | [`beike97/MiniMax-H3`](https://huggingface.co/beike97/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-01 | 2574 | 0 | [`addlabsviral/minimax-h3-combined`](https://huggingface.co/addlabsviral/minimax-h3-combined) | image-text-to-video | license:other |
+| 2026-08-27 | 2420 | 0 | [`ljt520lxy/MiniMax-H3`](https://huggingface.co/ljt520lxy/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-02 | 2139 | 0 | [`star08/MiniMax-H3`](https://huggingface.co/star08/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-23 | 1945 | 0 | [`shablyx666/MiniMax-H3`](https://huggingface.co/shablyx666/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-23 | 1733 | 0 | [`Royalrajat1230/MiniMax-H3`](https://huggingface.co/Royalrajat1230/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-09 | 1645 | 1 | [`Rurbino/MiniMax-H3`](https://huggingface.co/Rurbino/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-24 | 1634 | 0 | [`hjshus/MiniMax-H3`](https://huggingface.co/hjshus/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-11 | 1633 | 0 | [`jon52638973/MiniMax-H3`](https://huggingface.co/jon52638973/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-27 | 1154 | 0 | [`Deepdive404-3/MiniMax-H3`](https://huggingface.co/Deepdive404-3/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-05 | 1084 | 0 | [`xiaogongshou/MiniMax-H3`](https://huggingface.co/xiaogongshou/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-15 | 1005 | 0 | [`MHWJJ/MiniMax-H3`](https://huggingface.co/MHWJJ/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-26 | 940 | 0 | [`Zane91/MiniMax-H3`](https://huggingface.co/Zane91/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-27 | 868 | 0 | [`mrlol123/MiniMax-H3`](https://huggingface.co/mrlol123/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-14 | 862 | 0 | [`A1Azmi/MiniMax-H3`](https://huggingface.co/A1Azmi/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-01 | 818 | 0 | [`saluca-labs/MiniMax-H3`](https://huggingface.co/saluca-labs/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-28 | 780 | 15 | [`Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3`](https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3) | diffusers |  |
+| 2026-08-13 | 728 | 0 | [`burningfeet/MiniMax-H3`](https://huggingface.co/burningfeet/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-01 | 626 | 0 | [`skySakir/MiniMax-H3`](https://huggingface.co/skySakir/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-18 | 620 | 0 | [`LILUMY/MiniMax-H3`](https://huggingface.co/LILUMY/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-03 | 603 | 1 | [`wudingdeet/MiniMax-H3`](https://huggingface.co/wudingdeet/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-30 | 601 | 0 | [`CosminDM/MiniMax-H3`](https://huggingface.co/CosminDM/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-14 | 593 | 0 | [`Lite01385/MiniMax-H3`](https://huggingface.co/Lite01385/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-15 | 590 | 0 | [`JNcharkey1/MiniMax-H3`](https://huggingface.co/JNcharkey1/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-14 | 495 | 0 | [`Stim748/MiniMax-H3`](https://huggingface.co/Stim748/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-22 | 484 | 0 | [`FrankensteinSim/MiniMax-H3`](https://huggingface.co/FrankensteinSim/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-16 | 461 | 1 | [`musafa901/MiniMax-H3_20260816`](https://huggingface.co/musafa901/MiniMax-H3_20260816) | image-text-to-video | license:other |
+| 2026-08-24 | 448 | 0 | [`fkyyy/MiniMax-H3-slim`](https://huggingface.co/fkyyy/MiniMax-H3-slim) | image-text-to-video | license:other |
+| 2026-09-22 | 448 | 0 | [`zhanglangdawang/MiniMax-H3`](https://huggingface.co/zhanglangdawang/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-18 | 442 | 0 | [`lin929/MiniMax-H3`](https://huggingface.co/lin929/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-18 | 441 | 0 | [`baselquants/MiniMax-H3`](https://huggingface.co/baselquants/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-31 | 435 | 0 | [`nyxtesla/MiniMax-H3`](https://huggingface.co/nyxtesla/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-27 | 430 | 1 | [`BIGJUTT/MiniMax-H3`](https://huggingface.co/BIGJUTT/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-22 | 425 | 0 | [`misstoyou/MiniMax-H3`](https://huggingface.co/misstoyou/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-21 | 413 | 0 | [`CRullo/MiniMax-H3`](https://huggingface.co/CRullo/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-19 | 379 | 0 | [`Nadun29/MiniMax-H3`](https://huggingface.co/Nadun29/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-26 | 378 | 0 | [`puterijessica/MiniMax-H3`](https://huggingface.co/puterijessica/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-25 | 362 | 0 | [`Exmanq/MiniMax-H3`](https://huggingface.co/Exmanq/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-30 | 352 | 0 | [`Ismailsalman444/MiniMax-H3`](https://huggingface.co/Ismailsalman444/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-27 | 352 | 0 | [`aleksyuk/h3-comfy-video`](https://huggingface.co/aleksyuk/h3-comfy-video) | minimax-h3 | comfyui, license:other |
+| 2026-09-24 | 351 | 0 | [`1ST-PLACE-WINNER/MiniMax-H3`](https://huggingface.co/1ST-PLACE-WINNER/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-16 | 342 | 0 | [`Wvkmsv/MiniMax-H3`](https://huggingface.co/Wvkmsv/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-28 | 337 | 0 | [`Archfiendgaming/MiniMax-H3`](https://huggingface.co/Archfiendgaming/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-26 | 321 | 0 | [`jinjiyoshi/MiniMax-H3`](https://huggingface.co/jinjiyoshi/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-21 | 315 | 0 | [`saramara/MiniMax-H3`](https://huggingface.co/saramara/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-05 | 306 | 0 | [`A20labs/MiniMax-H3`](https://huggingface.co/A20labs/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-29 | 305 | 2 | [`t8star/semantic_bridge_T8-comic-combat`](https://huggingface.co/t8star/semantic_bridge_T8-comic-combat) | minimax-h3 | comfyui, license:apache-2.0 |
+| 2026-09-28 | 300 | 0 | [`alexterieur2026/MiniMax-H3`](https://huggingface.co/alexterieur2026/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-01 | 297 | 0 | [`diffusers-internal-dev/tiny-minimax-h3-modular-pipe`](https://huggingface.co/diffusers-internal-dev/tiny-minimax-h3-modular-pipe) | diffusers |  |
+| 2026-09-25 | 294 | 0 | [`baharedorsa/MiniMax-H3`](https://huggingface.co/baharedorsa/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-05 | 291 | 0 | [`x-atm-x/MiniMax-H3`](https://huggingface.co/x-atm-x/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-07 | 246 | 23 | [`unsloth/MiniMax-H3`](https://huggingface.co/unsloth/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-07 | 189 | 0 | [`pradeepkumar2772/MiniMax-H3`](https://huggingface.co/pradeepkumar2772/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-09 | 177 | 0 | [`abenliao/minimax-h3-ref2va-transformer-bf16`](https://huggingface.co/abenliao/minimax-h3-ref2va-transformer-bf16) | diffusers |  |
+| 2026-10-06 | 161 | 0 | [`dware/MiniMax-H3`](https://huggingface.co/dware/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-09 | 96 | 0 | [`dubin1232/MiniMax-H3`](https://huggingface.co/dubin1232/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-10 | 89 | 0 | [`vdaular/MiniMax-H3`](https://huggingface.co/vdaular/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-04 | 29 | 0 | [`AgentAnon/MiniMax-H3`](https://huggingface.co/AgentAnon/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-04 | 29 | 0 | [`multimodalart/minimax-h3-aoti`](https://huggingface.co/multimodalart/minimax-h3-aoti) | minimax-h3 | license:other |
 | 2026-08-08 | 27 | 0 | [`laoK888/MiniMax-H3`](https://huggingface.co/laoK888/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-09 | 20 | 0 | [`MJlohfg/MiniMax-H3`](https://huggingface.co/MJlohfg/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-04 | 19 | 1 | [`Inkdhostile/MiniMax-H3`](https://huggingface.co/Inkdhostile/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-09 | 19 | 0 | [`kg1965/MiniMax-H3`](https://huggingface.co/kg1965/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-09 | 18 | 0 | [`Xdp99/MiniMax-H3`](https://huggingface.co/Xdp99/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-07 | 18 | 0 | [`alituvalu/MiniMax-H3`](https://huggingface.co/alituvalu/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-04 | 17 | 0 | [`Athena1433/MiniMax-H3`](https://huggingface.co/Athena1433/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-06 | 17 | 0 | [`marchkamal51/MiniMax-H3`](https://huggingface.co/marchkamal51/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-12 | 17 | 0 | [`wo1808401/MiniMax-H3`](https://huggingface.co/wo1808401/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-09 | 21 | 0 | [`kg1965/MiniMax-H3`](https://huggingface.co/kg1965/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-25 | 20 | 0 | [`Exmanq/minimax-h3-aoti`](https://huggingface.co/Exmanq/minimax-h3-aoti) | minimax-h3 | license:other |
+| 2026-08-04 | 18 | 1 | [`Inkdhostile/MiniMax-H3`](https://huggingface.co/Inkdhostile/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-09 | 18 | 0 | [`MJlohfg/MiniMax-H3`](https://huggingface.co/MJlohfg/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-04 | 16 | 0 | [`Athena1433/MiniMax-H3`](https://huggingface.co/Athena1433/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-10 | 16 | 0 | [`DeepDive404-2/MiniMax-H3`](https://huggingface.co/DeepDive404-2/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-08 | 15 | 0 | [`ZIYOU99/MiniMax-H3`](https://huggingface.co/ZIYOU99/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-04 | 15 | 0 | [`gubernac/MiniMax-H3`](https://huggingface.co/gubernac/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-04 | 15 | 0 | [`multimodalart/minimax-h3-aoti`](https://huggingface.co/multimodalart/minimax-h3-aoti) | minimax-h3 | license:other |
-| 2026-08-05 | 15 | 0 | [`rayrickypp/MiniMax-H3`](https://huggingface.co/rayrickypp/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-06 | 14 | 0 | [`Obong128/MiniMax-H3`](https://huggingface.co/Obong128/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-06 | 16 | 0 | [`Obong128/MiniMax-H3`](https://huggingface.co/Obong128/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-07 | 16 | 0 | [`alituvalu/MiniMax-H3`](https://huggingface.co/alituvalu/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-09 | 15 | 0 | [`QVQsdaa/MiniMax-H3`](https://huggingface.co/QVQsdaa/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-05 | 15 | 0 | [`Terminus404/MiniMax-H3`](https://huggingface.co/Terminus404/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-06 | 15 | 0 | [`marchkamal51/MiniMax-H3`](https://huggingface.co/marchkamal51/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-12 | 15 | 0 | [`wo1808401/MiniMax-H3`](https://huggingface.co/wo1808401/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-07 | 14 | 0 | [`Xxjbn/MiniMax-H3`](https://huggingface.co/Xxjbn/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-09 | 13 | 0 | [`QVQsdaa/MiniMax-H3`](https://huggingface.co/QVQsdaa/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-08 | 14 | 0 | [`ZIYOU99/MiniMax-H3`](https://huggingface.co/ZIYOU99/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-04 | 14 | 0 | [`gubernac/MiniMax-H3`](https://huggingface.co/gubernac/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-05 | 14 | 0 | [`yemsrach3723/MiniMax-H3-new`](https://huggingface.co/yemsrach3723/MiniMax-H3-new) | image-text-to-video | license:other |
+| 2026-08-09 | 13 | 0 | [`Xdp99/MiniMax-H3`](https://huggingface.co/Xdp99/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-10 | 13 | 0 | [`anlessparky/MiniMax-H3`](https://huggingface.co/anlessparky/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-11 | 13 | 0 | [`astonzhang/MiniMax-H3`](https://huggingface.co/astonzhang/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-09 | 13 | 0 | [`johnsonhuggingapi/MiniMax-H3`](https://huggingface.co/johnsonhuggingapi/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-07 | 13 | 0 | [`kingsoul0018/MiniMax-H3`](https://huggingface.co/kingsoul0018/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-25 | 12 | 0 | [`Exmanq/minimax-h3-aoti`](https://huggingface.co/Exmanq/minimax-h3-aoti) | minimax-h3 | license:other |
-| 2026-08-03 | 12 | 0 | [`LinYunPRO/MiniMax-H3`](https://huggingface.co/LinYunPRO/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-11 | 12 | 0 | [`Zain0611/MiniMax-H3`](https://huggingface.co/Zain0611/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-08 | 12 | 0 | [`chiharoong/MiniMax-H3`](https://huggingface.co/chiharoong/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-11 | 13 | 0 | [`liskasYR/MiniMax-H3`](https://huggingface.co/liskasYR/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-05 | 13 | 0 | [`rayrickypp/MiniMax-H3`](https://huggingface.co/rayrickypp/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-08 | 12 | 0 | [`hvcgvvgg7/MiniMax-H3`](https://huggingface.co/hvcgvvgg7/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-06 | 12 | 0 | [`maplewoohoooyeah/MiniMax-H3`](https://huggingface.co/maplewoohoooyeah/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-05 | 12 | 0 | [`qqceqqq/MiniMax-H3`](https://huggingface.co/qqceqqq/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-12 | 11 | 0 | [`AnnaRa/MiniMax-H3`](https://huggingface.co/AnnaRa/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-05 | 11 | 0 | [`Terminus404/MiniMax-H3`](https://huggingface.co/Terminus404/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-11 | 11 | 0 | [`damiang/minimax-h3-ref2va-runpod`](https://huggingface.co/damiang/minimax-h3-ref2va-runpod) | image-text-to-video | license:other |
-| 2026-08-11 | 11 | 0 | [`liskasYR/MiniMax-H3`](https://huggingface.co/liskasYR/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-06 | 11 | 0 | [`maplewoohoooyeah/MiniMax-H3`](https://huggingface.co/maplewoohoooyeah/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-02 | 11 | 0 | [`TheMindExpansionNetwork/m1nd3xp4nd3r_Minimax_H3_T2V`](https://huggingface.co/TheMindExpansionNetwork/m1nd3xp4nd3r_Minimax_H3_T2V) |  |  |
+| 2026-08-11 | 11 | 0 | [`astonzhang/MiniMax-H3`](https://huggingface.co/astonzhang/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-08 | 11 | 0 | [`chiharoong/MiniMax-H3`](https://huggingface.co/chiharoong/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-10 | 11 | 0 | [`nahxa/MiniMax-H3`](https://huggingface.co/nahxa/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-12 | 11 | 0 | [`vs4vijay/MiniMax-H3`](https://huggingface.co/vs4vijay/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-05 | 11 | 0 | [`yemsrach3723/MiniMax-H3-new`](https://huggingface.co/yemsrach3723/MiniMax-H3-new) | image-text-to-video | license:other |
-| 2026-08-05 | 10 | 0 | [`qqceqqq/MiniMax-H3`](https://huggingface.co/qqceqqq/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-03 | 10 | 0 | [`LinYunPRO/MiniMax-H3`](https://huggingface.co/LinYunPRO/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-11 | 10 | 0 | [`Zain0611/MiniMax-H3`](https://huggingface.co/Zain0611/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-12 | 9 | 0 | [`Elitetotem/MiniMax-H3`](https://huggingface.co/Elitetotem/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-11 | 9 | 0 | [`damiang/minimax-h3-ref2va-runpod`](https://huggingface.co/damiang/minimax-h3-ref2va-runpod) | image-text-to-video | license:other |
+| 2026-08-03 | 9 | 0 | [`paulcoronel/MiniMax-H3`](https://huggingface.co/paulcoronel/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-03 | 7 | 0 | [`TheMindExpansionNetwork/stawberryman_t2v_Minimax_H3_v2`](https://huggingface.co/TheMindExpansionNetwork/stawberryman_t2v_Minimax_H3_v2) |  |  |
 | 2026-08-03 | 6 | 0 | [`Simplismart/MiniMax-H3`](https://huggingface.co/Simplismart/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-02 | 6 | 0 | [`TheMindExpansionNetwork/BudNSpud_T2V_Minimax_H3_v1`](https://huggingface.co/TheMindExpansionNetwork/BudNSpud_T2V_Minimax_H3_v1) |  |  |
-| 2026-08-03 | 6 | 0 | [`paulcoronel/MiniMax-H3`](https://huggingface.co/paulcoronel/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-03 | 6 | 0 | [`thanyathon/MiniMax-H3`](https://huggingface.co/thanyathon/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-09-03 | 5 | 0 | [`TheMindExpansionNetwork/fyr3_t2v_minimax_h3_v2`](https://huggingface.co/TheMindExpansionNetwork/fyr3_t2v_minimax_h3_v2) |  |  |
-| 2026-09-02 | 5 | 0 | [`TheMindExpansionNetwork/m1nd3xp4nd3r_Minimax_H3_T2V`](https://huggingface.co/TheMindExpansionNetwork/m1nd3xp4nd3r_Minimax_H3_T2V) |  |  |
-| 2026-09-03 | 5 | 0 | [`TheMindExpansionNetwork/stawberryman_t2v_Minimax_H3_v2`](https://huggingface.co/TheMindExpansionNetwork/stawberryman_t2v_Minimax_H3_v2) |  |  |
-| 2026-09-03 | 5 | 0 | [`TheMindExpansionNetwork/worldweaver_t2v_Minimax_H3_v2`](https://huggingface.co/TheMindExpansionNetwork/worldweaver_t2v_Minimax_H3_v2) |  |  |
-| 2026-08-03 | 5 | 0 | [`greenslime/MiniMax-H3`](https://huggingface.co/greenslime/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-02 | 5 | 0 | [`TheMindExpansionNetwork/BudNSpud_T2V_Minimax_H3_v1`](https://huggingface.co/TheMindExpansionNetwork/BudNSpud_T2V_Minimax_H3_v1) |  |  |
+| 2026-08-03 | 4 | 0 | [`greenslime/MiniMax-H3`](https://huggingface.co/greenslime/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-08-03 | 4 | 0 | [`thanyathon/MiniMax-H3`](https://huggingface.co/thanyathon/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-09-03 | 2 | 0 | [`TheMindExpansionNetwork/fyr3_t2v_minimax_h3_v2`](https://huggingface.co/TheMindExpansionNetwork/fyr3_t2v_minimax_h3_v2) |  |  |
 | 2026-09-28 | 2 | 0 | [`ZeyuLing/HFTrainer-MiniMax-H3-Base-FL2VA`](https://huggingface.co/ZeyuLing/HFTrainer-MiniMax-H3-Base-FL2VA) | text-to-video | license:other |
+| 2026-09-03 | 1 | 0 | [`TheMindExpansionNetwork/worldweaver_t2v_Minimax_H3_v2`](https://huggingface.co/TheMindExpansionNetwork/worldweaver_t2v_Minimax_H3_v2) |  |  |
 | 2026-08-21 | 0 | 1 | [`0v0o0w0/MinimaxH3_Actions`](https://huggingface.co/0v0o0w0/MinimaxH3_Actions) |  |  |
 | 2026-08-03 | 0 | 0 | [`727dcdxd/minimax-h3`](https://huggingface.co/727dcdxd/minimax-h3) |  | license:mit |
-| 2026-08-05 | 0 | 37 | [`AiNinja94/MiniMax-H3`](https://huggingface.co/AiNinja94/MiniMax-H3) |  |  |
+| 2026-08-05 | 0 | 41 | [`AiNinja94/MiniMax-H3`](https://huggingface.co/AiNinja94/MiniMax-H3) |  |  |
 | 2026-09-20 | 0 | 0 | [`Andri1987/FaceSwap_MiniMaxH3_REF2VA`](https://huggingface.co/Andri1987/FaceSwap_MiniMaxH3_REF2VA) |  | license:apache-2.0 |
 | 2026-08-17 | 0 | 1 | [`Bolt-367/minimax-h3-serverless`](https://huggingface.co/Bolt-367/minimax-h3-serverless) |  |  |
 | 2026-08-15 | 0 | 0 | [`Buonomo/MiniMax-H3-Slim`](https://huggingface.co/Buonomo/MiniMax-H3-Slim) |  |  |
-| 2026-10-03 | 0 | 7 | [`Charlietooth/Animatediff_style_Minimax_H3`](https://huggingface.co/Charlietooth/Animatediff_style_Minimax_H3) |  |  |
+| 2026-10-03 | 0 | 11 | [`Charlietooth/Animatediff_style_Minimax_H3`](https://huggingface.co/Charlietooth/Animatediff_style_Minimax_H3) |  |  |
 | 2026-08-27 | 0 | 1 | [`Dcbuilder831/MiniMax-H3-Longvideos`](https://huggingface.co/Dcbuilder831/MiniMax-H3-Longvideos) | text-to-video | comfyui |
-| 2026-08-06 | 0 | 67 | [`EllaPriest45/MinimaxH3_Actions`](https://huggingface.co/EllaPriest45/MinimaxH3_Actions) |  |  |
+| 2026-08-06 | 0 | 68 | [`EllaPriest45/MinimaxH3_Actions`](https://huggingface.co/EllaPriest45/MinimaxH3_Actions) |  |  |
 | 2026-08-18 | 0 | 4 | [`EllaPriest45/MinimaxH3_Characters`](https://huggingface.co/EllaPriest45/MinimaxH3_Characters) |  |  |
-| 2026-08-06 | 0 | 15 | [`EllaPriest45/MinimaxH3_Styles`](https://huggingface.co/EllaPriest45/MinimaxH3_Styles) |  |  |
+| 2026-08-06 | 0 | 17 | [`EllaPriest45/MinimaxH3_Styles`](https://huggingface.co/EllaPriest45/MinimaxH3_Styles) |  |  |
 | 2026-09-15 | 0 | 0 | [`EllipsesMark/MiniMax-H3_comfy`](https://huggingface.co/EllipsesMark/MiniMax-H3_comfy) |  |  |
 | 2026-08-18 | 0 | 0 | [`EllipsesMark/Sheet_Generator_H3_PoopMan333`](https://huggingface.co/EllipsesMark/Sheet_Generator_H3_PoopMan333) | image-to-image | comfyui, license:other |
 | 2026-09-19 | 0 | 1 | [`EllipsesMark/minimaxh3_characters`](https://huggingface.co/EllipsesMark/minimaxh3_characters) |  | license:apache-2.0 |
@@ -1127,25 +1214,29 @@
 | 2026-08-22 | 0 | 0 | [`GingerLabsPlatform/MiniMax-H3-D10000-T2V-Runtime`](https://huggingface.co/GingerLabsPlatform/MiniMax-H3-D10000-T2V-Runtime) |  |  |
 | 2026-08-22 | 0 | 0 | [`GingerLabsPlatform/MiniMax-H3-Voice-Preprocessor-Runtime`](https://huggingface.co/GingerLabsPlatform/MiniMax-H3-Voice-Preprocessor-Runtime) |  |  |
 | 2026-09-15 | 0 | 4 | [`Gonzaluigi/minimax-h3-refmods`](https://huggingface.co/Gonzaluigi/minimax-h3-refmods) |  |  |
+| 2026-10-11 | 0 | 0 | [`He1207/AmanoAkira_Style_MiniMaxH3`](https://huggingface.co/He1207/AmanoAkira_Style_MiniMaxH3) |  | license:apache-2.0 |
 | 2026-09-04 | 0 | 0 | [`Heouzen/minimax-h3_sks_noel`](https://huggingface.co/Heouzen/minimax-h3_sks_noel) |  |  |
 | 2026-09-04 | 0 | 0 | [`Heouzen/minimax-h3_sks_rikel_r16`](https://huggingface.co/Heouzen/minimax-h3_sks_rikel_r16) |  |  |
 | 2026-09-18 | 0 | 0 | [`Hoaschen06135/MINIMAXH3V3_Yz_tar`](https://huggingface.co/Hoaschen06135/MINIMAXH3V3_Yz_tar) |  |  |
 | 2026-09-23 | 0 | 0 | [`Hoaschen06135/Minimaxh3HyLan`](https://huggingface.co/Hoaschen06135/Minimaxh3HyLan) |  |  |
+| 2026-10-08 | 0 | 1 | [`Ijaadddd/Minimax-h3-mis-insrt`](https://huggingface.co/Ijaadddd/Minimax-h3-mis-insrt) |  | license:apache-2.0 |
+| 2026-10-11 | 0 | 0 | [`Ijaadddd/minimax-h3-video-reasoning`](https://huggingface.co/Ijaadddd/minimax-h3-video-reasoning) |  | license:apache-2.0 |
 | 2026-08-11 | 0 | 0 | [`Ivan12191812/MiniMax-H3`](https://huggingface.co/Ivan12191812/MiniMax-H3) |  |  |
-| 2026-08-10 | 0 | 23 | [`JahJedi/MiniMax-H3-Character-Sheet`](https://huggingface.co/JahJedi/MiniMax-H3-Character-Sheet) |  | comfyui, license:apache-2.0 |
+| 2026-08-10 | 0 | 32 | [`JahJedi/MiniMax-H3-Character-Sheet`](https://huggingface.co/JahJedi/MiniMax-H3-Character-Sheet) |  | comfyui, license:apache-2.0 |
 | 2026-09-22 | 0 | 1 | [`Jojocodex/ComfyUI-H3-WushuBridge`](https://huggingface.co/Jojocodex/ComfyUI-H3-WushuBridge) | other | comfyui, license:apache-2.0 |
 | 2026-09-25 | 0 | 3 | [`Jojocodex/H3-Wushu-Fight-Simulator`](https://huggingface.co/Jojocodex/H3-Wushu-Fight-Simulator) | minimax-h3 | comfyui |
 | 2026-08-18 | 0 | 0 | [`K3NK/MiniMax_H3`](https://huggingface.co/K3NK/MiniMax_H3) |  | license:unknown |
 | 2026-09-19 | 0 | 0 | [`KazumaSensei/MiniMax-H3`](https://huggingface.co/KazumaSensei/MiniMax-H3) |  |  |
-| 2026-08-04 | 0 | 177 | [`Kijai/MiniMax-H3-TAE`](https://huggingface.co/Kijai/MiniMax-H3-TAE) |  | license:apache-2.0 |
-| 2026-08-05 | 0 | 561 | [`Kijai/MiniMax-H3-experimental`](https://huggingface.co/Kijai/MiniMax-H3-experimental) |  |  |
-| 2026-08-07 | 0 | 479 | [`Kijai/MiniMax-H3_comfy`](https://huggingface.co/Kijai/MiniMax-H3_comfy) |  |  |
+| 2026-08-04 | 0 | 179 | [`Kijai/MiniMax-H3-TAE`](https://huggingface.co/Kijai/MiniMax-H3-TAE) |  | license:apache-2.0 |
+| 2026-08-05 | 0 | 585 | [`Kijai/MiniMax-H3-experimental`](https://huggingface.co/Kijai/MiniMax-H3-experimental) |  |  |
+| 2026-08-07 | 0 | 485 | [`Kijai/MiniMax-H3_comfy`](https://huggingface.co/Kijai/MiniMax-H3_comfy) |  |  |
 | 2026-08-19 | 0 | 0 | [`LIQI5134/minimax-h3-t2v`](https://huggingface.co/LIQI5134/minimax-h3-t2v) |  |  |
 | 2026-09-25 | 0 | 16 | [`LiseTY/Minimax-H3-ref2v_Anime_2_Realism`](https://huggingface.co/LiseTY/Minimax-H3-ref2v_Anime_2_Realism) |  | license:other |
 | 2026-08-26 | 0 | 0 | [`MomilGugsu/MiniMaxH3`](https://huggingface.co/MomilGugsu/MiniMaxH3) |  |  |
 | 2026-08-08 | 0 | 0 | [`Momoking/MiniMax-H3_comfy`](https://huggingface.co/Momoking/MiniMax-H3_comfy) |  |  |
 | 2026-08-06 | 0 | 0 | [`NazGulation/comfyui_model_minimaxH3`](https://huggingface.co/NazGulation/comfyui_model_minimaxH3) |  |  |
 | 2026-10-03 | 0 | 0 | [`NazGulation/comfyui_model_minimaxH3_dasiwa`](https://huggingface.co/NazGulation/comfyui_model_minimaxH3_dasiwa) |  |  |
+| 2026-10-11 | 0 | 0 | [`Rahsauce/MiniMax-H3`](https://huggingface.co/Rahsauce/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-09-11 | 0 | 0 | [`Raretutor/Minimax-H3-Prompts-ComfyUI`](https://huggingface.co/Raretutor/Minimax-H3-Prompts-ComfyUI) |  | license:apache-2.0 |
 | 2026-08-04 | 0 | 0 | [`Rudra-ai/MiniMax-H3`](https://huggingface.co/Rudra-ai/MiniMax-H3) |  | comfyui, license:other |
 | 2026-08-10 | 0 | 0 | [`Simplismart/Minimax-H3-FL2VA-Photon`](https://huggingface.co/Simplismart/Minimax-H3-FL2VA-Photon) |  |  |
@@ -1153,9 +1244,10 @@
 | 2026-08-03 | 0 | 0 | [`TechnoBaptist/MiniMax-H3`](https://huggingface.co/TechnoBaptist/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-09-24 | 0 | 0 | [`Teddooo/MinimaxH3I2V`](https://huggingface.co/Teddooo/MinimaxH3I2V) |  |  |
 | 2026-09-06 | 0 | 0 | [`Unicuser/minimaxh3`](https://huggingface.co/Unicuser/minimaxh3) |  | license:apache-2.0 |
-| 2026-09-15 | 0 | 135 | [`UntMods/FaceSwap_MiniMaxH3_REF2VA`](https://huggingface.co/UntMods/FaceSwap_MiniMaxH3_REF2VA) |  | license:apache-2.0 |
+| 2026-09-15 | 0 | 151 | [`UntMods/FaceSwap_MiniMaxH3_REF2VA`](https://huggingface.co/UntMods/FaceSwap_MiniMaxH3_REF2VA) |  | license:apache-2.0 |
 | 2026-09-23 | 0 | 0 | [`Varlan97/minimaxh3`](https://huggingface.co/Varlan97/minimaxh3) |  | license:unknown |
 | 2026-09-20 | 0 | 0 | [`WanApp/MinimaxH3`](https://huggingface.co/WanApp/MinimaxH3) |  | license:apache-2.0 |
+| 2026-10-08 | 0 | 0 | [`Wham13/FaceSwap_MiniMaxH3_REF2VA`](https://huggingface.co/Wham13/FaceSwap_MiniMaxH3_REF2VA) |  | license:apache-2.0 |
 | 2026-08-14 | 0 | 0 | [`YZisM3/MinimaxH3`](https://huggingface.co/YZisM3/MinimaxH3) |  |  |
 | 2026-08-04 | 0 | 1 | [`acckpoot/MiniMax-H3`](https://huggingface.co/acckpoot/MiniMax-H3) |  | comfyui, license:other |
 | 2026-08-23 | 0 | 0 | [`adilkoray/minimax-h3-runpod-cache-lite`](https://huggingface.co/adilkoray/minimax-h3-runpod-cache-lite) |  | license:other |
@@ -1163,6 +1255,7 @@
 | 2026-08-28 | 0 | 0 | [`altctrl/minimax-h3-sglang-vendor`](https://huggingface.co/altctrl/minimax-h3-sglang-vendor) |  | license:apache-2.0 |
 | 2026-08-22 | 0 | 0 | [`amitat44/comic-minimax-h3-video`](https://huggingface.co/amitat44/comic-minimax-h3-video) |  |  |
 | 2026-08-10 | 0 | 0 | [`anlessparky/minimax-h3-aoti`](https://huggingface.co/anlessparky/minimax-h3-aoti) |  | license:other |
+| 2026-10-08 | 0 | 0 | [`ascsda/FaceSwap_MiniMaxH3_REF2VA`](https://huggingface.co/ascsda/FaceSwap_MiniMaxH3_REF2VA) |  | license:apache-2.0 |
 | 2026-09-22 | 0 | 0 | [`boffee/MiniMax-H3-Piper`](https://huggingface.co/boffee/MiniMax-H3-Piper) |  |  |
 | 2026-09-17 | 0 | 0 | [`bumasura/minimax-h3`](https://huggingface.co/bumasura/minimax-h3) |  |  |
 | 2026-09-16 | 0 | 0 | [`carrot124/minimaxh3`](https://huggingface.co/carrot124/minimaxh3) |  |  |
@@ -1174,13 +1267,16 @@
 | 2026-08-22 | 0 | 0 | [`clayshoaf/minimax-h3-runpod`](https://huggingface.co/clayshoaf/minimax-h3-runpod) |  |  |
 | 2026-08-03 | 0 | 0 | [`cusiman/MiniMax-H3`](https://huggingface.co/cusiman/MiniMax-H3) |  | comfyui, license:other |
 | 2026-08-19 | 0 | 0 | [`dani444444el/MiniMax-H3-ComfyUI-Slim`](https://huggingface.co/dani444444el/MiniMax-H3-ComfyUI-Slim) |  |  |
-| 2026-08-25 | 0 | 2 | [`darksidewalker/MiniMaxH3`](https://huggingface.co/darksidewalker/MiniMaxH3) |  | license:other |
+| 2026-08-25 | 0 | 5 | [`darksidewalker/MiniMaxH3`](https://huggingface.co/darksidewalker/MiniMaxH3) |  | license:other |
 | 2026-08-15 | 0 | 0 | [`dci05049/h3-minimax`](https://huggingface.co/dci05049/h3-minimax) |  |  |
 | 2026-08-05 | 0 | 0 | [`demlog/minimax-h3-ref2va-worker`](https://huggingface.co/demlog/minimax-h3-ref2va-worker) |  |  |
+| 2026-10-05 | 0 | 0 | [`diffusers-modular/minimax-h3-refmod`](https://huggingface.co/diffusers-modular/minimax-h3-refmod) | diffusers | license:apache-2.0 |
 | 2026-08-08 | 0 | 0 | [`djessica/minimax-h3-aoti`](https://huggingface.co/djessica/minimax-h3-aoti) |  | license:other |
+| 2026-10-08 | 0 | 0 | [`dmangosing/koya_minimax_h3`](https://huggingface.co/dmangosing/koya_minimax_h3) |  |  |
+| 2026-10-08 | 0 | 0 | [`dmangosing/koya_minimax_h3_ref2v`](https://huggingface.co/dmangosing/koya_minimax_h3_ref2v) |  |  |
 | 2026-09-11 | 0 | 2 | [`drawthingsai/MiniMax-H3`](https://huggingface.co/drawthingsai/MiniMax-H3) | image-text-to-video | license:other |
 | 2026-08-11 | 0 | 2 | [`drowzeys/keys-2k-MiniMax-H3-Parallel-Two-DGX-Sparks`](https://huggingface.co/drowzeys/keys-2k-MiniMax-H3-Parallel-Two-DGX-Sparks) | text-to-video | comfyui, license:other |
-| 2026-08-24 | 0 | 48 | [`ethanfel/H3_Cinematic_Multishot_Coverage`](https://huggingface.co/ethanfel/H3_Cinematic_Multishot_Coverage) | image-to-video | comfyui, license:other |
+| 2026-08-24 | 0 | 47 | [`ethanfel/H3_Cinematic_Multishot_Coverage`](https://huggingface.co/ethanfel/H3_Cinematic_Multishot_Coverage) | image-to-video | comfyui, license:other |
 | 2026-08-20 | 0 | 0 | [`f5aiteam/Minimax-H3`](https://huggingface.co/f5aiteam/Minimax-H3) |  |  |
 | 2026-08-07 | 0 | 0 | [`fei567/open-video`](https://huggingface.co/fei567/open-video) | text-to-video | comfyui, license:apache-2.0 |
 | 2026-08-03 | 0 | 2 | [`h35656566/MiniMax-H3`](https://huggingface.co/h35656566/MiniMax-H3) |  | comfyui, license:other |
@@ -1196,12 +1292,14 @@
 | 2026-08-14 | 0 | 0 | [`joeranger789/MinimaXH3All`](https://huggingface.co/joeranger789/MinimaXH3All) |  |  |
 | 2026-08-13 | 0 | 2 | [`joeygambino/Dual-Engine-H3-LTX25`](https://huggingface.co/joeygambino/Dual-Engine-H3-LTX25) | text-to-video | comfyui, license:mit |
 | 2026-08-24 | 0 | 0 | [`joeygambino/MiniMax-H3-ZSpatial-native`](https://huggingface.co/joeygambino/MiniMax-H3-ZSpatial-native) |  |  |
-| 2026-09-03 | 0 | 12 | [`junchaoh-cs/SolarWM-H3-33B`](https://huggingface.co/junchaoh-cs/SolarWM-H3-33B) | pytorch |  |
+| 2026-09-03 | 0 | 13 | [`junchaoh-cs/SolarWM-H3-33B`](https://huggingface.co/junchaoh-cs/SolarWM-H3-33B) | pytorch |  |
 | 2026-08-19 | 0 | 0 | [`kaiw7/Kai-JAV-MiniMax-H3`](https://huggingface.co/kaiw7/Kai-JAV-MiniMax-H3) | diffusers |  |
 | 2026-09-09 | 0 | 0 | [`keyoung/MiniMaxH3_SMPL`](https://huggingface.co/keyoung/MiniMaxH3_SMPL) | diffusers |  |
 | 2026-08-03 | 0 | 0 | [`khaduyen1993/minimax-h3`](https://huggingface.co/khaduyen1993/minimax-h3) |  |  |
+| 2026-10-06 | 0 | 0 | [`kirk86413/faster-anime-h3`](https://huggingface.co/kirk86413/faster-anime-h3) |  |  |
 | 2026-09-24 | 0 | 1 | [`kogehek/DaSiWa_MiniMax_H3`](https://huggingface.co/kogehek/DaSiWa_MiniMax_H3) |  | license:other |
-| 2026-09-05 | 0 | 50 | [`malcolmrey/minimaxh3`](https://huggingface.co/malcolmrey/minimaxh3) |  | license:apache-2.0 |
+| 2026-10-11 | 0 | 0 | [`luoke013/MinimaxH3CinematicRealism`](https://huggingface.co/luoke013/MinimaxH3CinematicRealism) |  |  |
+| 2026-09-05 | 0 | 54 | [`malcolmrey/minimaxh3`](https://huggingface.co/malcolmrey/minimaxh3) |  | license:apache-2.0 |
 | 2026-08-11 | 0 | 2 | [`mhnakif/minimax_h3`](https://huggingface.co/mhnakif/minimax_h3) |  |  |
 | 2026-08-05 | 0 | 0 | [`mid2/MiniMax-H3-mirrors`](https://huggingface.co/mid2/MiniMax-H3-mirrors) |  |  |
 | 2026-08-15 | 0 | 0 | [`minguri98/minimaxh3`](https://huggingface.co/minguri98/minimaxh3) |  |  |
@@ -1210,7 +1308,7 @@
 | 2026-08-19 | 0 | 0 | [`nemusugikenshin/MiniMax-H3Test`](https://huggingface.co/nemusugikenshin/MiniMax-H3Test) |  |  |
 | 2026-08-12 | 0 | 0 | [`nikdevs/minimax-h3-fl2va`](https://huggingface.co/nikdevs/minimax-h3-fl2va) |  |  |
 | 2026-08-12 | 0 | 0 | [`nikdevs/minimax-h3-ref2va`](https://huggingface.co/nikdevs/minimax-h3-ref2va) |  |  |
-| 2026-08-31 | 0 | 11 | [`orangesouth/MinimaxH3CinematicRealism`](https://huggingface.co/orangesouth/MinimaxH3CinematicRealism) |  |  |
+| 2026-08-31 | 0 | 13 | [`orangesouth/MinimaxH3CinematicRealism`](https://huggingface.co/orangesouth/MinimaxH3CinematicRealism) |  |  |
 | 2026-08-09 | 0 | 0 | [`phaus00/MODELH3`](https://huggingface.co/phaus00/MODELH3) | text-to-video | license:apache-2.0 |
 | 2026-09-13 | 0 | 1 | [`pridewar/ACT-Minimax-H3`](https://huggingface.co/pridewar/ACT-Minimax-H3) |  | license:apache-2.0 |
 | 2026-09-20 | 0 | 1 | [`pridewar/BHM-Minimax-H3`](https://huggingface.co/pridewar/BHM-Minimax-H3) |  | license:apache-2.0 |
@@ -1221,12 +1319,13 @@
 | 2026-08-20 | 0 | 4 | [`saejon/MinimaxH3`](https://huggingface.co/saejon/MinimaxH3) |  | license:apache-2.0 |
 | 2026-08-25 | 0 | 0 | [`saejon/minimaxh32`](https://huggingface.co/saejon/minimaxh32) |  | license:apache-2.0 |
 | 2026-08-03 | 0 | 0 | [`sekkit/MiniMax-H3`](https://huggingface.co/sekkit/MiniMax-H3) | image-text-to-video | license:other |
-| 2026-08-07 | 0 | 93 | [`silveroxides/MiniMax-H3_tests`](https://huggingface.co/silveroxides/MiniMax-H3_tests) |  |  |
+| 2026-08-07 | 0 | 102 | [`silveroxides/MiniMax-H3_tests`](https://huggingface.co/silveroxides/MiniMax-H3_tests) |  |  |
 | 2026-09-08 | 0 | 1 | [`sinatra-rd/real-dream-minimax-h3`](https://huggingface.co/sinatra-rd/real-dream-minimax-h3) |  |  |
-| 2026-09-08 | 0 | 1 | [`smart-bobo/MiniMax-H3`](https://huggingface.co/smart-bobo/MiniMax-H3) |  | license:cc-by-4.0 |
+| 2026-09-08 | 0 | 2 | [`smart-bobo/MiniMax-H3`](https://huggingface.co/smart-bobo/MiniMax-H3) |  | license:cc-by-4.0 |
 | 2026-09-17 | 0 | 0 | [`smith1302/Minimaxh3`](https://huggingface.co/smith1302/Minimaxh3) |  |  |
 | 2026-09-07 | 0 | 0 | [`songyu123/minimax_h3_worship_it_v_0.6`](https://huggingface.co/songyu123/minimax_h3_worship_it_v_0.6) |  | license:mit |
 | 2026-08-14 | 0 | 0 | [`strangevil/MiniMax-H3`](https://huggingface.co/strangevil/MiniMax-H3) | image-text-to-video | license:other |
+| 2026-10-07 | 0 | 3 | [`tsolful/minimaxh3_tests`](https://huggingface.co/tsolful/minimaxh3_tests) |  |  |
 | 2026-09-10 | 0 | 1 | [`tubbymeatball/MinimaxH3-CumWalk`](https://huggingface.co/tubbymeatball/MinimaxH3-CumWalk) |  |  |
 | 2026-09-30 | 0 | 0 | [`vidGen654/minimax-h3-r2v-comfyui`](https://huggingface.co/vidGen654/minimax-h3-r2v-comfyui) |  |  |
 | 2026-08-12 | 0 | 0 | [`wangpj/MiniMax-H3-FL2VA`](https://huggingface.co/wangpj/MiniMax-H3-FL2VA) |  | license:other |
@@ -1234,7 +1333,7 @@
 | 2026-08-13 | 0 | 0 | [`wiikoo/minimax-h3`](https://huggingface.co/wiikoo/minimax-h3) |  |  |
 | 2026-09-17 | 0 | 0 | [`xxx1311/minimax-h3`](https://huggingface.co/xxx1311/minimax-h3) |  |  |
 | 2026-09-17 | 0 | 2 | [`yang1975/MinimaxH3_Actions`](https://huggingface.co/yang1975/MinimaxH3_Actions) |  |  |
-| 2026-08-24 | 0 | 38 | [`zuanfilm/H3_HD_2K_Detailer`](https://huggingface.co/zuanfilm/H3_HD_2K_Detailer) | text-to-video | comfyui, license:mit |
+| 2026-08-24 | 0 | 39 | [`zuanfilm/H3_HD_2K_Detailer`](https://huggingface.co/zuanfilm/H3_HD_2K_Detailer) | text-to-video | comfyui, license:mit |
 
 ## 说明
 
